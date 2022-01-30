@@ -1,0 +1,8 @@
+Algorithme = ROUND_ROBIN quantum = 5
+Nombre de processus = 5
+Nom Arrivee duree
+P1 0 20
+P2 3 10
+P3 2 25
+P4 12 1
+P5 56 32
