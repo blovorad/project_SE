@@ -46,11 +46,12 @@ puis ensuite elle les tri par ordre croissant d'arriver
 */
 int fill_processus_array(FILE *file, Processus_array *array_processus){
 
-    fscanf(file, "Nom Arrivee duree\n");
+    fscanf(file, "Nom Arrivee cycle<ES ou CPU><duree>\n");
     for(int i = 0; i < array_processus->nbProcessus; i++){
 
         int begin;
         int time;
+        int length_processus = 0;
         char car = 'a';
         int size = 0;
         long position = ftell(file);
@@ -71,14 +72,51 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
             return -1;
         }
         /*lecture du mot*/
-        fscanf(file, "%s %d %d\n", name, &begin, &time);
+        fscanf(file, "%s %d ", name, &begin);
         init_processus(name, begin, time, &array_processus->processus[i]);
+        car = 'a';
+        while(car != '\n'){
+        
+        	int length;
+        	int type;
+		    fscanf(file, "%c", &car);
+		    if(car != ' ' && car != '\n'){
+
+		    	fseek(file, (ftell(file) - 1), SEEK_SET);
+				if(car == 'C'){
+					
+					fscanf(file, "CPU=%d", &length);
+					type = CPU;
+				}
+				else if(car == 'E'){
+					
+					fscanf(file, "ES=%d", &length);
+					type = ES;
+				}
+				array_processus->processus[i].action_cycle = push_to_tail(length, type, array_processus->processus[i].action_cycle);
+				length_processus += length;
+			}
+		}
+		array_processus->processus[i].length = length_processus;
     }
 
     qsort(array_processus->processus, array_processus->nbProcessus, sizeof(Processus), compare_begin_processus);
     for(int i = 0; i < array_processus->nbProcessus; i++){
-
+		
         printf("processus %d : %s,%d,%d,%d\n",i, array_processus->processus[i].name, array_processus->processus[i].arrive_at, array_processus->processus[i].length, array_processus->processus[i].timePause);
+        Action *action = array_processus->processus[i].action_cycle;
+        while(action != NULL){
+        	
+        	if(action->type == CPU){
+        		
+        		printf("time action : %d CPU\n", action->length);
+        	}
+        	else{
+        		
+        		printf("time action : %d ES\n", action->length);
+        	}
+        	action = action->suivant;
+        }
     }
     return 0;
 }

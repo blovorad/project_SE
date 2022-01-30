@@ -21,6 +21,8 @@ void init_processus(char *name, int arrive_at, int length, Processus *processus)
     processus->arrive_at = arrive_at;
     processus->length = length;
     processus->timePause = 0;
+    processus->startWith = CPU;
+    processus->action_cycle = NULL;
 }
 
 /*
@@ -33,4 +35,43 @@ int compare_begin_processus(const void *p1, const void *p2){
     const Processus *processus2 = p2;
 
     return processus1->arrive_at >= processus2->arrive_at;
+}
+
+/*fonction de base pour la liste chainer action*/
+Action *push_to_tail(int length, int type, Action *action){
+	
+	Action *tmp = malloc(sizeof(struct cellule));
+	if(tmp == NULL){
+		
+		fprintf(stderr, "Error malloc in push_to_tail\n");
+		exit(1);
+	}
+	tmp->length = length;
+	tmp->type = type;
+	tmp->suivant = NULL;
+	if(action == NULL){
+	
+		return tmp;
+	}
+	
+	Action *tmp2 = action;
+	
+	while(tmp2->suivant != NULL){
+		
+		tmp2 = tmp2->suivant;
+	}
+	tmp2->suivant = tmp;
+	
+	return action;
+}
+
+Action *delete_head(Action *action){
+	
+	Action *tmp = action;
+	
+	action = tmp->suivant;
+	free(tmp);
+	tmp = NULL;
+	
+	return action;
 }
