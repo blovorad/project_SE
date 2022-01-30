@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-W -Wall -ansi -pedantic
+CFLAGS=-W -Wall
 LDFLAGS=
 EXEC=prog
 SRC= config.c processus.c main.c

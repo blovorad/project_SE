@@ -50,8 +50,7 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
     for(int i = 0; i < array_processus->nbProcessus; i++){
 
         int begin;
-        int time;
-        int length_processus = 0;
+        int time_processus = 0;
         char car = 'a';
         int size = 0;
         long position = ftell(file);
@@ -73,11 +72,11 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
         }
         /*lecture du mot*/
         fscanf(file, "%s %d ", name, &begin);
-        init_processus(name, begin, time, &array_processus->processus[i]);
+        init_processus(name, begin, &array_processus->processus[i]);
         car = 'a';
         while(car != '\n'){
         
-        	int length;
+        	int time;
         	int type;
 		    fscanf(file, "%c", &car);
 		    if(car != ' ' && car != '\n'){
@@ -85,35 +84,35 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
 		    	fseek(file, (ftell(file) - 1), SEEK_SET);
 				if(car == 'C'){
 					
-					fscanf(file, "CPU=%d", &length);
+					fscanf(file, "CPU=%d", &time);
 					type = CPU;
 				}
 				else if(car == 'E'){
 					
-					fscanf(file, "ES=%d", &length);
+					fscanf(file, "ES=%d", &time);
 					type = ES;
 				}
-				array_processus->processus[i].action_cycle = push_to_tail(length, type, array_processus->processus[i].action_cycle);
-				length_processus += length;
+				array_processus->processus[i].action_cycle = push_to_tail(time, type, array_processus->processus[i].action_cycle);
+				time_processus += time;
 			}
 		}
-		array_processus->processus[i].length = length_processus;
+		array_processus->processus[i].time_execution = time_processus;
     }
 
     qsort(array_processus->processus, array_processus->nbProcessus, sizeof(Processus), compare_begin_processus);
     for(int i = 0; i < array_processus->nbProcessus; i++){
 		
-        printf("processus %d : %s,%d,%d,%d\n",i, array_processus->processus[i].name, array_processus->processus[i].arrive_at, array_processus->processus[i].length, array_processus->processus[i].timePause);
+        printf("processus %d : %s,%d,%d,%d\n",i, array_processus->processus[i].name, array_processus->processus[i].arrive_at, array_processus->processus[i].time_execution, array_processus->processus[i].timePause);
         Action *action = array_processus->processus[i].action_cycle;
         while(action != NULL){
         	
         	if(action->type == CPU){
         		
-        		printf("time action : %d CPU\n", action->length);
+        		printf("time action : %d CPU\n", action->time_execution);
         	}
         	else{
         		
-        		printf("time action : %d ES\n", action->length);
+        		printf("time action : %d ES\n", action->time_execution);
         	}
         	action = action->suivant;
         }

@@ -15,11 +15,11 @@ int init_processus_array(int nbProcessus, Processus_array *array_processus){
 }
 
 /*Initialisation d'un processus*/
-void init_processus(char *name, int arrive_at, int length, Processus *processus){
+void init_processus(char *name, int arrive_at, Processus *processus){
 
     processus->name = name;
     processus->arrive_at = arrive_at;
-    processus->length = length;
+    processus->time_execution = 0;
     processus->timePause = 0;
     processus->startWith = CPU;
     processus->action_cycle = NULL;
@@ -38,7 +38,7 @@ int compare_begin_processus(const void *p1, const void *p2){
 }
 
 /*fonction de base pour la liste chainer action*/
-Action *push_to_tail(int length, Cycle_type type, Action *action){
+Action *push_to_tail(int time_execution, Cycle_type type, Action *action){
 	
 	Action *tmp = malloc(sizeof(struct cellule));
 	if(tmp == NULL){
@@ -46,7 +46,7 @@ Action *push_to_tail(int length, Cycle_type type, Action *action){
 		fprintf(stderr, "Error malloc in push_to_tail\n");
 		exit(1);
 	}
-	tmp->length = length;
+	tmp->time_execution = time_execution;
 	tmp->type = type;
 	tmp->suivant = NULL;
 	if(action == NULL){
