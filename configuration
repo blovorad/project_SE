@@ -1,8 +1,8 @@
 Algorithme = ROUND_ROBIN quantum = 5
 Nombre de processus = 5
-Nom Arrivee duree
-P1 0 20
-P2 3 10
-P3 2 25
-P4 12 1
-P5 56 32
+Nom Arrivee <ES ou CPU>=duree
+P1 0 CPU=20 ES=2
+P2 3 CPU=10 ES=4 CPU= 3
+P3 2 ES=25
+P4 12 CPU=1
+P5 56 ES=32

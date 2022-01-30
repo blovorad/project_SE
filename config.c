@@ -46,7 +46,7 @@ puis ensuite elle les tri par ordre croissant d'arriver
 */
 int fill_processus_array(FILE *file, Processus_array *array_processus){
 
-    fscanf(file, "Nom Arrivee cycle<ES ou CPU><duree>\n");
+    fscanf(file, "Nom Arrivee <ES ou CPU>=duree\n");
     for(int i = 0; i < array_processus->nbProcessus; i++){
 
         int begin;
