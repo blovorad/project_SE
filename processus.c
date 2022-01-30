@@ -38,7 +38,7 @@ int compare_begin_processus(const void *p1, const void *p2){
 }
 
 /*fonction de base pour la liste chainer action*/
-Action *push_to_tail(int length, int type, Action *action){
+Action *push_to_tail(int length, Cycle_type type, Action *action){
 	
 	Action *tmp = malloc(sizeof(struct cellule));
 	if(tmp == NULL){

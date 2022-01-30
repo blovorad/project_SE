@@ -1,14 +1,22 @@
 #ifndef __SIMULATION__H__
 #define __SIMULATION__H__
 
-#define FIFO 0
-#define SJF 1
-#define SRJF 2
-#define ROUND_ROBIN 3
+typedef enum{
+	
+	FIFO,
+	SJF,
+	SRJF,
+	ROUND_ROBIN
+}Algorithm;
+
 typedef struct{
 
-    int code_algorithm;
+    Algorithm code_algorithm;
     int quantum;
+    double average_time_attempt;
+    double average_time_restitution;
+    double average_time_respond;
+    double average_pourcentage_CPU;
 }Simulation;
 
 #endif
