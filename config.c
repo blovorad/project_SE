@@ -207,6 +207,9 @@ surcouche pour la fermuture du fichier config
 */
 void close_fileConfig(FILE *file){
 
-    fclose(file);
+    if (fclose(file)==EOF) {
+        perror("Impossible to close file\n");
+        exit(1);
+    }
     file = NULL;
 }
