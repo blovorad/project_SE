@@ -11,6 +11,9 @@ int main(int argc, char *argv[]){
         free(array_processus.processus);
         array_processus.processus = NULL;
     }
+    else {
+        printf("argument manquant - se referer a la documentation\n");
+    }
     
     return 0;
 }
