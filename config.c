@@ -98,7 +98,7 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
     qsort(array_processus->processus, array_processus->nbProcessus, sizeof(Processus), compare_begin_processus);
     for(int i = 0; i < array_processus->nbProcessus; i++){
 		
-        printf("processus %d : %s,%d,%d,%d\n",i, array_processus->processus[i].name, array_processus->processus[i].arrive_at, array_processus->processus[i].time_execution, array_processus->processus[i].timePause);
+        printf("processus %d : %s,%d,%d,%d\n",i, array_processus->processus[i].name, array_processus->processus[i].arrive_at, array_processus->processus[i].time_execution, array_processus->processus[i].time_pause);
         Action *action = array_processus->processus[i].action_cycle;
         while(action != NULL){
         	
@@ -189,8 +189,8 @@ FILE *open_fileConfig(char *path, char *mode){
 
 void close_fileConfig(FILE *file){
 
-    fclose(file);
-    if (fclose(file) == EOF) {
+    if (fclose(file)==EOF) {
+
         perror("Impossible to close file\n");
         exit(1);
     }
