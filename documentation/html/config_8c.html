@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier config.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet systeme exploitation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier config.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnacement  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab39d6394d56a69d049ffaecd6e83dd86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8c.html#ab39d6394d56a69d049ffaecd6e83dd86">get_config</a> (FILE *file, <a class="el" href="structSimulation.html">Simulation</a> *simulation, <a class="el" href="structProcessus__array.html">Processus_array</a> *array_processus)</td></tr>
+<tr class="memdesc:ab39d6394d56a69d049ffaecd6e83dd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">charge la configuration du test de l'ordonnancement  <a href="config_8c.html#ab39d6394d56a69d049ffaecd6e83dd86">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab39d6394d56a69d049ffaecd6e83dd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8786c93d4dc7b9604510e5dd456704d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8c.html#af8786c93d4dc7b9604510e5dd456704d">fill_processus_array</a> (FILE *file, <a class="el" href="structProcessus__array.html">Processus_array</a> *array_processus)</td></tr>
+<tr class="memdesc:af8786c93d4dc7b9604510e5dd456704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">lit chaque processus et le remplis de maniere a bien remplir le tableau puis ensuite elle les tri par ordre croissant d'arriver  <a href="config_8c.html#af8786c93d4dc7b9604510e5dd456704d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af8786c93d4dc7b9604510e5dd456704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0167792967928940e30732b3f3f4a08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8c.html#ae0167792967928940e30732b3f3f4a08">get_algorithm_code</a> (FILE *file)</td></tr>
+<tr class="memdesc:ae0167792967928940e30732b3f3f4a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">lire le type d'algorithm d'ordonnancement utilise pour cette configuration  <a href="config_8c.html#ae0167792967928940e30732b3f3f4a08">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae0167792967928940e30732b3f3f4a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490f425482ee7f8d8cb89e0217be05ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8c.html#a490f425482ee7f8d8cb89e0217be05ec">select_algorithm</a> (char *code)</td></tr>
+<tr class="memdesc:a490f425482ee7f8d8cb89e0217be05ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère  <a href="config_8c.html#a490f425482ee7f8d8cb89e0217be05ec">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a490f425482ee7f8d8cb89e0217be05ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502472e70a1120ebe799ec14efcd6dbc"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8c.html#a502472e70a1120ebe799ec14efcd6dbc">open_fileConfig</a> (char *path, char *mode)</td></tr>
+<tr class="memdesc:a502472e70a1120ebe799ec14efcd6dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">primitive d'ouverture de fichier  <a href="config_8c.html#a502472e70a1120ebe799ec14efcd6dbc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a502472e70a1120ebe799ec14efcd6dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8c.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3">close_fileConfig</a> (FILE *file)</td></tr>
+<tr class="memdesc:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">primitive qui ferme un fichier precedement ouvert  <a href="config_8c.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnacement </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a0eca57fce0f4c72a0bdd73d5cae6e6e3" name="a0eca57fce0f4c72a0bdd73d5cae6e6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eca57fce0f4c72a0bdd73d5cae6e6e3">&#9670;&nbsp;</a></span>close_fileConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close_fileConfig </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>primitive qui ferme un fichier precedement ouvert </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>fichier a fermer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af8786c93d4dc7b9604510e5dd456704d" name="af8786c93d4dc7b9604510e5dd456704d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8786c93d4dc7b9604510e5dd456704d">&#9670;&nbsp;</a></span>fill_processus_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fill_processus_array </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structProcessus__array.html">Processus_array</a> *&#160;</td>
+          <td class="paramname"><em>array_processus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lit chaque processus et le remplis de maniere a bien remplir le tableau puis ensuite elle les tri par ordre croissant d'arriver </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>fichier de configuration ouvert </td></tr>
+    <tr><td class="paramname">array_processus</td><td>tableau qui va être remplis avec toute les informations des processus du test </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un code d'erreur ou 0 si tout va bien </dd></dl>
+
+</div>
+</div>
+<a id="ae0167792967928940e30732b3f3f4a08" name="ae0167792967928940e30732b3f3f4a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0167792967928940e30732b3f3f4a08">&#9670;&nbsp;</a></span>get_algorithm_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_algorithm_code </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lire le type d'algorithm d'ordonnancement utilise pour cette configuration </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>fichier de configuration ouvert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier qui represente le type d'algorithm ou -1 si erreur </dd></dl>
+
+</div>
+</div>
+<a id="ab39d6394d56a69d049ffaecd6e83dd86" name="ab39d6394d56a69d049ffaecd6e83dd86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39d6394d56a69d049ffaecd6e83dd86">&#9670;&nbsp;</a></span>get_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_config </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSimulation.html">Simulation</a> *&#160;</td>
+          <td class="paramname"><em>simulation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structProcessus__array.html">Processus_array</a> *&#160;</td>
+          <td class="paramname"><em>array_processus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>charge la configuration du test de l'ordonnancement </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>fichier de configuration ouvert </td></tr>
+    <tr><td class="paramname">simulation</td><td>structure remplis par la fonction, notament le quantum de temps </td></tr>
+    <tr><td class="paramname">array_processus</td><td>tableau qui va être créer qui contient tout les processus du test </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code erreur 0 si ok, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a502472e70a1120ebe799ec14efcd6dbc" name="a502472e70a1120ebe799ec14efcd6dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502472e70a1120ebe799ec14efcd6dbc">&#9670;&nbsp;</a></span>open_fileConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * open_fileConfig </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>primitive d'ouverture de fichier </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>chaine de caractere qui represente le chemin d'accès du fichier </td></tr>
+    <tr><td class="paramname">mode</td><td>chaine de caractere qui represente le mode d'ouverture du fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le pointeur du fichier ouvert </dd></dl>
+
+</div>
+</div>
+<a id="a490f425482ee7f8d8cb89e0217be05ec" name="a490f425482ee7f8d8cb89e0217be05ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a490f425482ee7f8d8cb89e0217be05ec">&#9670;&nbsp;</a></span>select_algorithm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int select_algorithm </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>chaine de caractere decrivant l'algorithme d'ordonnancement </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le code de l'algorithm </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

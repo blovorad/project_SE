@@ -1,5 +1,12 @@
 #include "processus.h"
 
+/**
+ * \file processus.c
+ * \author Gautier Levesque
+ * \date 29/01/2022
+ * \brief fichier source pour la gestion des processus
+ */
+
 /*Initialisation d'un tableau de processus*/
 int init_processus_array(int nbProcessus, Processus_array *array_processus){
 
@@ -20,7 +27,11 @@ void init_processus(char *name, int arrive_at, Processus *processus){
     processus->name = name;
     processus->arrive_at = arrive_at;
     processus->time_execution = 0;
-    processus->timePause = 0;
+    processus->time_pause = 0;
+    processus->average_attempt_time = 0;
+    processus->time_pause_count = 0;
+    processus->average_time_to_restue = 0;
+    processus->average_time_to_answer = 0;
     processus->startWith = CPU;
     processus->action_cycle = NULL;
 }

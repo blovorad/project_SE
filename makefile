@@ -5,7 +5,7 @@ EXEC=prog
 SRC= config.c processus.c main.c
 OBJ= $(SRC:.c=.o)
 
-all: $(EXEC)
+all: $(EXEC) docs
 
 $(EXEC): $(OBJ)
 	$(CC) -o $@ $^ $(LDFLAGS)
@@ -15,6 +15,9 @@ main.o: config.h
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
+
+docs:
+	@doxygen ./Doxyfile
 
 .PHONY: clean mrproper
 

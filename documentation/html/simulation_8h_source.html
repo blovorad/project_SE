@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de simulation.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet systeme exploitation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">simulation.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="simulation_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __SIMULATION__H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __SIMULATION__H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">   18</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a7795ebef271efe70b28f37deb9a07a83">   20</a></span>    <a class="code hl_enumvalue" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a7795ebef271efe70b28f37deb9a07a83">FIFO</a>, </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a8ade209ddd4ef30da88ba1c9780b5e33">   21</a></span>    <a class="code hl_enumvalue" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a8ade209ddd4ef30da88ba1c9780b5e33">SJF</a>, </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691abe9f9b6bbaa3155615f3e3318ec3ecae">   22</a></span>    <a class="code hl_enumvalue" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691abe9f9b6bbaa3155615f3e3318ec3ecae">SRJF</a>, </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47">ROUND_ROBIN</a> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47">   24</a></span>}<a class="code hl_enumeration" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structSimulation.html">   32</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structSimulation.html#a4136de497e524f8c0b476a117e98faf8">   34</a></span>    <a class="code hl_enumeration" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a> <a class="code hl_variable" href="structSimulation.html#a4136de497e524f8c0b476a117e98faf8">code_algorithm</a>; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structSimulation.html#a32b7d6bcaff8a599681de98d21ad5a2a">   35</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structSimulation.html#a32b7d6bcaff8a599681de98d21ad5a2a">quantum</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structSimulation.html#a7f6991c03539b0f54d0fa7b66113df26">   36</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structSimulation.html#a7f6991c03539b0f54d0fa7b66113df26">average_time_attempt</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structSimulation.html#a91ab552e6b5d002d5e87deda3bdf7635">   37</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structSimulation.html#a91ab552e6b5d002d5e87deda3bdf7635">average_time_restitution</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structSimulation.html#a1cf584d62dd12db7ce1bd5bf31f73c2b">   38</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structSimulation.html#a1cf584d62dd12db7ce1bd5bf31f73c2b">average_time_respond</a>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structSimulation.html#a30f3c44581f1ee6109b57391bfbc012b">   39</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structSimulation.html#a30f3c44581f1ee6109b57391bfbc012b">average_pourcentage_CPU</a>; </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}<a class="code hl_struct" href="structSimulation.html">Simulation</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="asimulation_8h_html_a5e41188f16a381c8915a17a22228e691"><div class="ttname"><a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a></div><div class="ttdeci">Algorithm</div><div class="ttdoc">Constantes pour les codes des algorithmes.</div><div class="ttdef"><b>Definition:</b> simulation.h:18</div></div>
+<div class="ttc" id="asimulation_8h_html_a5e41188f16a381c8915a17a22228e691a7795ebef271efe70b28f37deb9a07a83"><div class="ttname"><a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a7795ebef271efe70b28f37deb9a07a83">FIFO</a></div><div class="ttdeci">@ FIFO</div><div class="ttdef"><b>Definition:</b> simulation.h:20</div></div>
+<div class="ttc" id="asimulation_8h_html_a5e41188f16a381c8915a17a22228e691a8ade209ddd4ef30da88ba1c9780b5e33"><div class="ttname"><a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a8ade209ddd4ef30da88ba1c9780b5e33">SJF</a></div><div class="ttdeci">@ SJF</div><div class="ttdef"><b>Definition:</b> simulation.h:21</div></div>
+<div class="ttc" id="asimulation_8h_html_a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47"><div class="ttname"><a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47">ROUND_ROBIN</a></div><div class="ttdeci">@ ROUND_ROBIN</div><div class="ttdef"><b>Definition:</b> simulation.h:23</div></div>
+<div class="ttc" id="asimulation_8h_html_a5e41188f16a381c8915a17a22228e691abe9f9b6bbaa3155615f3e3318ec3ecae"><div class="ttname"><a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691abe9f9b6bbaa3155615f3e3318ec3ecae">SRJF</a></div><div class="ttdeci">@ SRJF</div><div class="ttdef"><b>Definition:</b> simulation.h:22</div></div>
+<div class="ttc" id="astructSimulation_html"><div class="ttname"><a href="structSimulation.html">Simulation</a></div><div class="ttdoc">Constantes pour les codes des algorithmes.</div><div class="ttdef"><b>Definition:</b> simulation.h:32</div></div>
+<div class="ttc" id="astructSimulation_html_a1cf584d62dd12db7ce1bd5bf31f73c2b"><div class="ttname"><a href="structSimulation.html#a1cf584d62dd12db7ce1bd5bf31f73c2b">Simulation::average_time_respond</a></div><div class="ttdeci">double average_time_respond</div><div class="ttdef"><b>Definition:</b> simulation.h:38</div></div>
+<div class="ttc" id="astructSimulation_html_a30f3c44581f1ee6109b57391bfbc012b"><div class="ttname"><a href="structSimulation.html#a30f3c44581f1ee6109b57391bfbc012b">Simulation::average_pourcentage_CPU</a></div><div class="ttdeci">double average_pourcentage_CPU</div><div class="ttdef"><b>Definition:</b> simulation.h:39</div></div>
+<div class="ttc" id="astructSimulation_html_a32b7d6bcaff8a599681de98d21ad5a2a"><div class="ttname"><a href="structSimulation.html#a32b7d6bcaff8a599681de98d21ad5a2a">Simulation::quantum</a></div><div class="ttdeci">int quantum</div><div class="ttdef"><b>Definition:</b> simulation.h:35</div></div>
+<div class="ttc" id="astructSimulation_html_a4136de497e524f8c0b476a117e98faf8"><div class="ttname"><a href="structSimulation.html#a4136de497e524f8c0b476a117e98faf8">Simulation::code_algorithm</a></div><div class="ttdeci">Algorithm code_algorithm</div><div class="ttdef"><b>Definition:</b> simulation.h:34</div></div>
+<div class="ttc" id="astructSimulation_html_a7f6991c03539b0f54d0fa7b66113df26"><div class="ttname"><a href="structSimulation.html#a7f6991c03539b0f54d0fa7b66113df26">Simulation::average_time_attempt</a></div><div class="ttdeci">double average_time_attempt</div><div class="ttdef"><b>Definition:</b> simulation.h:36</div></div>
+<div class="ttc" id="astructSimulation_html_a91ab552e6b5d002d5e87deda3bdf7635"><div class="ttname"><a href="structSimulation.html#a91ab552e6b5d002d5e87deda3bdf7635">Simulation::average_time_restitution</a></div><div class="ttdeci">double average_time_restitution</div><div class="ttdef"><b>Definition:</b> simulation.h:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

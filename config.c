@@ -1,10 +1,11 @@
 #include "config.h"
-
-/*
-Fonction principale du fichier, elle charge la configuration global du test pour l'ordonnancement
-@return code erreur pour savoir si tout est ok
-remplis un champ code algorithm et un tableau de tout les processus trier par ordre d'arriver
-*/
+/**
+ * \file config.c
+ * \author Gautier Levesque
+ * \date 29/01/2022
+ * \brief fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnacement
+ */
+ 
 int get_config(FILE *file, Simulation *simulation, Processus_array *array_processus){
 
     //recuperation du type d'algorithm utilisé
@@ -39,11 +40,6 @@ int get_config(FILE *file, Simulation *simulation, Processus_array *array_proces
     return 0;
 }
 
-/*
-cette fonction lit chaque processus et le remplis de maniere a bien remplir le tableau
-puis ensuite elle les tri par ordre croissant d'arriver
-@return un code d'erreur ou 0 si tout va bien
-*/
 int fill_processus_array(FILE *file, Processus_array *array_processus){
 
     fscanf(file, "Nom Arrivee <ES ou CPU>=duree\n");
@@ -120,10 +116,6 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
     return 0;
 }
 
-/*
-ici cette fonction se charge de lire le type d'algorithm d'ordonnancement utilise pour cette configuration
-@return entier qui represente le type d'algorithm ou -1 si erreur
-*/
 int get_algorithm_code(FILE *file){
 
     fscanf(file, "Algorithme = ");
@@ -158,10 +150,6 @@ int get_algorithm_code(FILE *file){
     return code;
 }
 
-/*
-selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère
-@return le code de l'algorithm
-*/
 int select_algorithm(char *code){
 
     if(strcmp(code, "FIFO") == 0){
@@ -187,9 +175,6 @@ int select_algorithm(char *code){
     }
 }
 
-/*
-surcouche pour l'ouverture du fichier config
-*/
 FILE *open_fileConfig(char *path, char *mode){
 
     FILE *file = fopen(path, mode);
@@ -202,11 +187,12 @@ FILE *open_fileConfig(char *path, char *mode){
     return file;
 }
 
-/*
-surcouche pour la fermuture du fichier config
-*/
 void close_fileConfig(FILE *file){
 
     fclose(file);
+    if (fclose(file) == EOF) {
+        perror("Impossible to close file\n");
+        exit(1);
+    }
     file = NULL;
 }
