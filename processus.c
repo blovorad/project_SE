@@ -28,11 +28,10 @@ void init_processus(char *name, int arrive_at, Processus *processus){
     processus->arrive_at = arrive_at;
     processus->time_execution = 0;
     processus->time_pause = 0;
-    processus->average_attempt_time = 0;
+    processus->time_attempt = 0;
     processus->time_pause_count = 0;
-    processus->average_time_to_restue = 0;
-    processus->average_time_to_answer = 0;
-    processus->startWith = CPU;
+    processus->time_to_restue = 0;
+    processus->time_to_answer = 0;
     processus->action_cycle = NULL;
 }
 

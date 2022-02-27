@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier util.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier util.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier source qui regroupe les fonctions utile au projet  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a1c117cc7a05e5d41f29b2b0d067e01bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a1c117cc7a05e5d41f29b2b0d067e01bf">is_path_ok</a> (char *path)</td></tr>
+<tr class="memdesc:a1c117cc7a05e5d41f29b2b0d067e01bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">regarder si la chaine de caractere est bien un chemin qui donne sur un .csv, si l'extension est bien .csv  <a href="util_8c.html#a1c117cc7a05e5d41f29b2b0d067e01bf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1c117cc7a05e5d41f29b2b0d067e01bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34407842c1b477926a7d6e13f22ab7d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#af34407842c1b477926a7d6e13f22ab7d">size_string</a> (char *string)</td></tr>
+<tr class="memdesc:af34407842c1b477926a7d6e13f22ab7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compter le nombre de caractère dans une chaine, sans compter le '/0'  <a href="util_8c.html#af34407842c1b477926a7d6e13f22ab7d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af34407842c1b477926a7d6e13f22ab7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1eba4fb8064e248109e9f379df6529d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ae1eba4fb8064e248109e9f379df6529d">get_int_from_string</a> (char *string)</td></tr>
+<tr class="memdesc:ae1eba4fb8064e248109e9f379df6529d"><td class="mdescLeft">&#160;</td><td class="mdescRight">tirer un nombre d'apres une chaine de caractere  <a href="util_8c.html#ae1eba4fb8064e248109e9f379df6529d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae1eba4fb8064e248109e9f379df6529d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d9e4154ee1dfa60e25dd7c07e3678b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a57d9e4154ee1dfa60e25dd7c07e3678b">get_name_from_int</a> (int number)</td></tr>
+<tr class="memdesc:a57d9e4154ee1dfa60e25dd7c07e3678b"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de donner un nom au processus en fonction de son numero  <a href="util_8c.html#a57d9e4154ee1dfa60e25dd7c07e3678b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a57d9e4154ee1dfa60e25dd7c07e3678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22444bd4145e3359c53457d46f9daa2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#aa22444bd4145e3359c53457d46f9daa2">get_string_from_algorithm</a> (int code_algorithm)</td></tr>
+<tr class="memdesc:aa22444bd4145e3359c53457d46f9daa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">retourner la chaine de caractere correspondant a l'algorithme utilise  <a href="util_8c.html#aa22444bd4145e3359c53457d46f9daa2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa22444bd4145e3359c53457d46f9daa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502472e70a1120ebe799ec14efcd6dbc"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a502472e70a1120ebe799ec14efcd6dbc">open_fileConfig</a> (char *path, char *mode)</td></tr>
+<tr class="memdesc:a502472e70a1120ebe799ec14efcd6dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">primitive d'ouverture de fichier  <a href="util_8c.html#a502472e70a1120ebe799ec14efcd6dbc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a502472e70a1120ebe799ec14efcd6dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3">close_fileConfig</a> (FILE *file)</td></tr>
+<tr class="memdesc:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">primitive qui ferme un fichier precedement ouvert  <a href="util_8c.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >fichier source qui regroupe les fonctions utile au projet </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16/02/2022 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a0eca57fce0f4c72a0bdd73d5cae6e6e3" name="a0eca57fce0f4c72a0bdd73d5cae6e6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eca57fce0f4c72a0bdd73d5cae6e6e3">&#9670;&nbsp;</a></span>close_fileConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close_fileConfig </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>primitive qui ferme un fichier precedement ouvert </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>fichier a fermer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1eba4fb8064e248109e9f379df6529d" name="ae1eba4fb8064e248109e9f379df6529d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1eba4fb8064e248109e9f379df6529d">&#9670;&nbsp;</a></span>get_int_from_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_int_from_string </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tirer un nombre d'apres une chaine de caractere </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>22/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>chaine de caractere </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier qui represente le nombre </dd></dl>
+
+</div>
+</div>
+<a id="a57d9e4154ee1dfa60e25dd7c07e3678b" name="a57d9e4154ee1dfa60e25dd7c07e3678b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d9e4154ee1dfa60e25dd7c07e3678b">&#9670;&nbsp;</a></span>get_name_from_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * get_name_from_int </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet de donner un nom au processus en fonction de son numero </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>22/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>a transformer en string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>chaine de caractere </dd></dl>
+
+</div>
+</div>
+<a id="aa22444bd4145e3359c53457d46f9daa2" name="aa22444bd4145e3359c53457d46f9daa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22444bd4145e3359c53457d46f9daa2">&#9670;&nbsp;</a></span>get_string_from_algorithm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * get_string_from_algorithm </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code_algorithm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>retourner la chaine de caractere correspondant a l'algorithme utilise </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code_algorithm</td><td>en int </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>nom de l'algorithme </dd></dl>
+
+</div>
+</div>
+<a id="a1c117cc7a05e5d41f29b2b0d067e01bf" name="a1c117cc7a05e5d41f29b2b0d067e01bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c117cc7a05e5d41f29b2b0d067e01bf">&#9670;&nbsp;</a></span>is_path_ok()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_path_ok </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>regarder si la chaine de caractere est bien un chemin qui donne sur un .csv, si l'extension est bien .csv </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>chemin du fichier a verifier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean 1 si ok et 0 si erreur </dd></dl>
+
+</div>
+</div>
+<a id="a502472e70a1120ebe799ec14efcd6dbc" name="a502472e70a1120ebe799ec14efcd6dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502472e70a1120ebe799ec14efcd6dbc">&#9670;&nbsp;</a></span>open_fileConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * open_fileConfig </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>primitive d'ouverture de fichier </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>chaine de caractere qui represente le chemin d'accès du fichier </td></tr>
+    <tr><td class="paramname">mode</td><td>chaine de caractere qui represente le mode d'ouverture du fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le pointeur du fichier ouvert </dd></dl>
+
+</div>
+</div>
+<a id="af34407842c1b477926a7d6e13f22ab7d" name="af34407842c1b477926a7d6e13f22ab7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34407842c1b477926a7d6e13f22ab7d">&#9670;&nbsp;</a></span>size_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int size_string </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compter le nombre de caractère dans une chaine, sans compter le '/0' </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>chaine de caractere </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier qui represente la taille de la chaine de caractere </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

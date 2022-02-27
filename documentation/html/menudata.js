@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"Page principale",url:"index.html"},
+{text:"Pages associées",url:"pages.html"},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Liste des classes",url:"annotated.html"},
 {text:"Index des classes",url:"classes.html"},
@@ -45,7 +46,15 @@ var menudata={children:[
 {text:"p",url:"globals.html#index_p"},
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"}]},
-{text:"Fonctions",url:"globals_func.html"},
+{text:"Fonctions",url:"globals_func.html",children:[
+{text:"c",url:"globals_func.html#index_c"},
+{text:"d",url:"globals_func.html#index_d"},
+{text:"f",url:"globals_func.html#index_f"},
+{text:"g",url:"globals_func.html#index_g"},
+{text:"i",url:"globals_func.html#index_i"},
+{text:"o",url:"globals_func.html#index_o"},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"s",url:"globals_func.html#index_s"}]},
 {text:"Définitions de type",url:"globals_type.html"},
 {text:"Énumérations",url:"globals_enum.html"},
 {text:"Valeurs énumérées",url:"globals_eval.html"}]}]}]}

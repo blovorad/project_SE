@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projet systeme exploitation
+   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
    </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
  </tr>
  </tbody>
@@ -88,6 +89,8 @@ Attributs publics</h2></td></tr>
 <tr class="separator:a1cf584d62dd12db7ce1bd5bf31f73c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f3c44581f1ee6109b57391bfbc012b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSimulation.html#a30f3c44581f1ee6109b57391bfbc012b">average_pourcentage_CPU</a></td></tr>
 <tr class="separator:a30f3c44581f1ee6109b57391bfbc012b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52402ab51c31f9ae77a7b67df51e0d56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structProcessus__array.html">Processus_array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSimulation.html#a52402ab51c31f9ae77a7b67df51e0d56">processus_array</a></td></tr>
+<tr class="separator:a52402ab51c31f9ae77a7b67df51e0d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p >Constantes pour les codes des algorithmes. </p>
@@ -119,7 +122,7 @@ Attributs publics</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >temps moyen d'attente de tout les processus </p>
+<p >temps moyen d'attente de tous les processus </p>
 
 </div>
 </div>
@@ -168,6 +171,21 @@ Attributs publics</h2></td></tr>
 
 </div>
 </div>
+<a id="a52402ab51c31f9ae77a7b67df51e0d56" name="a52402ab51c31f9ae77a7b67df51e0d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52402ab51c31f9ae77a7b67df51e0d56">&#9670;&nbsp;</a></span>processus_array</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structProcessus__array.html">Processus_array</a> Simulation::processus_array</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >processus qui compose la simulation </p>
+
+</div>
+</div>
 <a id="a32b7d6bcaff8a599681de98d21ad5a2a" name="a32b7d6bcaff8a599681de98d21ad5a2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32b7d6bcaff8a599681de98d21ad5a2a">&#9670;&nbsp;</a></span>quantum</h2>
 
@@ -179,7 +197,7 @@ Attributs publics</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >si round_robin &gt; 0 </p>
+<p >si round_robin </p>
 
 </div>
 </div>

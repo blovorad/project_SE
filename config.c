@@ -6,44 +6,137 @@
  * \brief fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnacement
  */
  
-int get_config(FILE *file, Simulation *simulation, Processus_array *array_processus){
-
-    //recuperation du type d'algorithm utilisé
-    simulation->code_algorithm = get_algorithm_code(file);
-    simulation->quantum = 0;
-    if(simulation->code_algorithm == ROUND_ROBIN){
-
-        int quantum;
-        fscanf(file, " quantum = %d\n", &quantum);
-        simulation->quantum = quantum;
-    }
-    else{
-        //si jamais pas quantum alors on lit le \n de la ligne de l'algorithm qui n'est pas lus
-        fscanf(file, "\n");
-    }
-
-    int nbProcessus;
-    fscanf(file, "Nombre de processus = %d\n", &nbProcessus);
-    if(init_processus_array(nbProcessus, array_processus) == -1){
-
-        close_fileConfig(file);
+int get_config_commandLine(char *argv[], Simulation_array *simulation_array){
+ 	
+ 	int nb_algorithm = 3;// FIFO, SJF, ROUND_ROBIN
+ 	int quantum = rand() % 10 + 5;
+ 	
+ 	simulation_array->nbSimulations = nb_algorithm;
+ 	simulation_array->simulations = malloc(sizeof(Simulation) * simulation_array->nbSimulations);
+   	if(simulation_array->simulations == NULL){
+   	
+   		fprintf(stderr, "Error malloc in get_config\n");
         return -1;
-    }
-    if(fill_processus_array(file, array_processus) == -1){
+   	}
+   	
+   	//recuperation du nombre de processus et du nombre de cycle CPU, on les interfacera avec des cycles ES
+   	int nb_processus = get_int_from_string(argv[2]);
+   	int nb_CPU = get_int_from_string(argv[3]);
 
-        close_fileConfig(file);
+   	if(nb_CPU < 1 && nb_processus < 1){
+   		
+   		return -1;
+   	}
+   	
+   	for(int i = 0; i < nb_algorithm; i++){
+
+   		if(i == ROUND_ROBIN){
+   			
+   			simulation_array->simulations[i].quantum = quantum;
+   		}
+   		else{
+   			
+   			simulation_array->simulations[i].quantum = 0;
+   		}
+   		
+   		simulation_array->simulations[i].code_algorithm = i;
+   		simulation_array->simulations[i].processus_array.nbProcessus = nb_processus;
+   		simulation_array->simulations[i].processus_array.processus = malloc(sizeof(Processus) * nb_processus);
+   		if(simulation_array->simulations[i].processus_array.processus == NULL){
+   			
+   			fprintf(stderr, "Error malloc int get_config\n");
+   			return -1;
+   		}
+   		
+   		int nb_action = nb_CPU * 2 - 1;
+   		//initialisation de chaque processus
+   		for(int j = 0; j < nb_processus; j++){
+   			
+   			char *name = get_name_from_int(j);
+   			int arrive_at = (rand() % (nb_processus * 2)) + 2;
+   			init_processus(name, arrive_at, &simulation_array->simulations[i].processus_array.processus[j]);
+	   		//initialisation de chaque action du processus
+	   		for(int k = 0; k < nb_action; k++){
+	   			
+	   			if(j % 2 == 0){
+	   			
+	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 30 + 3, CPU, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
+	   			}
+	   			else{
+	   			
+	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 30 + 3, ES, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
+	   			}
+	   		}
+   		}
+   	}
+   	
+ 	return 0;
+}	
+
+int get_config_file(FILE *file, Simulation_array *simulation_array){
+	
+	/*
+	recuperation du nombre de simulation 
+	une simulation = un algo a utiliser
+	*/
+    fscanf(file, "Nombre d'algorithme = %d\n", &simulation_array->nbSimulations);
+   	simulation_array->simulations = malloc(sizeof(Simulation) * simulation_array->nbSimulations);
+   	if(simulation_array->simulations == NULL){
+   	
+   		fprintf(stderr, "Error malloc in get_config\n");
         return -1;
-    }
+   	}
+   	
+   	//boucle pour recuperer le code de l'algorithme de chaque simulation
+   	for(int i = 0; i < simulation_array->nbSimulations; i++){
+   	
+	   	//recuperation du type d'algorithm utilisé
+		simulation_array->simulations[i].code_algorithm = get_algorithm_code(file);
+		simulation_array->simulations[i].quantum = 0;
+		
+		if(simulation_array->simulations[i].code_algorithm == ROUND_ROBIN){
+
+		    int quantum;
+		    fscanf(file, " quantum = %d\n", &quantum);
+		    simulation_array->simulations[i].quantum = quantum;
+		}
+		else{
+		    //si jamais pas quantum alors on lit le \n de la ligne de l'algorithme qui n'est pas lus
+		    fscanf(file, "\n");
+		}
+	}
+	
+	//remplissage du tableau des processus de chaque simulation
+	for(int i = 0; i < simulation_array->nbSimulations; i++){
+		
+		int position = ftell(file);
+		int nbProcessus;
+		fscanf(file, "Nombre de processus = %d\n", &nbProcessus);
+		//initialisation du tableau de processus avec juste sa taille
+		if(init_processus_array(nbProcessus, &simulation_array->simulations[i].processus_array) == -1){
+
+		    close_fileConfig(file);
+		    return -1;
+		}
+		//remplissage du tableau de processus
+		if(fill_processus_array(file, &simulation_array->simulations[i].processus_array) == -1){
+
+		    close_fileConfig(file);
+		    return -1;
+		}
+		fseek(file, position, SEEK_SET);
+	}
 
     close_fileConfig(file);
     //tout s'est bien passer
     return 0;
 }
 
-int fill_processus_array(FILE *file, Processus_array *array_processus){
+int fill_processus_array(FILE *file, Processus_array *processus_array){
 
     fscanf(file, "Nom Arrivee <ES ou CPU>=duree\n");
-    for(int i = 0; i < array_processus->nbProcessus; i++){
+    //recuperation des informations de chaque processus de la simulation
+    for(int i = 0; i < processus_array->nbProcessus; i++){
 
         int begin;
         int time_processus = 0;
@@ -68,10 +161,12 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
         }
         /*lecture du mot*/
         fscanf(file, "%s %d ", name, &begin);
-        init_processus(name, begin, &array_processus->processus[i]);
-        car = 'a';
-        while(car != '\n'){
+        init_processus(name, begin, &processus_array->processus[i]);
+        car = 'a';//initialisation par defaut
         
+        //recuperation de chaque Action du processus
+        while(car != '\n'){
+        	
         	int time;
         	int type;
 		    fscanf(file, "%c", &car);
@@ -88,18 +183,21 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
 					fscanf(file, "ES=%d", &time);
 					type = ES;
 				}
-				array_processus->processus[i].action_cycle = push_to_tail(time, type, array_processus->processus[i].action_cycle);
+				processus_array->processus[i].action_cycle = push_to_tail(time, type, processus_array->processus[i].action_cycle);
 				time_processus += time;
 			}
 		}
-		array_processus->processus[i].time_execution = time_processus;
+		processus_array->processus[i].time_execution = time_processus;
     }
-
-    qsort(array_processus->processus, array_processus->nbProcessus, sizeof(Processus), compare_begin_processus);
-    for(int i = 0; i < array_processus->nbProcessus; i++){
+    
+	//tri des processus par ordre d'arriver dans la simulation
+    qsort(processus_array->processus, processus_array->nbProcessus, sizeof(Processus), compare_begin_processus);
+    
+    /*
+    for(int i = 0; i < processus_array->nbProcessus; i++){
 		
-        printf("processus %d : %s,%d,%d,%d\n",i, array_processus->processus[i].name, array_processus->processus[i].arrive_at, array_processus->processus[i].time_execution, array_processus->processus[i].time_pause);
-        Action *action = array_processus->processus[i].action_cycle;
+        printf("processus %d : %s,%d,%d,%d\n",i, processus_array->processus[i].name, processus_array->processus[i].arrive_at, processus_array->processus[i].time_execution, processus_array->processus[i].time_pause);
+        Action *action = processus_array->processus[i].action_cycle;
         while(action != NULL){
         	
         	if(action->type == CPU){
@@ -113,6 +211,8 @@ int fill_processus_array(FILE *file, Processus_array *array_processus){
         	action = action->suivant;
         }
     }
+    */
+    
     return 0;
 }
 
@@ -123,7 +223,7 @@ int get_algorithm_code(FILE *file){
     char car = 'a';
     int size = 0;
 
-    /*recuperation de la taille du nom de l'algorithm d'ordonnancement*/
+    /*recuperation de la taille du nom de l'algorithme d'ordonnancement*/
     while(car != '\n' && car != ' '){
 
         fscanf(file, "%c", &car);
@@ -150,49 +250,27 @@ int get_algorithm_code(FILE *file){
     return code;
 }
 
-int select_algorithm(char *code){
+Algorithm select_algorithm(char *nom_algorithm){
 
-    if(strcmp(code, "FIFO") == 0){
+    if(strcmp(nom_algorithm, "FIFO") == 0){
 
         return FIFO;
     }
-    else if(strcmp(code, "SJF") == 0){
+    else if(strcmp(nom_algorithm, "SJF") == 0){
 
         return SJF;
     }
-    else if(strcmp(code, "SRJF") == 0){
+    else if(strcmp(nom_algorithm, "SRJF") == 0){
 
         return SRJF;
     }
-    else if(strcmp(code, "ROUND_ROBIN") == 0){
+    else if(strcmp(nom_algorithm, "ROUND_ROBIN") == 0){
 
         return ROUND_ROBIN;
     }
     else{
 
-        printf("Erreur, algorithm %s non reconnue chargement de l'algorithme FIFO\n", code);
+        printf("Erreur, algorithm %s non reconnue chargement de l'algorithme FIFO\n", nom_algorithm);
         return FIFO;
     }
-}
-
-FILE *open_fileConfig(char *path, char *mode){
-
-    FILE *file = fopen(path, mode);
-    if(file == NULL){
-
-        perror("Error fopen file in open_fileConfig");
-        exit(1);
-    }
-
-    return file;
-}
-
-void close_fileConfig(FILE *file){
-
-    if (fclose(file)==EOF) {
-
-        perror("Impossible to close file\n");
-        exit(1);
-    }
-    file = NULL;
 }

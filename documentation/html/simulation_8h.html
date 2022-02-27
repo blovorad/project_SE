@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projet systeme exploitation
+   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
    </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
  </tr>
  </tbody>
@@ -64,20 +65,25 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Énumérations</a>  </div>
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle"><div class="title">Référence du fichier simulation.h</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametre de la simulation  
+<p>fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de la simulation  
 <a href="#details">Plus de détails...</a></p>
-
+<div class="textblock"><code>#include &quot;<a class="el" href="processus_8h_source.html">processus.h</a>&quot;</code><br />
+</div>
 <p><a href="simulation_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSimulation.html">Simulation</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constantes pour les codes des algorithmes.  <a href="structSimulation.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSimulation__array.html">Simulation_array</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">gerer un tableau de simuation, chaque simulation est lier a un algorithme d'ordonnancement  <a href="structSimulation__array.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -89,9 +95,15 @@ Classes</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a5e41188f16a381c8915a17a22228e691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constantes pour les codes des algorithmes.  <a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5e41188f16a381c8915a17a22228e691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aa0299e87c472d5b2de49c6fe3c8c7542"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simulation_8h.html#aa0299e87c472d5b2de49c6fe3c8c7542">start_simulation</a> (<a class="el" href="structSimulation__array.html">Simulation_array</a> *simulation_array)</td></tr>
+<tr class="memdesc:aa0299e87c472d5b2de49c6fe3c8c7542"><td class="mdescLeft">&#160;</td><td class="mdescRight">lancer la simulation  <a href="simulation_8h.html#aa0299e87c472d5b2de49c6fe3c8c7542">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa0299e87c472d5b2de49c6fe3c8c7542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p >fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametre de la simulation </p>
+<div class="textblock"><p >fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de la simulation </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 </div><h2 class="groupheader">Documentation du type de l'énumération</h2>
@@ -119,6 +131,36 @@ Classes</h2></td></tr>
 <tr><td class="fieldname"><a id="a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47" name="a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47"></a>ROUND_ROBIN&#160;</td><td class="fielddoc"><p >Algo ROUND_ROBIN </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aa0299e87c472d5b2de49c6fe3c8c7542" name="aa0299e87c472d5b2de49c6fe3c8c7542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0299e87c472d5b2de49c6fe3c8c7542">&#9670;&nbsp;</a></span>start_simulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int start_simulation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSimulation__array.html">Simulation_array</a> *&#160;</td>
+          <td class="paramname"><em>simulation_array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lancer la simulation </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>27/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">simulation_array</td><td>tableau contenant tout les algorithmes d'ordonnacement a lancer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier 0 si ok, -1 si erreur </dd></dl>
 
 </div>
 </div>

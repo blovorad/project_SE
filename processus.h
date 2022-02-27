@@ -47,11 +47,10 @@ typedef struct{
     int arrive_at; /*!< quand arrive le processus */
     int time_execution; /*!< temps d'execution du processus */
     int time_pause; /*!< temps de debut de la pause courante*/
-    int average_attempt_time; /*!< temps moyen d'attente du processus*/
+    int time_attempt; /*!< temps d'attente du processus*/
     int time_pause_count; /*!< nombre de pause du processus*/
-    int average_time_to_restue; /*!< temps pour que le processus se termine*/ 
-    int average_time_to_answer; /*!< temps de reponse du processus*/
-    Cycle_type startWith; /*!< si il commence par une ES ou un cycle CPU */
+    int time_to_restue; /*!< temps pour que le processus se termine*/ 
+    int time_to_answer; /*!< temps de reponse du processus*/
     Action *action_cycle; /*!< liste de ses actions */
 }Processus;
 
@@ -72,8 +71,8 @@ typedef struct{
  * \brief initialisation de tableau de processus
  * \param nbProcessus nombre de processus
  * \param array_processus tableau de processus
- * \return -1 si erreur et 0 sinon
-*/
+ * \return entier 0 si ok, -1 sinon
+ */
 int init_processus_array(int nbProcessus, Processus_array *array_processus);
 
 /**
@@ -84,7 +83,7 @@ int init_processus_array(int nbProcessus, Processus_array *array_processus);
  * \param name nom du processus
  * \param arrive_at temps a laquelle arrive le processus
  * \param processus le processus(son adresse) qui est rempli
-*/
+ */
 void init_processus(char *name, int arrive_at, Processus *processus);
 
 /**
@@ -95,7 +94,7 @@ void init_processus(char *name, int arrive_at, Processus *processus);
  * \param p1 ici on envoie une Action
  * \param p2 ici on envoie une Action
  * \return entier si p1.temps > p2.temps
-*/
+ */
 int compare_begin_processus(const void *p1, const void *p2);
 
 /**
@@ -107,7 +106,7 @@ int compare_begin_processus(const void *p1, const void *p2);
  * \param type type d'action, CPU ou ES
  * \param action liste chainer ou faire l'insertion
  * \return la liste chainer avec changement en queue
-*/
+ */
 Action *push_to_tail(int time_execution, Cycle_type type, Action *action);
 
 /**
@@ -117,7 +116,7 @@ Action *push_to_tail(int time_execution, Cycle_type type, Action *action);
  * \brief detruis la tete de la liste chainer action
  * \param action liste chainer ou l'on doit supprimer la tete
  * \return la liste chainer avec changement de tete
-*/
+ */
 Action *delete_head(Action *action);
 
 #endif

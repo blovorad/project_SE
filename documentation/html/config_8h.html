@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projet systeme exploitation
+   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
    </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
  </tr>
  </tbody>
@@ -75,6 +76,7 @@ $(function() {
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="simulation_8h_source.html">simulation.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="processus_8h_source.html">processus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 </div>
 <p><a href="config_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
@@ -83,57 +85,26 @@ Fonctions</h2></td></tr>
 <tr class="memitem:ae0167792967928940e30732b3f3f4a08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ae0167792967928940e30732b3f3f4a08">get_algorithm_code</a> (FILE *file)</td></tr>
 <tr class="memdesc:ae0167792967928940e30732b3f3f4a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">lire le type d'algorithm d'ordonnancement utilise pour cette configuration  <a href="config_8h.html#ae0167792967928940e30732b3f3f4a08">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae0167792967928940e30732b3f3f4a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39d6394d56a69d049ffaecd6e83dd86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ab39d6394d56a69d049ffaecd6e83dd86">get_config</a> (FILE *file, <a class="el" href="structSimulation.html">Simulation</a> *simulation, <a class="el" href="structProcessus__array.html">Processus_array</a> *array_processus)</td></tr>
-<tr class="memdesc:ab39d6394d56a69d049ffaecd6e83dd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">charge la configuration du test de l'ordonnancement  <a href="config_8h.html#ab39d6394d56a69d049ffaecd6e83dd86">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ab39d6394d56a69d049ffaecd6e83dd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8786c93d4dc7b9604510e5dd456704d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#af8786c93d4dc7b9604510e5dd456704d">fill_processus_array</a> (FILE *file, <a class="el" href="structProcessus__array.html">Processus_array</a> *array_processus)</td></tr>
-<tr class="memdesc:af8786c93d4dc7b9604510e5dd456704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">lit chaque processus et le remplis de maniere a bien remplir le tableau puis ensuite elle les tri par ordre croissant d'arriver  <a href="config_8h.html#af8786c93d4dc7b9604510e5dd456704d">Plus de détails...</a><br /></td></tr>
-<tr class="separator:af8786c93d4dc7b9604510e5dd456704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a490f425482ee7f8d8cb89e0217be05ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a490f425482ee7f8d8cb89e0217be05ec">select_algorithm</a> (char *code)</td></tr>
-<tr class="memdesc:a490f425482ee7f8d8cb89e0217be05ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère  <a href="config_8h.html#a490f425482ee7f8d8cb89e0217be05ec">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a490f425482ee7f8d8cb89e0217be05ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a502472e70a1120ebe799ec14efcd6dbc"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a502472e70a1120ebe799ec14efcd6dbc">open_fileConfig</a> (char *path, char *mode)</td></tr>
-<tr class="memdesc:a502472e70a1120ebe799ec14efcd6dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">primitive d'ouverture de fichier  <a href="config_8h.html#a502472e70a1120ebe799ec14efcd6dbc">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a502472e70a1120ebe799ec14efcd6dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3">close_fileConfig</a> (FILE *file)</td></tr>
-<tr class="memdesc:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">primitive qui ferme un fichier precedement ouvert  <a href="config_8h.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0eca57fce0f4c72a0bdd73d5cae6e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80371c83857917c236922df7d5258c40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a80371c83857917c236922df7d5258c40">get_config_commandLine</a> (char *argv[], <a class="el" href="structSimulation__array.html">Simulation_array</a> *simulation_array)</td></tr>
+<tr class="memdesc:a80371c83857917c236922df7d5258c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">charge la configuration du test de l'ordonnancement depuis la ligne de commande  <a href="config_8h.html#a80371c83857917c236922df7d5258c40">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a80371c83857917c236922df7d5258c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac">get_config_file</a> (FILE *file, <a class="el" href="structSimulation__array.html">Simulation_array</a> *simulation_array)</td></tr>
+<tr class="memdesc:a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">charge la configuration du test de l'ordonnancement depuis un fichier configuration  <a href="config_8h.html#a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b767aeda066410b596fc3f51549870"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ac8b767aeda066410b596fc3f51549870">fill_processus_array</a> (FILE *file, <a class="el" href="structProcessus__array.html">Processus_array</a> *processus_array)</td></tr>
+<tr class="memdesc:ac8b767aeda066410b596fc3f51549870"><td class="mdescLeft">&#160;</td><td class="mdescRight">lit chaque processus et le remplis de maniere a bien remplir le tableau puis ensuite elle les tri par ordre croissant d'arriver  <a href="config_8h.html#ac8b767aeda066410b596fc3f51549870">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac8b767aeda066410b596fc3f51549870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c98ac273d99f4fc11cdb91cc431f68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68">select_algorithm</a> (char *nom_algorithm)</td></tr>
+<tr class="memdesc:a98c98ac273d99f4fc11cdb91cc431f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère  <a href="config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a98c98ac273d99f4fc11cdb91cc431f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p >fichier entete pour la gestion du chargemet de la configuration du programme </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a0eca57fce0f4c72a0bdd73d5cae6e6e3" name="a0eca57fce0f4c72a0bdd73d5cae6e6e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eca57fce0f4c72a0bdd73d5cae6e6e3">&#9670;&nbsp;</a></span>close_fileConfig()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void close_fileConfig </td>
-          <td>(</td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>primitive qui ferme un fichier precedement ouvert </p>
-<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>fichier a fermer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af8786c93d4dc7b9604510e5dd456704d" name="af8786c93d4dc7b9604510e5dd456704d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8786c93d4dc7b9604510e5dd456704d">&#9670;&nbsp;</a></span>fill_processus_array()</h2>
+<a id="ac8b767aeda066410b596fc3f51549870" name="ac8b767aeda066410b596fc3f51549870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b767aeda066410b596fc3f51549870">&#9670;&nbsp;</a></span>fill_processus_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +119,7 @@ Fonctions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structProcessus__array.html">Processus_array</a> *&#160;</td>
-          <td class="paramname"><em>array_processus</em>&#160;</td>
+          <td class="paramname"><em>processus_array</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -164,11 +135,11 @@ Fonctions</h2></td></tr>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>fichier de configuration ouvert </td></tr>
-    <tr><td class="paramname">array_processus</td><td>tableau qui va être remplis avec toute les informations des processus du test </td></tr>
+    <tr><td class="paramname">processus_array</td><td>tableau qui va être remplis avec toute les informations des processus du test </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>un code d'erreur ou 0 si tout va bien </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier 0 si ok, -1 sinon </dd></dl>
 
 </div>
 </div>
@@ -201,14 +172,54 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab39d6394d56a69d049ffaecd6e83dd86" name="ab39d6394d56a69d049ffaecd6e83dd86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab39d6394d56a69d049ffaecd6e83dd86">&#9670;&nbsp;</a></span>get_config()</h2>
+<a id="a80371c83857917c236922df7d5258c40" name="a80371c83857917c236922df7d5258c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80371c83857917c236922df7d5258c40">&#9670;&nbsp;</a></span>get_config_commandLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int get_config </td>
+          <td class="memname">int get_config_commandLine </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSimulation__array.html">Simulation_array</a> *&#160;</td>
+          <td class="paramname"><em>simulation_array</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>charge la configuration du test de l'ordonnancement depuis la ligne de commande </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>21/02/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argv</td><td>tableau des mots </td></tr>
+    <tr><td class="paramname">simulation_array</td><td>structure remplis par la fonction, notament le quantum de temps et la liste des processus </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier 0 si ok, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac" name="a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac">&#9670;&nbsp;</a></span>get_config_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_config_file </td>
           <td>(</td>
           <td class="paramtype">FILE *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
@@ -216,14 +227,8 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structSimulation.html">Simulation</a> *&#160;</td>
-          <td class="paramname"><em>simulation</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structProcessus__array.html">Processus_array</a> *&#160;</td>
-          <td class="paramname"><em>array_processus</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structSimulation__array.html">Simulation_array</a> *&#160;</td>
+          <td class="paramname"><em>simulation_array</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -233,72 +238,31 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>charge la configuration du test de l'ordonnancement </p>
+<p>charge la configuration du test de l'ordonnancement depuis un fichier configuration </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>fichier de configuration ouvert </td></tr>
-    <tr><td class="paramname">simulation</td><td>structure remplis par la fonction, notament le quantum de temps </td></tr>
-    <tr><td class="paramname">array_processus</td><td>tableau qui va être créer qui contient tout les processus du test </td></tr>
+    <tr><td class="paramname">simulation_array</td><td>structure remplis par la fonction, notament le quantum de temps et la liste des processus </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>code erreur 0 si ok, -1 sinon </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>entier 0 si ok, -1 sinon </dd></dl>
 
 </div>
 </div>
-<a id="a502472e70a1120ebe799ec14efcd6dbc" name="a502472e70a1120ebe799ec14efcd6dbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a502472e70a1120ebe799ec14efcd6dbc">&#9670;&nbsp;</a></span>open_fileConfig()</h2>
+<a id="a98c98ac273d99f4fc11cdb91cc431f68" name="a98c98ac273d99f4fc11cdb91cc431f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c98ac273d99f4fc11cdb91cc431f68">&#9670;&nbsp;</a></span>select_algorithm()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FILE * open_fileConfig </td>
+          <td class="memname"><a class="el" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a> select_algorithm </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>mode</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>primitive d'ouverture de fichier </p>
-<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>chaine de caractere qui represente le chemin d'accès du fichier </td></tr>
-    <tr><td class="paramname">mode</td><td>chaine de caractere qui represente le mode d'ouverture du fichier </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>le pointeur du fichier ouvert </dd></dl>
-
-</div>
-</div>
-<a id="a490f425482ee7f8d8cb89e0217be05ec" name="a490f425482ee7f8d8cb89e0217be05ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a490f425482ee7f8d8cb89e0217be05ec">&#9670;&nbsp;</a></span>select_algorithm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int select_algorithm </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>code</em></td><td>)</td>
+          <td class="paramname"><em>nom_algorithm</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -309,7 +273,7 @@ Fonctions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">code</td><td>chaine de caractere decrivant l'algorithme d'ordonnancement </td></tr>
+    <tr><td class="paramname">nom_algorithm</td><td>chaine de caractere decrivant l'algorithme d'ordonnancement </td></tr>
   </table>
   </dd>
 </dl>

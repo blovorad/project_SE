@@ -14,6 +14,7 @@
 
 #include "simulation.h"
 #include "processus.h"
+#include "util.h"
 
 /**
  * \fn int get_algorithm_code(FILE *file)
@@ -22,60 +23,50 @@
  * \brief lire le type d'algorithm d'ordonnancement utilise pour cette configuration
  * \param file fichier de configuration ouvert
  * \return entier qui represente le type d'algorithm ou -1 si erreur
-*/
+ */
 int get_algorithm_code(FILE *file);
 
 /**
- * \fn int get_config(FILE *file, Simulation *simulation, Processus_array *array_processus)
+ * \fn int get_config_commandLine(char *argv[], Simulation_array *simulation_array)
  * \author Gautier Levesque
- * \date 29/01/2022
- * \brief charge la configuration du test de l'ordonnancement
- * \param file fichier de configuration ouvert
- * \param simulation structure remplis par la fonction, notament le quantum de temps
- * \param array_processus tableau qui va être créer qui contient tout les processus du test
- * \return code erreur 0 si ok, -1 sinon
+ * \date 21/02/2022
+ * \brief charge la configuration du test de l'ordonnancement depuis la ligne de commande
+ * \param argv tableau des mots
+ * \param simulation_array structure remplis par la fonction, notament le quantum de temps et la liste des processus
+ * \return entier 0 si ok, -1 sinon
  */
-int get_config(FILE *file, Simulation *simulation, Processus_array *array_processus);
+int get_config_commandLine(char *argv[], Simulation_array *simulation_array);
 
 /**
- * \fn int fill_processus_array(FILE *file, Processus_array *array_processus)
+ * \fn int get_config_file(FILE *file, Simulation_array *simulation_array)
+ * \author Gautier Levesque
+ * \date 29/01/2022
+ * \brief charge la configuration du test de l'ordonnancement depuis un fichier configuration
+ * \param file fichier de configuration ouvert
+ * \param simulation_array structure remplis par la fonction, notament le quantum de temps et la liste des processus
+ * \return entier 0 si ok, -1 sinon
+ */
+int get_config_file(FILE *file, Simulation_array *simulation_array);
+
+/**
+ * \fn int fill_processus_array(FILE *file, Processus_array *processus_array)
  * \author Gautier Levesque
  * \date 29/01/2022
  * \brief lit chaque processus et le remplis de maniere a bien remplir le tableau puis ensuite elle les tri par ordre croissant d'arriver
  * \param file fichier de configuration ouvert
- * \param array_processus tableau qui va être remplis avec toute les informations des processus du test
- * \return un code d'erreur ou 0 si tout va bien
+ * \param processus_array tableau qui va être remplis avec toute les informations des processus du test
+ * \return entier 0 si ok, -1 sinon
  */
-int fill_processus_array(FILE *file, Processus_array *array_processus);
+int fill_processus_array(FILE *file, Processus_array *processus_array);
 
 /**
- * \fn int select_algorithm(char *code)
+ * \fn Algorithm select_algorithm(char *nom_algorithm)
  * \author Gautier Levesque
  * \date 29/01/2022
  * \brief selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère
- * \param code chaine de caractere decrivant l'algorithme d'ordonnancement
+ * \param nom_algorithm chaine de caractere decrivant l'algorithme d'ordonnancement
  * \return le code de l'algorithm
  */
-int select_algorithm(char *code);
-
-/**
- * \fn FILE *open_fileConfig(char *path, char *mode)
- * \author Gautier Levesque
- * \date 29/01/2022
- * \brief primitive d'ouverture de fichier
- * \param path chaine de caractere qui represente le chemin d'accès du fichier
- * \param mode chaine de caractere qui represente le mode d'ouverture du fichier
- * \return le pointeur du fichier ouvert
- */
-FILE *open_fileConfig(char *path, char *mode);
-
-/**
- * \fn void close_fileConfig(FILE *file)
- * \author Gautier Levesque
- * \date 29/01/2022
- * \brief primitive qui ferme un fichier precedement ouvert
- * \param file fichier a fermer
- */
-void close_fileConfig(FILE *file);
+Algorithm select_algorithm(char *nom_algorithm);
 
 #endif

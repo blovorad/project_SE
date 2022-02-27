@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projet systeme exploitation
+   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
    </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
  </tr>
  </tbody>
@@ -84,16 +85,14 @@ Attributs publics</h2></td></tr>
 <tr class="separator:a12de43d915ed490ba3b2f69b233c8832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a344acd15169f1b9029d66fef11b011f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#a344acd15169f1b9029d66fef11b011f6">time_pause</a></td></tr>
 <tr class="separator:a344acd15169f1b9029d66fef11b011f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a796e83331b82855f309401ffbd1db0de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#a796e83331b82855f309401ffbd1db0de">average_attempt_time</a></td></tr>
-<tr class="separator:a796e83331b82855f309401ffbd1db0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada75eb5f9c9de459e06f0e48f3dec2be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#ada75eb5f9c9de459e06f0e48f3dec2be">time_attempt</a></td></tr>
+<tr class="separator:ada75eb5f9c9de459e06f0e48f3dec2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c0bd33da0dcced080b662f4a3ab0f34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#a5c0bd33da0dcced080b662f4a3ab0f34">time_pause_count</a></td></tr>
 <tr class="separator:a5c0bd33da0dcced080b662f4a3ab0f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ae0c0a77ff9b63765fedcc0b5d5ae3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#ac2ae0c0a77ff9b63765fedcc0b5d5ae3">average_time_to_restue</a></td></tr>
-<tr class="separator:ac2ae0c0a77ff9b63765fedcc0b5d5ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf113388e724eab3c469a155fcae0088"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#abf113388e724eab3c469a155fcae0088">average_time_to_answer</a></td></tr>
-<tr class="separator:abf113388e724eab3c469a155fcae0088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0a68e75322a53f6ffdb753f839e93d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#a1e0a68e75322a53f6ffdb753f839e93d">startWith</a></td></tr>
-<tr class="separator:a1e0a68e75322a53f6ffdb753f839e93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332be096433c4905eb3266fc7966aa20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">time_to_restue</a></td></tr>
+<tr class="separator:a332be096433c4905eb3266fc7966aa20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03083be98f69418350d962a6dab06117"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#a03083be98f69418350d962a6dab06117">time_to_answer</a></td></tr>
+<tr class="separator:a03083be98f69418350d962a6dab06117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace1a49bc69d757a6a6c58c805848024c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">action_cycle</a></td></tr>
 <tr class="separator:ace1a49bc69d757a6a6c58c805848024c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -130,51 +129,6 @@ Attributs publics</h2></td></tr>
 
 </div>
 </div>
-<a id="a796e83331b82855f309401ffbd1db0de" name="a796e83331b82855f309401ffbd1db0de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a796e83331b82855f309401ffbd1db0de">&#9670;&nbsp;</a></span>average_attempt_time</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Processus::average_attempt_time</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >temps moyen d'attente du processus </p>
-
-</div>
-</div>
-<a id="abf113388e724eab3c469a155fcae0088" name="abf113388e724eab3c469a155fcae0088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf113388e724eab3c469a155fcae0088">&#9670;&nbsp;</a></span>average_time_to_answer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Processus::average_time_to_answer</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >temps de reponse du processus </p>
-
-</div>
-</div>
-<a id="ac2ae0c0a77ff9b63765fedcc0b5d5ae3" name="ac2ae0c0a77ff9b63765fedcc0b5d5ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2ae0c0a77ff9b63765fedcc0b5d5ae3">&#9670;&nbsp;</a></span>average_time_to_restue</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Processus::average_time_to_restue</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >temps pour que le processus se termine </p>
-
-</div>
-</div>
 <a id="a5349d09102daad27ff7dead8f109564b" name="a5349d09102daad27ff7dead8f109564b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5349d09102daad27ff7dead8f109564b">&#9670;&nbsp;</a></span>name</h2>
 
@@ -190,18 +144,18 @@ Attributs publics</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e0a68e75322a53f6ffdb753f839e93d" name="a1e0a68e75322a53f6ffdb753f839e93d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e0a68e75322a53f6ffdb753f839e93d">&#9670;&nbsp;</a></span>startWith</h2>
+<a id="ada75eb5f9c9de459e06f0e48f3dec2be" name="ada75eb5f9c9de459e06f0e48f3dec2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada75eb5f9c9de459e06f0e48f3dec2be">&#9670;&nbsp;</a></span>time_attempt</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> Processus::startWith</td>
+          <td class="memname">int Processus::time_attempt</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >si il commence par une ES ou un cycle CPU </p>
+<p >temps d'attente du processus </p>
 
 </div>
 </div>
@@ -247,6 +201,36 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >nombre de pause du processus </p>
+
+</div>
+</div>
+<a id="a03083be98f69418350d962a6dab06117" name="a03083be98f69418350d962a6dab06117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03083be98f69418350d962a6dab06117">&#9670;&nbsp;</a></span>time_to_answer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Processus::time_to_answer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >temps de reponse du processus </p>
+
+</div>
+</div>
+<a id="a332be096433c4905eb3266fc7966aa20" name="a332be096433c4905eb3266fc7966aa20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332be096433c4905eb3266fc7966aa20">&#9670;&nbsp;</a></span>time_to_restue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Processus::time_to_restue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >temps pour que le processus se termine </p>
 
 </div>
 </div>
