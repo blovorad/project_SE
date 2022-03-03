@@ -53,14 +53,4 @@ typedef struct{
 	Simulation *simulations;/*!< tableau des simulations */
 }Simulation_array;
 
-/**
- * \fn int start_simulation(Simulation_array *simulation_array)
- * \author Gautier Levesque
- * \date 27/02/2022
- * \brief lancer la simulation
- * \param simulation_array tableau contenant tout les algorithmes d'ordonnacement a lancer
- * \return entier 0 si ok, -1 si erreur
- */
-int start_simulation(Simulation_array *simulation_array);
-
 #endif
