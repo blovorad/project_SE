@@ -12,7 +12,6 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
     if(argc > 1){
         
         srand(time(NULL));
-        Simulation_array simulation_array;
         
         if(strcmp(argv[1], "-rt") == 0){
             //test rapide console, nombre processus, nombre de cycle CPU
