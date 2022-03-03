@@ -25,6 +25,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 printf("Erreur chargement configuration\n");
                 return 2;
             }
+            launch_an_algoritm(simulation_array);
             generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
             generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
             print_resultat_console_simulation(*simulation_array);
@@ -39,6 +40,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                     printf("Erreur chargement configuration\n");
                     return 2;
                 }
+                launch_an_algoritm(simulation_array);
                 generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
                 generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
                 print_resultat_console_simulation(*simulation_array);
@@ -51,6 +53,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                     printf("Erreur chargement configuration\n");
                     return 2;
                 }
+                launch_an_algoritm(simulation_array);
                 int path_ok = is_path_ok(argv[3]);
                 if(path_ok == 1){
                 
@@ -97,13 +100,13 @@ int launch_an_algoritm(Simulation_array *simulation_array){
     
         switch(simulation_array->simulations[i].code_algorithm){
             
-            case FIFO:
+            case FIFO: 
                 break;
-            case SJF:
+            case SJF:  
                 break;
             case SRJF:
                 break;
-            case ROUND_ROBIN:
+            case ROUND_ROBIN: 
                 break;
             default:
                 break;

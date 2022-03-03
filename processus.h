@@ -28,7 +28,7 @@ typedef enum{
 struct cellule{
 
 	int time_execution; /*!< temps d'execution de l'action */
-	Cycle_type type; /*!< si CPU ou  ES */
+	Cycle_type type; /*!< si CPU ou ES */
 	struct cellule *suivant; /*!< adresse suivante de la prochaine action */
 };
 
@@ -45,7 +45,6 @@ typedef struct{
 
     char *name; /*!< nom du processus */
     int arrive_at; /*!< quand arrive le processus */
-    int time_execution; /*!< temps d'execution du processus */
     int time_pause; /*!< temps de debut de la pause courante*/
     int time_attempt; /*!< temps d'attente du processus*/
     int time_to_restue; /*!< temps pour que le processus se termine*/ 
