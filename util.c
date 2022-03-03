@@ -102,7 +102,7 @@ char *get_string_from_algorithm(int code_algorithm){
 	}
 }
 
-FILE *open_fileConfig(char *path, char *mode){
+FILE *open_file(char *path, char *mode){
 
     FILE *file = fopen(path, mode);
     if(file == NULL){
@@ -114,7 +114,7 @@ FILE *open_fileConfig(char *path, char *mode){
     return file;
 }
 
-void close_fileConfig(FILE *file){
+void close_file(FILE *file){
 
     if (fclose(file)==EOF) {
 

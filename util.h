@@ -63,7 +63,7 @@ char *get_name_from_int(int number);
 char *get_string_from_algorithm(int code_algorithm);
 
 /**
- * \fn FILE *open_fileConfig(char *path, char *mode)
+ * \fn FILE *open_file(char *path, char *mode)
  * \author Gautier Levesque
  * \date 29/01/2022
  * \brief primitive d'ouverture de fichier
@@ -71,15 +71,15 @@ char *get_string_from_algorithm(int code_algorithm);
  * \param mode chaine de caractere qui represente le mode d'ouverture du fichier
  * \return le pointeur du fichier ouvert
  */
-FILE *open_fileConfig(char *path, char *mode);
+FILE *open_file(char *path, char *mode);
 
 /**
- * \fn void close_fileConfig(FILE *file)
+ * \fn void close_file(FILE *file)
  * \author Gautier Levesque
  * \date 29/01/2022
  * \brief primitive qui ferme un fichier precedement ouvert
  * \param file fichier a fermer
  */
-void close_fileConfig(FILE *file);
+void close_file(FILE *file);
 
 #endif

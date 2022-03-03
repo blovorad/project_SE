@@ -48,7 +48,6 @@ typedef struct{
     int time_execution; /*!< temps d'execution du processus */
     int time_pause; /*!< temps de debut de la pause courante*/
     int time_attempt; /*!< temps d'attente du processus*/
-    int time_pause_count; /*!< nombre de pause du processus*/
     int time_to_restue; /*!< temps pour que le processus se termine*/ 
     int time_to_answer; /*!< temps de reponse du processus*/
     Action *action_cycle; /*!< liste de ses actions */
