@@ -115,19 +115,19 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 		//initialisation du tableau de processus avec juste sa taille
 		if(init_processus_array(nbProcessus, &simulation_array->simulations[i].processus_array) == -1){
 
-		    close_fileConfig(file);
+		    close_file(file);
 		    return -1;
 		}
 		//remplissage du tableau de processus
 		if(fill_processus_array(file, &simulation_array->simulations[i].processus_array) == -1){
 
-		    close_fileConfig(file);
+		    close_file(file);
 		    return -1;
 		}
 		fseek(file, position, SEEK_SET);
 	}
 
-    close_fileConfig(file);
+    close_file(file);
     //tout s'est bien passer
     return 0;
 }

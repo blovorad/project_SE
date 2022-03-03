@@ -20,35 +20,33 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 printf("Format commande mauvaise, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
                 return 1;
             }
-            if(get_config_commandLine(argv, &simulation_array) == -1){
+            if(get_config_commandLine(argv, simulation_array) == -1){
                 
                 printf("Erreur chargement configuration\n");
                 return 2;
             }
-            start_simulation(&simulation_array);
-            generate_result_processus("./fichier_resultat_processus.csv", simulation_array);
-            generate_result_simulation("./fichier_resultat_processus.csv", &simulation_array);
-            print_resultat_console_simulation(simulation_array);
-            print_resultat_console_processus(simulation_array);
+            generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
+            generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
+            print_resultat_console_simulation(*simulation_array);
+            print_resultat_console_processus(*simulation_array);
         }
         else if(strcmp(argv[1], "-rc") == 0){
             //test renseigner avec un fichier configuration
             if(argc == 3){
                 //sortis non specifier
-                if(get_config_file(open_file(argv[2], "r"), &simulation_array) == -1){
+                if(get_config_file(open_file(argv[2], "r"), simulation_array) == -1){
                     
                     printf("Erreur chargement configuration\n");
                     return 2;
                 }
-                start_simulation(&simulation_array);
-                generate_result_processus("./fichier_resultat_processus.csv", simulation_array);
-                generate_result_simulation("./fichier_resultat_processus.csv", &simulation_array);
-                print_resultat_console_simulation(simulation_array);
-                print_resultat_console_processus(simulation_array);
+                generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
+                generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
+                print_resultat_console_simulation(*simulation_array);
+                print_resultat_console_processus(*simulation_array);
             }
             else if(argc == 4){
                 //fichier de sortis specifier
-                if(get_config_file(open_file(argv[2], "r"), &simulation_array) == -1){
+                if(get_config_file(open_file(argv[2], "r"), simulation_array) == -1){
                     
                     printf("Erreur chargement configuration\n");
                     return 2;
@@ -56,18 +54,17 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 int path_ok = is_path_ok(argv[3]);
                 if(path_ok == 1){
                 
-                    generate_result_processus(argv[3], simulation_array);
-                    generate_result_simulation(argv[3], &simulation_array);
+                    generate_result_processus(argv[3], *simulation_array);
+                    generate_result_simulation(argv[3], simulation_array);
                 }
                 else{
                     
                     printf("format du fichier non reconnus ou chemin mauvais ecriture des resultats dans le fichier :./fichier_resultat_processus.csv\n"); 
-                    generate_result_processus("./fichier_resultat_processus.csv", simulation_array);
-                    generate_result_simulation("./fichier_resultat_processus.csv", &simulation_array);
+                    generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
+                    generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
                 }
-                start_simulation(&simulation_array);
-                print_resultat_console_simulation(simulation_array);
-                print_resultat_console_processus(simulation_array);
+                print_resultat_console_simulation(*simulation_array);
+                print_resultat_console_processus(*simulation_array);
             }
             else{
                 
