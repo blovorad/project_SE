@@ -26,6 +26,7 @@ void init_processus(char *name, int arrive_at, Processus *processus){
 
     processus->name = name;
     processus->arrive_at = arrive_at;
+    processus->time_execution = 0;
     processus->time_pause = 0;
     processus->time_attempt = 0;
     processus->time_to_restue = 0;
