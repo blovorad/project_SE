@@ -1,3 +1,4 @@
+Nombre d'algorithmes = 1
 Algorithme = ROUND_ROBIN quantum = 5
 Nombre de processus = 5
 Nom Arrivee <ES ou CPU>=duree
