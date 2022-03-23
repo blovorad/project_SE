@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['resultat_2ec_0',['resultat.c',['../resultat_8c.html',1,'']]],
-  ['resultat_2eh_1',['resultat.h',['../resultat_8h.html',1,'']]],
-  ['round_5frobin_2',['ROUND_ROBIN',['../simulation_8h.html#a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47',1,'simulation.h']]]
+  ['quantum_51',['quantum',['../structSimulation.html#a32b7d6bcaff8a599681de98d21ad5a2a',1,'Simulation']]]
 ];

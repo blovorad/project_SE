@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier round-robin.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier round-robin.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier source qui implemente l'algorithme d'ordonnancement round-robin  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="round-robin_8h_source.html">round-robin.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a185f96d2b5102330952eb134ad7fe307"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a185f96d2b5102330952eb134ad7fe307">cpu_occupation</a> (int signal)</td></tr>
+<tr class="memdesc:a185f96d2b5102330952eb134ad7fe307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de reaction au signal CPU_BUSY pour savoir quand un processus occupe la CPU.  <a href="round-robin_8c.html#a185f96d2b5102330952eb134ad7fe307">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a185f96d2b5102330952eb134ad7fe307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6335f8d692f6f647cbbafaabd0ff8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a5e6335f8d692f6f647cbbafaabd0ff8b">cpu_liberation</a> (int signal)</td></tr>
+<tr class="memdesc:a5e6335f8d692f6f647cbbafaabd0ff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de reaction au signal CPU_FREE pour savoir quand un processus libere la CPU.  <a href="round-robin_8c.html#a5e6335f8d692f6f647cbbafaabd0ff8b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5e6335f8d692f6f647cbbafaabd0ff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebce5b82b4a9d46d95030ba107ec987"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#acebce5b82b4a9d46d95030ba107ec987">round_robin</a> (<a class="el" href="structSimulation.html">Simulation</a> *simulation)</td></tr>
+<tr class="memdesc:acebce5b82b4a9d46d95030ba107ec987"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a> effectuee avec l'algorithme Round-Robin (ou tourniquet)  <a href="round-robin_8c.html#acebce5b82b4a9d46d95030ba107ec987">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acebce5b82b4a9d46d95030ba107ec987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab71d93cee5084f43238be5fb904027b5"><td class="memItemLeft" align="right" valign="top"><a id="ab71d93cee5084f43238be5fb904027b5"></a>
+struct sigaction&#160;</td><td class="memItemRight" valign="bottom"><b>sa_cpu_liberation</b></td></tr>
+<tr class="separator:ab71d93cee5084f43238be5fb904027b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14ae666b18fa34da1e17cbccc272a3a"><td class="memItemLeft" align="right" valign="top"><a id="ae14ae666b18fa34da1e17cbccc272a3a"></a>
+struct sigaction&#160;</td><td class="memItemRight" valign="bottom"><b>sa_cpu_occupation</b></td></tr>
+<tr class="separator:ae14ae666b18fa34da1e17cbccc272a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60b2f06e41c9bee26bfb969466c7497"><td class="memItemLeft" align="right" valign="top"><a id="ab60b2f06e41c9bee26bfb969466c7497"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cpu_busy</b> = 0</td></tr>
+<tr class="separator:ab60b2f06e41c9bee26bfb969466c7497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931e0c2a9fb76fd1b45897077bf6c5a1"><td class="memItemLeft" align="right" valign="top"><a id="a931e0c2a9fb76fd1b45897077bf6c5a1"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>total_occupation_cpu_time</b> = 0</td></tr>
+<tr class="separator:a931e0c2a9fb76fd1b45897077bf6c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcc84b0265b665faa69271420b36fa5"><td class="memItemLeft" align="right" valign="top"><a id="a9dcc84b0265b665faa69271420b36fa5"></a>
+time_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_occupation_cpu</b> = 0</td></tr>
+<tr class="separator:a9dcc84b0265b665faa69271420b36fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cccea6cd9fed70e3256470113be4f4"><td class="memItemLeft" align="right" valign="top"><a id="a95cccea6cd9fed70e3256470113be4f4"></a>
+time_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_occupation_cpu</b> = 0</td></tr>
+<tr class="separator:a95cccea6cd9fed70e3256470113be4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8861193246fc34d8f29ac9d57b6791a"><td class="memItemLeft" align="right" valign="top"><a id="ac8861193246fc34d8f29ac9d57b6791a"></a>
+key_t&#160;</td><td class="memItemRight" valign="bottom"><b>key</b></td></tr>
+<tr class="separator:ac8861193246fc34d8f29ac9d57b6791a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1533dc1884cd5b8643b3f6fa02d020ae"><td class="memItemLeft" align="right" valign="top"><a id="a1533dc1884cd5b8643b3f6fa02d020ae"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mutexCPU</b></td></tr>
+<tr class="separator:a1533dc1884cd5b8643b3f6fa02d020ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc69aab9a458af34b0140f861635d40"><td class="memItemLeft" align="right" valign="top"><a id="a5dc69aab9a458af34b0140f861635d40"></a>
+<a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>actions_list</b></td></tr>
+<tr class="separator:a5dc69aab9a458af34b0140f861635d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>fichier source qui implemente l'algorithme d'ordonnancement round-robin </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a5e6335f8d692f6f647cbbafaabd0ff8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e6335f8d692f6f647cbbafaabd0ff8b">&#9670;&nbsp;</a></span>cpu_liberation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cpu_liberation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de reaction au signal CPU_FREE pour savoir quand un processus libere la CPU. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>23/03/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>signal auquel doit reagir la fonction </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a185f96d2b5102330952eb134ad7fe307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185f96d2b5102330952eb134ad7fe307">&#9670;&nbsp;</a></span>cpu_occupation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cpu_occupation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de reaction au signal CPU_BUSY pour savoir quand un processus occupe la CPU. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>23/03/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>signal auquel doit reagir la fonction </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="acebce5b82b4a9d46d95030ba107ec987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebce5b82b4a9d46d95030ba107ec987">&#9670;&nbsp;</a></span>round_robin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int round_robin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSimulation.html">Simulation</a> *&#160;</td>
+          <td class="paramname"><em>simulation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a> effectuee avec l'algorithme Round-Robin (ou tourniquet) </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a></td><td>simulation ayant pour algorithme d'ordonnancement Round-Robin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 en temps normal, -1 en cas d'erreur </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

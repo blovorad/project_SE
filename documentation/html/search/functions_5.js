@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open_5ffileconfig_0',['open_fileConfig',['../util_8c.html#a502472e70a1120ebe799ec14efcd6dbc',1,'open_fileConfig(char *path, char *mode):&#160;util.c'],['../util_8h.html#a502472e70a1120ebe799ec14efcd6dbc',1,'open_fileConfig(char *path, char *mode):&#160;util.c']]]
+  ['launch_5fan_5falgoritm_113',['launch_an_algoritm',['../starter_8c.html#a027f33f9e84e97524640bc238c13230b',1,'launch_an_algoritm(Simulation_array *simulation_array):&#160;starter.c'],['../starter_8h.html#a027f33f9e84e97524640bc238c13230b',1,'launch_an_algoritm(Simulation_array *simulation_array):&#160;starter.c']]]
 ];

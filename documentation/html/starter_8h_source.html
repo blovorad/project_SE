@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de starter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">starter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="starter_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __STARTER__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __STARTER__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resultat_8h.html">resultat.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> <a class="code" href="starter_8h.html#a73c455357bbfe7e99de367086ce4a739">start_simulations</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[], <a class="code" href="structSimulation__array.html">Simulation_array</a> *simulation_array);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="starter_8h.html#a402ea961bfc2ffeee61e3a7c330b1559">print_help</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">int</span> <a class="code" href="starter_8h.html#a027f33f9e84e97524640bc238c13230b">launch_an_algoritm</a>(<a class="code" href="structSimulation__array.html">Simulation_array</a> *simulation_array);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">fichier entete pour la gestion du chargemet de la configuration du programme</div></div>
+<div class="ttc" id="aresultat_8h_html"><div class="ttname"><a href="resultat_8h.html">resultat.h</a></div><div class="ttdoc">fichier entete qui s'occupe la generation des resultats des simulations</div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="simulation_8h.html">simulation.h</a></div><div class="ttdoc">fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de...</div></div>
+<div class="ttc" id="astarter_8h_html_a027f33f9e84e97524640bc238c13230b"><div class="ttname"><a href="starter_8h.html#a027f33f9e84e97524640bc238c13230b">launch_an_algoritm</a></div><div class="ttdeci">int launch_an_algoritm(Simulation_array *simulation_array)</div><div class="ttdoc">lancer une simulation</div><div class="ttdef"><b>Definition:</b> starter.c:97</div></div>
+<div class="ttc" id="astarter_8h_html_a402ea961bfc2ffeee61e3a7c330b1559"><div class="ttname"><a href="starter_8h.html#a402ea961bfc2ffeee61e3a7c330b1559">print_help</a></div><div class="ttdeci">void print_help(void)</div><div class="ttdoc">affiche l'aide console</div><div class="ttdef"><b>Definition:</b> starter.c:119</div></div>
+<div class="ttc" id="astarter_8h_html_a73c455357bbfe7e99de367086ce4a739"><div class="ttname"><a href="starter_8h.html#a73c455357bbfe7e99de367086ce4a739">start_simulations</a></div><div class="ttdeci">int start_simulations(int argc, char *argv[], Simulation_array *simulation_array)</div><div class="ttdoc">lancer les simulations</div><div class="ttdef"><b>Definition:</b> starter.c:10</div></div>
+<div class="ttc" id="astructSimulation__array_html"><div class="ttname"><a href="structSimulation__array.html">Simulation_array</a></div><div class="ttdoc">gerer un tableau de simuation, chaque simulation est lier a un algorithme d'ordonnancement</div><div class="ttdef"><b>Definition:</b> simulation.h:50</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions utile au projet</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

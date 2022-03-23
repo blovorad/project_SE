@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['cellule_0',['cellule',['../structcellule.html',1,'']]],
-  ['close_5ffileconfig_1',['close_fileConfig',['../util_8c.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3',1,'close_fileConfig(FILE *file):&#160;util.c'],['../util_8h.html#a0eca57fce0f4c72a0bdd73d5cae6e6e3',1,'close_fileConfig(FILE *file):&#160;util.c']]],
-  ['code_5falgorithm_2',['code_algorithm',['../structSimulation.html#a4136de497e524f8c0b476a117e98faf8',1,'Simulation']]],
-  ['compare_5fbegin_5fprocessus_3',['compare_begin_processus',['../processus_8c.html#a6e9c6a0f0f8489212e8572921e1e2437',1,'compare_begin_processus(const void *p1, const void *p2):&#160;processus.c'],['../processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437',1,'compare_begin_processus(const void *p1, const void *p2):&#160;processus.c']]],
-  ['config_2ec_4',['config.c',['../config_8c.html',1,'']]],
-  ['config_2eh_5',['config.h',['../config_8h.html',1,'']]],
-  ['cpu_6',['CPU',['../processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b',1,'processus.h']]],
-  ['cycle_5ftype_7',['Cycle_type',['../processus_8h.html#a450315c67565678c674b45ab421d53ec',1,'processus.h']]]
+  ['cellule_8',['cellule',['../structcellule.html',1,'']]],
+  ['close_5ffile_9',['close_file',['../util_8c.html#a3cbcbb47b732f62618b9614903245343',1,'close_file(FILE *file):&#160;util.c'],['../util_8h.html#a3cbcbb47b732f62618b9614903245343',1,'close_file(FILE *file):&#160;util.c']]],
+  ['code_5falgorithm_10',['code_algorithm',['../structSimulation.html#a4136de497e524f8c0b476a117e98faf8',1,'Simulation']]],
+  ['compare_5fbegin_5fprocessus_11',['compare_begin_processus',['../processus_8c.html#a6e9c6a0f0f8489212e8572921e1e2437',1,'compare_begin_processus(const void *p1, const void *p2):&#160;processus.c'],['../processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437',1,'compare_begin_processus(const void *p1, const void *p2):&#160;processus.c']]],
+  ['config_2ec_12',['config.c',['../config_8c.html',1,'']]],
+  ['config_2eh_13',['config.h',['../config_8h.html',1,'']]],
+  ['cpu_14',['CPU',['../processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b',1,'processus.h']]],
+  ['cpu_5fbusy_15',['CPU_BUSY',['../round-robin_8h.html#a894a8a53764d0561ad2acb1136364a74',1,'round-robin.h']]],
+  ['cpu_5ffree_16',['CPU_FREE',['../round-robin_8h.html#a91bc1c4e792b9645a54450c2020521b1',1,'round-robin.h']]],
+  ['cpu_5fliberation_17',['cpu_liberation',['../round-robin_8c.html#a5e6335f8d692f6f647cbbafaabd0ff8b',1,'round-robin.c']]],
+  ['cpu_5foccupation_18',['cpu_occupation',['../round-robin_8c.html#a185f96d2b5102330952eb134ad7fe307',1,'round-robin.c']]],
+  ['cycle_5ftype_19',['Cycle_type',['../processus_8h.html#a450315c67565678c674b45ab421d53ec',1,'processus.h']]]
 ];

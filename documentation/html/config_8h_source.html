@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.3"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Projet systeme exploitation:  Fichier source de config.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,10 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
    </div>
    <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
@@ -30,22 +31,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.3 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <!-- window showing the filter options -->
@@ -63,31 +63,32 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">config.h</div></div>
+  <div class="headertitle">
+<div class="title">config.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="config_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __CONFIG__H__</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __CONFIG__H__</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="simulation_8h.html">simulation.h</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="processus_8h.html">processus.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="config_8h.html#ae0167792967928940e30732b3f3f4a08">get_algorithm_code</a>(FILE *file);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">int</span> <a class="code hl_function" href="config_8h.html#a80371c83857917c236922df7d5258c40">get_config_commandLine</a>(<span class="keywordtype">char</span> *argv[], <a class="code hl_struct" href="structSimulation__array.html">Simulation_array</a> *simulation_array);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">int</span> <a class="code hl_function" href="config_8h.html#a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac">get_config_file</a>(FILE *file, <a class="code hl_struct" href="structSimulation__array.html">Simulation_array</a> *simulation_array);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">int</span> <a class="code hl_function" href="config_8h.html#ac8b767aeda066410b596fc3f51549870">fill_processus_array</a>(FILE *file, <a class="code hl_struct" href="structProcessus__array.html">Processus_array</a> *processus_array);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><a class="code hl_enumeration" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a> <a class="code hl_function" href="config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68">select_algorithm</a>(<span class="keywordtype">char</span> *nom_algorithm);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
+<a href="config_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __CONFIG__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __CONFIG__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="processus_8h.html">processus.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">int</span> <a class="code" href="config_8h.html#ae0167792967928940e30732b3f3f4a08">get_algorithm_code</a>(FILE *file);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">int</span> <a class="code" href="config_8h.html#a80371c83857917c236922df7d5258c40">get_config_commandLine</a>(<span class="keywordtype">char</span> *argv[], <a class="code" href="structSimulation__array.html">Simulation_array</a> *simulation_array);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">int</span> <a class="code" href="config_8h.html#a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac">get_config_file</a>(FILE *file, <a class="code" href="structSimulation__array.html">Simulation_array</a> *simulation_array);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="config_8h.html#ac8b767aeda066410b596fc3f51549870">fill_processus_array</a>(FILE *file, <a class="code" href="structProcessus__array.html">Processus_array</a> *processus_array);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a> <a class="code" href="config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68">select_algorithm</a>(<span class="keywordtype">char</span> *nom_algorithm);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aconfig_8h_html_a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac"><div class="ttname"><a href="config_8h.html#a27e6ba3ac8e5fa5b7c26fcc16ef5b3ac">get_config_file</a></div><div class="ttdeci">int get_config_file(FILE *file, Simulation_array *simulation_array)</div><div class="ttdoc">charge la configuration du test de l'ordonnancement depuis un fichier configuration</div><div class="ttdef"><b>Definition:</b> config.c:76</div></div>
 <div class="ttc" id="aconfig_8h_html_a80371c83857917c236922df7d5258c40"><div class="ttname"><a href="config_8h.html#a80371c83857917c236922df7d5258c40">get_config_commandLine</a></div><div class="ttdeci">int get_config_commandLine(char *argv[], Simulation_array *simulation_array)</div><div class="ttdoc">charge la configuration du test de l'ordonnancement depuis la ligne de commande</div><div class="ttdef"><b>Definition:</b> config.c:9</div></div>
 <div class="ttc" id="aconfig_8h_html_a98c98ac273d99f4fc11cdb91cc431f68"><div class="ttname"><a href="config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68">select_algorithm</a></div><div class="ttdeci">Algorithm select_algorithm(char *nom_algorithm)</div><div class="ttdoc">selection de l'algorithm d'ordonanncement par comparaison de chaine de caractère</div><div class="ttdef"><b>Definition:</b> config.c:253</div></div>
@@ -96,13 +97,13 @@ $(function() {
 <div class="ttc" id="aprocessus_8h_html"><div class="ttname"><a href="processus_8h.html">processus.h</a></div><div class="ttdoc">fichier entete qui gere les processus</div></div>
 <div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="simulation_8h.html">simulation.h</a></div><div class="ttdoc">fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de...</div></div>
 <div class="ttc" id="asimulation_8h_html_a5e41188f16a381c8915a17a22228e691"><div class="ttname"><a href="simulation_8h.html#a5e41188f16a381c8915a17a22228e691">Algorithm</a></div><div class="ttdeci">Algorithm</div><div class="ttdoc">Constantes pour les codes des algorithmes.</div><div class="ttdef"><b>Definition:</b> simulation.h:20</div></div>
-<div class="ttc" id="astructProcessus__array_html"><div class="ttname"><a href="structProcessus__array.html">Processus_array</a></div><div class="ttdoc">gerer un tableau de processus, permet de savoir qui arrive a quelle moment en fonction de l'index dan...</div><div class="ttdef"><b>Definition:</b> processus.h:61</div></div>
+<div class="ttc" id="astructProcessus__array_html"><div class="ttname"><a href="structProcessus__array.html">Processus_array</a></div><div class="ttdoc">gerer un tableau de processus, permet de savoir qui arrive a quelle moment en fonction de l'index dan...</div><div class="ttdef"><b>Definition:</b> processus.h:60</div></div>
 <div class="ttc" id="astructSimulation__array_html"><div class="ttname"><a href="structSimulation__array.html">Simulation_array</a></div><div class="ttdoc">gerer un tableau de simuation, chaque simulation est lier a un algorithme d'ordonnancement</div><div class="ttdef"><b>Definition:</b> simulation.h:50</div></div>
 <div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions utile au projet</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

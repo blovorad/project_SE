@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.3"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Projet systeme exploitation:  Fichier source de processus.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,10 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">Projet systeme exploitation<span id="projectnumber">&#160;1.5</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
    </div>
    <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
@@ -30,22 +31,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.3 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <!-- window showing the filter options -->
@@ -63,80 +63,79 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">processus.h</div></div>
+  <div class="headertitle">
+<div class="title">processus.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="processus_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __PROCESSUS__H__</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __PROCESSUS__H__</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">   18</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b">   20</a></span>    <a class="code hl_enumvalue" href="processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b">CPU</a>, </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="processus_8h.html#a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f">ES</a> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="processus_8h.html#a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f">   22</a></span>}<a class="code hl_enumeration" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structcellule.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structcellule.html">cellule</a>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">time_execution</a>; </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structcellule.html#aaeb5e8d003d86719bcfbf30dc820d282">   31</a></span>    <a class="code hl_enumeration" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> <a class="code hl_variable" href="structcellule.html#aaeb5e8d003d86719bcfbf30dc820d282">type</a>; </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structcellule.html#a697f75c7dd9a48ef34247501cff1c084">   32</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structcellule.html">cellule</a> *<a class="code hl_variable" href="structcellule.html#a697f75c7dd9a48ef34247501cff1c084">suivant</a>; </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">   38</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structcellule.html">cellule</a> <a class="code hl_struct" href="structcellule.html">Action</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structProcessus.html">   44</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structProcessus.html#a5349d09102daad27ff7dead8f109564b">   46</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structProcessus.html#a5349d09102daad27ff7dead8f109564b">name</a>; </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structProcessus.html#a0f17c62795268f8aceab762e3f01c762">   47</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#a0f17c62795268f8aceab762e3f01c762">arrive_at</a>; </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structProcessus.html#a12de43d915ed490ba3b2f69b233c8832">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#a12de43d915ed490ba3b2f69b233c8832">time_execution</a>; </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structProcessus.html#a344acd15169f1b9029d66fef11b011f6">   49</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#a344acd15169f1b9029d66fef11b011f6">time_pause</a>; </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structProcessus.html#ada75eb5f9c9de459e06f0e48f3dec2be">   50</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#ada75eb5f9c9de459e06f0e48f3dec2be">time_attempt</a>; </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structProcessus.html#a5c0bd33da0dcced080b662f4a3ab0f34">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#a5c0bd33da0dcced080b662f4a3ab0f34">time_pause_count</a>; </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">   52</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">time_to_restue</a>; </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structProcessus.html#a03083be98f69418350d962a6dab06117">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus.html#a03083be98f69418350d962a6dab06117">time_to_answer</a>; </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">   54</a></span>    <a class="code hl_struct" href="structcellule.html">Action</a> *<a class="code hl_variable" href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">action_cycle</a>; </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}<a class="code hl_struct" href="structProcessus.html">Processus</a>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structProcessus__array.html">   61</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">nbProcessus</a>; </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4">   64</a></span>    <a class="code hl_struct" href="structProcessus.html">Processus</a> *<a class="code hl_variable" href="structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4">processus</a>; </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}<a class="code hl_struct" href="structProcessus__array.html">Processus_array</a>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">int</span> <a class="code hl_function" href="processus_8h.html#a60797000dba261d3400ff60e3ad28f51">init_processus_array</a>(<span class="keywordtype">int</span> nbProcessus, <a class="code hl_struct" href="structProcessus__array.html">Processus_array</a> *array_processus);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keywordtype">void</span> <a class="code hl_function" href="processus_8h.html#a7a1a8aec2b6e36b2bbc8668a81905dbe">init_processus</a>(<span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> arrive_at, <a class="code hl_struct" href="structProcessus.html">Processus</a> *processus);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">int</span> <a class="code hl_function" href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">compare_begin_processus</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *p1, <span class="keyword">const</span> <span class="keywordtype">void</span> *p2);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><a class="code hl_struct" href="structcellule.html">Action</a> *<a class="code hl_function" href="processus_8h.html#ad566f6919b8dede2c1bd441f42f136b5">push_to_tail</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">time_execution</a>, <a class="code hl_enumeration" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> <a class="code hl_variable" href="structcellule.html#aaeb5e8d003d86719bcfbf30dc820d282">type</a>, <a class="code hl_struct" href="structcellule.html">Action</a> *action);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><a class="code hl_struct" href="structcellule.html">Action</a> *<a class="code hl_function" href="processus_8h.html#a1c66c46115a1946ffe1269722a898e54">delete_head</a>(<a class="code hl_struct" href="structcellule.html">Action</a> *action);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aprocessus_8h_html_a1c66c46115a1946ffe1269722a898e54"><div class="ttname"><a href="processus_8h.html#a1c66c46115a1946ffe1269722a898e54">delete_head</a></div><div class="ttdeci">Action * delete_head(Action *action)</div><div class="ttdoc">detruis la tete de la liste chainer action</div><div class="ttdef"><b>Definition:</b> processus.c:78</div></div>
+<a href="processus_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">    1</a></span>&#160;<span class="preprocessor">#ifndef __PROCESSUS__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __PROCESSUS__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b">   20</a></span>&#160;    <a class="code" href="processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b">CPU</a>, </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="processus_8h.html#a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f">ES</a> </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="processus_8h.html#a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f">   22</a></span>&#160;}<a class="code" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structcellule.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcellule.html">cellule</a>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">   30</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">time_execution</a>; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structcellule.html#aaeb5e8d003d86719bcfbf30dc820d282">   31</a></span>&#160;    <a class="code" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> <a class="code" href="structcellule.html#aaeb5e8d003d86719bcfbf30dc820d282">type</a>; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structcellule.html#a697f75c7dd9a48ef34247501cff1c084">   32</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structcellule.html">cellule</a> *<a class="code" href="structcellule.html#a697f75c7dd9a48ef34247501cff1c084">suivant</a>; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcellule.html">cellule</a> <a class="code" href="structcellule.html">Action</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structProcessus.html">   44</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structProcessus.html#a5349d09102daad27ff7dead8f109564b">   46</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structProcessus.html#a5349d09102daad27ff7dead8f109564b">name</a>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structProcessus.html#a0f17c62795268f8aceab762e3f01c762">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus.html#a0f17c62795268f8aceab762e3f01c762">arrive_at</a>; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structProcessus.html#a12de43d915ed490ba3b2f69b233c8832">   48</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus.html#a12de43d915ed490ba3b2f69b233c8832">time_execution</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structProcessus.html#a344acd15169f1b9029d66fef11b011f6">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus.html#a344acd15169f1b9029d66fef11b011f6">time_pause</a>; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structProcessus.html#ada75eb5f9c9de459e06f0e48f3dec2be">   50</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus.html#ada75eb5f9c9de459e06f0e48f3dec2be">time_attempt</a>; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">time_to_restue</a>; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structProcessus.html#a03083be98f69418350d962a6dab06117">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus.html#a03083be98f69418350d962a6dab06117">time_to_answer</a>; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">   53</a></span>&#160;    <a class="code" href="structcellule.html">Action</a> *<a class="code" href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">action_cycle</a>; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}<a class="code" href="structProcessus.html">Processus</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structProcessus__array.html">   60</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">nbProcessus</a>; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4">   63</a></span>&#160;    <a class="code" href="structProcessus.html">Processus</a> *<a class="code" href="structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4">processus</a>; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}<a class="code" href="structProcessus__array.html">Processus_array</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">int</span> <a class="code" href="processus_8h.html#a60797000dba261d3400ff60e3ad28f51">init_processus_array</a>(<span class="keywordtype">int</span> nbProcessus, <a class="code" href="structProcessus__array.html">Processus_array</a> *array_processus);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> <a class="code" href="processus_8h.html#a7a1a8aec2b6e36b2bbc8668a81905dbe">init_processus</a>(<span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> arrive_at, <a class="code" href="structProcessus.html">Processus</a> *processus);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">int</span> <a class="code" href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">compare_begin_processus</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *p1, <span class="keyword">const</span> <span class="keywordtype">void</span> *p2);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<a class="code" href="structcellule.html">Action</a> *<a class="code" href="processus_8h.html#a0da68731fce570669c6df8931681fed8">push_to_tail</a>(<span class="keywordtype">int</span> <a class="code" href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">time_execution</a>, <a class="code" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> <a class="code" href="structcellule.html#aaeb5e8d003d86719bcfbf30dc820d282">type</a>, <a class="code" href="structcellule.html">Action</a> *action);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="structcellule.html">Action</a> *<a class="code" href="processus_8h.html#aed90ec89c08ffbc2d8bc65d9bb49a9dd">delete_head</a>(<a class="code" href="structcellule.html">Action</a> *action);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aprocessus_8h_html_a0da68731fce570669c6df8931681fed8"><div class="ttname"><a href="processus_8h.html#a0da68731fce570669c6df8931681fed8">push_to_tail</a></div><div class="ttdeci">Action * push_to_tail(int time_execution, Cycle_type type, Action *action)</div><div class="ttdoc">insertion en queue dans la liste chainer d'action</div><div class="ttdef"><b>Definition:</b> processus.c:50</div></div>
 <div class="ttc" id="aprocessus_8h_html_a450315c67565678c674b45ab421d53ec"><div class="ttname"><a href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a></div><div class="ttdeci">Cycle_type</div><div class="ttdoc">Constantes si Action est CPU ou entrer/sortie.</div><div class="ttdef"><b>Definition:</b> processus.h:18</div></div>
 <div class="ttc" id="aprocessus_8h_html_a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b"><div class="ttname"><a href="processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b">CPU</a></div><div class="ttdeci">@ CPU</div><div class="ttdef"><b>Definition:</b> processus.h:20</div></div>
 <div class="ttc" id="aprocessus_8h_html_a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f"><div class="ttname"><a href="processus_8h.html#a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f">ES</a></div><div class="ttdeci">@ ES</div><div class="ttdef"><b>Definition:</b> processus.h:21</div></div>
 <div class="ttc" id="aprocessus_8h_html_a60797000dba261d3400ff60e3ad28f51"><div class="ttname"><a href="processus_8h.html#a60797000dba261d3400ff60e3ad28f51">init_processus_array</a></div><div class="ttdeci">int init_processus_array(int nbProcessus, Processus_array *array_processus)</div><div class="ttdoc">initialisation de tableau de processus</div><div class="ttdef"><b>Definition:</b> processus.c:11</div></div>
-<div class="ttc" id="aprocessus_8h_html_a6e9c6a0f0f8489212e8572921e1e2437"><div class="ttname"><a href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">compare_begin_processus</a></div><div class="ttdeci">int compare_begin_processus(const void *p1, const void *p2)</div><div class="ttdoc">fonction de comparaison utiliser par Qsort qui compare les temps de chaque Action</div><div class="ttdef"><b>Definition:</b> processus.c:42</div></div>
+<div class="ttc" id="aprocessus_8h_html_a6e9c6a0f0f8489212e8572921e1e2437"><div class="ttname"><a href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">compare_begin_processus</a></div><div class="ttdeci">int compare_begin_processus(const void *p1, const void *p2)</div><div class="ttdoc">fonction de comparaison utiliser par Qsort qui compare les temps de chaque Action</div><div class="ttdef"><b>Definition:</b> processus.c:41</div></div>
 <div class="ttc" id="aprocessus_8h_html_a7a1a8aec2b6e36b2bbc8668a81905dbe"><div class="ttname"><a href="processus_8h.html#a7a1a8aec2b6e36b2bbc8668a81905dbe">init_processus</a></div><div class="ttdeci">void init_processus(char *name, int arrive_at, Processus *processus)</div><div class="ttdoc">initialise un processus</div><div class="ttdef"><b>Definition:</b> processus.c:25</div></div>
-<div class="ttc" id="aprocessus_8h_html_ad566f6919b8dede2c1bd441f42f136b5"><div class="ttname"><a href="processus_8h.html#ad566f6919b8dede2c1bd441f42f136b5">push_to_tail</a></div><div class="ttdeci">Action * push_to_tail(int time_execution, Cycle_type type, Action *action)</div><div class="ttdoc">insertion en queue dans la liste chainer d'action</div><div class="ttdef"><b>Definition:</b> processus.c:51</div></div>
-<div class="ttc" id="astructProcessus__array_html"><div class="ttname"><a href="structProcessus__array.html">Processus_array</a></div><div class="ttdoc">gerer un tableau de processus, permet de savoir qui arrive a quelle moment en fonction de l'index dan...</div><div class="ttdef"><b>Definition:</b> processus.h:61</div></div>
-<div class="ttc" id="astructProcessus__array_html_a34412bb024904355e30ac7c1118ea373"><div class="ttname"><a href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">Processus_array::nbProcessus</a></div><div class="ttdeci">int nbProcessus</div><div class="ttdef"><b>Definition:</b> processus.h:63</div></div>
-<div class="ttc" id="astructProcessus__array_html_a5f2c31b94a2f125b00ee2939c29c9ba4"><div class="ttname"><a href="structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4">Processus_array::processus</a></div><div class="ttdeci">Processus * processus</div><div class="ttdef"><b>Definition:</b> processus.h:64</div></div>
+<div class="ttc" id="aprocessus_8h_html_aed90ec89c08ffbc2d8bc65d9bb49a9dd"><div class="ttname"><a href="processus_8h.html#aed90ec89c08ffbc2d8bc65d9bb49a9dd">delete_head</a></div><div class="ttdeci">Action * delete_head(Action *action)</div><div class="ttdoc">detruis la tete de la liste chainer action</div><div class="ttdef"><b>Definition:</b> processus.c:77</div></div>
+<div class="ttc" id="astructProcessus__array_html"><div class="ttname"><a href="structProcessus__array.html">Processus_array</a></div><div class="ttdoc">gerer un tableau de processus, permet de savoir qui arrive a quelle moment en fonction de l'index dan...</div><div class="ttdef"><b>Definition:</b> processus.h:60</div></div>
+<div class="ttc" id="astructProcessus__array_html_a34412bb024904355e30ac7c1118ea373"><div class="ttname"><a href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">Processus_array::nbProcessus</a></div><div class="ttdeci">int nbProcessus</div><div class="ttdef"><b>Definition:</b> processus.h:62</div></div>
+<div class="ttc" id="astructProcessus__array_html_a5f2c31b94a2f125b00ee2939c29c9ba4"><div class="ttname"><a href="structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4">Processus_array::processus</a></div><div class="ttdeci">Processus * processus</div><div class="ttdef"><b>Definition:</b> processus.h:63</div></div>
 <div class="ttc" id="astructProcessus_html"><div class="ttname"><a href="structProcessus.html">Processus</a></div><div class="ttdoc">structure d'un processus ainsi que toute ses actions, et les resultats de la simulation pour ce proce...</div><div class="ttdef"><b>Definition:</b> processus.h:44</div></div>
-<div class="ttc" id="astructProcessus_html_a03083be98f69418350d962a6dab06117"><div class="ttname"><a href="structProcessus.html#a03083be98f69418350d962a6dab06117">Processus::time_to_answer</a></div><div class="ttdeci">int time_to_answer</div><div class="ttdef"><b>Definition:</b> processus.h:53</div></div>
+<div class="ttc" id="astructProcessus_html_a03083be98f69418350d962a6dab06117"><div class="ttname"><a href="structProcessus.html#a03083be98f69418350d962a6dab06117">Processus::time_to_answer</a></div><div class="ttdeci">int time_to_answer</div><div class="ttdef"><b>Definition:</b> processus.h:52</div></div>
 <div class="ttc" id="astructProcessus_html_a0f17c62795268f8aceab762e3f01c762"><div class="ttname"><a href="structProcessus.html#a0f17c62795268f8aceab762e3f01c762">Processus::arrive_at</a></div><div class="ttdeci">int arrive_at</div><div class="ttdef"><b>Definition:</b> processus.h:47</div></div>
 <div class="ttc" id="astructProcessus_html_a12de43d915ed490ba3b2f69b233c8832"><div class="ttname"><a href="structProcessus.html#a12de43d915ed490ba3b2f69b233c8832">Processus::time_execution</a></div><div class="ttdeci">int time_execution</div><div class="ttdef"><b>Definition:</b> processus.h:48</div></div>
-<div class="ttc" id="astructProcessus_html_a332be096433c4905eb3266fc7966aa20"><div class="ttname"><a href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">Processus::time_to_restue</a></div><div class="ttdeci">int time_to_restue</div><div class="ttdef"><b>Definition:</b> processus.h:52</div></div>
+<div class="ttc" id="astructProcessus_html_a332be096433c4905eb3266fc7966aa20"><div class="ttname"><a href="structProcessus.html#a332be096433c4905eb3266fc7966aa20">Processus::time_to_restue</a></div><div class="ttdeci">int time_to_restue</div><div class="ttdef"><b>Definition:</b> processus.h:51</div></div>
 <div class="ttc" id="astructProcessus_html_a344acd15169f1b9029d66fef11b011f6"><div class="ttname"><a href="structProcessus.html#a344acd15169f1b9029d66fef11b011f6">Processus::time_pause</a></div><div class="ttdeci">int time_pause</div><div class="ttdef"><b>Definition:</b> processus.h:49</div></div>
 <div class="ttc" id="astructProcessus_html_a5349d09102daad27ff7dead8f109564b"><div class="ttname"><a href="structProcessus.html#a5349d09102daad27ff7dead8f109564b">Processus::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> processus.h:46</div></div>
-<div class="ttc" id="astructProcessus_html_a5c0bd33da0dcced080b662f4a3ab0f34"><div class="ttname"><a href="structProcessus.html#a5c0bd33da0dcced080b662f4a3ab0f34">Processus::time_pause_count</a></div><div class="ttdeci">int time_pause_count</div><div class="ttdef"><b>Definition:</b> processus.h:51</div></div>
-<div class="ttc" id="astructProcessus_html_ace1a49bc69d757a6a6c58c805848024c"><div class="ttname"><a href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">Processus::action_cycle</a></div><div class="ttdeci">Action * action_cycle</div><div class="ttdef"><b>Definition:</b> processus.h:54</div></div>
+<div class="ttc" id="astructProcessus_html_ace1a49bc69d757a6a6c58c805848024c"><div class="ttname"><a href="structProcessus.html#ace1a49bc69d757a6a6c58c805848024c">Processus::action_cycle</a></div><div class="ttdeci">Action * action_cycle</div><div class="ttdef"><b>Definition:</b> processus.h:53</div></div>
 <div class="ttc" id="astructProcessus_html_ada75eb5f9c9de459e06f0e48f3dec2be"><div class="ttname"><a href="structProcessus.html#ada75eb5f9c9de459e06f0e48f3dec2be">Processus::time_attempt</a></div><div class="ttdeci">int time_attempt</div><div class="ttdef"><b>Definition:</b> processus.h:50</div></div>
 <div class="ttc" id="astructcellule_html"><div class="ttname"><a href="structcellule.html">cellule</a></div><div class="ttdoc">liste chainer qui represente une action d'un processus</div><div class="ttdef"><b>Definition:</b> processus.h:28</div></div>
 <div class="ttc" id="astructcellule_html_a41a16e3e89569ef91069310ff27edf5a"><div class="ttname"><a href="structcellule.html#a41a16e3e89569ef91069310ff27edf5a">cellule::time_execution</a></div><div class="ttdeci">int time_execution</div><div class="ttdef"><b>Definition:</b> processus.h:30</div></div>
@@ -145,7 +144,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

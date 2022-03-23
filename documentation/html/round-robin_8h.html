@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier round-robin.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier round-robin.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier entete associe a l'algorithme d'ordonnancement round-robin  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="simulation_8h_source.html">simulation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="resultat_8h_source.html">resultat.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
+<code>#include &quot;ipcTools.h&quot;</code><br />
+</div>
+<p><a href="round-robin_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a894a8a53764d0561ad2acb1136364a74"><td class="memItemLeft" align="right" valign="top"><a id="a894a8a53764d0561ad2acb1136364a74"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#a894a8a53764d0561ad2acb1136364a74">CPU_BUSY</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a894a8a53764d0561ad2acb1136364a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un signal qu'un processus fils envoie pour dire qu'il occcupe la CPU. <br /></td></tr>
+<tr class="separator:a894a8a53764d0561ad2acb1136364a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bc1c4e792b9645a54450c2020521b1"><td class="memItemLeft" align="right" valign="top"><a id="a91bc1c4e792b9645a54450c2020521b1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#a91bc1c4e792b9645a54450c2020521b1">CPU_FREE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a91bc1c4e792b9645a54450c2020521b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un signal qu'un processus fils envoie pour dire qu'il libere la CPU. <br /></td></tr>
+<tr class="separator:a91bc1c4e792b9645a54450c2020521b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>fichier entete associe a l'algorithme d'ordonnancement round-robin </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
