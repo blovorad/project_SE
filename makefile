@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-W -Wall
 LDFLAGS=
 EXEC=prog
-SRC= config.c processus.c resultat.c util.c simulation.c main.c starter.c
+SRC= config.c processus.c resultat.c util.c simulation.c main.c starter.c round-robin.c ipcTools.c
 OBJ= $(SRC:.c=.o)
 
 all: $(EXEC) docs

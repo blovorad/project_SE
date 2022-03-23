@@ -23,19 +23,19 @@ int semalloc(key_t key, int valInit) {
 }
 
 void P(int semid) {
-	struct sembuf sopsP[1] = {0, -1, 0};
-	//sops[0].sem_num=0;
-	//sops[0].sem_op=-1;
-	//sops[0].sem_flg=0;
+	struct sembuf sopsP[1];
+	sopsP[0].sem_num=0;
+	sopsP[0].sem_op=-1;
+	sopsP[0].sem_flg=0;
 	
 	semop(semid, sopsP, 1);
 }
 
 void V(int semid) {
-	struct sembuf sopsV[1] = {0, +1, 0};
-	//sops[0].sem_num=0;
-	//sops[0].sem_op=1;
-	//sops[0].sem_flg=0;
+	struct sembuf sopsV[1];
+	sopsV[0].sem_num=0;
+	sopsV[0].sem_op=1;
+	sopsV[0].sem_flg=0;
 	
 	semop(semid, sopsV, 1);
 }

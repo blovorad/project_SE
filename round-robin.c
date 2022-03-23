@@ -8,13 +8,15 @@
  */
 
     // Envoi de signaux par les fils au père pour savoir si CPU libre : "je suis dans CPU", sleep(), "je suis sorti", dans le mutexCPU pour mettre à jour booléen et calculer taux d'occupation de la CPU (gestion du calcul du temps dans le père - vérifier si le booléen a changé entre temps dans le père)
-struct sigaction sa_cpu_free;
-struct sigaction sa_cpu_occupy;
+struct sigaction sa_cpu_liberation;
+struct sigaction sa_cpu_occupation;
 int cpu_busy = 0;
-int previous_state_cpu = cpu_busy;
 double total_occupation_cpu_time = 0;
 time_t start_occupation_cpu = 0;
 time_t end_occupation_cpu = 0;
+key_t key;
+int mutexCPU;
+Action* actions_list;
 
 
 /**
@@ -56,16 +58,16 @@ void cpu_liberation(int signal) {
 int round_robin(Simulation *simulation) {
 
     //Activation des fonctions de reaction
-    sa_cpu_occupy.sa_handler = cpu_occupation;
-    sigaction(CPU_BUSY, &sa_cpu_occupy, 0);
+    sa_cpu_occupation.sa_handler = cpu_occupation;
+    sigaction(CPU_BUSY, &sa_cpu_occupation, 0);
     
-    sa_cpu_free.sa_handler = cpu_liberation;
+    sa_cpu_liberation.sa_handler = cpu_liberation;
     sigaction(CPU_FREE, &sa_cpu_liberation, 0);
 
     //Initialisation des semaphores et variables partagees
 
     //MutexCPU : permet de n'avoir qu'un seul processus actif sur la CPU
-    if ((key=ftokey("/etc/passwd", 1))==-1) { 
+    if ((key=ftok("/etc/passwd", 1))==-1) { 
         perror("ftok failed");
         exit(-1);
     }
@@ -74,17 +76,17 @@ int round_robin(Simulation *simulation) {
 
     //Recuperation des parametres de l'algorithme et des processus
     int quantum = simulation->quantum;
-    Processus* processus = simulation->processus_array->processus;
-    int nbProcessus = simulation->processus_array->nbProcessus;
+    Processus* processus = simulation->processus_array.processus;
+    int nbProcessus = simulation->processus_array.nbProcessus;
     pid_t processus_pid[nbProcessus];
 
     //Indice du processus courant
     int i = 0;
 
     //Recuperation des temps d'arrivee
-    double arrival_times[nbProcessus] = {0};
-    for (i=0; i<n; i++) {
-        arrival_times[i] = (double) processus[i]->arrive_at;
+    double arrival_times[nbProcessus];
+    for (i=0; i < nbProcessus; i++) {
+        arrival_times[i] = (double) processus[i].arrive_at;
     }
     i=0;
 
@@ -101,18 +103,17 @@ int round_robin(Simulation *simulation) {
                     return -1;
 
                 case 0:
-                    Processus current_processus = processus[i];
-                    Action* actions_list = current_processus->action_cycle;
+                    actions_list = processus[i].action_cycle;
 
                     while (actions_list != NULL) {
                         if (actions_list->type == CPU) {
                             time_t start_waiting = time(NULL);
-                            current_processus->time_pause = (int) start_waiting; //Correct ?
+                            processus[i].time_pause = (int) start_waiting; //Correct ?
 
                             P(mutexCPU);
 
                             time_t end_waiting = time(NULL);
-                            current_processus->time_attempt += (int) difftime(end_waiting, start_waiting);
+                            processus[i].time_attempt += (int) difftime(end_waiting, start_waiting);
 
                             kill(getppid(), CPU_BUSY);
                             if (actions_list->time_execution < quantum) {
@@ -129,7 +130,7 @@ int round_robin(Simulation *simulation) {
                         else if (actions_list->type == ES) {
                             sleep(actions_list->time_execution);
                         }
-                        current_processus->time_to_restue = current_processus->time_execution + current_processus->time_attempt;
+                        processus[i].time_to_restue = processus[i].time_execution + processus[i].time_attempt;
                         actions_list = delete_head(actions_list);
                     }
                     return 0;
@@ -141,7 +142,9 @@ int round_robin(Simulation *simulation) {
         }
     }
 
-    
+    cpu_occupation(CPU_BUSY);
+    cpu_liberation(CPU_FREE);
+ 
     time_t end_time = time(NULL);
 
     double algorithm_execution_time = difftime(end_time, start_time);
@@ -152,8 +155,8 @@ int round_robin(Simulation *simulation) {
     double total_time_respond = 0; // Comment l'évaluer ?
     
     for (i=0; i<nbProcessus; i++) {
-        total_time_attempt += processus[i]->time_attempt;
-        total_time_restitution += processus[i]->time_to_restue;
+        total_time_attempt += processus[i].time_attempt;
+        total_time_restitution += processus[i].time_to_restue;
     }
 
     simulation->average_time_attempt = total_time_attempt/nbProcessus;
