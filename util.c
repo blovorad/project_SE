@@ -95,7 +95,7 @@ char *get_string_from_algorithm(int code_algorithm){
 	switch(code_algorithm){
 		
 		case FIFO : return "FIFO";
-		case SJF : return "SFJ";
+		case SJF : return "SJF";
 		case ROUND_ROBIN : return "ROUND_ROBIN";
 		default : return "NOT KNOW";
 	}
