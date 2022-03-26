@@ -21,7 +21,6 @@ typedef enum{
 	
 	FIFO, /*!< Algo FIFO */
 	SJF, /*!< Algo SJF */
-	SRJF, /*!< Algo SRJF */
 	ROUND_ROBIN /*!< Algo ROUND_ROBIN */
 }Algorithm;
 

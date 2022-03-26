@@ -260,10 +260,6 @@ Algorithm select_algorithm(char *nom_algorithm){
 
         return SJF;
     }
-    else if(strcmp(nom_algorithm, "SRJF") == 0){
-
-        return SRJF;
-    }
     else if(strcmp(nom_algorithm, "ROUND_ROBIN") == 0){
 
         return ROUND_ROBIN;
