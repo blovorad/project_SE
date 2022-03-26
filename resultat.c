@@ -7,29 +7,25 @@
  * \brief fichier source qui s'occupe la generation des resultats des simulations
  */
  
-int generate_result_simulation(char *path, Simulation_array *simulation_array){
-	
-	for(int i = 0; i < simulation_array->nbSimulations; i++){
-		
-		simulation_array->simulations[i].average_time_attempt = rand() % 30;
-		simulation_array->simulations[i].average_time_restitution = rand() % 30;
-		simulation_array->simulations[i].average_time_respond = rand() % 30;
-		simulation_array->simulations[i].average_pourcentage_CPU = 100;
-	}
+int generate_result_simulation(char *path, Simulation_array simulation_array){
 	
 	FILE *file = open_file(path, "a");
 	fprintf(file, "\n\n\nSIMULATION RESULTAT\n\n\n");
-	fprintf(file, "Average_time_attempt;");
 	fprintf(file, "Average_time_restitution;");
+	fprintf(file, "Average_time_attempt;");
 	fprintf(file, "Average_time_respond;");
-	fprintf(file, "Average_pourcentage_CPU\n");
+	fprintf(file, "Average_pourcentage_CPU");
+	fprintf(file, "Algorithm\n");
 	
-	for(int i = 0; i < simulation_array->nbSimulations; i++){
+	for(int i = 0; i < simulation_array.nbSimulations; i++){
 		
-		fprintf(file, "%d;", (int)simulation_array->simulations[i].average_time_attempt);
-		fprintf(file, "%d;", (int)simulation_array->simulations[i].average_time_restitution);
-		fprintf(file, "%d;", (int)simulation_array->simulations[i].average_time_respond);
-		fprintf(file, "%d\n", (int)simulation_array->simulations[i].average_pourcentage_CPU);
+		char *string = get_string_from_algorithm(simulation_array.simulations[i].code_algorithm);
+		
+		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_time_restitution);
+		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_time_attempt);
+		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_time_respond);
+		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_pourcentage_CPU);
+		fprintf(file, "%s\n", string);
 	}
 	
 	
@@ -43,17 +39,21 @@ void print_resultat_console_simulation(Simulation_array simulation_array){
 	printf("******************************************************************\n");
 	printf("Affichage des resultats des simulations commencer\n\n\n");
 	
-	printf("Average_time_attempt;");
 	printf("Average_time_restitution;");
+	printf("Average_time_attempt;");
 	printf("Average_time_respond;");
-	printf("Average_pourcentage_CPU\n\n");
+	printf("Average_pourcentage_CPU");
+	printf("Algorithm\n\n");
 	
 	for(int i = 0; i < simulation_array.nbSimulations; i++){
 		
-		printf("%d;", (int)simulation_array.simulations[i].average_time_attempt);
+		char *string = get_string_from_algorithm(simulation_array.simulations[i].code_algorithm);
+		
 		printf("%d;", (int)simulation_array.simulations[i].average_time_restitution);
+		printf("%d;", (int)simulation_array.simulations[i].average_time_attempt);
 		printf("%d;", (int)simulation_array.simulations[i].average_time_respond);
-		printf("%d\n", (int)simulation_array.simulations[i].average_pourcentage_CPU);
+		printf("%d;", (int)simulation_array.simulations[i].average_pourcentage_CPU);
+		printf("%s\n", string);
 	}
 	
 	printf("\n\nAffichage des resultats simulations terminer\n");
@@ -69,7 +69,7 @@ int generate_result_processus(char *path, Simulation_array simulation_array){
 	fprintf(file, "Processus;");
 	fprintf(file, "Time_to_restue;");
 	fprintf(file, "Time_attempt;");
-	fprintf(file, "Time_to_answer;");
+	fprintf(file, "Time_to_respond;");
 	fprintf(file, "Algorithm\n");
 	
 	for(int i = 0; i < simulation_array.nbSimulations; i++){
@@ -99,7 +99,7 @@ void print_resultat_console_processus(Simulation_array simulation_array){
 	printf("Processus;");
 	printf("Time_to_restue;");
 	printf("Time_attempt;");
-	printf("Time_to_answer;");
+	printf("Time_to_respond;");
 	printf("Algorithm\n\n");
 	
 	for(int i = 0; i < simulation_array.nbSimulations; i++){

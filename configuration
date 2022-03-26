@@ -1,9 +1,8 @@
 Nombre d'algorithmes = 1
-Algorithme = ROUND_ROBIN quantum = 5
-Nombre de processus = 5
+Algorithme = SJF
+Nombre de processus = 4
 Nom Arrivee <ES ou CPU>=duree
-P1 0 CPU=20 ES=2
-P2 3 CPU=10 ES=4 CPU= 3
-P3 2 ES=25
-P4 12 CPU=1
-P5 56 ES=32
+P1 0 CPU=3 ES=2
+P2 2 CPU=10 CPU=5
+P3 4 ES=6
+P4 7 CPU=2

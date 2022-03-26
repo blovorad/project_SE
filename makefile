@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS=-W -Wall
-LDFLAGS=
+LDFLAGS= -pthread
 EXEC=prog
-SRC= config.c processus.c resultat.c util.c simulation.c main.c starter.c round-robin.c ipcTools.c
+SRC= config.c processus.c resultat.c util.c main.c starter.c round-robin.c ipcTools.c sjf.c
 OBJ= $(SRC:.c=.o)
 
 all: $(EXEC) docs

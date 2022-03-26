@@ -27,7 +27,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
             }
             launch_an_algoritm(simulation_array);
             generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
-            generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
+            generate_result_simulation("./fichier_resultat_processus.csv", *simulation_array);
             print_resultat_console_simulation(*simulation_array);
             print_resultat_console_processus(*simulation_array);
         }
@@ -42,7 +42,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 }
                 launch_an_algoritm(simulation_array);
                 generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
-                generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
+                generate_result_simulation("./fichier_resultat_processus.csv", *simulation_array);
                 print_resultat_console_simulation(*simulation_array);
                 print_resultat_console_processus(*simulation_array);
             }
@@ -58,13 +58,13 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 if(path_ok == 1){
                 
                     generate_result_processus(argv[3], *simulation_array);
-                    generate_result_simulation(argv[3], simulation_array);
+                    generate_result_simulation(argv[3], *simulation_array);
                 }
                 else{
                     
                     printf("format du fichier non reconnus ou chemin mauvais ecriture des resultats dans le fichier :./fichier_resultat_processus.csv\n"); 
                     generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
-                    generate_result_simulation("./fichier_resultat_processus.csv", simulation_array);
+                    generate_result_simulation("./fichier_resultat_processus.csv", *simulation_array);
                 }
                 print_resultat_console_simulation(*simulation_array);
                 print_resultat_console_processus(*simulation_array);
@@ -102,7 +102,7 @@ int launch_an_algoritm(Simulation_array *simulation_array){
             
             case FIFO: 
                 break;
-            case SJF:  
+            case SJF:  sjf(&simulation_array->simulations[i]);
                 break;
             case SRJF:
                 break;

@@ -8,6 +8,7 @@
 #include "util.h"
 #include "resultat.h"
 #include "config.h"
+#include "sjf.h"
 
 /**
  * \file starter.h

@@ -79,7 +79,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 	recuperation du nombre de simulation 
 	une simulation = un algo a utiliser
 	*/
-    fscanf(file, "Nombre d'algorithme = %d\n", &simulation_array->nbSimulations);
+    fscanf(file, "Nombre d'algorithmes = %d\n", &simulation_array->nbSimulations);
    	simulation_array->simulations = malloc(sizeof(Simulation) * simulation_array->nbSimulations);
    	if(simulation_array->simulations == NULL){
    	

@@ -13,7 +13,7 @@
 #include "util.h"
 
 /**
- * \fn int generate_result_simulation(char *path, Simulation_array *simulation_array)
+ * \fn int generate_result_simulation(char *path, Simulation_array simulation_array)
  * \author Gautier Levesque
  * \date 27/02/2022
  * \brief ecrit les resultats des algorithmes d'ordonnacement dans un fichier .csv
@@ -21,7 +21,7 @@
  * \param simulation_array tableau de toutes les simulations
  * \return entier 0 si ok, -1 sinon
  */
-int generate_result_simulation(char *path, Simulation_array *simulation_array);
+int generate_result_simulation(char *path, Simulation_array simulation_array);
 
 /**
  * \fn void print_resultat_console_simulation(Simulation_array simulation_array)
