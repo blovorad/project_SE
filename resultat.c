@@ -14,7 +14,7 @@ int generate_result_simulation(char *path, Simulation_array simulation_array){
 	fprintf(file, "Average_time_restitution;");
 	fprintf(file, "Average_time_attempt;");
 	fprintf(file, "Average_time_respond;");
-	fprintf(file, "Average_pourcentage_CPU");
+	fprintf(file, "Average_pourcentage_CPU;");
 	fprintf(file, "Algorithm\n");
 	
 	for(int i = 0; i < simulation_array.nbSimulations; i++){
@@ -42,7 +42,7 @@ void print_resultat_console_simulation(Simulation_array simulation_array){
 	printf("Average_time_restitution;");
 	printf("Average_time_attempt;");
 	printf("Average_time_respond;");
-	printf("Average_pourcentage_CPU");
+	printf("Average_pourcentage_CPU;");
 	printf("Algorithm\n\n");
 	
 	for(int i = 0; i < simulation_array.nbSimulations; i++){
