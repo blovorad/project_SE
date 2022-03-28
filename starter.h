@@ -9,6 +9,7 @@
 #include "resultat.h"
 #include "config.h"
 #include "sjf.h"
+#include "round-robin.h"
 
 /**
  * \file starter.h

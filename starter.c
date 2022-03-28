@@ -105,6 +105,7 @@ int launch_an_algoritm(Simulation_array *simulation_array){
             case SJF: 
                 break;
             case ROUND_ROBIN: 
+                round_robin(simulation_array->simulations[i]);
                 break;
             default:
                 break;

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence de la structure SJF_Thread</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Attributs publics</a> &#124;
+<a href="structSJF__Thread-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la structure SJF_Thread</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Structure pour gerer les thread pour l'algorithme SJF.  
+ <a href="structSJF__Thread.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sjf_8h_source.html">sjf.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
+<tr class="memitem:aaebc804954f864c0ae8dd955ccbcbeea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSJF__Thread.html#aaebc804954f864c0ae8dd955ccbcbeea">arrive</a></td></tr>
+<tr class="separator:aaebc804954f864c0ae8dd955ccbcbeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18830db942c5e2f6bdb127a3a4129779"><td class="memItemLeft" align="right" valign="top">sem_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSJF__Thread.html#a18830db942c5e2f6bdb127a3a4129779">mutex_cpu</a></td></tr>
+<tr class="separator:a18830db942c5e2f6bdb127a3a4129779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126c447f56eb573205a4287e38450ef1"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSJF__Thread.html#a126c447f56eb573205a4287e38450ef1">thread</a></td></tr>
+<tr class="separator:a126c447f56eb573205a4287e38450ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Structure pour gerer les thread pour l'algorithme SJF. </p>
+</div><h2 class="groupheader">Documentation des données membres</h2>
+<a id="aaebc804954f864c0ae8dd955ccbcbeea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaebc804954f864c0ae8dd955ccbcbeea">&#9670;&nbsp;</a></span>arrive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SJF_Thread::arrive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>si le thread est bien lancer, c'est a dire que le temps d'arriver du processus est bien arriver et donc qu'il peut entrer en action </p>
+
+</div>
+</div>
+<a id="a18830db942c5e2f6bdb127a3a4129779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18830db942c5e2f6bdb127a3a4129779">&#9670;&nbsp;</a></span>mutex_cpu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sem_t SJF_Thread::mutex_cpu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mutex du thread pour les cycles CPU </p>
+
+</div>
+</div>
+<a id="a126c447f56eb573205a4287e38450ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126c447f56eb573205a4287e38450ef1">&#9670;&nbsp;</a></span>thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t SJF_Thread::thread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>le thread en question </p>
+
+</div>
+</div>
+<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="sjf_8h_source.html">sjf.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

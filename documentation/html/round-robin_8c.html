@@ -77,109 +77,60 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a185f96d2b5102330952eb134ad7fe307"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a185f96d2b5102330952eb134ad7fe307">cpu_occupation</a> (int signal)</td></tr>
-<tr class="memdesc:a185f96d2b5102330952eb134ad7fe307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de reaction au signal CPU_BUSY pour savoir quand un processus occupe la CPU.  <a href="round-robin_8c.html#a185f96d2b5102330952eb134ad7fe307">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a185f96d2b5102330952eb134ad7fe307"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e6335f8d692f6f647cbbafaabd0ff8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a5e6335f8d692f6f647cbbafaabd0ff8b">cpu_liberation</a> (int signal)</td></tr>
-<tr class="memdesc:a5e6335f8d692f6f647cbbafaabd0ff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de reaction au signal CPU_FREE pour savoir quand un processus libere la CPU.  <a href="round-robin_8c.html#a5e6335f8d692f6f647cbbafaabd0ff8b">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a5e6335f8d692f6f647cbbafaabd0ff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafeed16f4b5850f8c594a54ac8e71fb"><td class="memItemLeft" align="right" valign="top"><a id="abafeed16f4b5850f8c594a54ac8e71fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cpu_occupation</b> ()</td></tr>
+<tr class="separator:abafeed16f4b5850f8c594a54ac8e71fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4b2240fd55b857ba4949bb39c35820"><td class="memItemLeft" align="right" valign="top"><a id="a4d4b2240fd55b857ba4949bb39c35820"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cpu_liberation</b> ()</td></tr>
+<tr class="separator:a4d4b2240fd55b857ba4949bb39c35820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acebce5b82b4a9d46d95030ba107ec987"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#acebce5b82b4a9d46d95030ba107ec987">round_robin</a> (<a class="el" href="structSimulation.html">Simulation</a> *simulation)</td></tr>
 <tr class="memdesc:acebce5b82b4a9d46d95030ba107ec987"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a> effectuee avec l'algorithme Round-Robin (ou tourniquet)  <a href="round-robin_8c.html#acebce5b82b4a9d46d95030ba107ec987">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acebce5b82b4a9d46d95030ba107ec987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab71d93cee5084f43238be5fb904027b5"><td class="memItemLeft" align="right" valign="top"><a id="ab71d93cee5084f43238be5fb904027b5"></a>
-struct sigaction&#160;</td><td class="memItemRight" valign="bottom"><b>sa_cpu_liberation</b></td></tr>
-<tr class="separator:ab71d93cee5084f43238be5fb904027b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae14ae666b18fa34da1e17cbccc272a3a"><td class="memItemLeft" align="right" valign="top"><a id="ae14ae666b18fa34da1e17cbccc272a3a"></a>
-struct sigaction&#160;</td><td class="memItemRight" valign="bottom"><b>sa_cpu_occupation</b></td></tr>
-<tr class="separator:ae14ae666b18fa34da1e17cbccc272a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab60b2f06e41c9bee26bfb969466c7497"><td class="memItemLeft" align="right" valign="top"><a id="ab60b2f06e41c9bee26bfb969466c7497"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cpu_busy</b> = 0</td></tr>
-<tr class="separator:ab60b2f06e41c9bee26bfb969466c7497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a931e0c2a9fb76fd1b45897077bf6c5a1"><td class="memItemLeft" align="right" valign="top"><a id="a931e0c2a9fb76fd1b45897077bf6c5a1"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>total_occupation_cpu_time</b> = 0</td></tr>
-<tr class="separator:a931e0c2a9fb76fd1b45897077bf6c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dcc84b0265b665faa69271420b36fa5"><td class="memItemLeft" align="right" valign="top"><a id="a9dcc84b0265b665faa69271420b36fa5"></a>
-time_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_occupation_cpu</b> = 0</td></tr>
-<tr class="separator:a9dcc84b0265b665faa69271420b36fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95cccea6cd9fed70e3256470113be4f4"><td class="memItemLeft" align="right" valign="top"><a id="a95cccea6cd9fed70e3256470113be4f4"></a>
-time_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_occupation_cpu</b> = 0</td></tr>
-<tr class="separator:a95cccea6cd9fed70e3256470113be4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8861193246fc34d8f29ac9d57b6791a"><td class="memItemLeft" align="right" valign="top"><a id="ac8861193246fc34d8f29ac9d57b6791a"></a>
-key_t&#160;</td><td class="memItemRight" valign="bottom"><b>key</b></td></tr>
-<tr class="separator:ac8861193246fc34d8f29ac9d57b6791a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1533dc1884cd5b8643b3f6fa02d020ae"><td class="memItemLeft" align="right" valign="top"><a id="a1533dc1884cd5b8643b3f6fa02d020ae"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mutexCPU</b></td></tr>
-<tr class="separator:a1533dc1884cd5b8643b3f6fa02d020ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dc69aab9a458af34b0140f861635d40"><td class="memItemLeft" align="right" valign="top"><a id="a5dc69aab9a458af34b0140f861635d40"></a>
-<a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>actions_list</b></td></tr>
-<tr class="separator:a5dc69aab9a458af34b0140f861635d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab97f9dec357760cb280cf5a121c8124a"><td class="memItemLeft" align="right" valign="top"><a id="ab97f9dec357760cb280cf5a121c8124a"></a>
+struct sigaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#ab97f9dec357760cb280cf5a121c8124a">sa_cpu_liberation</a></td></tr>
+<tr class="memdesc:ab97f9dec357760cb280cf5a121c8124a"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure permettant de gerer les signaux de liberation de la CPU <br /></td></tr>
+<tr class="separator:ab97f9dec357760cb280cf5a121c8124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2092aba7d760f117a89a9cefd1bc5733"><td class="memItemLeft" align="right" valign="top"><a id="a2092aba7d760f117a89a9cefd1bc5733"></a>
+struct sigaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a2092aba7d760f117a89a9cefd1bc5733">sa_cpu_occupation</a></td></tr>
+<tr class="memdesc:a2092aba7d760f117a89a9cefd1bc5733"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure permettant de gerer les signaux d'occupation de la CPU <br /></td></tr>
+<tr class="separator:a2092aba7d760f117a89a9cefd1bc5733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a152c7dbec01c72ad85c4442d49005"><td class="memItemLeft" align="right" valign="top"><a id="a95a152c7dbec01c72ad85c4442d49005"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a95a152c7dbec01c72ad85c4442d49005">cpu_busy</a> = 0</td></tr>
+<tr class="memdesc:a95a152c7dbec01c72ad85c4442d49005"><td class="mdescLeft">&#160;</td><td class="mdescRight">booleen indiquant si la CPU est occupee par un processus (true) ou non (false) <br /></td></tr>
+<tr class="separator:a95a152c7dbec01c72ad85c4442d49005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0010037e844940022f651c6e28f98d2"><td class="memItemLeft" align="right" valign="top"><a id="ad0010037e844940022f651c6e28f98d2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#ad0010037e844940022f651c6e28f98d2">total_occupation_cpu_time</a> = 0</td></tr>
+<tr class="memdesc:ad0010037e844940022f651c6e28f98d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">temps total d'occupation de la CPU au cours de l'execution de l'algorithme <br /></td></tr>
+<tr class="separator:ad0010037e844940022f651c6e28f98d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ae181d5d2bc6bde8a441486831ca13"><td class="memItemLeft" align="right" valign="top"><a id="ac5ae181d5d2bc6bde8a441486831ca13"></a>
+time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#ac5ae181d5d2bc6bde8a441486831ca13">start_occupation_cpu</a> = 0</td></tr>
+<tr class="memdesc:ac5ae181d5d2bc6bde8a441486831ca13"><td class="mdescLeft">&#160;</td><td class="mdescRight">instant marquant le debut de l'occupation de la CPU par un processus <br /></td></tr>
+<tr class="separator:ac5ae181d5d2bc6bde8a441486831ca13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5693a7acc5a72a2a4d08ab00ee1074ea"><td class="memItemLeft" align="right" valign="top"><a id="a5693a7acc5a72a2a4d08ab00ee1074ea"></a>
+time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a5693a7acc5a72a2a4d08ab00ee1074ea">end_occupation_cpu</a> = 0</td></tr>
+<tr class="memdesc:a5693a7acc5a72a2a4d08ab00ee1074ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">instant marquant la fin de l'occupation de la CPU par un processus <br /></td></tr>
+<tr class="separator:a5693a7acc5a72a2a4d08ab00ee1074ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d96f9d852c2058c2546a1338e87544"><td class="memItemLeft" align="right" valign="top"><a id="ab0d96f9d852c2058c2546a1338e87544"></a>
+key_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#ab0d96f9d852c2058c2546a1338e87544">key</a></td></tr>
+<tr class="memdesc:ab0d96f9d852c2058c2546a1338e87544"><td class="mdescLeft">&#160;</td><td class="mdescRight">clef permettant de creer un semaphore avec semalloc <br /></td></tr>
+<tr class="separator:ab0d96f9d852c2058c2546a1338e87544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6edd25eb8afd336e53e71e968b1a2a3a"><td class="memItemLeft" align="right" valign="top"><a id="a6edd25eb8afd336e53e71e968b1a2a3a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a6edd25eb8afd336e53e71e968b1a2a3a">mutexCPU</a></td></tr>
+<tr class="memdesc:a6edd25eb8afd336e53e71e968b1a2a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">mutex permettant de s'assurer qu'un seul processus occupe la CPU a chaque instant t <br /></td></tr>
+<tr class="separator:a6edd25eb8afd336e53e71e968b1a2a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d28270a410b65407f29e44b11bec99"><td class="memItemLeft" align="right" valign="top"><a id="a11d28270a410b65407f29e44b11bec99"></a>
+<a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8c.html#a11d28270a410b65407f29e44b11bec99">actions_list</a></td></tr>
+<tr class="memdesc:a11d28270a410b65407f29e44b11bec99"><td class="mdescLeft">&#160;</td><td class="mdescRight">liste d'actions (cycles CPU ou entrée/sortie) d'un processus <br /></td></tr>
+<tr class="separator:a11d28270a410b65407f29e44b11bec99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>fichier source qui implemente l'algorithme d'ordonnancement round-robin </p>
 <dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a5e6335f8d692f6f647cbbafaabd0ff8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e6335f8d692f6f647cbbafaabd0ff8b">&#9670;&nbsp;</a></span>cpu_liberation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cpu_liberation </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fonction de reaction au signal CPU_FREE pour savoir quand un processus libere la CPU. </p>
-<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>23/03/2022 </dd></dl>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>signal auquel doit reagir la fonction </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a id="a185f96d2b5102330952eb134ad7fe307"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a185f96d2b5102330952eb134ad7fe307">&#9670;&nbsp;</a></span>cpu_occupation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cpu_occupation </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fonction de reaction au signal CPU_BUSY pour savoir quand un processus occupe la CPU. </p>
-<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>23/03/2022 </dd></dl>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">int</td><td>signal auquel doit reagir la fonction </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a id="acebce5b82b4a9d46d95030ba107ec987"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acebce5b82b4a9d46d95030ba107ec987">&#9670;&nbsp;</a></span>round_robin()</h2>
 
@@ -201,7 +152,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mutexCPU</b></td></tr>
 <dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a></td><td>simulation ayant pour algorithme d'ordonnancement Round-Robin </td></tr>
+    <tr><td class="paramname">simulation</td><td>simulation ayant pour algorithme d'ordonnancement Round-Robin </td></tr>
   </table>
   </dd>
 </dl>

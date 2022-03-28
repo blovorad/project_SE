@@ -7,15 +7,59 @@
  * \brief fichier source qui implemente l'algorithme d'ordonnancement round-robin
  */
 
-    // Envoi de signaux par les fils au père pour savoir si CPU libre : "je suis dans CPU", sleep(), "je suis sorti", dans le mutexCPU pour mettre à jour booléen et calculer taux d'occupation de la CPU (gestion du calcul du temps dans le père - vérifier si le booléen a changé entre temps dans le père)
+
+/**
+ * \var sa_cpu_liberation
+ * \brief structure permettant de gerer les signaux de liberation de la CPU
+ */
 struct sigaction sa_cpu_liberation;
+
+/**
+ * \var sa_cpu_occupation
+ * \brief structure permettant de gerer les signaux d'occupation de la CPU
+ */
 struct sigaction sa_cpu_occupation;
+
+/**
+ * \var cpu_busy
+ * \brief booleen indiquant si la CPU est occupee par un processus (true) ou non (false)
+ */
 int cpu_busy = 0;
+
+/**
+ * \var total_occupation_cpu_time
+ * \brief temps total d'occupation de la CPU au cours de l'execution de l'algorithme
+ */
 double total_occupation_cpu_time = 0;
+
+/**
+ * \var start_occupation_cpu
+ * \brief instant marquant le debut de l'occupation de la CPU par un processus
+ */
 time_t start_occupation_cpu = 0;
+
+/**
+ * \var end_occupation_cpu
+ * \brief instant marquant la fin de l'occupation de la CPU par un processus
+ */
 time_t end_occupation_cpu = 0;
+
+/**
+ * \var key
+ * \brief clef permettant de creer un semaphore avec semalloc
+ */
 key_t key;
+
+/**
+ * \var mutexCPU
+ * \brief mutex permettant de s'assurer qu'un seul processus occupe la CPU a chaque instant t
+ */
 int mutexCPU;
+
+/**
+ * \var actions_list
+ * \brief liste d'actions (cycles CPU ou entrée/sortie) d'un processus
+ */
 Action* actions_list;
 
 
@@ -24,11 +68,9 @@ Action* actions_list;
  * \author Ouliana Anikienko
  * \date 23/03/2022
  * \brief Fonction de reaction au signal CPU_BUSY pour savoir quand un processus occupe la CPU
- * \param int signal auquel doit reagir la fonction
  * \return void
  */
-void cpu_occupation(int signal) {
-    //un processus déclare occuper la CPU : il envoie le signal d'occupation au processus père qui déclare la cpu occupée et lance le chrono pour mesurer le temps do'cuppation (et pour ensuite calculer le pourcentage d'occupation)
+void cpu_occupation() {
     cpu_busy = 1;
     start_occupation_cpu = time(NULL);
 }
@@ -38,10 +80,9 @@ void cpu_occupation(int signal) {
  * \author Ouliana Anikienko
  * \date 23/03/2022
  * \brief Fonction de reaction au signal CPU_FREE pour savoir quand un processus libere la CPU
- * \param int signal auquel doit reagir la fonction
  * \return void
  */
-void cpu_liberation(int signal) {
+void cpu_liberation() {
     cpu_busy = 0;
     end_occupation_cpu = time(NULL);
     total_occupation_cpu_time += difftime(end_occupation_cpu, start_occupation_cpu);
@@ -52,7 +93,7 @@ void cpu_liberation(int signal) {
  * \author Ouliana Anikienko
  * \date 03/03/2022
  * \brief Simulation effectuee avec l'algorithme Round-Robin (ou tourniquet)
- * \param Simulation simulation ayant pour algorithme d'ordonnancement Round-Robin
+ * \param simulation simulation ayant pour algorithme d'ordonnancement Round-Robin
  * \return 0 en temps normal, -1 en cas d'erreur
  */
 int round_robin(Simulation *simulation) {
@@ -78,13 +119,26 @@ int round_robin(Simulation *simulation) {
     int quantum = simulation->quantum;
     Processus* processus = simulation->processus_array.processus;
     int nbProcessus = simulation->processus_array.nbProcessus;
-    pid_t processus_pid[nbProcessus];
+    
+    printf("nbProcessus : %d\n", nbProcessus);
+
+    pid_t* processus_pid = (pid_t*) malloc (sizeof(pid_t)*nbProcessus);
+    if (processus_pid == NULL) {
+        semfree(mutexCPU);
+        perror("Malloc failed for processus_pid");
+        exit(-1);
+    }
 
     //Indice du processus courant
     int i = 0;
 
     //Recuperation des temps d'arrivee
-    double arrival_times[nbProcessus];
+    double* arrival_times = (double*) malloc (sizeof(double)*nbProcessus);
+    if (arrival_times == NULL) {
+        semfree(mutexCPU);
+        perror("Malloc failed for arrival_times");
+        exit(-1);
+    }
     for (i=0; i < nbProcessus; i++) {
         arrival_times[i] = (double) processus[i].arrive_at;
     }
@@ -108,7 +162,6 @@ int round_robin(Simulation *simulation) {
                     while (actions_list != NULL) {
                         if (actions_list->type == CPU) {
                             time_t start_waiting = time(NULL);
-                            processus[i].time_pause = (int) start_waiting; //Correct ?
 
                             P(mutexCPU);
 
@@ -133,9 +186,10 @@ int round_robin(Simulation *simulation) {
                         processus[i].time_to_restue = processus[i].time_execution + processus[i].time_attempt;
                         actions_list = delete_head(actions_list);
                     }
-                    return 0;
+                    return 1;
 
                 default:
+                    
                     i++;
                     break;
             }
@@ -152,17 +206,18 @@ int round_robin(Simulation *simulation) {
     i=0;
     double total_time_attempt = 0;
     double total_time_restitution = 0;
-    double total_time_respond = 0; // Comment l'évaluer ?
+    double total_time_respond = 0; //Considere comme negligeable a l'echelle de la simulation
     
     for (i=0; i<nbProcessus; i++) {
         total_time_attempt += processus[i].time_attempt;
         total_time_restitution += processus[i].time_to_restue;
     }
 
-    simulation->average_time_attempt = total_time_attempt/nbProcessus;
-    simulation->average_time_restitution = total_time_restitution/nbProcessus;
-    simulation->average_time_respond = total_time_respond/nbProcessus;
+    simulation->average_time_attempt = total_time_attempt/(double) nbProcessus;
+    simulation->average_time_restitution = total_time_restitution/(double)nbProcessus;
+    simulation->average_time_respond = total_time_respond/(double)nbProcessus;
     simulation->average_pourcentage_CPU = total_occupation_cpu_time/algorithm_execution_time; //Correct ?
+    simulation->time_restitution = algorithm_execution_time;
 
     //Destruction des ressources IPC allouees
     //MutexCPU

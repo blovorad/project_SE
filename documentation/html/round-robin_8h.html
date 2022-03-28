@@ -64,7 +64,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier round-robin.h</div>  </div>
 </div><!--header-->
@@ -88,19 +89,61 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a894a8a53764d0561ad2acb1136364a74"><td class="memItemLeft" align="right" valign="top"><a id="a894a8a53764d0561ad2acb1136364a74"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#a894a8a53764d0561ad2acb1136364a74">CPU_BUSY</a>&#160;&#160;&#160;1</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#a894a8a53764d0561ad2acb1136364a74">CPU_BUSY</a>&#160;&#160;&#160;51</td></tr>
 <tr class="memdesc:a894a8a53764d0561ad2acb1136364a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un signal qu'un processus fils envoie pour dire qu'il occcupe la CPU. <br /></td></tr>
 <tr class="separator:a894a8a53764d0561ad2acb1136364a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91bc1c4e792b9645a54450c2020521b1"><td class="memItemLeft" align="right" valign="top"><a id="a91bc1c4e792b9645a54450c2020521b1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#a91bc1c4e792b9645a54450c2020521b1">CPU_FREE</a>&#160;&#160;&#160;2</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#a91bc1c4e792b9645a54450c2020521b1">CPU_FREE</a>&#160;&#160;&#160;52</td></tr>
 <tr class="memdesc:a91bc1c4e792b9645a54450c2020521b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un signal qu'un processus fils envoie pour dire qu'il libere la CPU. <br /></td></tr>
 <tr class="separator:a91bc1c4e792b9645a54450c2020521b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:abafeed16f4b5850f8c594a54ac8e71fb"><td class="memItemLeft" align="right" valign="top"><a id="abafeed16f4b5850f8c594a54ac8e71fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cpu_occupation</b> ()</td></tr>
+<tr class="separator:abafeed16f4b5850f8c594a54ac8e71fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4b2240fd55b857ba4949bb39c35820"><td class="memItemLeft" align="right" valign="top"><a id="a4d4b2240fd55b857ba4949bb39c35820"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cpu_liberation</b> ()</td></tr>
+<tr class="separator:a4d4b2240fd55b857ba4949bb39c35820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebce5b82b4a9d46d95030ba107ec987"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="round-robin_8h.html#acebce5b82b4a9d46d95030ba107ec987">round_robin</a> (<a class="el" href="structSimulation.html">Simulation</a> *simulation)</td></tr>
+<tr class="memdesc:acebce5b82b4a9d46d95030ba107ec987"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a> effectuee avec l'algorithme Round-Robin (ou tourniquet)  <a href="round-robin_8h.html#acebce5b82b4a9d46d95030ba107ec987">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acebce5b82b4a9d46d95030ba107ec987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>fichier entete associe a l'algorithme d'ordonnancement round-robin </p>
 <dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="acebce5b82b4a9d46d95030ba107ec987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebce5b82b4a9d46d95030ba107ec987">&#9670;&nbsp;</a></span>round_robin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int round_robin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSimulation.html">Simulation</a> *&#160;</td>
+          <td class="paramname"><em>simulation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structSimulation.html" title="Constantes pour les codes des algorithmes.">Simulation</a> effectuee avec l'algorithme Round-Robin (ou tourniquet) </p>
+<dl class="section author"><dt>Auteur</dt><dd>Ouliana Anikienko </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>03/03/2022 </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">simulation</td><td>simulation ayant pour algorithme d'ordonnancement Round-Robin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 en temps normal, -1 en cas d'erreur </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

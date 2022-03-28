@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['open_5ffile_39',['open_file',['../util_8c.html#aac7d8fc77f17b44006b8cce30ed001b8',1,'open_file(char *path, char *mode):&#160;util.c'],['../util_8h.html#a207a3b13f42c4cb561abdd1a4989faa2',1,'open_file(char *path, char *mode):&#160;util.c']]]
+  ['mutex_5fcpu_41',['mutex_cpu',['../structSJF__Thread.html#a18830db942c5e2f6bdb127a3a4129779',1,'SJF_Thread']]],
+  ['mutexcpu_42',['mutexCPU',['../round-robin_8c.html#a6edd25eb8afd336e53e71e968b1a2a3a',1,'round-robin.c']]]
 ];

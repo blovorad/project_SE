@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['processus_133',['processus',['../structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4',1,'Processus_array']]],
-  ['processus_5farray_134',['processus_array',['../structSimulation.html#a52402ab51c31f9ae77a7b67df51e0d56',1,'Simulation']]]
+  ['first_5fcpu_166',['first_cpu',['../structSJF__needs.html#a2dc0adc7d15eaaebd69c3dfa6e59d4f3',1,'SJF_needs']]]
 ];

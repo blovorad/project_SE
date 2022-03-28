@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['util_2ec_76',['util.c',['../util_8c.html',1,'']]],
-  ['util_2eh_77',['util.h',['../util_8h.html',1,'']]]
+  ['sa_5fcpu_5fliberation_66',['sa_cpu_liberation',['../round-robin_8c.html#ab97f9dec357760cb280cf5a121c8124a',1,'round-robin.c']]],
+  ['sa_5fcpu_5foccupation_67',['sa_cpu_occupation',['../round-robin_8c.html#a2092aba7d760f117a89a9cefd1bc5733',1,'round-robin.c']]],
+  ['select_5falgorithm_68',['select_algorithm',['../config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68',1,'select_algorithm(char *nom_algorithm):&#160;config.c'],['../config_8c.html#a98c98ac273d99f4fc11cdb91cc431f68',1,'select_algorithm(char *nom_algorithm):&#160;config.c']]],
+  ['select_5fnext_5fcpu_69',['select_next_cpu',['../sjf_8h.html#a9e3692da9fb7bd8a20aac5f857afdbac',1,'select_next_cpu(void):&#160;sjf.c'],['../sjf_8c.html#a9e3692da9fb7bd8a20aac5f857afdbac',1,'select_next_cpu(void):&#160;sjf.c']]],
+  ['simulation_70',['Simulation',['../structSimulation.html',1,'']]],
+  ['simulation_2eh_71',['simulation.h',['../simulation_8h.html',1,'']]],
+  ['simulation_5farray_72',['Simulation_array',['../structSimulation__array.html',1,'']]],
+  ['simulation_5fshared_73',['simulation_shared',['../structSJF__needs.html#a90204ca551caa9ae446a3bd306cfabd7',1,'SJF_needs']]],
+  ['simulations_74',['simulations',['../structSimulation__array.html#a62b77ad35217d8a6fa1fe69b3bd44ab3',1,'Simulation_array']]],
+  ['size_5fstring_75',['size_string',['../util_8h.html#af34407842c1b477926a7d6e13f22ab7d',1,'size_string(char *string):&#160;util.c'],['../util_8c.html#af34407842c1b477926a7d6e13f22ab7d',1,'size_string(char *string):&#160;util.c']]],
+  ['sjf_76',['sjf',['../sjf_8h.html#ad99a8fefa2265562a1dc44ef6d0a2772',1,'sjf(Simulation *simulation):&#160;sjf.c'],['../sjf_8c.html#ad99a8fefa2265562a1dc44ef6d0a2772',1,'sjf(Simulation *simulation):&#160;sjf.c']]],
+  ['sjf_77',['SJF',['../simulation_8h.html#a5e41188f16a381c8915a17a22228e691a8ade209ddd4ef30da88ba1c9780b5e33',1,'simulation.h']]],
+  ['sjf_2ec_78',['sjf.c',['../sjf_8c.html',1,'']]],
+  ['sjf_2eh_79',['sjf.h',['../sjf_8h.html',1,'']]],
+  ['sjf_5fneeds_80',['SJF_needs',['../structSJF__needs.html',1,'']]],
+  ['sjf_5fneeds_81',['sjf_needs',['../sjf_8c.html#af37c5aca22afdeaac964e5dbea319fde',1,'sjf.c']]],
+  ['sjf_5fthread_82',['SJF_Thread',['../structSJF__Thread.html',1,'']]],
+  ['sjf_5fthread_5farray_83',['SJF_Thread_array',['../structSJF__Thread__array.html',1,'']]],
+  ['start_5foccupation_5fcpu_84',['start_occupation_cpu',['../round-robin_8c.html#ac5ae181d5d2bc6bde8a441486831ca13',1,'round-robin.c']]],
+  ['start_5fsimulations_85',['start_simulations',['../starter_8c.html#a73c455357bbfe7e99de367086ce4a739',1,'start_simulations(int argc, char *argv[], Simulation_array *simulation_array):&#160;starter.c'],['../starter_8h.html#a73c455357bbfe7e99de367086ce4a739',1,'start_simulations(int argc, char *argv[], Simulation_array *simulation_array):&#160;starter.c']]],
+  ['start_5ftime_86',['start_time',['../structSJF__needs.html#a8f53c3465fa94e7d982658781e7245ab',1,'SJF_needs']]],
+  ['starter_2ec_87',['starter.c',['../starter_8c.html',1,'']]],
+  ['starter_2eh_88',['starter.h',['../starter_8h.html',1,'']]],
+  ['suivant_89',['suivant',['../structcellule.html#a697f75c7dd9a48ef34247501cff1c084',1,'cellule']]]
 ];
