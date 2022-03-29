@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['mutex_5fcpu_41',['mutex_cpu',['../structSJF__Thread.html#a18830db942c5e2f6bdb127a3a4129779',1,'SJF_Thread']]],
-  ['mutexcpu_42',['mutexCPU',['../round-robin_8c.html#a6edd25eb8afd336e53e71e968b1a2a3a',1,'round-robin.c']]]
+  ['name_40',['name',['../structProcessus.html#a5349d09102daad27ff7dead8f109564b',1,'Processus']]],
+  ['nb_5fthread_41',['nb_thread',['../structSJF__Thread__array.html#ad0619dedafcf54cb8fa242e85e583286',1,'SJF_Thread_array']]],
+  ['nb_5fthreads_42',['nb_threads',['../structRR__Threads__array.html#ad630f1c6d6863511f22426754de6ec3c',1,'RR_Threads_array']]],
+  ['nbprocessus_43',['nbProcessus',['../structProcessus__array.html#a34412bb024904355e30ac7c1118ea373',1,'Processus_array']]],
+  ['nbsimulations_44',['nbSimulations',['../structSimulation__array.html#adabfa1b9cfe233a6354e28fe7691eb46',1,'Simulation_array']]]
 ];

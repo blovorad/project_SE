@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['name_170',['name',['../structProcessus.html#a5349d09102daad27ff7dead8f109564b',1,'Processus']]],
-  ['nb_5fthread_171',['nb_thread',['../structSJF__Thread__array.html#ad0619dedafcf54cb8fa242e85e583286',1,'SJF_Thread_array']]],
-  ['nbprocessus_172',['nbProcessus',['../structProcessus__array.html#a34412bb024904355e30ac7c1118ea373',1,'Processus_array']]],
-  ['nbsimulations_173',['nbSimulations',['../structSimulation__array.html#adabfa1b9cfe233a6354e28fe7691eb46',1,'Simulation_array']]]
+  ['processus_177',['processus',['../structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4',1,'Processus_array']]],
+  ['processus_5farray_178',['processus_array',['../structSimulation.html#a52402ab51c31f9ae77a7b67df51e0d56',1,'Simulation']]]
 ];
