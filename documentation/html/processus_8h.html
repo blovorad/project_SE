@@ -83,18 +83,19 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcellule.html">cellule</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">liste chainer qui represente une action d'un processus  <a href="structcellule.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">liste chainee qui represente une action d'un processus  <a href="structcellule.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus.html">Processus</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure d'un processus ainsi que toute ses actions, et les resultats de la simulation pour ce processus  <a href="structProcessus.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure d'un processus ainsi que toutes ses actions, et les resultats de la simulation pour ce processus  <a href="structProcessus.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessus__array.html">Processus_array</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">gerer un tableau de processus, permet de savoir qui arrive a quelle moment en fonction de l'index dans le tableau  <a href="structProcessus__array.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">gerer un tableau de processus, permet de savoir qui arrive a quel moment en fonction de l'indice dans le tableau  <a href="structProcessus__array.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Définitions de type</h2></td></tr>
-<tr class="memitem:a206a58174ece27c950e9b005d52db250"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structcellule.html">cellule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a></td></tr>
+<tr class="memitem:a206a58174ece27c950e9b005d52db250"><td class="memItemLeft" align="right" valign="top"><a id="a206a58174ece27c950e9b005d52db250"></a>
+typedef struct <a class="el" href="structcellule.html">cellule</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Action</b></td></tr>
 <tr class="separator:a206a58174ece27c950e9b005d52db250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -102,7 +103,7 @@ Définitions de type</h2></td></tr>
 <tr class="memitem:a450315c67565678c674b45ab421d53ec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> { <a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b">CPU</a>
 , <a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f">ES</a>
  }</td></tr>
-<tr class="memdesc:a450315c67565678c674b45ab421d53ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constantes si Action est CPU ou entrer/sortie.  <a href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a450315c67565678c674b45ab421d53ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constantes si Action est CPU ou entree/sortie.  <a href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a450315c67565678c674b45ab421d53ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -114,36 +115,20 @@ Fonctions</h2></td></tr>
 <tr class="memdesc:a7a1a8aec2b6e36b2bbc8668a81905dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise un processus  <a href="processus_8h.html#a7a1a8aec2b6e36b2bbc8668a81905dbe">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7a1a8aec2b6e36b2bbc8668a81905dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e9c6a0f0f8489212e8572921e1e2437"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">compare_begin_processus</a> (const void *p1, const void *p2)</td></tr>
-<tr class="memdesc:a6e9c6a0f0f8489212e8572921e1e2437"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction de comparaison utiliser par Qsort qui compare les temps de chaque Action  <a href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a6e9c6a0f0f8489212e8572921e1e2437"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction de comparaison utilisee par qsort qui compare les temps de chaque action  <a href="processus_8h.html#a6e9c6a0f0f8489212e8572921e1e2437">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6e9c6a0f0f8489212e8572921e1e2437"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da68731fce570669c6df8931681fed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#a0da68731fce570669c6df8931681fed8">push_to_tail</a> (int time_execution, <a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> type, <a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *action)</td></tr>
-<tr class="memdesc:a0da68731fce570669c6df8931681fed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">insertion en queue dans la liste chainer d'action  <a href="processus_8h.html#a0da68731fce570669c6df8931681fed8">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a0da68731fce570669c6df8931681fed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcellule.html">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#a0da68731fce570669c6df8931681fed8">push_to_tail</a> (int time_execution, <a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> type, <a class="el" href="structcellule.html">Action</a> *action)</td></tr>
+<tr class="memdesc:a0da68731fce570669c6df8931681fed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">insertion en queue dans la liste chainee d'actions  <a href="processus_8h.html#a0da68731fce570669c6df8931681fed8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0da68731fce570669c6df8931681fed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed90ec89c08ffbc2d8bc65d9bb49a9dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#aed90ec89c08ffbc2d8bc65d9bb49a9dd">delete_head</a> (<a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *action)</td></tr>
-<tr class="memdesc:aed90ec89c08ffbc2d8bc65d9bb49a9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">detruis la tete de la liste chainer action  <a href="processus_8h.html#aed90ec89c08ffbc2d8bc65d9bb49a9dd">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:aed90ec89c08ffbc2d8bc65d9bb49a9dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcellule.html">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8h.html#aed90ec89c08ffbc2d8bc65d9bb49a9dd">delete_head</a> (<a class="el" href="structcellule.html">Action</a> *action)</td></tr>
+<tr class="memdesc:aed90ec89c08ffbc2d8bc65d9bb49a9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">detruit la tete de la liste chainee d'actions  <a href="processus_8h.html#aed90ec89c08ffbc2d8bc65d9bb49a9dd">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aed90ec89c08ffbc2d8bc65d9bb49a9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>fichier entete qui gere les processus </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
-</div><h2 class="groupheader">Documentation des définitions de type</h2>
-<a id="a206a58174ece27c950e9b005d52db250"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a206a58174ece27c950e9b005d52db250">&#9670;&nbsp;</a></span>Action</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structcellule.html">cellule</a> <a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>typedef de la struct cellule en Action pour une compréhension et une utilisation plus clair </p>
-
-</div>
-</div>
-<h2 class="groupheader">Documentation du type de l'énumération</h2>
+</div><h2 class="groupheader">Documentation du type de l'énumération</h2>
 <a id="a450315c67565678c674b45ab421d53ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a450315c67565678c674b45ab421d53ec">&#9670;&nbsp;</a></span>Cycle_type</h2>
 
@@ -156,11 +141,11 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constantes si Action est CPU ou entrer/sortie. </p>
+<p>Constantes si Action est CPU ou entree/sortie. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a450315c67565678c674b45ab421d53eca0035eb0600d18dfc302f6bf7a7cbfa3b"></a>CPU&#160;</td><td class="fielddoc"><p>Action cycle CPU </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f"></a>ES&#160;</td><td class="fielddoc"><p>Action cycle Entrer/Sortie </p>
+<tr><td class="fieldname"><a id="a450315c67565678c674b45ab421d53eca5a0892a1c7e395be57cf5b9f1cd9c76f"></a>ES&#160;</td><td class="fielddoc"><p>Action cycle Entree/Sortie </p>
 </td></tr>
 </table>
 
@@ -193,13 +178,13 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>fonction de comparaison utiliser par Qsort qui compare les temps de chaque Action </p>
+<p>fonction de comparaison utilisee par qsort qui compare les temps de chaque action </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p1</td><td>ici on envoie une Action </td></tr>
-    <tr><td class="paramname">p2</td><td>ici on envoie une Action </td></tr>
+    <tr><td class="paramname">p1</td><td>ici on envoie une action </td></tr>
+    <tr><td class="paramname">p2</td><td>ici on envoie une action </td></tr>
   </table>
   </dd>
 </dl>
@@ -214,25 +199,25 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a>* delete_head </td>
+          <td class="memname"><a class="el" href="structcellule.html">Action</a>* delete_head </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structcellule.html">Action</a> *&#160;</td>
           <td class="paramname"><em>action</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>detruis la tete de la liste chainer action </p>
+<p>detruit la tete de la liste chainee d'actions </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">action</td><td>liste chainer ou l'on doit supprimer la tete </td></tr>
+    <tr><td class="paramname">action</td><td>liste chainee ou l'on doit supprimer la tete </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>la liste chainer avec changement de tete </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la liste chainee avec changement de tete </dd></dl>
 
 </div>
 </div>
@@ -274,7 +259,7 @@ Fonctions</h2></td></tr>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>nom du processus </td></tr>
-    <tr><td class="paramname">arrive_at</td><td>temps a laquelle arrive le processus </td></tr>
+    <tr><td class="paramname">arrive_at</td><td>temps auquel arrive le processus </td></tr>
     <tr><td class="paramname">processus</td><td>le processus(son adresse) qui est rempli </td></tr>
   </table>
   </dd>
@@ -329,7 +314,7 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a>* push_to_tail </td>
+          <td class="memname"><a class="el" href="structcellule.html">Action</a>* push_to_tail </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>time_execution</em>, </td>
@@ -343,7 +328,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structcellule.html">Action</a> *&#160;</td>
           <td class="paramname"><em>action</em>&#160;</td>
         </tr>
         <tr>
@@ -354,18 +339,18 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>insertion en queue dans la liste chainer d'action </p>
+<p>insertion en queue dans la liste chainee d'actions </p>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">time_execution</td><td>temps d'execution en int de l'action </td></tr>
+    <tr><td class="paramname">time_execution</td><td>temps d'execution (type int) de l'action </td></tr>
     <tr><td class="paramname">type</td><td>type d'action, CPU ou ES </td></tr>
-    <tr><td class="paramname">action</td><td>liste chainer ou faire l'insertion </td></tr>
+    <tr><td class="paramname">action</td><td>liste chainee ou faire l'insertion </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>la liste chainer avec changement en queue </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la liste chainee avec changement en queue </dd></dl>
 
 </div>
 </div>
