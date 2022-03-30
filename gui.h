@@ -99,7 +99,7 @@ typedef struct{
  * \param w largeur du bouton
  * \param h hauteur du bouton
  * \param fill si le bouton est remplis ou non par une couleur
- * \param index_texture, -1 si aucune textue n'est utiliser sinon envoyer son index par rapport au tableau de graphics
+ * \param index_texture -1 si aucune textue n'est utiliser sinon envoyer son index par rapport au tableau de graphics
  * \param color la couleur du bouton
  * \param event index dans le tableau event d'une fonction qui s'execute a l'appuis du bouton
  * \param text_color la couleur du texte
@@ -110,7 +110,7 @@ typedef struct{
 BL_Button BL_create_button(BL_Window window, int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, int event,  SDL_Color text_color, char *text, char *font_path);
 
 /**
- * \fn BL_Panel BL_create_panel(int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, BL_Array_text array_text, BL_Array_button array_button);
+ * \fn BL_Panel BL_create_panel(int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, BL_Array_text array_text, BL_Array_button array_button)
  * \author Gautier Levesque
  * \brief creation d'un panel
  * \param x position x du panel
@@ -118,7 +118,7 @@ BL_Button BL_create_button(BL_Window window, int x, int y, int w, int h, SDL_boo
  * \param w largeur du panel
  * \param h hauteur du panel
  * \param fill si le panel est remplis ou non par une couleur
- * \param index_texture, -1 si aucune texture n'est utiliser sinon envoyer son index par rapport au tableau de graphics
+ * \param index_texture -1 si aucune texture n'est utiliser sinon envoyer son index par rapport au tableau de graphics
  * \param color la couleur du panel
  * \param array_text tableau de tous les textes qui sont attaches au panel
  * \param array_button tableau de tous les boutons qui sont attaches au panel
