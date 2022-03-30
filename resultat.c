@@ -36,8 +36,7 @@ int generate_result_simulation(char *path, Simulation_array simulation_array){
 void print_resultat_console_simulation(Simulation_array simulation_array){
 	
 	printf("******************************************************************\n");
-	printf("******************************************************************\n");
-	printf("Affichage des resultats des simulations commencer\n\n\n");
+	printf("Affichage des resultats des simulations\n\n");
 	
 	printf("Average_time_restitution;");
 	printf("Average_time_attempt;");
@@ -56,9 +55,6 @@ void print_resultat_console_simulation(Simulation_array simulation_array){
 		printf("%s\n", string);
 	}
 	
-	printf("\n\nAffichage des resultats simulations terminer\n");
-	printf("******************************************************************\n");
-	printf("******************************************************************\n");
 }
 
 int generate_result_processus(char *path, Simulation_array simulation_array){
@@ -92,9 +88,7 @@ int generate_result_processus(char *path, Simulation_array simulation_array){
 
 void print_resultat_console_processus(Simulation_array simulation_array){
 	
-	printf("******************************************************************\n");
-	printf("******************************************************************\n");
-	printf("Affichage des resultats des processus commencer\n\n\n");
+	printf("\n\n\nAffichage des resultats des processus\n\n");
 	
 	printf("Processus;");
 	printf("Time_to_restue;");
@@ -116,7 +110,5 @@ void print_resultat_console_processus(Simulation_array simulation_array){
 		printf("\n");
 	}
 	
-	printf("\n\nAffichage des resultats processus terminer\n");
-	printf("******************************************************************\n");
 	printf("******************************************************************\n");
 }

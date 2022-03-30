@@ -17,15 +17,17 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
             //test rapide console, nombre processus, nombre de cycle CPU
             if(argc != 4){
                 
-                printf("Format commande mauvaise, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
+                printf("Mauvais format de commande, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
                 return 1;
             }
             if(get_config_commandLine(argv, simulation_array) == -1){
                 
-                printf("Erreur chargement configuration\n");
+                printf("Erreur lors du chargement de la configuration\n");
                 return 2;
             }
-            launch_an_algoritm(simulation_array);
+            printf("Lancement de la simulation - celle-ci peut prendre quelques minutes...\n");
+            launch_an_algorithm(simulation_array);
+            printf("Sauvegarde des resultats dans le fichier de sortie par defaut...\n\n");
             generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
             generate_result_simulation("./fichier_resultat_processus.csv", *simulation_array);
             print_resultat_console_simulation(*simulation_array);
@@ -37,10 +39,12 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 //sortis non specifier
                 if(get_config_file(open_file(argv[2], "r"), simulation_array) == -1){
                     
-                    printf("Erreur chargement configuration\n");
+                    printf("Erreur lors du chargement de la configuration\n");
                     return 2;
                 }
-                launch_an_algoritm(simulation_array);
+                printf("Lancement de la simulation - celle-ci peut prendre quelques minutes...\n");
+                launch_an_algorithm(simulation_array);
+                printf("Sauvegarde des resultats dans le fichier de sortie par defaut ./fichier_resultat_processus.csv...\n\n");
                 generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
                 generate_result_simulation("./fichier_resultat_processus.csv", *simulation_array);
                 print_resultat_console_simulation(*simulation_array);
@@ -50,19 +54,21 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 //fichier de sortis specifier
                 if(get_config_file(open_file(argv[2], "r"), simulation_array) == -1){
                     
-                    printf("Erreur chargement configuration\n");
+                    printf("Erreur lors du chargement de la configuration\n");
                     return 2;
                 }
-                launch_an_algoritm(simulation_array);
+                printf("Lancement de la simulation - celle-ci peut prendre quelques minutes...\n");
+                launch_an_algorithm(simulation_array);
                 int path_ok = is_path_ok(argv[3]);
                 if(path_ok == 1){
                 
+                    printf("Ecriture des resultats dans le fichier %s\n", argv[3]); 
                     generate_result_processus(argv[3], *simulation_array);
                     generate_result_simulation(argv[3], *simulation_array);
                 }
                 else{
                     
-                    printf("format du fichier non reconnus ou chemin mauvais ecriture des resultats dans le fichier :./fichier_resultat_processus.csv\n"); 
+                    printf("Format du fichier non reconnu ou chemin incorrect ; ecriture des resultats dans le fichier : ./fichier_resultat_processus.csv\n\n"); 
                     generate_result_processus("./fichier_resultat_processus.csv", *simulation_array);
                     generate_result_simulation("./fichier_resultat_processus.csv", *simulation_array);
                 }
@@ -71,7 +77,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
             }
             else{
                 
-                printf("Format commande mauvaise, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
+                printf("Mauvais format de commande, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
                 return 1;
             }
         }
@@ -81,20 +87,20 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
         }
         else{
             
-            printf("Mauvaise commande, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
+            printf("Commande incorrecte, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
             return 1;
         }
     }
     else{
         
-        printf("Mauvaise commande, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
+        printf("Commande incorrecte, taper : ./prog -h pour plus d'information ou consulter la documentation\n");
         return 1;
     }
     
     return 0;
 }
 
-int launch_an_algoritm(Simulation_array *simulation_array){
+int launch_an_algorithm(Simulation_array *simulation_array){
 
     for(int i = 0; i < simulation_array->nbSimulations;i++){
     
@@ -118,8 +124,8 @@ int launch_an_algoritm(Simulation_array *simulation_array){
 
 void print_help(void){
     
-    printf("Aide du programme\n");
-    printf("taper ./prog -rt <nombre de processus> <nombre de cycle CPU> pour lancer un test rapide\n");
-    printf("taper ./prog -rc <chemin vers un fichier de configuration> <chemin de sortis(optionnel) en .csv> pour lancer un test avec un fichier de configuration\n");
-    printf("Pour plus d'aide consulter la documentation du programme\n");
+    printf("---- Aide du programme ---\n");
+    printf(" - Taper ./prog -rt <nombre de processus> <nombre de cycle CPU> pour lancer un test rapide ;\n");
+    printf(" - Taper ./prog -rc <chemin vers un fichier de configuration> [chemin du fichier de sortie (optionnel) en .csv] pour lancer un test avec un fichier de configuration.\n");
+    printf("Pour plus d'informations, consulter la documentation du programme.\n");
 }
