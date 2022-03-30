@@ -10,19 +10,21 @@
 int is_path_ok(char *path){
 	
 	int size = size_string(path);
-	if(size < 6 || size > 255){
-		
+	if(size < 7 || size > 255){
+        printf("Nom de fichier de longueur insuffisante\n");
 		return 0;
 	}	
-	char extension[5];
-	extension[0] = path[size - 3];
-	extension[1] = path[size - 2];
-	extension[2] = path[size - 1];
-	extension[3] = path[size];
-	extension[4] = '\0';
+	char extension[6];
+	extension[0] = path[size - 4];
+	extension[1] = path[size - 3];
+	extension[2] = path[size - 2];
+	extension[3] = path[size - 1];
+	extension[4] = path[size];
+    extension[5] = '\0';
+
 	
-	if(strcmp(".csv", extension) != 0){
-		
+	if(strncmp(".csv", extension, 4) != 0){
+		printf("Probleme avec l'extension du fichier, celle-ci doit etre .csv\n");
 		return 0;
 	}
 	
