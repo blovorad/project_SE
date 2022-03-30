@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de window.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">window.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="window_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __WINDOW__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __WINDOW__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;define.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="directory_8h.html">directory.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structBL__Window.html">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structBL__Window.html#a2c0898994444f67b91e86471ea5ebb8f">   19</a></span>&#160;    SDL_Window *<a class="code" href="structBL__Window.html#a2c0898994444f67b91e86471ea5ebb8f">screen</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structBL__Window.html#a2b7bdeac86472fa70442fd7d5cfca625">   20</a></span>&#160;    SDL_Renderer *<a class="code" href="structBL__Window.html#a2b7bdeac86472fa70442fd7d5cfca625">renderer</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structBL__Window.html#a46ce2974b72b0f261b89637d6a4bdba4">   21</a></span>&#160;    SDL_bool <a class="code" href="structBL__Window.html#a46ce2974b72b0f261b89637d6a4bdba4">fullscreen</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structBL__Window.html#a9480590ef08845c377fd83d2fab67c75">   23</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structBL__Window.html#a9480590ef08845c377fd83d2fab67c75">width</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structBL__Window.html#a42d09804ddbf8ac2cce2a68078307572">   24</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structBL__Window.html#a42d09804ddbf8ac2cce2a68078307572">height</a>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structBL__Window.html#aa0642cc5dd7853e73a54548f11e7c45c">   26</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structBL__Window.html#aa0642cc5dd7853e73a54548f11e7c45c">scaleX</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structBL__Window.html#a26353cacd17fe886abfedee017ca89dd">   27</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structBL__Window.html#a26353cacd17fe886abfedee017ca89dd">scaleY</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}<a class="code" href="structBL__Window.html">BL_Window</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;SDL_bool <a class="code" href="window_8h.html#a534736165cb87e3fa2399f99a42e1c43">BL_creat_windowRenderer</a>(<span class="keywordtype">char</span> *title, <a class="code" href="structBL__Window.html">BL_Window</a> *window);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;SDL_bool <a class="code" href="window_8h.html#a11112d04060539ad1b4165f43e0284e8">BL_creat_configuration</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adirectory_8h_html"><div class="ttname"><a href="directory_8h.html">directory.h</a></div><div class="ttdoc">fichier entete pour la recherche de fichier dans des repertoires</div></div>
+<div class="ttc" id="astructBL__Window_html"><div class="ttname"><a href="structBL__Window.html">BL_Window</a></div><div class="ttdoc">regroupe toute les variables necessaire a la gestion des fenetres en SDL</div><div class="ttdef"><b>Definition:</b> window.h:17</div></div>
+<div class="ttc" id="astructBL__Window_html_a26353cacd17fe886abfedee017ca89dd"><div class="ttname"><a href="structBL__Window.html#a26353cacd17fe886abfedee017ca89dd">BL_Window::scaleY</a></div><div class="ttdeci">float scaleY</div><div class="ttdef"><b>Definition:</b> window.h:27</div></div>
+<div class="ttc" id="astructBL__Window_html_a2b7bdeac86472fa70442fd7d5cfca625"><div class="ttname"><a href="structBL__Window.html#a2b7bdeac86472fa70442fd7d5cfca625">BL_Window::renderer</a></div><div class="ttdeci">SDL_Renderer * renderer</div><div class="ttdef"><b>Definition:</b> window.h:20</div></div>
+<div class="ttc" id="astructBL__Window_html_a2c0898994444f67b91e86471ea5ebb8f"><div class="ttname"><a href="structBL__Window.html#a2c0898994444f67b91e86471ea5ebb8f">BL_Window::screen</a></div><div class="ttdeci">SDL_Window * screen</div><div class="ttdef"><b>Definition:</b> window.h:19</div></div>
+<div class="ttc" id="astructBL__Window_html_a42d09804ddbf8ac2cce2a68078307572"><div class="ttname"><a href="structBL__Window.html#a42d09804ddbf8ac2cce2a68078307572">BL_Window::height</a></div><div class="ttdeci">unsigned int height</div><div class="ttdef"><b>Definition:</b> window.h:24</div></div>
+<div class="ttc" id="astructBL__Window_html_a46ce2974b72b0f261b89637d6a4bdba4"><div class="ttname"><a href="structBL__Window.html#a46ce2974b72b0f261b89637d6a4bdba4">BL_Window::fullscreen</a></div><div class="ttdeci">SDL_bool fullscreen</div><div class="ttdef"><b>Definition:</b> window.h:21</div></div>
+<div class="ttc" id="astructBL__Window_html_a9480590ef08845c377fd83d2fab67c75"><div class="ttname"><a href="structBL__Window.html#a9480590ef08845c377fd83d2fab67c75">BL_Window::width</a></div><div class="ttdeci">unsigned int width</div><div class="ttdef"><b>Definition:</b> window.h:23</div></div>
+<div class="ttc" id="astructBL__Window_html_aa0642cc5dd7853e73a54548f11e7c45c"><div class="ttname"><a href="structBL__Window.html#aa0642cc5dd7853e73a54548f11e7c45c">BL_Window::scaleX</a></div><div class="ttdeci">float scaleX</div><div class="ttdef"><b>Definition:</b> window.h:26</div></div>
+<div class="ttc" id="awindow_8h_html_a11112d04060539ad1b4165f43e0284e8"><div class="ttname"><a href="window_8h.html#a11112d04060539ad1b4165f43e0284e8">BL_creat_configuration</a></div><div class="ttdeci">SDL_bool BL_creat_configuration(void)</div><div class="ttdoc">creaton du fichier configuration pour les valeurs necessaire a la creation de la fenetre si il n'exis...</div><div class="ttdef"><b>Definition:</b> window.c:70</div></div>
+<div class="ttc" id="awindow_8h_html_a534736165cb87e3fa2399f99a42e1c43"><div class="ttname"><a href="window_8h.html#a534736165cb87e3fa2399f99a42e1c43">BL_creat_windowRenderer</a></div><div class="ttdeci">SDL_bool BL_creat_windowRenderer(char *title, BL_Window *window)</div><div class="ttdoc">creaton de la fenetre et du renderer</div><div class="ttdef"><b>Definition:</b> window.c:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

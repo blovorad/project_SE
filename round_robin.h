@@ -28,7 +28,6 @@
  */
 typedef struct {
  	int arrived; /*!< booleen signalant si le processus est arrive (1) ou pas (0) */
- 	sem_t mutex_CPU; /*!< mutex pour restreindre l'acces a la CPU */
  	pthread_t thread; /*!< thread representant le processus */
 } RR_Thread;
 
@@ -49,6 +48,7 @@ typedef struct {
 typedef struct{
 	Simulation shared_simulation; /*!< variable partagee pour la simulation */
 	time_t start_time; /*!< instant de debut de l'algorithme */
+ 	sem_t mutex_CPU; /*!< mutex pour restreindre l'acces a la CPU */
 	double effective_occupation_time_cpu; /*!< temps effectif d'occupation de la CPU au cours de l'execution de l'algorithme */
 	RR_Threads_array threads; /*!< tableau des threads */
 } RR_simulation;

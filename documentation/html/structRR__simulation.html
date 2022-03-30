@@ -82,6 +82,8 @@ Attributs publics</h2></td></tr>
 <tr class="separator:a018ca86080fb29b6fab6023173b57e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f9d063d7924f23164bfd5040fd7948b"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRR__simulation.html#a4f9d063d7924f23164bfd5040fd7948b">start_time</a></td></tr>
 <tr class="separator:a4f9d063d7924f23164bfd5040fd7948b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22258dd108804c243cdfca19ec1f974e"><td class="memItemLeft" align="right" valign="top">sem_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRR__simulation.html#a22258dd108804c243cdfca19ec1f974e">mutex_CPU</a></td></tr>
+<tr class="separator:a22258dd108804c243cdfca19ec1f974e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa337af89ec0792b704ea65781d655b30"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRR__simulation.html#aa337af89ec0792b704ea65781d655b30">effective_occupation_time_cpu</a></td></tr>
 <tr class="separator:aa337af89ec0792b704ea65781d655b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dbbe2ce94befc780d618847faca45b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRR__Threads__array.html">RR_Threads_array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRR__simulation.html#a6dbbe2ce94befc780d618847faca45b8">threads</a></td></tr>
@@ -102,6 +104,21 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>temps effectif d'occupation de la CPU au cours de l'execution de l'algorithme </p>
+
+</div>
+</div>
+<a id="a22258dd108804c243cdfca19ec1f974e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22258dd108804c243cdfca19ec1f974e">&#9670;&nbsp;</a></span>mutex_CPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sem_t RR_simulation::mutex_CPU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mutex pour restreindre l'acces a la CPU </p>
 
 </div>
 </div>

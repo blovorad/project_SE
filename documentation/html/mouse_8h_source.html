@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de mouse.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mouse.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mouse_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __MOUSE__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __MOUSE__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;define.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structBL__Mouse.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structBL__Mouse.html#aa3d0c3cf9db6071f027bd96a50927ee9">   18</a></span>&#160;    SDL_bool <a class="code" href="structBL__Mouse.html#aa3d0c3cf9db6071f027bd96a50927ee9">rightButton</a>; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structBL__Mouse.html#ae69f280ac23696bf38b6fe83e293b21b">   19</a></span>&#160;    SDL_bool <a class="code" href="structBL__Mouse.html#ae69f280ac23696bf38b6fe83e293b21b">leftButton</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structBL__Mouse.html#a067e22e2ba2a9395ab96eab8c2d992f5">   20</a></span>&#160;    SDL_bool <a class="code" href="structBL__Mouse.html#a067e22e2ba2a9395ab96eab8c2d992f5">oldRightButton</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structBL__Mouse.html#ac9623f8f924299655a0eeb423f6c0506">   21</a></span>&#160;    SDL_bool <a class="code" href="structBL__Mouse.html#ac9623f8f924299655a0eeb423f6c0506">oldLeftButton</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structBL__Mouse.html#ae455555bace121c4f7dbe45ce061185f">   22</a></span>&#160;    SDL_Rect <a class="code" href="structBL__Mouse.html#ae455555bace121c4f7dbe45ce061185f">pos</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}<a class="code" href="structBL__Mouse.html">BL_Mouse</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;SDL_bool <a class="code" href="mouse_8h.html#ae58e9ae78b602ed88f84eab3ce044ef0">BL_init_mouse</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8h.html#a89f0320f9a1ffe5a2fbeb653c1845fc6">BL_get_mouse_pos</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8h.html#ab1b072a98fd129986c9b57e90fd19731">BL_actualise_right_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8h.html#a43109845badab774bd2ca4fcaba8b124">BL_actualise_left_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8h.html#af5553c6e48c40fa7ca057ca194acbe56">BL_actualise_old_left_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8h.html#a595f9c9d9d93a045552ef6525b5d7676">BL_actualise_old_right_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;SDL_bool <a class="code" href="mouse_8h.html#a81ae9c8e2de7e36d286c345b2948f978">BL_get_state_of_right_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;SDL_bool <a class="code" href="mouse_8h.html#a7e708bef0e304d2f0ff662e02e03cc14">BL_get_state_of_old_right_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;SDL_bool <a class="code" href="mouse_8h.html#a43e308ef4d9978eab21d2c6e77cfd158">BL_get_state_of_left_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;SDL_bool <a class="code" href="mouse_8h.html#a8c4699f52d51167a60c180dafc31674e">BL_get_state_of_old_left_button</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">int</span> <a class="code" href="mouse_8h.html#a3463b052c53df1d0d0b520ff3a859450">BL_get_mouse_x</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordtype">int</span> <a class="code" href="mouse_8h.html#ab603bfa73ae6613f98fc45ace8d6d0d4">BL_get_mouse_y</a>(<a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="amouse_8h_html_a3463b052c53df1d0d0b520ff3a859450"><div class="ttname"><a href="mouse_8h.html#a3463b052c53df1d0d0b520ff3a859450">BL_get_mouse_x</a></div><div class="ttdeci">int BL_get_mouse_x(BL_Mouse *mouse)</div><div class="ttdoc">recuperation de la position x de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:85</div></div>
+<div class="ttc" id="amouse_8h_html_a43109845badab774bd2ca4fcaba8b124"><div class="ttname"><a href="mouse_8h.html#a43109845badab774bd2ca4fcaba8b124">BL_actualise_left_button</a></div><div class="ttdeci">void BL_actualise_left_button(BL_Mouse *mouse, int n)</div><div class="ttdoc">modification de l'etat du clic gauche de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:41</div></div>
+<div class="ttc" id="amouse_8h_html_a43e308ef4d9978eab21d2c6e77cfd158"><div class="ttname"><a href="mouse_8h.html#a43e308ef4d9978eab21d2c6e77cfd158">BL_get_state_of_left_button</a></div><div class="ttdeci">SDL_bool BL_get_state_of_left_button(BL_Mouse *mouse)</div><div class="ttdoc">recuperation de l'etat du clic gauche de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:75</div></div>
+<div class="ttc" id="amouse_8h_html_a595f9c9d9d93a045552ef6525b5d7676"><div class="ttname"><a href="mouse_8h.html#a595f9c9d9d93a045552ef6525b5d7676">BL_actualise_old_right_button</a></div><div class="ttdeci">void BL_actualise_old_right_button(BL_Mouse *mouse)</div><div class="ttdoc">modification de l'ancien etat du clic droit de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:60</div></div>
+<div class="ttc" id="amouse_8h_html_a7e708bef0e304d2f0ff662e02e03cc14"><div class="ttname"><a href="mouse_8h.html#a7e708bef0e304d2f0ff662e02e03cc14">BL_get_state_of_old_right_button</a></div><div class="ttdeci">SDL_bool BL_get_state_of_old_right_button(BL_Mouse *mouse)</div><div class="ttdoc">recuperation de l'ancien etat du clic droit de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:70</div></div>
+<div class="ttc" id="amouse_8h_html_a81ae9c8e2de7e36d286c345b2948f978"><div class="ttname"><a href="mouse_8h.html#a81ae9c8e2de7e36d286c345b2948f978">BL_get_state_of_right_button</a></div><div class="ttdeci">SDL_bool BL_get_state_of_right_button(BL_Mouse *mouse)</div><div class="ttdoc">recuperation de l'etat du clic droit de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:65</div></div>
+<div class="ttc" id="amouse_8h_html_a89f0320f9a1ffe5a2fbeb653c1845fc6"><div class="ttname"><a href="mouse_8h.html#a89f0320f9a1ffe5a2fbeb653c1845fc6">BL_get_mouse_pos</a></div><div class="ttdeci">void BL_get_mouse_pos(BL_Mouse *mouse)</div><div class="ttdoc">modification du x et y de la structure BL_Mouse</div><div class="ttdef"><b>Definition:</b> mouse.c:22</div></div>
+<div class="ttc" id="amouse_8h_html_a8c4699f52d51167a60c180dafc31674e"><div class="ttname"><a href="mouse_8h.html#a8c4699f52d51167a60c180dafc31674e">BL_get_state_of_old_left_button</a></div><div class="ttdeci">SDL_bool BL_get_state_of_old_left_button(BL_Mouse *mouse)</div><div class="ttdoc">recuperation de l'ancien etat du clic gauche de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:80</div></div>
+<div class="ttc" id="amouse_8h_html_ab1b072a98fd129986c9b57e90fd19731"><div class="ttname"><a href="mouse_8h.html#ab1b072a98fd129986c9b57e90fd19731">BL_actualise_right_button</a></div><div class="ttdeci">void BL_actualise_right_button(BL_Mouse *mouse, int n)</div><div class="ttdoc">modification de l'etat du clic droit de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:27</div></div>
+<div class="ttc" id="amouse_8h_html_ab603bfa73ae6613f98fc45ace8d6d0d4"><div class="ttname"><a href="mouse_8h.html#ab603bfa73ae6613f98fc45ace8d6d0d4">BL_get_mouse_y</a></div><div class="ttdeci">int BL_get_mouse_y(BL_Mouse *mouse)</div><div class="ttdoc">recuperation de la position y de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:90</div></div>
+<div class="ttc" id="amouse_8h_html_ae58e9ae78b602ed88f84eab3ce044ef0"><div class="ttname"><a href="mouse_8h.html#ae58e9ae78b602ed88f84eab3ce044ef0">BL_init_mouse</a></div><div class="ttdeci">SDL_bool BL_init_mouse(BL_Mouse *mouse)</div><div class="ttdoc">initialisation de la structure BL_Mouse</div><div class="ttdef"><b>Definition:</b> mouse.c:9</div></div>
+<div class="ttc" id="amouse_8h_html_af5553c6e48c40fa7ca057ca194acbe56"><div class="ttname"><a href="mouse_8h.html#af5553c6e48c40fa7ca057ca194acbe56">BL_actualise_old_left_button</a></div><div class="ttdeci">void BL_actualise_old_left_button(BL_Mouse *mouse)</div><div class="ttdoc">modification de l'ancien etat du clic gauche de la souris</div><div class="ttdef"><b>Definition:</b> mouse.c:55</div></div>
+<div class="ttc" id="astructBL__Mouse_html"><div class="ttname"><a href="structBL__Mouse.html">BL_Mouse</a></div><div class="ttdoc">structure pour la gestion de la souris</div><div class="ttdef"><b>Definition:</b> mouse.h:16</div></div>
+<div class="ttc" id="astructBL__Mouse_html_a067e22e2ba2a9395ab96eab8c2d992f5"><div class="ttname"><a href="structBL__Mouse.html#a067e22e2ba2a9395ab96eab8c2d992f5">BL_Mouse::oldRightButton</a></div><div class="ttdeci">SDL_bool oldRightButton</div><div class="ttdef"><b>Definition:</b> mouse.h:20</div></div>
+<div class="ttc" id="astructBL__Mouse_html_aa3d0c3cf9db6071f027bd96a50927ee9"><div class="ttname"><a href="structBL__Mouse.html#aa3d0c3cf9db6071f027bd96a50927ee9">BL_Mouse::rightButton</a></div><div class="ttdeci">SDL_bool rightButton</div><div class="ttdef"><b>Definition:</b> mouse.h:18</div></div>
+<div class="ttc" id="astructBL__Mouse_html_ac9623f8f924299655a0eeb423f6c0506"><div class="ttname"><a href="structBL__Mouse.html#ac9623f8f924299655a0eeb423f6c0506">BL_Mouse::oldLeftButton</a></div><div class="ttdeci">SDL_bool oldLeftButton</div><div class="ttdef"><b>Definition:</b> mouse.h:21</div></div>
+<div class="ttc" id="astructBL__Mouse_html_ae455555bace121c4f7dbe45ce061185f"><div class="ttname"><a href="structBL__Mouse.html#ae455555bace121c4f7dbe45ce061185f">BL_Mouse::pos</a></div><div class="ttdeci">SDL_Rect pos</div><div class="ttdef"><b>Definition:</b> mouse.h:22</div></div>
+<div class="ttc" id="astructBL__Mouse_html_ae69f280ac23696bf38b6fe83e293b21b"><div class="ttname"><a href="structBL__Mouse.html#ae69f280ac23696bf38b6fe83e293b21b">BL_Mouse::leftButton</a></div><div class="ttdeci">SDL_bool leftButton</div><div class="ttdef"><b>Definition:</b> mouse.h:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

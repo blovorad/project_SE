@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['resultat_2ec_58',['resultat.c',['../resultat_8c.html',1,'']]],
-  ['resultat_2eh_59',['resultat.h',['../resultat_8h.html',1,'']]],
-  ['round_5frobin_60',['round_robin',['../round__robin_8c.html#acebce5b82b4a9d46d95030ba107ec987',1,'round_robin(Simulation *simulation):&#160;round_robin.c'],['../round__robin_8h.html#acebce5b82b4a9d46d95030ba107ec987',1,'round_robin(Simulation *simulation):&#160;round_robin.c']]],
-  ['round_5frobin_61',['ROUND_ROBIN',['../simulation_8h.html#a5e41188f16a381c8915a17a22228e691a9e805af736d9be20caf33f5ec0dc1d47',1,'simulation.h']]],
-  ['round_5frobin_2ec_62',['round_robin.c',['../round__robin_8c.html',1,'']]],
-  ['round_5frobin_2eh_63',['round_robin.h',['../round__robin_8h.html',1,'']]],
-  ['rr_5fsimulation_64',['RR_simulation',['../structRR__simulation.html',1,'']]],
-  ['rr_5fsimulation_65',['rr_simulation',['../round__robin_8c.html#ad4d4d95e4a9322c40b783def8834fbc2',1,'round_robin.c']]],
-  ['rr_5fthread_66',['RR_Thread',['../structRR__Thread.html',1,'']]],
-  ['rr_5fthreads_67',['rr_threads',['../structRR__Threads__array.html#a44a566de5a41650c0d3db15c79afc88b',1,'RR_Threads_array']]],
-  ['rr_5fthreads_5farray_68',['RR_Threads_array',['../structRR__Threads__array.html',1,'']]]
+  ['n_171',['n',['../structBL__Input.html#a063258f52fdd8bcc3f89bc882197e7d3',1,'BL_Input']]],
+  ['name_172',['name',['../structProcessus.html#a5349d09102daad27ff7dead8f109564b',1,'Processus']]],
+  ['nb_5fbuttons_173',['nb_buttons',['../structBL__Array__button.html#ab3399c091ff596e4e5719ba2ef994b5f',1,'BL_Array_button']]],
+  ['nb_5ftexts_174',['nb_texts',['../structBL__Array__text.html#a6c4589f35e142cf8d69506bc4faed4ae',1,'BL_Array_text']]],
+  ['nb_5fthread_175',['nb_thread',['../structSJF__Thread__array.html#ad0619dedafcf54cb8fa242e85e583286',1,'SJF_Thread_array']]],
+  ['nb_5fthreads_176',['nb_threads',['../structRR__Threads__array.html#ad630f1c6d6863511f22426754de6ec3c',1,'RR_Threads_array']]],
+  ['nbprocessus_177',['nbProcessus',['../structProcessus__array.html#a34412bb024904355e30ac7c1118ea373',1,'Processus_array']]],
+  ['nbsimulations_178',['nbSimulations',['../structSimulation__array.html#adabfa1b9cfe233a6354e28fe7691eb46',1,'Simulation_array']]],
+  ['nbtexture_179',['nbTexture',['../structBL__Graphics.html#ab7bf63004201f4c998e2c58488b79159',1,'BL_Graphics']]]
 ];

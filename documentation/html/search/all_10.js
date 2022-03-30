@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['util_2ec_102',['util.c',['../util_8c.html',1,'']]],
-  ['util_2eh_103',['util.h',['../util_8h.html',1,'']]]
+  ['q_198',['q',['../structBL__Input.html#abfbd9b90283ed57aae2d85e0c7c06296',1,'BL_Input']]],
+  ['quantum_199',['quantum',['../structSimulation.html#a32b7d6bcaff8a599681de98d21ad5a2a',1,'Simulation']]]
 ];

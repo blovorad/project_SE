@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier draw.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier draw.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier source qui gere l'affichage de toute les entitees a l'ecran  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="draw_8h_source.html">draw.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aaff6343c19834335598ee2723fec54fa"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#aaff6343c19834335598ee2723fec54fa">BL_draw</a> (SDL_Renderer *renderer, <a class="el" href="structBL__Graphics.html">BL_Graphics</a> graphics, <a class="el" href="structBL__Panel.html">BL_Panel</a> panel, <a class="el" href="structBL__Histogramme.html">BL_Histogramme</a> histogramme)</td></tr>
+<tr class="memdesc:aaff6343c19834335598ee2723fec54fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction core de dessin qui appelle toutes les autres  <a href="draw_8c.html#aaff6343c19834335598ee2723fec54fa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaff6343c19834335598ee2723fec54fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e41f7d4b33d04108e81a5cfb06739b"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#ae5e41f7d4b33d04108e81a5cfb06739b">BL_draw_line</a> (SDL_Renderer *renderer, const int x1, const int y1, const int x2, const int y2, SDL_Color *couleur)</td></tr>
+<tr class="memdesc:ae5e41f7d4b33d04108e81a5cfb06739b"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de dessiner une ligne  <a href="draw_8c.html#ae5e41f7d4b33d04108e81a5cfb06739b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae5e41f7d4b33d04108e81a5cfb06739b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1521e2f9c45928dda393bf0c017cfe86"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a1521e2f9c45928dda393bf0c017cfe86">BL_draw_point</a> (SDL_Renderer *renderer, const int x, const int y, SDL_Color *couleur)</td></tr>
+<tr class="memdesc:a1521e2f9c45928dda393bf0c017cfe86"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de dessiner un point  <a href="draw_8c.html#a1521e2f9c45928dda393bf0c017cfe86">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1521e2f9c45928dda393bf0c017cfe86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd167812e4d6328a6e81ff04a6752ab6"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#acd167812e4d6328a6e81ff04a6752ab6">BL_draw_rect</a> (SDL_Renderer *renderer, SDL_Rect *r, SDL_bool *fill, SDL_Color *couleur)</td></tr>
+<tr class="memdesc:acd167812e4d6328a6e81ff04a6752ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">dessine un rectangle  <a href="draw_8c.html#acd167812e4d6328a6e81ff04a6752ab6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acd167812e4d6328a6e81ff04a6752ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0badc2f9c2f25ad9e229cb74871d4f47"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a0badc2f9c2f25ad9e229cb74871d4f47">BL_draw_texture</a> (SDL_Renderer *renderer, SDL_Texture *texture, SDL_Rect *dst, SDL_Rect *src)</td></tr>
+<tr class="memdesc:a0badc2f9c2f25ad9e229cb74871d4f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">dessine une texture  <a href="draw_8c.html#a0badc2f9c2f25ad9e229cb74871d4f47">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0badc2f9c2f25ad9e229cb74871d4f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0a8f9372a2f7deeceb35dd8960fe51"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a1e0a8f9372a2f7deeceb35dd8960fe51">BL_draw_textureEx</a> (SDL_Renderer *renderer, SDL_Texture *texture, SDL_Rect *dst, SDL_Rect *src, SDL_Point *center, int angle, SDL_RendererFlip flip)</td></tr>
+<tr class="memdesc:a1e0a8f9372a2f7deeceb35dd8960fe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">dessine une texture avec plus de detail, on peut appliquer plus de chose dessus, une rotation ou autre  <a href="draw_8c.html#a1e0a8f9372a2f7deeceb35dd8960fe51">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1e0a8f9372a2f7deeceb35dd8960fe51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ded952593f2ec35e07a5319ff01dd27"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a7ded952593f2ec35e07a5319ff01dd27">BL_set_render_color</a> (SDL_Renderer *renderer, SDL_Color *couleur)</td></tr>
+<tr class="memdesc:a7ded952593f2ec35e07a5319ff01dd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet d'appliquer une couleur sur le renderer, tous ce qui est dessiner apres aura cette couleur  <a href="draw_8c.html#a7ded952593f2ec35e07a5319ff01dd27">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7ded952593f2ec35e07a5319ff01dd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac346a5e8278ce14dc645e1116ff12f6"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#aac346a5e8278ce14dc645e1116ff12f6">BL_draw_cercle</a> (SDL_Renderer *renderer, <a class="el" href="structBL__Cercle.html">BL_Cercle</a> cercle)</td></tr>
+<tr class="memdesc:aac346a5e8278ce14dc645e1116ff12f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de dessiner un cercle  <a href="draw_8c.html#aac346a5e8278ce14dc645e1116ff12f6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aac346a5e8278ce14dc645e1116ff12f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a364aff35eac6d5e99265445b70a33"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#a56a364aff35eac6d5e99265445b70a33">BL_draw_disque</a> (SDL_Renderer *renderer, <a class="el" href="structBL__Cercle.html">BL_Cercle</a> cercle)</td></tr>
+<tr class="memdesc:a56a364aff35eac6d5e99265445b70a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet de dessiner un disque  <a href="draw_8c.html#a56a364aff35eac6d5e99265445b70a33">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a56a364aff35eac6d5e99265445b70a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af429ad37104e54a4186b89c1035a6399"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#af429ad37104e54a4186b89c1035a6399">BL_draw_panel</a> (SDL_Renderer *renderer, <a class="el" href="structBL__Graphics.html">BL_Graphics</a> graphics, <a class="el" href="structBL__Panel.html">BL_Panel</a> panel)</td></tr>
+<tr class="memdesc:af429ad37104e54a4186b89c1035a6399"><td class="mdescLeft">&#160;</td><td class="mdescRight">dessine un panel  <a href="draw_8c.html#af429ad37104e54a4186b89c1035a6399">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af429ad37104e54a4186b89c1035a6399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab361e4a3299b4a54940491b59e0b6ebc"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw_8c.html#ab361e4a3299b4a54940491b59e0b6ebc">BL_draw_histogramme</a> (SDL_Renderer *renderer, <a class="el" href="structBL__Histogramme.html">BL_Histogramme</a> histogramme)</td></tr>
+<tr class="memdesc:ab361e4a3299b4a54940491b59e0b6ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">dessine un histogramme  <a href="draw_8c.html#ab361e4a3299b4a54940491b59e0b6ebc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab361e4a3299b4a54940491b59e0b6ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>fichier source qui gere l'affichage de toute les entitees a l'ecran </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aaff6343c19834335598ee2723fec54fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff6343c19834335598ee2723fec54fa">&#9670;&nbsp;</a></span>BL_draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Graphics.html">BL_Graphics</a>&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a>&#160;</td>
+          <td class="paramname"><em>panel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Histogramme.html">BL_Histogramme</a>&#160;</td>
+          <td class="paramname"><em>histogramme</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction core de dessin qui appelle toutes les autres </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">graphics</td><td>le tableau de toutes les textures </td></tr>
+    <tr><td class="paramname">panel</td><td>le panel a dessine </td></tr>
+    <tr><td class="paramname">histogramme</td><td>l'histogramme a dessiner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="aac346a5e8278ce14dc645e1116ff12f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac346a5e8278ce14dc645e1116ff12f6">&#9670;&nbsp;</a></span>BL_draw_cercle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_cercle </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Cercle.html">BL_Cercle</a>&#160;</td>
+          <td class="paramname"><em>cercle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet de dessiner un cercle </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">cercle</td><td>le cercle a dessiner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="a56a364aff35eac6d5e99265445b70a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a364aff35eac6d5e99265445b70a33">&#9670;&nbsp;</a></span>BL_draw_disque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_disque </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Cercle.html">BL_Cercle</a>&#160;</td>
+          <td class="paramname"><em>cercle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet de dessiner un disque </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">cercle</td><td>le disque a dessiner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="ab361e4a3299b4a54940491b59e0b6ebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab361e4a3299b4a54940491b59e0b6ebc">&#9670;&nbsp;</a></span>BL_draw_histogramme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_histogramme </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Histogramme.html">BL_Histogramme</a>&#160;</td>
+          <td class="paramname"><em>histogramme</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dessine un histogramme </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">histogramme</td><td>l'histogramme a dessiner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="ae5e41f7d4b33d04108e81a5cfb06739b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e41f7d4b33d04108e81a5cfb06739b">&#9670;&nbsp;</a></span>BL_draw_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_line </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color *&#160;</td>
+          <td class="paramname"><em>couleur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet de dessiner une ligne </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">x1</td><td>l'abscisse du point 1 </td></tr>
+    <tr><td class="paramname">y1</td><td>l'ordonnee du point 1 </td></tr>
+    <tr><td class="paramname">x2</td><td>l'abscisse du point 2 </td></tr>
+    <tr><td class="paramname">y2</td><td>l'ordonnee du point 2 </td></tr>
+    <tr><td class="paramname">couleur</td><td>la couleur de la ligne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="af429ad37104e54a4186b89c1035a6399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af429ad37104e54a4186b89c1035a6399">&#9670;&nbsp;</a></span>BL_draw_panel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_panel </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Graphics.html">BL_Graphics</a>&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a>&#160;</td>
+          <td class="paramname"><em>panel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dessine un panel </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">graphics</td><td>le tableau de toutes les textures </td></tr>
+    <tr><td class="paramname">panel</td><td>le panel a dessine </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="a1521e2f9c45928dda393bf0c017cfe86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1521e2f9c45928dda393bf0c017cfe86">&#9670;&nbsp;</a></span>BL_draw_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_point </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color *&#160;</td>
+          <td class="paramname"><em>couleur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet de dessiner un point </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on dessine </td></tr>
+    <tr><td class="paramname">x</td><td>l'abscisse du point </td></tr>
+    <tr><td class="paramname">y</td><td>l'ordonnee du point </td></tr>
+    <tr><td class="paramname">couleur</td><td>la couleur du point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="acd167812e4d6328a6e81ff04a6752ab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd167812e4d6328a6e81ff04a6752ab6">&#9670;&nbsp;</a></span>BL_draw_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_rect </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_bool *&#160;</td>
+          <td class="paramname"><em>fill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color *&#160;</td>
+          <td class="paramname"><em>couleur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dessine un rectangle </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on applique le changement de couleur </td></tr>
+    <tr><td class="paramname">r</td><td>le rectangle a dessiner </td></tr>
+    <tr><td class="paramname">fill</td><td>si le rectangle est remplis de couleur ou vide de couleur </td></tr>
+    <tr><td class="paramname">couleur</td><td>la couleur du rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="a0badc2f9c2f25ad9e229cb74871d4f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0badc2f9c2f25ad9e229cb74871d4f47">&#9670;&nbsp;</a></span>BL_draw_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dessine une texture </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on applique le changement de couleur </td></tr>
+    <tr><td class="paramname">texture</td><td>la texture a dessiner </td></tr>
+    <tr><td class="paramname">dst</td><td>l'endroit ou le dessiner </td></tr>
+    <tr><td class="paramname">src</td><td>si on veut qu'une partie de la texture cette partis est indiquer dans src </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="a1e0a8f9372a2f7deeceb35dd8960fe51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0a8f9372a2f7deeceb35dd8960fe51">&#9670;&nbsp;</a></span>BL_draw_textureEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_draw_textureEx </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Point *&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_RendererFlip&#160;</td>
+          <td class="paramname"><em>flip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dessine une texture avec plus de detail, on peut appliquer plus de chose dessus, une rotation ou autre </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on applique le changement de couleur </td></tr>
+    <tr><td class="paramname">texture</td><td>la texture a dessiner </td></tr>
+    <tr><td class="paramname">dst</td><td>l'endroit ou le dessiner </td></tr>
+    <tr><td class="paramname">src</td><td>si on veut qu'une partie de la texture cette partis est indiquer dans src </td></tr>
+    <tr><td class="paramname">center</td><td>pour savoir on dessine la texture par rapport a quel point </td></tr>
+    <tr><td class="paramname">angle</td><td>angle qui permet de donner la rotation de la texture </td></tr>
+    <tr><td class="paramname">flip</td><td>pour savoir si l'image doit etre tourner vers la gauche ou la droite </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le dessin est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="a7ded952593f2ec35e07a5319ff01dd27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ded952593f2ec35e07a5319ff01dd27">&#9670;&nbsp;</a></span>BL_set_render_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_set_render_color </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color *&#160;</td>
+          <td class="paramname"><em>couleur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>permet d'appliquer une couleur sur le renderer, tous ce qui est dessiner apres aura cette couleur </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>neccessaire pour savoir sur quoi on applique le changement de couleur </td></tr>
+    <tr><td class="paramname">couleur</td><td>la couleur pour le changement de couleur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean SDL_TRUE si le changement de couleur est ok SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

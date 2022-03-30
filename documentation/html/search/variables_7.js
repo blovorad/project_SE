@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quantum_179',['quantum',['../structSimulation.html#a32b7d6bcaff8a599681de98d21ad5a2a',1,'Simulation']]]
+  ['h_470',['h',['../structBL__Input.html#abbc851e5d24b22bc357d00fe4efa3d59',1,'BL_Input']]],
+  ['height_471',['height',['../structBL__Window.html#a42d09804ddbf8ac2cce2a68078307572',1,'BL_Window']]]
 ];

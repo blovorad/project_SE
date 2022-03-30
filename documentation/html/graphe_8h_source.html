@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de graphe.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">graphe.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graphe_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __GRAPHE__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __GRAPHE__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;define.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gui_8h.html">gui.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="color_8h.html">color.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structBL__Block.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> nb_rects;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    SDL_Rect *rects;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    SDL_Color *colors;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> *texts;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}<a class="code" href="structBL__Block.html">BL_Block</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structBL__Histogramme.html">   24</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> nb_blocks;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> nb_legendes;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="structBL__Block.html">BL_Block</a> *blocks;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="structBL__Block.html">BL_Block</a> legendes;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> title_legende;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> x_label;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> y_label;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> title;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="structBL__Button.html">BL_Button</a> button_graphe_1;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structBL__Button.html">BL_Button</a> button_graphe_2;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> index_first_print;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> index_second_print;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> max_index;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> first_print_name;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> second_print_name;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> cpu_usage_1;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> cpu_usage_2;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> cpu_legend_1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> cpu_legend_2;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> time_restitution_usage_1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> time_restitution_usage_2;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> time_restitution_legend_1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> time_restitution_legend_2;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}<a class="code" href="structBL__Histogramme.html">BL_Histogramme</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="structBL__Histogramme.html">BL_Histogramme</a> <a class="code" href="graphe_8h.html#a9c6878df100f8b1f1f7e3156bb1c2470">generate_histogramme</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <a class="code" href="structSimulation__array.html">Simulation_array</a> simulation_array);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphe_8h.html#ad74a38d1472be29a6f6859843539eb9d">BL_change_histogramme</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <a class="code" href="structSimulation__array.html">Simulation_array</a> simulation_array, <a class="code" href="structBL__Histogramme.html">BL_Histogramme</a> *histogramme);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">double</span> <a class="code" href="graphe_8h.html#a1881214930c257c0bf7e73f814174450">BL_search_max_value</a>(<a class="code" href="structSimulation__array.html">Simulation_array</a> simulation_array, <span class="keywordtype">int</span> first_index, <span class="keywordtype">int</span> second_index);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphe_8h.html#a66f859fdb8447a6637ee39d9603b893e">BL_change_graphe_1</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <a class="code" href="structSimulation__array.html">Simulation_array</a> simulation_array, <a class="code" href="structBL__Histogramme.html">BL_Histogramme</a> *histogramme);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordtype">void</span> <a class="code" href="graphe_8h.html#a5f4676cc9a5102bb53952331e1df63d8">BL_change_graphe_2</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <a class="code" href="structSimulation__array.html">Simulation_array</a> simulation_array, <a class="code" href="structBL__Histogramme.html">BL_Histogramme</a> *histogramme);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acolor_8h_html"><div class="ttname"><a href="color_8h.html">color.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des couleurs</div></div>
+<div class="ttc" id="agraphe_8h_html_a1881214930c257c0bf7e73f814174450"><div class="ttname"><a href="graphe_8h.html#a1881214930c257c0bf7e73f814174450">BL_search_max_value</a></div><div class="ttdeci">double BL_search_max_value(Simulation_array simulation_array, int first_index, int second_index)</div><div class="ttdoc">permet de connaitre la valeur maximal de toutes les moyennes pour pouvoir faire un coeficient de prop...</div><div class="ttdef"><b>Definition:</b> graphe.c:279</div></div>
+<div class="ttc" id="agraphe_8h_html_a5f4676cc9a5102bb53952331e1df63d8"><div class="ttname"><a href="graphe_8h.html#a5f4676cc9a5102bb53952331e1df63d8">BL_change_graphe_2</a></div><div class="ttdeci">void BL_change_graphe_2(BL_Window window, Simulation_array simulation_array, BL_Histogramme *histogramme)</div><div class="ttdoc">Permet de changer le graphique a afficher dans la deuxieme partie de l'histogramme.</div><div class="ttdef"><b>Definition:</b> graphe.c:326</div></div>
+<div class="ttc" id="agraphe_8h_html_a66f859fdb8447a6637ee39d9603b893e"><div class="ttname"><a href="graphe_8h.html#a66f859fdb8447a6637ee39d9603b893e">BL_change_graphe_1</a></div><div class="ttdeci">void BL_change_graphe_1(BL_Window window, Simulation_array simulation_array, BL_Histogramme *histogramme)</div><div class="ttdoc">Permet de changer le graphique a afficher dans la premiere partie de l'histogramme.</div><div class="ttdef"><b>Definition:</b> graphe.c:316</div></div>
+<div class="ttc" id="agraphe_8h_html_a9c6878df100f8b1f1f7e3156bb1c2470"><div class="ttname"><a href="graphe_8h.html#a9c6878df100f8b1f1f7e3156bb1c2470">generate_histogramme</a></div><div class="ttdeci">BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulation_array)</div><div class="ttdoc">creation de l'histogramme pour le projet</div><div class="ttdef"><b>Definition:</b> graphe.c:9</div></div>
+<div class="ttc" id="agraphe_8h_html_ad74a38d1472be29a6f6859843539eb9d"><div class="ttname"><a href="graphe_8h.html#ad74a38d1472be29a6f6859843539eb9d">BL_change_histogramme</a></div><div class="ttdeci">void BL_change_histogramme(BL_Window window, Simulation_array simulation_array, BL_Histogramme *histogramme)</div><div class="ttdoc">changer le graphe 1 ou 2 de l'histogramme</div><div class="ttdef"><b>Definition:</b> graphe.c:140</div></div>
+<div class="ttc" id="agui_8h_html"><div class="ttname"><a href="gui_8h.html">gui.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion de la GUI</div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="simulation_8h.html">simulation.h</a></div><div class="ttdoc">fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de...</div></div>
+<div class="ttc" id="astructBL__Block_html"><div class="ttname"><a href="structBL__Block.html">BL_Block</a></div><div class="ttdef"><b>Definition:</b> graphe.h:16</div></div>
+<div class="ttc" id="astructBL__Button_html"><div class="ttname"><a href="structBL__Button.html">BL_Button</a></div><div class="ttdoc">structure pour la gestion de bouton</div><div class="ttdef"><b>Definition:</b> gui.h:44</div></div>
+<div class="ttc" id="astructBL__Histogramme_html"><div class="ttname"><a href="structBL__Histogramme.html">BL_Histogramme</a></div><div class="ttdef"><b>Definition:</b> graphe.h:24</div></div>
+<div class="ttc" id="astructBL__Text_html"><div class="ttname"><a href="structBL__Text.html">BL_Text</a></div><div class="ttdoc">structure pour la gestion de texte</div><div class="ttdef"><b>Definition:</b> gui.h:21</div></div>
+<div class="ttc" id="astructBL__Window_html"><div class="ttname"><a href="structBL__Window.html">BL_Window</a></div><div class="ttdoc">regroupe toute les variables necessaire a la gestion des fenetres en SDL</div><div class="ttdef"><b>Definition:</b> window.h:17</div></div>
+<div class="ttc" id="astructSimulation__array_html"><div class="ttname"><a href="structSimulation__array.html">Simulation_array</a></div><div class="ttdoc">gerer un tableau de simuation, chaque simulation est lier a un algorithme d'ordonnancement</div><div class="ttdef"><b>Definition:</b> simulation.h:50</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions utile au projet</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

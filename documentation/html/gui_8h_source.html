@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de gui.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gui.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gui_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __GUI__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __GUI__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;define.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mouse_8h.html">mouse.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="font_8h.html">font.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="color_8h.html">color.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">texture.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">window.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structBL__Text.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structBL__Text.html#a00d1aa5b1a18875d84cf0f8f89006462">   23</a></span>&#160;    SDL_Rect <a class="code" href="structBL__Text.html#a00d1aa5b1a18875d84cf0f8f89006462">position</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structBL__Text.html#a9c576f15f30413206618d94f42b19c79">   24</a></span>&#160;    SDL_Texture *<a class="code" href="structBL__Text.html#a9c576f15f30413206618d94f42b19c79">texture</a>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structBL__Text.html#aa0bfb3e95912fa93a66c3a071f1cf594">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Text.html#aa0bfb3e95912fa93a66c3a071f1cf594">rapport_x</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structBL__Text.html#a1db69bfa5e7a5132b1c1623902ad7e70">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Text.html#a1db69bfa5e7a5132b1c1623902ad7e70">rapport_y</a>; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}<a class="code" href="structBL__Text.html">BL_Text</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structBL__Array__text.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structBL__Array__text.html#a6c4589f35e142cf8d69506bc4faed4ae">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Array__text.html#a6c4589f35e142cf8d69506bc4faed4ae">nb_texts</a>; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structBL__Array__text.html#ae78dbf35a97aa6e15747070625d260aa">   37</a></span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> *<a class="code" href="structBL__Array__text.html#ae78dbf35a97aa6e15747070625d260aa">texts</a>; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}<a class="code" href="structBL__Array__text.html">BL_Array_text</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structBL__Button.html">   44</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structBL__Button.html#a7a3c4911e1950449abfecf547f03bee6">   46</a></span>&#160;    SDL_Rect <a class="code" href="structBL__Button.html#a7a3c4911e1950449abfecf547f03bee6">position</a>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structBL__Button.html#ad226cfc89fa42a6de1488e2d54b3c47f">   47</a></span>&#160;    SDL_Color <a class="code" href="structBL__Button.html#ad226cfc89fa42a6de1488e2d54b3c47f">color</a>; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structBL__Button.html#a5df5929696873428b734b795866bffc7">   48</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Button.html#a5df5929696873428b734b795866bffc7">index_texture</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structBL__Button.html#ad87240b4060a657942ff0e106457d8ce">   49</a></span>&#160;    SDL_bool <a class="code" href="structBL__Button.html#ad87240b4060a657942ff0e106457d8ce">is_hoover</a>; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structBL__Button.html#a45b41703bee6ae7489e76f0635e61f90">   50</a></span>&#160;    SDL_bool <a class="code" href="structBL__Button.html#a45b41703bee6ae7489e76f0635e61f90">is_pressed</a>; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structBL__Button.html#a29d886a2d6ef715cfcd0bc775a891fbf">   51</a></span>&#160;    SDL_bool <a class="code" href="structBL__Button.html#a29d886a2d6ef715cfcd0bc775a891fbf">is_visible</a>; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structBL__Button.html#a9a7465362eb9d355016332be8a7d32db">   52</a></span>&#160;    SDL_bool <a class="code" href="structBL__Button.html#a9a7465362eb9d355016332be8a7d32db">fill</a>; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structBL__Button.html#a79bc71119d58fb1d739151a2a59c7fec">   53</a></span>&#160;    <a class="code" href="structBL__Text.html">BL_Text</a> <a class="code" href="structBL__Button.html#a79bc71119d58fb1d739151a2a59c7fec">text</a>; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structBL__Button.html#aa9501ed3a8babfc22e0e62ed4dbc11a3">   55</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Button.html#aa9501ed3a8babfc22e0e62ed4dbc11a3">event</a>; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structBL__Button.html#a2c98eccec8d2aae617597b1c00278ca5">   57</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Button.html#a2c98eccec8d2aae617597b1c00278ca5">rapport_x</a>; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structBL__Button.html#a03f0018b9c80d4388ccf581049ed9a20">   58</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Button.html#a03f0018b9c80d4388ccf581049ed9a20">rapport_y</a>; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}<a class="code" href="structBL__Button.html">BL_Button</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structBL__Array__button.html">   65</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structBL__Array__button.html#ab3399c091ff596e4e5719ba2ef994b5f">   67</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Array__button.html#ab3399c091ff596e4e5719ba2ef994b5f">nb_buttons</a>; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structBL__Array__button.html#aa684f51abfd38944206637a3e3edee18">   68</a></span>&#160;    <a class="code" href="structBL__Button.html">BL_Button</a> *<a class="code" href="structBL__Array__button.html#aa684f51abfd38944206637a3e3edee18">buttons</a>; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}<a class="code" href="structBL__Array__button.html">BL_Array_button</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structBL__Panel.html">   75</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structBL__Panel.html#a3b07f602faf8636f036bead18a5b8fb8">   77</a></span>&#160;    SDL_Rect <a class="code" href="structBL__Panel.html#a3b07f602faf8636f036bead18a5b8fb8">position</a>; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structBL__Panel.html#ae29d240a99ab8d437e6f36b2dd7f9ace">   78</a></span>&#160;    SDL_Color <a class="code" href="structBL__Panel.html#ae29d240a99ab8d437e6f36b2dd7f9ace">color</a>; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structBL__Panel.html#a6581682f6945cce7214906100c598ae8">   79</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Panel.html#a6581682f6945cce7214906100c598ae8">index_texture</a>; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structBL__Panel.html#ad69f215014e73307eace00809665a615">   80</a></span>&#160;    SDL_bool <a class="code" href="structBL__Panel.html#ad69f215014e73307eace00809665a615">is_selected</a>; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structBL__Panel.html#a23f74508947680774f340d37375e4def">   81</a></span>&#160;    SDL_bool <a class="code" href="structBL__Panel.html#a23f74508947680774f340d37375e4def">is_visible</a>; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structBL__Panel.html#a54bcab0e289ef07054a70227e7154d39">   82</a></span>&#160;    SDL_bool <a class="code" href="structBL__Panel.html#a54bcab0e289ef07054a70227e7154d39">fill</a>; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//to moving panel</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structBL__Panel.html#ab5bddf6d7c97f9aef8ed50eb54bc4328">   85</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Panel.html#ab5bddf6d7c97f9aef8ed50eb54bc4328">dif_x</a>; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structBL__Panel.html#ab549117ba4533fac12d9f8531c63270e">   86</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Panel.html#ab549117ba4533fac12d9f8531c63270e">dif_y</a>; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structBL__Panel.html#add5b2994d1cb6b8786f2d7c88767f2cf">   88</a></span>&#160;    <a class="code" href="structBL__Array__text.html">BL_Array_text</a> <a class="code" href="structBL__Panel.html#add5b2994d1cb6b8786f2d7c88767f2cf">array_text</a>; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="structBL__Panel.html#a9e00b2e1ffa0ecc56e2b6d123b8bd8d1">   89</a></span>&#160;    <a class="code" href="structBL__Array__button.html">BL_Array_button</a> <a class="code" href="structBL__Panel.html#a9e00b2e1ffa0ecc56e2b6d123b8bd8d1">array_button</a>; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}<a class="code" href="structBL__Panel.html">BL_Panel</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<a class="code" href="structBL__Button.html">BL_Button</a> <a class="code" href="gui_8h.html#a345ac398365da420e3fa5d914b68848d">BL_create_button</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, SDL_bool fill, <span class="keywordtype">int</span> index_texture, SDL_Color color, <span class="keywordtype">int</span> event,  SDL_Color text_color, <span class="keywordtype">char</span> *text, <span class="keywordtype">char</span> *font_path);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<a class="code" href="structBL__Panel.html">BL_Panel</a> <a class="code" href="gui_8h.html#a80a36752ef7819a1d48eac89c5919b0f">BL_create_panel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, SDL_bool fill, <span class="keywordtype">int</span> index_texture, SDL_Color color, <a class="code" href="structBL__Array__text.html">BL_Array_text</a> array_text, <a class="code" href="structBL__Array__button.html">BL_Array_button</a> array_button);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<a class="code" href="structBL__Text.html">BL_Text</a> <a class="code" href="gui_8h.html#a3a7437d7b0f2932589bd12ba723f245a">BL_create_text</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Color color, <span class="keywordtype">char</span> *text_string, <span class="keywordtype">char</span> *path, <span class="keywordtype">int</span> size_text);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;SDL_bool <a class="code" href="gui_8h.html#a9b821398f0a9de64637899e2b1f7c12c">BL_update_panel</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse, <a class="code" href="structBL__Panel.html">BL_Panel</a> *panel);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gui_8h.html#a14d6a99ad3779bf37dec293454916ecb">BL_panel_set_visible</a>(<a class="code" href="structBL__Panel.html">BL_Panel</a> *panel, SDL_bool visible);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gui_8h.html#a46220fbc9e4945dac0e3cf574ff2587c">BL_panel_set_selected</a>(<a class="code" href="structBL__Panel.html">BL_Panel</a> *panel, SDL_bool selected);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gui_8h.html#a2eb4edbe473a2f17f51c248f3bd2078b">BL_panel_set_position</a>(<a class="code" href="structBL__Panel.html">BL_Panel</a> *panel, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gui_8h.html#a6e48740e2c635fce634383b083deca13">BL_panel_resized</a>(<a class="code" href="structBL__Panel.html">BL_Panel</a> *panel, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acolor_8h_html"><div class="ttname"><a href="color_8h.html">color.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des couleurs</div></div>
+<div class="ttc" id="afont_8h_html"><div class="ttname"><a href="font_8h.html">font.h</a></div><div class="ttdoc">fichier entete qui contient les structures/fonctions/defines pour la gestion des font</div></div>
+<div class="ttc" id="agui_8h_html_a14d6a99ad3779bf37dec293454916ecb"><div class="ttname"><a href="gui_8h.html#a14d6a99ad3779bf37dec293454916ecb">BL_panel_set_visible</a></div><div class="ttdeci">void BL_panel_set_visible(BL_Panel *panel, SDL_bool visible)</div><div class="ttdoc">fonction qui change la variable visible d'un panel</div><div class="ttdef"><b>Definition:</b> gui.c:146</div></div>
+<div class="ttc" id="agui_8h_html_a2eb4edbe473a2f17f51c248f3bd2078b"><div class="ttname"><a href="gui_8h.html#a2eb4edbe473a2f17f51c248f3bd2078b">BL_panel_set_position</a></div><div class="ttdeci">void BL_panel_set_position(BL_Panel *panel, int x, int y)</div><div class="ttdoc">fonction qui place un panel sur un endroit precis</div><div class="ttdef"><b>Definition:</b> gui.c:156</div></div>
+<div class="ttc" id="agui_8h_html_a345ac398365da420e3fa5d914b68848d"><div class="ttname"><a href="gui_8h.html#a345ac398365da420e3fa5d914b68848d">BL_create_button</a></div><div class="ttdeci">BL_Button BL_create_button(BL_Window window, int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, int event, SDL_Color text_color, char *text, char *font_path)</div><div class="ttdoc">creaton d'un bouton</div><div class="ttdef"><b>Definition:</b> gui.c:9</div></div>
+<div class="ttc" id="agui_8h_html_a3a7437d7b0f2932589bd12ba723f245a"><div class="ttname"><a href="gui_8h.html#a3a7437d7b0f2932589bd12ba723f245a">BL_create_text</a></div><div class="ttdeci">BL_Text BL_create_text(BL_Window window, int x, int y, SDL_Color color, char *text_string, char *path, int size_text)</div><div class="ttdoc">creation d'un texte</div><div class="ttdef"><b>Definition:</b> gui.c:68</div></div>
+<div class="ttc" id="agui_8h_html_a46220fbc9e4945dac0e3cf574ff2587c"><div class="ttname"><a href="gui_8h.html#a46220fbc9e4945dac0e3cf574ff2587c">BL_panel_set_selected</a></div><div class="ttdeci">void BL_panel_set_selected(BL_Panel *panel, SDL_bool selected)</div><div class="ttdoc">fonction qui change la variable selected d'un panel</div><div class="ttdef"><b>Definition:</b> gui.c:151</div></div>
+<div class="ttc" id="agui_8h_html_a6e48740e2c635fce634383b083deca13"><div class="ttname"><a href="gui_8h.html#a6e48740e2c635fce634383b083deca13">BL_panel_resized</a></div><div class="ttdeci">void BL_panel_resized(BL_Panel *panel, int w, int h)</div><div class="ttdoc">fonction qui resize la taille d'un panel</div><div class="ttdef"><b>Definition:</b> gui.c:162</div></div>
+<div class="ttc" id="agui_8h_html_a80a36752ef7819a1d48eac89c5919b0f"><div class="ttname"><a href="gui_8h.html#a80a36752ef7819a1d48eac89c5919b0f">BL_create_panel</a></div><div class="ttdeci">BL_Panel BL_create_panel(int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, BL_Array_text array_text, BL_Array_button array_button)</div><div class="ttdoc">creation d'un panel</div><div class="ttdef"><b>Definition:</b> gui.c:35</div></div>
+<div class="ttc" id="agui_8h_html_a9b821398f0a9de64637899e2b1f7c12c"><div class="ttname"><a href="gui_8h.html#a9b821398f0a9de64637899e2b1f7c12c">BL_update_panel</a></div><div class="ttdeci">SDL_bool BL_update_panel(BL_Window window, BL_Mouse *mouse, BL_Panel *panel)</div><div class="ttdoc">fonction qui actualise le contexte d'un panel</div><div class="ttdef"><b>Definition:</b> gui.c:85</div></div>
+<div class="ttc" id="amouse_8h_html"><div class="ttname"><a href="mouse_8h.html">mouse.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion de la souris</div></div>
+<div class="ttc" id="astructBL__Array__button_html"><div class="ttname"><a href="structBL__Array__button.html">BL_Array_button</a></div><div class="ttdoc">structure pour la gestion de tableau de bouton</div><div class="ttdef"><b>Definition:</b> gui.h:65</div></div>
+<div class="ttc" id="astructBL__Array__button_html_aa684f51abfd38944206637a3e3edee18"><div class="ttname"><a href="structBL__Array__button.html#aa684f51abfd38944206637a3e3edee18">BL_Array_button::buttons</a></div><div class="ttdeci">BL_Button * buttons</div><div class="ttdef"><b>Definition:</b> gui.h:68</div></div>
+<div class="ttc" id="astructBL__Array__button_html_ab3399c091ff596e4e5719ba2ef994b5f"><div class="ttname"><a href="structBL__Array__button.html#ab3399c091ff596e4e5719ba2ef994b5f">BL_Array_button::nb_buttons</a></div><div class="ttdeci">int nb_buttons</div><div class="ttdef"><b>Definition:</b> gui.h:67</div></div>
+<div class="ttc" id="astructBL__Array__text_html"><div class="ttname"><a href="structBL__Array__text.html">BL_Array_text</a></div><div class="ttdoc">structure pour la gestion de tableau de textes</div><div class="ttdef"><b>Definition:</b> gui.h:34</div></div>
+<div class="ttc" id="astructBL__Array__text_html_a6c4589f35e142cf8d69506bc4faed4ae"><div class="ttname"><a href="structBL__Array__text.html#a6c4589f35e142cf8d69506bc4faed4ae">BL_Array_text::nb_texts</a></div><div class="ttdeci">int nb_texts</div><div class="ttdef"><b>Definition:</b> gui.h:36</div></div>
+<div class="ttc" id="astructBL__Array__text_html_ae78dbf35a97aa6e15747070625d260aa"><div class="ttname"><a href="structBL__Array__text.html#ae78dbf35a97aa6e15747070625d260aa">BL_Array_text::texts</a></div><div class="ttdeci">BL_Text * texts</div><div class="ttdef"><b>Definition:</b> gui.h:37</div></div>
+<div class="ttc" id="astructBL__Button_html"><div class="ttname"><a href="structBL__Button.html">BL_Button</a></div><div class="ttdoc">structure pour la gestion de bouton</div><div class="ttdef"><b>Definition:</b> gui.h:44</div></div>
+<div class="ttc" id="astructBL__Button_html_a03f0018b9c80d4388ccf581049ed9a20"><div class="ttname"><a href="structBL__Button.html#a03f0018b9c80d4388ccf581049ed9a20">BL_Button::rapport_y</a></div><div class="ttdeci">int rapport_y</div><div class="ttdef"><b>Definition:</b> gui.h:58</div></div>
+<div class="ttc" id="astructBL__Button_html_a29d886a2d6ef715cfcd0bc775a891fbf"><div class="ttname"><a href="structBL__Button.html#a29d886a2d6ef715cfcd0bc775a891fbf">BL_Button::is_visible</a></div><div class="ttdeci">SDL_bool is_visible</div><div class="ttdef"><b>Definition:</b> gui.h:51</div></div>
+<div class="ttc" id="astructBL__Button_html_a2c98eccec8d2aae617597b1c00278ca5"><div class="ttname"><a href="structBL__Button.html#a2c98eccec8d2aae617597b1c00278ca5">BL_Button::rapport_x</a></div><div class="ttdeci">int rapport_x</div><div class="ttdef"><b>Definition:</b> gui.h:57</div></div>
+<div class="ttc" id="astructBL__Button_html_a45b41703bee6ae7489e76f0635e61f90"><div class="ttname"><a href="structBL__Button.html#a45b41703bee6ae7489e76f0635e61f90">BL_Button::is_pressed</a></div><div class="ttdeci">SDL_bool is_pressed</div><div class="ttdef"><b>Definition:</b> gui.h:50</div></div>
+<div class="ttc" id="astructBL__Button_html_a5df5929696873428b734b795866bffc7"><div class="ttname"><a href="structBL__Button.html#a5df5929696873428b734b795866bffc7">BL_Button::index_texture</a></div><div class="ttdeci">int index_texture</div><div class="ttdef"><b>Definition:</b> gui.h:48</div></div>
+<div class="ttc" id="astructBL__Button_html_a79bc71119d58fb1d739151a2a59c7fec"><div class="ttname"><a href="structBL__Button.html#a79bc71119d58fb1d739151a2a59c7fec">BL_Button::text</a></div><div class="ttdeci">BL_Text text</div><div class="ttdef"><b>Definition:</b> gui.h:53</div></div>
+<div class="ttc" id="astructBL__Button_html_a7a3c4911e1950449abfecf547f03bee6"><div class="ttname"><a href="structBL__Button.html#a7a3c4911e1950449abfecf547f03bee6">BL_Button::position</a></div><div class="ttdeci">SDL_Rect position</div><div class="ttdef"><b>Definition:</b> gui.h:46</div></div>
+<div class="ttc" id="astructBL__Button_html_a9a7465362eb9d355016332be8a7d32db"><div class="ttname"><a href="structBL__Button.html#a9a7465362eb9d355016332be8a7d32db">BL_Button::fill</a></div><div class="ttdeci">SDL_bool fill</div><div class="ttdef"><b>Definition:</b> gui.h:52</div></div>
+<div class="ttc" id="astructBL__Button_html_aa9501ed3a8babfc22e0e62ed4dbc11a3"><div class="ttname"><a href="structBL__Button.html#aa9501ed3a8babfc22e0e62ed4dbc11a3">BL_Button::event</a></div><div class="ttdeci">int event</div><div class="ttdef"><b>Definition:</b> gui.h:55</div></div>
+<div class="ttc" id="astructBL__Button_html_ad226cfc89fa42a6de1488e2d54b3c47f"><div class="ttname"><a href="structBL__Button.html#ad226cfc89fa42a6de1488e2d54b3c47f">BL_Button::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdef"><b>Definition:</b> gui.h:47</div></div>
+<div class="ttc" id="astructBL__Button_html_ad87240b4060a657942ff0e106457d8ce"><div class="ttname"><a href="structBL__Button.html#ad87240b4060a657942ff0e106457d8ce">BL_Button::is_hoover</a></div><div class="ttdeci">SDL_bool is_hoover</div><div class="ttdef"><b>Definition:</b> gui.h:49</div></div>
+<div class="ttc" id="astructBL__Mouse_html"><div class="ttname"><a href="structBL__Mouse.html">BL_Mouse</a></div><div class="ttdoc">structure pour la gestion de la souris</div><div class="ttdef"><b>Definition:</b> mouse.h:16</div></div>
+<div class="ttc" id="astructBL__Panel_html"><div class="ttname"><a href="structBL__Panel.html">BL_Panel</a></div><div class="ttdoc">structure pour la gestion de panel</div><div class="ttdef"><b>Definition:</b> gui.h:75</div></div>
+<div class="ttc" id="astructBL__Panel_html_a23f74508947680774f340d37375e4def"><div class="ttname"><a href="structBL__Panel.html#a23f74508947680774f340d37375e4def">BL_Panel::is_visible</a></div><div class="ttdeci">SDL_bool is_visible</div><div class="ttdef"><b>Definition:</b> gui.h:81</div></div>
+<div class="ttc" id="astructBL__Panel_html_a3b07f602faf8636f036bead18a5b8fb8"><div class="ttname"><a href="structBL__Panel.html#a3b07f602faf8636f036bead18a5b8fb8">BL_Panel::position</a></div><div class="ttdeci">SDL_Rect position</div><div class="ttdef"><b>Definition:</b> gui.h:77</div></div>
+<div class="ttc" id="astructBL__Panel_html_a54bcab0e289ef07054a70227e7154d39"><div class="ttname"><a href="structBL__Panel.html#a54bcab0e289ef07054a70227e7154d39">BL_Panel::fill</a></div><div class="ttdeci">SDL_bool fill</div><div class="ttdef"><b>Definition:</b> gui.h:82</div></div>
+<div class="ttc" id="astructBL__Panel_html_a6581682f6945cce7214906100c598ae8"><div class="ttname"><a href="structBL__Panel.html#a6581682f6945cce7214906100c598ae8">BL_Panel::index_texture</a></div><div class="ttdeci">int index_texture</div><div class="ttdef"><b>Definition:</b> gui.h:79</div></div>
+<div class="ttc" id="astructBL__Panel_html_a9e00b2e1ffa0ecc56e2b6d123b8bd8d1"><div class="ttname"><a href="structBL__Panel.html#a9e00b2e1ffa0ecc56e2b6d123b8bd8d1">BL_Panel::array_button</a></div><div class="ttdeci">BL_Array_button array_button</div><div class="ttdef"><b>Definition:</b> gui.h:89</div></div>
+<div class="ttc" id="astructBL__Panel_html_ab549117ba4533fac12d9f8531c63270e"><div class="ttname"><a href="structBL__Panel.html#ab549117ba4533fac12d9f8531c63270e">BL_Panel::dif_y</a></div><div class="ttdeci">int dif_y</div><div class="ttdef"><b>Definition:</b> gui.h:86</div></div>
+<div class="ttc" id="astructBL__Panel_html_ab5bddf6d7c97f9aef8ed50eb54bc4328"><div class="ttname"><a href="structBL__Panel.html#ab5bddf6d7c97f9aef8ed50eb54bc4328">BL_Panel::dif_x</a></div><div class="ttdeci">int dif_x</div><div class="ttdef"><b>Definition:</b> gui.h:85</div></div>
+<div class="ttc" id="astructBL__Panel_html_ad69f215014e73307eace00809665a615"><div class="ttname"><a href="structBL__Panel.html#ad69f215014e73307eace00809665a615">BL_Panel::is_selected</a></div><div class="ttdeci">SDL_bool is_selected</div><div class="ttdef"><b>Definition:</b> gui.h:80</div></div>
+<div class="ttc" id="astructBL__Panel_html_add5b2994d1cb6b8786f2d7c88767f2cf"><div class="ttname"><a href="structBL__Panel.html#add5b2994d1cb6b8786f2d7c88767f2cf">BL_Panel::array_text</a></div><div class="ttdeci">BL_Array_text array_text</div><div class="ttdef"><b>Definition:</b> gui.h:88</div></div>
+<div class="ttc" id="astructBL__Panel_html_ae29d240a99ab8d437e6f36b2dd7f9ace"><div class="ttname"><a href="structBL__Panel.html#ae29d240a99ab8d437e6f36b2dd7f9ace">BL_Panel::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdef"><b>Definition:</b> gui.h:78</div></div>
+<div class="ttc" id="astructBL__Text_html"><div class="ttname"><a href="structBL__Text.html">BL_Text</a></div><div class="ttdoc">structure pour la gestion de texte</div><div class="ttdef"><b>Definition:</b> gui.h:21</div></div>
+<div class="ttc" id="astructBL__Text_html_a00d1aa5b1a18875d84cf0f8f89006462"><div class="ttname"><a href="structBL__Text.html#a00d1aa5b1a18875d84cf0f8f89006462">BL_Text::position</a></div><div class="ttdeci">SDL_Rect position</div><div class="ttdef"><b>Definition:</b> gui.h:23</div></div>
+<div class="ttc" id="astructBL__Text_html_a1db69bfa5e7a5132b1c1623902ad7e70"><div class="ttname"><a href="structBL__Text.html#a1db69bfa5e7a5132b1c1623902ad7e70">BL_Text::rapport_y</a></div><div class="ttdeci">int rapport_y</div><div class="ttdef"><b>Definition:</b> gui.h:27</div></div>
+<div class="ttc" id="astructBL__Text_html_a9c576f15f30413206618d94f42b19c79"><div class="ttname"><a href="structBL__Text.html#a9c576f15f30413206618d94f42b19c79">BL_Text::texture</a></div><div class="ttdeci">SDL_Texture * texture</div><div class="ttdef"><b>Definition:</b> gui.h:24</div></div>
+<div class="ttc" id="astructBL__Text_html_aa0bfb3e95912fa93a66c3a071f1cf594"><div class="ttname"><a href="structBL__Text.html#aa0bfb3e95912fa93a66c3a071f1cf594">BL_Text::rapport_x</a></div><div class="ttdeci">int rapport_x</div><div class="ttdef"><b>Definition:</b> gui.h:26</div></div>
+<div class="ttc" id="astructBL__Window_html"><div class="ttname"><a href="structBL__Window.html">BL_Window</a></div><div class="ttdoc">regroupe toute les variables necessaire a la gestion des fenetres en SDL</div><div class="ttdef"><b>Definition:</b> window.h:17</div></div>
+<div class="ttc" id="atexture_8h_html"><div class="ttname"><a href="texture_8h.html">texture.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des textures</div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="window_8h.html">window.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/define/structure utile a la gestion de fenetre en SDL</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

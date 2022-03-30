@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier texture.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier texture.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des textures  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;define.h&quot;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="color_8h_source.html">color.h</a>&quot;</code><br />
+</div>
+<p><a href="texture_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBL__Graphics.html">BL_Graphics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable pour la sauvegarde des textures crees  <a href="structBL__Graphics.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ad60d008dc44924826931de9039e13f55"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="texture_8h.html#ad60d008dc44924826931de9039e13f55">BL_init_texture</a> (SDL_Renderer *renderer, <a class="el" href="structBL__Graphics.html">BL_Graphics</a> *graphics)</td></tr>
+<tr class="memdesc:ad60d008dc44924826931de9039e13f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">creation de toute les textures, elle parcourt le dossier graphics  <a href="texture_8h.html#ad60d008dc44924826931de9039e13f55">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad60d008dc44924826931de9039e13f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3783540e0ba346b18c5c5f614e070a"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="texture_8h.html#a2f3783540e0ba346b18c5c5f614e070a">BL_create_texture</a> (SDL_Renderer *renderer, char *chemin, SDL_Rect *rect, SDL_Texture **textureDst)</td></tr>
+<tr class="memdesc:a2f3783540e0ba346b18c5c5f614e070a"><td class="mdescLeft">&#160;</td><td class="mdescRight">creation d'une texture  <a href="texture_8h.html#a2f3783540e0ba346b18c5c5f614e070a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2f3783540e0ba346b18c5c5f614e070a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe260b9b02354142af59c9de161cabf"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="texture_8h.html#affe260b9b02354142af59c9de161cabf">BL_create_texture_text</a> (SDL_Renderer *renderer, TTF_Font *font, SDL_Color bg, char *text, SDL_Rect *rect, SDL_Texture **textureDst)</td></tr>
+<tr class="memdesc:affe260b9b02354142af59c9de161cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">creation d'une texture pour un texte  <a href="texture_8h.html#affe260b9b02354142af59c9de161cabf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:affe260b9b02354142af59c9de161cabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a451bff42b6d1a7755a5a00a6c9069630"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="texture_8h.html#a451bff42b6d1a7755a5a00a6c9069630">BL_texture_get_index</a> (<a class="el" href="structBL__Graphics.html">BL_Graphics</a> graphics, int index)</td></tr>
+<tr class="memdesc:a451bff42b6d1a7755a5a00a6c9069630"><td class="mdescLeft">&#160;</td><td class="mdescRight">recupere une texture dans le tableau de graphics  <a href="texture_8h.html#a451bff42b6d1a7755a5a00a6c9069630">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a451bff42b6d1a7755a5a00a6c9069630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590d291c866c3752d5334a3cb28a4857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="texture_8h.html#a590d291c866c3752d5334a3cb28a4857">BL_clean_texture</a> (<a class="el" href="structBL__Graphics.html">BL_Graphics</a> *graphics)</td></tr>
+<tr class="memdesc:a590d291c866c3752d5334a3cb28a4857"><td class="mdescLeft">&#160;</td><td class="mdescRight">detruit toute les textures creer precedement  <a href="texture_8h.html#a590d291c866c3752d5334a3cb28a4857">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a590d291c866c3752d5334a3cb28a4857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des textures </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a590d291c866c3752d5334a3cb28a4857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a590d291c866c3752d5334a3cb28a4857">&#9670;&nbsp;</a></span>BL_clean_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BL_clean_texture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Graphics.html">BL_Graphics</a> *&#160;</td>
+          <td class="paramname"><em>graphics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>detruit toute les textures creer precedement </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>la structure qui contient toutes les textures </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f3783540e0ba346b18c5c5f614e070a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3783540e0ba346b18c5c5f614e070a">&#9670;&nbsp;</a></span>BL_create_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_create_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>chemin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture **&#160;</td>
+          <td class="paramname"><em>textureDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creation d'une texture </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>necessaire pour creer une texture </td></tr>
+    <tr><td class="paramname">chemin</td><td>le chemin vers l'image a charger en texture </td></tr>
+    <tr><td class="paramname">rect</td><td>si on veut qu'une partie de l'image en question </td></tr>
+    <tr><td class="paramname">textureDst</td><td>la texture remplis a la fin de la creation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean si la creation a reussit ou non, SDL_TRUE si oui, SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="affe260b9b02354142af59c9de161cabf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe260b9b02354142af59c9de161cabf">&#9670;&nbsp;</a></span>BL_create_texture_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_create_texture_text </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture **&#160;</td>
+          <td class="paramname"><em>textureDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creation d'une texture pour un texte </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>necessaire pour creer une texture </td></tr>
+    <tr><td class="paramname">font</td><td>la font utiliser pour creer le texte </td></tr>
+    <tr><td class="paramname">bg</td><td>la couleur du fond du texte </td></tr>
+    <tr><td class="paramname">text</td><td>le texte qui doit etre changer en texture </td></tr>
+    <tr><td class="paramname">rect</td><td>si on veut qu'une partis du texte </td></tr>
+    <tr><td class="paramname">textureDst</td><td>la texture remplis a la fin de la creation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean si la creation a reussit ou non, SDL_TRUE si oui, SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="ad60d008dc44924826931de9039e13f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60d008dc44924826931de9039e13f55">&#9670;&nbsp;</a></span>BL_init_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_init_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Graphics.html">BL_Graphics</a> *&#160;</td>
+          <td class="paramname"><em>graphics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creation de toute les textures, elle parcourt le dossier graphics </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>necessaire pour creer une texture </td></tr>
+    <tr><td class="paramname">graphics</td><td>la structure qui sera remplis a la suite de la creation de toute les textures </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean si l'initialisation a reussit ou non, SDL_TRUE si oui, SDL_FALSE sinon </dd></dl>
+
+</div>
+</div>
+<a id="a451bff42b6d1a7755a5a00a6c9069630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a451bff42b6d1a7755a5a00a6c9069630">&#9670;&nbsp;</a></span>BL_texture_get_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture* BL_texture_get_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Graphics.html">BL_Graphics</a>&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>recupere une texture dans le tableau de graphics </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>la structure qui contient toutes les textures </td></tr>
+    <tr><td class="paramname">index</td><td>l'index dans le tableau de la texture </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>SDL_Texture la texture du tableau de texture </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

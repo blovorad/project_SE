@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation:  Fichier source de update.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">update.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="update_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __UPDATE__H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __UPDATE__H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;define.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="input_8h.html">input.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gui_8h.html">gui.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mouse_8h.html">mouse.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">window.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graphe_8h.html">graphe.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;SDL_bool <a class="code" href="update_8h.html#a16c59832e9cacf721fd6c8ba9d00feac">BL_update</a>(<a class="code" href="structBL__Window.html">BL_Window</a> window, <span class="keywordtype">double</span> deltaTime, <a class="code" href="structBL__Input.html">BL_Input</a> *input, <a class="code" href="structBL__Mouse.html">BL_Mouse</a> *mouse, <a class="code" href="structBL__Panel.html">BL_Panel</a> *panel, <a class="code" href="structBL__Histogramme.html">BL_Histogramme</a> *histogramme, <a class="code" href="structSimulation__array.html">Simulation_array</a> simulation_array);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agraphe_8h_html"><div class="ttname"><a href="graphe_8h.html">graphe.h</a></div><div class="ttdoc">fichier entete pour la creation et gestion des graphes</div></div>
+<div class="ttc" id="agui_8h_html"><div class="ttname"><a href="gui_8h.html">gui.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion de la GUI</div></div>
+<div class="ttc" id="ainput_8h_html"><div class="ttname"><a href="input_8h.html">input.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des touches du clavie...</div></div>
+<div class="ttc" id="amouse_8h_html"><div class="ttname"><a href="mouse_8h.html">mouse.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/defines/structures utile a la gestion de la souris</div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="simulation_8h.html">simulation.h</a></div><div class="ttdoc">fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de...</div></div>
+<div class="ttc" id="astructBL__Histogramme_html"><div class="ttname"><a href="structBL__Histogramme.html">BL_Histogramme</a></div><div class="ttdef"><b>Definition:</b> graphe.h:24</div></div>
+<div class="ttc" id="astructBL__Input_html"><div class="ttname"><a href="structBL__Input.html">BL_Input</a></div><div class="ttdoc">structure pour la gestion des touches du clavier, SDL_TRUE si appuyer</div><div class="ttdef"><b>Definition:</b> input.h:16</div></div>
+<div class="ttc" id="astructBL__Mouse_html"><div class="ttname"><a href="structBL__Mouse.html">BL_Mouse</a></div><div class="ttdoc">structure pour la gestion de la souris</div><div class="ttdef"><b>Definition:</b> mouse.h:16</div></div>
+<div class="ttc" id="astructBL__Panel_html"><div class="ttname"><a href="structBL__Panel.html">BL_Panel</a></div><div class="ttdoc">structure pour la gestion de panel</div><div class="ttdef"><b>Definition:</b> gui.h:75</div></div>
+<div class="ttc" id="astructBL__Window_html"><div class="ttname"><a href="structBL__Window.html">BL_Window</a></div><div class="ttdoc">regroupe toute les variables necessaire a la gestion des fenetres en SDL</div><div class="ttdef"><b>Definition:</b> window.h:17</div></div>
+<div class="ttc" id="astructSimulation__array_html"><div class="ttname"><a href="structSimulation__array.html">Simulation_array</a></div><div class="ttdoc">gerer un tableau de simuation, chaque simulation est lier a un algorithme d'ordonnancement</div><div class="ttdef"><b>Definition:</b> simulation.h:50</div></div>
+<div class="ttc" id="aupdate_8h_html_a16c59832e9cacf721fd6c8ba9d00feac"><div class="ttname"><a href="update_8h.html#a16c59832e9cacf721fd6c8ba9d00feac">BL_update</a></div><div class="ttdeci">SDL_bool BL_update(BL_Window window, double deltaTime, BL_Input *input, BL_Mouse *mouse, BL_Panel *panel, BL_Histogramme *histogramme, Simulation_array simulation_array)</div><div class="ttdoc">actualisation des elements donner en parametre</div><div class="ttdef"><b>Definition:</b> update.c:9</div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="window_8h.html">window.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions/define/structure utile a la gestion de fenetre en SDL</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

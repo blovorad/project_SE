@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet systeme exploitation: Référence du fichier gui.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier gui.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>fichier source qui regroupe les fonctions utile a la gestion de la GUI  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="gui_8h_source.html">gui.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a345ac398365da420e3fa5d914b68848d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBL__Button.html">BL_Button</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a345ac398365da420e3fa5d914b68848d">BL_create_button</a> (<a class="el" href="structBL__Window.html">BL_Window</a> window, int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, int event, SDL_Color text_color, char *text, char *font_path)</td></tr>
+<tr class="memdesc:a345ac398365da420e3fa5d914b68848d"><td class="mdescLeft">&#160;</td><td class="mdescRight">creaton d'un bouton  <a href="gui_8c.html#a345ac398365da420e3fa5d914b68848d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a345ac398365da420e3fa5d914b68848d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a36752ef7819a1d48eac89c5919b0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBL__Panel.html">BL_Panel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a80a36752ef7819a1d48eac89c5919b0f">BL_create_panel</a> (int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, <a class="el" href="structBL__Array__text.html">BL_Array_text</a> array_text, <a class="el" href="structBL__Array__button.html">BL_Array_button</a> array_button)</td></tr>
+<tr class="memdesc:a80a36752ef7819a1d48eac89c5919b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">creation d'un panel  <a href="gui_8c.html#a80a36752ef7819a1d48eac89c5919b0f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a80a36752ef7819a1d48eac89c5919b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7437d7b0f2932589bd12ba723f245a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBL__Text.html">BL_Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a3a7437d7b0f2932589bd12ba723f245a">BL_create_text</a> (<a class="el" href="structBL__Window.html">BL_Window</a> window, int x, int y, SDL_Color color, char *text_string, char *path, int size_text)</td></tr>
+<tr class="memdesc:a3a7437d7b0f2932589bd12ba723f245a"><td class="mdescLeft">&#160;</td><td class="mdescRight">creation d'un texte  <a href="gui_8c.html#a3a7437d7b0f2932589bd12ba723f245a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3a7437d7b0f2932589bd12ba723f245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b821398f0a9de64637899e2b1f7c12c"><td class="memItemLeft" align="right" valign="top">SDL_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a9b821398f0a9de64637899e2b1f7c12c">BL_update_panel</a> (<a class="el" href="structBL__Window.html">BL_Window</a> window, <a class="el" href="structBL__Mouse.html">BL_Mouse</a> *mouse, <a class="el" href="structBL__Panel.html">BL_Panel</a> *panel)</td></tr>
+<tr class="memdesc:a9b821398f0a9de64637899e2b1f7c12c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui actualise le contexte d'un panel  <a href="gui_8c.html#a9b821398f0a9de64637899e2b1f7c12c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9b821398f0a9de64637899e2b1f7c12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d6a99ad3779bf37dec293454916ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a14d6a99ad3779bf37dec293454916ecb">BL_panel_set_visible</a> (<a class="el" href="structBL__Panel.html">BL_Panel</a> *panel, SDL_bool visible)</td></tr>
+<tr class="memdesc:a14d6a99ad3779bf37dec293454916ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui change la variable visible d'un panel  <a href="gui_8c.html#a14d6a99ad3779bf37dec293454916ecb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a14d6a99ad3779bf37dec293454916ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46220fbc9e4945dac0e3cf574ff2587c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a46220fbc9e4945dac0e3cf574ff2587c">BL_panel_set_selected</a> (<a class="el" href="structBL__Panel.html">BL_Panel</a> *panel, SDL_bool selected)</td></tr>
+<tr class="memdesc:a46220fbc9e4945dac0e3cf574ff2587c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui change la variable selected d'un panel  <a href="gui_8c.html#a46220fbc9e4945dac0e3cf574ff2587c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a46220fbc9e4945dac0e3cf574ff2587c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb4edbe473a2f17f51c248f3bd2078b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a2eb4edbe473a2f17f51c248f3bd2078b">BL_panel_set_position</a> (<a class="el" href="structBL__Panel.html">BL_Panel</a> *panel, int x, int y)</td></tr>
+<tr class="memdesc:a2eb4edbe473a2f17f51c248f3bd2078b"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui place un panel sur un endroit precis  <a href="gui_8c.html#a2eb4edbe473a2f17f51c248f3bd2078b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2eb4edbe473a2f17f51c248f3bd2078b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e48740e2c635fce634383b083deca13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gui_8c.html#a6e48740e2c635fce634383b083deca13">BL_panel_resized</a> (<a class="el" href="structBL__Panel.html">BL_Panel</a> *panel, int w, int h)</td></tr>
+<tr class="memdesc:a6e48740e2c635fce634383b083deca13"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui resize la taille d'un panel  <a href="gui_8c.html#a6e48740e2c635fce634383b083deca13">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6e48740e2c635fce634383b083deca13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>fichier source qui regroupe les fonctions utile a la gestion de la GUI </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a345ac398365da420e3fa5d914b68848d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345ac398365da420e3fa5d914b68848d">&#9670;&nbsp;</a></span>BL_create_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBL__Button.html">BL_Button</a> BL_create_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Window.html">BL_Window</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_bool&#160;</td>
+          <td class="paramname"><em>fill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index_texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>text_color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>font_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creaton d'un bouton </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>structure contenant une variable, rendrerer qui est utile pour la creation de texture </td></tr>
+    <tr><td class="paramname">x</td><td>position x du bouton </td></tr>
+    <tr><td class="paramname">y</td><td>position y du bouton </td></tr>
+    <tr><td class="paramname">w</td><td>largeur du bouton </td></tr>
+    <tr><td class="paramname">h</td><td>hauteur du bouton </td></tr>
+    <tr><td class="paramname">fill</td><td>si le bouton est remplis ou non par une couleur </td></tr>
+    <tr><td class="paramname">index_texture,-1</td><td>si aucune textue n'est utiliser sinon envoyer son index par rapport au tableau de graphics </td></tr>
+    <tr><td class="paramname">color</td><td>la couleur du bouton </td></tr>
+    <tr><td class="paramname">event</td><td>index dans le tableau event d'une fonction qui s'execute a l'appuis du bouton </td></tr>
+    <tr><td class="paramname">text_color</td><td>la couleur du texte </td></tr>
+    <tr><td class="paramname">text</td><td>le texte du bouton </td></tr>
+    <tr><td class="paramname">font_path</td><td>le chemin vers la font utiliser </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structBL__Button.html" title="structure pour la gestion de bouton">BL_Button</a> le bouton creer </dd></dl>
+
+</div>
+</div>
+<a id="a80a36752ef7819a1d48eac89c5919b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a36752ef7819a1d48eac89c5919b0f">&#9670;&nbsp;</a></span>BL_create_panel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBL__Panel.html">BL_Panel</a> BL_create_panel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_bool&#160;</td>
+          <td class="paramname"><em>fill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index_texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Array__text.html">BL_Array_text</a>&#160;</td>
+          <td class="paramname"><em>array_text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Array__button.html">BL_Array_button</a>&#160;</td>
+          <td class="paramname"><em>array_button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creation d'un panel </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position x du panel </td></tr>
+    <tr><td class="paramname">y</td><td>position y du panel </td></tr>
+    <tr><td class="paramname">w</td><td>largeur du panel </td></tr>
+    <tr><td class="paramname">h</td><td>hauteur du panel </td></tr>
+    <tr><td class="paramname">fill</td><td>si le panel est remplis ou non par une couleur </td></tr>
+    <tr><td class="paramname">index_texture,-1</td><td>si aucune texture n'est utiliser sinon envoyer son index par rapport au tableau de graphics </td></tr>
+    <tr><td class="paramname">color</td><td>la couleur du panel </td></tr>
+    <tr><td class="paramname">array_text</td><td>tableau de tous les textes qui sont attaches au panel </td></tr>
+    <tr><td class="paramname">array_button</td><td>tableau de tous les boutons qui sont attaches au panel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structBL__Panel.html" title="structure pour la gestion de panel">BL_Panel</a> le panel creer </dd></dl>
+
+</div>
+</div>
+<a id="a3a7437d7b0f2932589bd12ba723f245a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a7437d7b0f2932589bd12ba723f245a">&#9670;&nbsp;</a></span>BL_create_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBL__Text.html">BL_Text</a> BL_create_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Window.html">BL_Window</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text_string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creation d'un texte </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>structure contenant une variable, rendrerer qui est utile pour la creation de texture </td></tr>
+    <tr><td class="paramname">x</td><td>position x du panel </td></tr>
+    <tr><td class="paramname">y</td><td>position y du panel </td></tr>
+    <tr><td class="paramname">color</td><td>la couleur du panel </td></tr>
+    <tr><td class="paramname">text_string</td><td>chaine de caractere du texte </td></tr>
+    <tr><td class="paramname">path</td><td>le chemin vers la font utiliser </td></tr>
+    <tr><td class="paramname">size_text</td><td>la taille du texte </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structBL__Text.html" title="structure pour la gestion de texte">BL_Text</a> le texte qui est creer </dd></dl>
+
+</div>
+</div>
+<a id="a6e48740e2c635fce634383b083deca13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e48740e2c635fce634383b083deca13">&#9670;&nbsp;</a></span>BL_panel_resized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BL_panel_resized </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a> *&#160;</td>
+          <td class="paramname"><em>panel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui resize la taille d'un panel </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panel</td><td>le panel concerner par la resize </td></tr>
+    <tr><td class="paramname">w</td><td>un entier qui represente ca nouvelle largeur </td></tr>
+    <tr><td class="paramname">h</td><td>un entier qui represente ca nouvelle hauteur </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2eb4edbe473a2f17f51c248f3bd2078b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb4edbe473a2f17f51c248f3bd2078b">&#9670;&nbsp;</a></span>BL_panel_set_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BL_panel_set_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a> *&#160;</td>
+          <td class="paramname"><em>panel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui place un panel sur un endroit precis </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panel</td><td>le panel concerner par le deplacement </td></tr>
+    <tr><td class="paramname">x</td><td>un entier qui represente ca nouvelle position x </td></tr>
+    <tr><td class="paramname">y</td><td>un entier qui represente ca nouvelle position y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46220fbc9e4945dac0e3cf574ff2587c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46220fbc9e4945dac0e3cf574ff2587c">&#9670;&nbsp;</a></span>BL_panel_set_selected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BL_panel_set_selected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a> *&#160;</td>
+          <td class="paramname"><em>panel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_bool&#160;</td>
+          <td class="paramname"><em>selected</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui change la variable selected d'un panel </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panel</td><td>le panel concerner par le changement </td></tr>
+    <tr><td class="paramname">selected</td><td>boolean qui represente si le panel est selectionner ou non </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a14d6a99ad3779bf37dec293454916ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d6a99ad3779bf37dec293454916ecb">&#9670;&nbsp;</a></span>BL_panel_set_visible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BL_panel_set_visible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a> *&#160;</td>
+          <td class="paramname"><em>panel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_bool&#160;</td>
+          <td class="paramname"><em>visible</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui change la variable visible d'un panel </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panel</td><td>le panel concerner par le changement </td></tr>
+    <tr><td class="paramname">visible</td><td>boolean qui represente si le panel est visible ou non </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b821398f0a9de64637899e2b1f7c12c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b821398f0a9de64637899e2b1f7c12c">&#9670;&nbsp;</a></span>BL_update_panel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_bool BL_update_panel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBL__Window.html">BL_Window</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Mouse.html">BL_Mouse</a> *&#160;</td>
+          <td class="paramname"><em>mouse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBL__Panel.html">BL_Panel</a> *&#160;</td>
+          <td class="paramname"><em>panel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui actualise le contexte d'un panel </p>
+<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>structure contenant des variables necessaire a l'actualisation </td></tr>
+    <tr><td class="paramname">panel</td><td>le panel concerner par l'actualisation </td></tr>
+    <tr><td class="paramname">mouse</td><td>la souris pour savoir si le panel reagit en fonction de la position de la souris </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>boolean si l'update a echouer ou non, SDL_FALSE si echec, SDL_TRUE sinon </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

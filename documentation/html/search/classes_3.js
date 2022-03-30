@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['simulation_110',['Simulation',['../structSimulation.html',1,'']]],
-  ['simulation_5farray_111',['Simulation_array',['../structSimulation__array.html',1,'']]],
-  ['sjf_5fneeds_112',['SJF_needs',['../structSJF__needs.html',1,'']]],
-  ['sjf_5fthread_113',['SJF_Thread',['../structSJF__Thread.html',1,'']]],
-  ['sjf_5fthread_5farray_114',['SJF_Thread_array',['../structSJF__Thread__array.html',1,'']]]
+  ['rr_5fsimulation_295',['RR_simulation',['../structRR__simulation.html',1,'']]],
+  ['rr_5fthread_296',['RR_Thread',['../structRR__Thread.html',1,'']]],
+  ['rr_5fthreads_5farray_297',['RR_Threads_array',['../structRR__Threads__array.html',1,'']]]
 ];

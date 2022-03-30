@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['print_5fhelp_46',['print_help',['../starter_8c.html#a402ea961bfc2ffeee61e3a7c330b1559',1,'print_help(void):&#160;starter.c'],['../starter_8h.html#a402ea961bfc2ffeee61e3a7c330b1559',1,'print_help(void):&#160;starter.c']]],
-  ['print_5fresultat_5fconsole_5fprocessus_47',['print_resultat_console_processus',['../resultat_8c.html#aa731fb4f1d4111008ad537a86dd13fd3',1,'print_resultat_console_processus(Simulation_array simulation_array):&#160;resultat.c'],['../resultat_8h.html#aa731fb4f1d4111008ad537a86dd13fd3',1,'print_resultat_console_processus(Simulation_array simulation_array):&#160;resultat.c']]],
-  ['print_5fresultat_5fconsole_5fsimulation_48',['print_resultat_console_simulation',['../resultat_8c.html#a9bd811dae7447c59bc7429778faf1a76',1,'print_resultat_console_simulation(Simulation_array simulation_array):&#160;resultat.c'],['../resultat_8h.html#a9bd811dae7447c59bc7429778faf1a76',1,'print_resultat_console_simulation(Simulation_array simulation_array):&#160;resultat.c']]],
-  ['processus_49',['Processus',['../structProcessus.html',1,'']]],
-  ['processus_50',['processus',['../structProcessus__array.html#a5f2c31b94a2f125b00ee2939c29c9ba4',1,'Processus_array']]],
-  ['processus_2ec_51',['processus.c',['../processus_8c.html',1,'']]],
-  ['processus_2eh_52',['processus.h',['../processus_8h.html',1,'']]],
-  ['processus_5farray_53',['Processus_array',['../structProcessus__array.html',1,'']]],
-  ['processus_5farray_54',['processus_array',['../structSimulation.html#a52402ab51c31f9ae77a7b67df51e0d56',1,'Simulation']]],
-  ['project_5fse_55',['project_SE',['../md_README.html',1,'']]],
-  ['push_5fto_5ftail_56',['push_to_tail',['../processus_8c.html#ad566f6919b8dede2c1bd441f42f136b5',1,'push_to_tail(int time_execution, Cycle_type type, Action *action):&#160;processus.c'],['../processus_8h.html#a0da68731fce570669c6df8931681fed8',1,'push_to_tail(int time_execution, Cycle_type type, Action *action):&#160;processus.c']]]
+  ['l_160',['l',['../structBL__Input.html#a22222cc9550b665063f3d6cb2d96d946',1,'BL_Input']]],
+  ['launch_5fan_5falgoritm_161',['launch_an_algoritm',['../starter_8c.html#a027f33f9e84e97524640bc238c13230b',1,'launch_an_algoritm(Simulation_array *simulation_array):&#160;starter.c'],['../starter_8h.html#a027f33f9e84e97524640bc238c13230b',1,'launch_an_algoritm(Simulation_array *simulation_array):&#160;starter.c']]],
+  ['launch_5fround_5frobin_162',['launch_round_robin',['../round__robin_8c.html#aeb19763819191c9d8360aa012c972d7a',1,'launch_round_robin(void *return_value):&#160;round_robin.c'],['../round__robin_8h.html#a319d344485337322333a171903090a1a',1,'launch_round_robin(void *return_value):&#160;round_robin.c']]],
+  ['launch_5fsjf_163',['launch_sjf',['../sjf_8c.html#a1c8c6242606e63ee02db83ce569f1061',1,'launch_sjf(void *nothing):&#160;sjf.c'],['../sjf_8h.html#a254b8666ddb5c10c29eec5c9801f413b',1,'launch_sjf(void *nothing):&#160;sjf.c']]],
+  ['left_164',['left',['../structBL__Input.html#a531443ceb921f1abcf5ac7c619f612e0',1,'BL_Input']]],
+  ['leftbutton_165',['leftButton',['../structBL__Mouse.html#ae69f280ac23696bf38b6fe83e293b21b',1,'BL_Mouse']]]
 ];

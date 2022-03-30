@@ -1,25 +1,7 @@
 var searchData=
 [
-  ['select_5falgorithm_69',['select_algorithm',['../config_8h.html#a98c98ac273d99f4fc11cdb91cc431f68',1,'select_algorithm(char *nom_algorithm):&#160;config.c'],['../config_8c.html#a98c98ac273d99f4fc11cdb91cc431f68',1,'select_algorithm(char *nom_algorithm):&#160;config.c']]],
-  ['select_5fnext_5fcpu_70',['select_next_cpu',['../sjf_8h.html#a9e3692da9fb7bd8a20aac5f857afdbac',1,'select_next_cpu(void):&#160;sjf.c'],['../sjf_8c.html#a9e3692da9fb7bd8a20aac5f857afdbac',1,'select_next_cpu(void):&#160;sjf.c']]],
-  ['shared_5fsimulation_71',['shared_simulation',['../structRR__simulation.html#a018ca86080fb29b6fab6023173b57e18',1,'RR_simulation']]],
-  ['simulation_72',['Simulation',['../structSimulation.html',1,'']]],
-  ['simulation_2eh_73',['simulation.h',['../simulation_8h.html',1,'']]],
-  ['simulation_5farray_74',['Simulation_array',['../structSimulation__array.html',1,'']]],
-  ['simulation_5fshared_75',['simulation_shared',['../structSJF__needs.html#a90204ca551caa9ae446a3bd306cfabd7',1,'SJF_needs']]],
-  ['simulations_76',['simulations',['../structSimulation__array.html#a62b77ad35217d8a6fa1fe69b3bd44ab3',1,'Simulation_array']]],
-  ['size_5fstring_77',['size_string',['../util_8c.html#af34407842c1b477926a7d6e13f22ab7d',1,'size_string(char *string):&#160;util.c'],['../util_8h.html#af34407842c1b477926a7d6e13f22ab7d',1,'size_string(char *string):&#160;util.c']]],
-  ['sjf_78',['SJF',['../simulation_8h.html#a5e41188f16a381c8915a17a22228e691a8ade209ddd4ef30da88ba1c9780b5e33',1,'simulation.h']]],
-  ['sjf_79',['sjf',['../sjf_8h.html#ad99a8fefa2265562a1dc44ef6d0a2772',1,'sjf(Simulation *simulation):&#160;sjf.c'],['../sjf_8c.html#ad99a8fefa2265562a1dc44ef6d0a2772',1,'sjf(Simulation *simulation):&#160;sjf.c']]],
-  ['sjf_2ec_80',['sjf.c',['../sjf_8c.html',1,'']]],
-  ['sjf_2eh_81',['sjf.h',['../sjf_8h.html',1,'']]],
-  ['sjf_5fneeds_82',['sjf_needs',['../sjf_8c.html#af37c5aca22afdeaac964e5dbea319fde',1,'sjf.c']]],
-  ['sjf_5fneeds_83',['SJF_needs',['../structSJF__needs.html',1,'']]],
-  ['sjf_5fthread_84',['SJF_Thread',['../structSJF__Thread.html',1,'']]],
-  ['sjf_5fthread_5farray_85',['SJF_Thread_array',['../structSJF__Thread__array.html',1,'']]],
-  ['start_5fsimulations_86',['start_simulations',['../starter_8c.html#a73c455357bbfe7e99de367086ce4a739',1,'start_simulations(int argc, char *argv[], Simulation_array *simulation_array):&#160;starter.c'],['../starter_8h.html#a73c455357bbfe7e99de367086ce4a739',1,'start_simulations(int argc, char *argv[], Simulation_array *simulation_array):&#160;starter.c']]],
-  ['start_5ftime_87',['start_time',['../structSJF__needs.html#a8f53c3465fa94e7d982658781e7245ab',1,'SJF_needs::start_time()'],['../structRR__simulation.html#a4f9d063d7924f23164bfd5040fd7948b',1,'RR_simulation::start_time()']]],
-  ['starter_2ec_88',['starter.c',['../starter_8c.html',1,'']]],
-  ['starter_2eh_89',['starter.h',['../starter_8h.html',1,'']]],
-  ['suivant_90',['suivant',['../structcellule.html#a697f75c7dd9a48ef34247501cff1c084',1,'cellule']]]
+  ['o_180',['o',['../structBL__Input.html#a3f9404aff1c169fa25a686ab76f55947',1,'BL_Input']]],
+  ['oldleftbutton_181',['oldLeftButton',['../structBL__Mouse.html#ac9623f8f924299655a0eeb423f6c0506',1,'BL_Mouse']]],
+  ['oldrightbutton_182',['oldRightButton',['../structBL__Mouse.html#a067e22e2ba2a9395ab96eab8c2d992f5',1,'BL_Mouse']]],
+  ['open_5ffile_183',['open_file',['../util_8c.html#aac7d8fc77f17b44006b8cce30ed001b8',1,'open_file(char *path, char *mode):&#160;util.c'],['../util_8h.html#a207a3b13f42c4cb561abdd1a4989faa2',1,'open_file(char *path, char *mode):&#160;util.c']]]
 ];

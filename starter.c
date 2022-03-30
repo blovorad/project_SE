@@ -103,6 +103,7 @@ int launch_an_algoritm(Simulation_array *simulation_array){
             case FIFO: 
                 break;
             case SJF: 
+                sjf(&simulation_array->simulations[i]);
                 break;
             case ROUND_ROBIN: 
                 round_robin(&simulation_array->simulations[i]);
