@@ -6,12 +6,12 @@
 /**
  * \file input.h
  * \author Gautier Levesque
- * \brief fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des touches du clavier
+ * \brief fichier entete qui regroupe les fonctions/defines/structures utiles a la gestion des touches du clavier
  */
 
 /**
  * \struct BL_Input input.h
- * \brief structure pour la gestion des touches du clavier, SDL_TRUE si appuyer
+ * \brief structure pour la gestion des touches du clavier, SDL_TRUE si appuye
  */
 typedef struct {
 
@@ -41,12 +41,12 @@ typedef struct {
 	SDL_bool v; /*!< etat du v sur le clavier */
 	SDL_bool b; /*!< etat du b sur le clavier */
 	SDL_bool n; /*!< etat du n sur le clavier */
-	SDL_bool space; /*!< etat de espace sur le clavier */
+	SDL_bool space; /*!< etat de la touche Espace sur le clavier */
 	SDL_bool up; /*!< etat de la fleche numerique haut sur le clavier */
 	SDL_bool down; /*!< etat de la fleche numerique bas sur le clavier */
 	SDL_bool left; /*!< etat de la fleche numerique gauche sur le clavier */
 	SDL_bool right; /*!< etat de la fleche numerique droit sur le clavier */
-	SDL_bool escape; /*!< etat du escape sur le clavier */
+	SDL_bool escape; /*!< etat de la touche Echap sur le clavier */
 
 }BL_Input;
 
@@ -56,7 +56,7 @@ typedef struct {
  * \author Gautier Levesque
  * \brief initialisation de la structure BL_Input
  * \param input la structure input a initialiser
- * \return boolean, SDL_TRUE si initialisation ok, SDL_FALSE sinon
+ * \return booleen, SDL_TRUE si initialisation ok, SDL_FALSE sinon
  */
 SDL_bool BL_init_input(BL_Input *input);
 
@@ -67,8 +67,8 @@ SDL_bool BL_init_input(BL_Input *input);
  * \author Gautier Levesque
  * \brief actualisation de l'etat des touches du clavier et du clic de la souris
  * \param input la structure input a actualiser pour les touches du clavier
- * \param mouse la structure mouse a actualiser pour les clis souris
- * \return boolean, SDL_FALSE si la touche pour quitter le programme de maniere sauvage est presser, SDL_TRUE sinon
+ * \param mouse la structure mouse a actualiser pour les clics souris
+ * \return booleen, SDL_FALSE si la touche pour quitter le programme de maniere brusque est pressee, SDL_TRUE sinon
  */
 SDL_bool BL_get_input_keyboard(BL_Input *input, BL_Mouse *mouse);
 

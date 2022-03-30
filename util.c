@@ -4,7 +4,7 @@
  * \file util.c
  * \author Gautier Levesque
  * \date 16/02/2022
- * \brief fichier source qui regroupe les fonctions utile au projet
+ * \brief fichier source qui regroupe les fonctions utiles au projet
  */
 
 int is_path_ok(char *path){

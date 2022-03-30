@@ -6,7 +6,7 @@
 /**
  * \file mouse.h
  * \author Gautier Levesque
- * \brief fichier entete qui regroupe les fonctions/defines/structures utile a la gestion de la souris
+ * \brief fichier entete qui regroupe les fonctions/defines/structures utiles a la gestion de la souris
  */
 
 /**
@@ -15,8 +15,8 @@
  */
 typedef struct {
 	
-	SDL_bool rightButton; /*!< etat du clic droit SDL_TRUE si appuyer */
-    SDL_bool leftButton; /*!< etat du clic gauche SDL_TRUE si appuyer */
+	SDL_bool rightButton; /*!< etat du clic droit SDL_TRUE si appuye */
+    SDL_bool leftButton; /*!< etat du clic gauche SDL_TRUE si appuye */
 	SDL_bool oldRightButton; /*!< ancien etat du clic droit */
     SDL_bool oldLeftButton; /*!< ancien etat du clic gauche */
 	SDL_Rect pos; /*!< position de la souris */
@@ -44,7 +44,7 @@ void BL_get_mouse_pos(BL_Mouse *mouse);
  * \author Gautier Levesque
  * \brief modification de l'etat du clic droit de la souris
  * \param mouse la souris
- * \param n etat du clic, 1 si appuyer, 2 si relacher
+ * \param n etat du clic, 1 si appuye, 2 si relache
  */
 void BL_actualise_right_button(BL_Mouse *mouse, int n);
 
@@ -53,7 +53,7 @@ void BL_actualise_right_button(BL_Mouse *mouse, int n);
  * \author Gautier Levesque
  * \brief modification de l'etat du clic gauche de la souris
  * \param mouse la souris
- * \param n etat du clic, 1 si appuyer, 2 si relacher
+ * \param n etat du clic, 1 si appuye, 2 si relache
  */
 void BL_actualise_left_button(BL_Mouse *mouse, int n);
 

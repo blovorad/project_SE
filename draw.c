@@ -3,7 +3,7 @@
 /**
  * \file draw.c
  * \author Gautier Levesque
- * \brief fichier source qui gere l'affichage de toute les entitees a l'ecran
+ * \brief fichier source qui gere l'affichage de toutes les entites a l'ecran
  */
 
 SDL_bool BL_draw(SDL_Renderer *renderer, BL_Graphics graphics, BL_Panel panel, BL_Histogramme histogramme){

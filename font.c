@@ -3,7 +3,7 @@
 /**
  * \file font.c
  * \author Gautier Levesque
- * \brief fichier source qui contient les fonctions pour la gestion des font
+ * \brief fichier source qui contient les fonctions pour la gestion des polices de caracteres
  */
 
 SDL_bool BL_init_font(TTF_Font **font, const char *chemin, int size){

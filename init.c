@@ -3,7 +3,7 @@
 /**
  * \file init.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a l'initialisation de la SDL et de tous les composants necessaires au fonctionnement du programme
+ * \brief fichier source qui regroupe les fonctions utiles a l'initialisation de la SDL et de tous les composants necessaires au fonctionnement du programme
  */
 
 SDL_bool BL_init(BL_Window *window, BL_Graphics *graphics, BL_Input *input, BL_Mouse *mouse){
@@ -25,7 +25,7 @@ SDL_bool BL_init(BL_Window *window, BL_Graphics *graphics, BL_Input *input, BL_M
 		return SDL_FALSE;
 	}
 
-	//ON INIT LA LIB D'ECRITURE
+	//ON INITIALISE LA LIBRAIRIE D'ECRITURE
 	if(TTF_Init() != 0){
 
 		SDL_Log("IMPOSSIBLE DE CHARGER TTF :%s", TTF_GetError());

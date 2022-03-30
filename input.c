@@ -3,7 +3,7 @@
 /**
  * \file input.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion des touches du clavier
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion des touches du clavier
  */
 
 SDL_bool BL_init_input(BL_Input *input){

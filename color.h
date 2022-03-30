@@ -6,7 +6,7 @@
 /**
  * \file color.h
  * \author Gautier Levesque
- * \brief fichier entete qui regroupe les fonctions/defines/structures utile a la gestion des couleurs
+ * \brief fichier entete qui regroupe les fonctions/defines/structures utiles a la gestion des couleurs
  */
 
 /**
@@ -19,13 +19,13 @@
 SDL_Color BL_get_vert(int alpha);
 
 /**
- * \fn SDL_Color BL_get_vert_foncer(int alpha)
+ * \fn SDL_Color BL_get_vert_fonce(int alpha)
  * \author Gautier Levesque
- * \brief renvoie la couleur verte foncer
+ * \brief renvoie la couleur verte fonce
  * \param alpha canal alpha pour la transparence
  * \return SDL_Color la couleur
  */
-SDL_Color BL_get_vert_foncer(int alpha);
+SDL_Color BL_get_vert_fonce(int alpha);
 
 /**
  * \fn SDL_Color BL_get_gris(int alpha)

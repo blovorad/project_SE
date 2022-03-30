@@ -9,7 +9,7 @@
  
 /**
  * \var sjf_needs
- * \brief tout les besoins specifiques en terme de variable global de l'algorithme SJF sont stocke dans cette variable
+ * \brief tous les besoins specifiques en terme de variables globales de l'algorithme SJF sont stockes dans cette variable
  */
 SJF_needs sjf_needs;
 
@@ -127,7 +127,7 @@ void *launch_sjf(void *nothing){
 	}
 	time_t start_time_processus = time(NULL);
 	
-	//on signal que le thread est arriver
+	//on signale que le thread est arrive
 	sjf_needs.thread_array.threads[i].arrive = 1;
 	
 	//debut reel de l'algorithme
@@ -144,7 +144,7 @@ void *launch_sjf(void *nothing){
 			
 			new_time = time(NULL);
 			
-			//si debut de l'algorithme et donc qu'aucun cycle cpu n'a ete choisit
+			//si debut de l'algorithme et donc qu'aucun cycle cpu n'a ete choisi
 			if(sjf_needs.first_cpu == 0){
 				
 				sjf_needs.first_cpu = 1;
@@ -162,7 +162,7 @@ void *launch_sjf(void *nothing){
 			//recuperation action suivante
 			processus->action_cycle = delete_head(processus->action_cycle);
 			
-			//on choisis le prochain cycle cpu a envoyer
+			//on choisit le prochain cycle cpu a envoyer
 			select_next_cpu();
 		}
 	}

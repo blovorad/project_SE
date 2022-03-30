@@ -10,7 +10,7 @@
 int generate_result_simulation(char *path, Simulation_array simulation_array){
 	
 	FILE *file = open_file(path, "a");
-	fprintf(file, "\n\n\nSIMULATION RESULTAT\n\n\n");
+	fprintf(file, "\n\n\nRESULTAT DE LA SIMULATION\n\n\n"); 
 	fprintf(file, "Average_time_restitution;");
 	fprintf(file, "Average_time_attempt;");
 	fprintf(file, "Average_time_respond;");

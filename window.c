@@ -3,7 +3,7 @@
 /**
  * \file window.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe l'implementation des fonctions utile a la gestion de fenetre en SDL
+ * \brief fichier source qui regroupe l'implementation des fonctions utiles a la gestion de fenetre en SDL
  */
 
 SDL_bool BL_creat_windowRenderer(char *title, BL_Window *window){

@@ -18,7 +18,7 @@
  * \brief chercher un fichier dans un repertoire
  * \param pathDirectory chemin du repertoire
  * \param fileName nom du fichier a trouver
- * \return boolean si le file existe
+ * \return booleen si le fichier existe
  */
 SDL_bool BL_search_file_in_Directory(char *pathDirectory, char *fileName);
 

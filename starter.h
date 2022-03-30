@@ -23,9 +23,9 @@
  * \author Gautier Levesque
  * \date 27/02/2022
  * \brief lancer les simulations
- * \param argc nombre d'arguments ligne de commande
- * \param argv les arguments ligne de commande
- * \param simulation_array tableau contenant tout les algorithmes d'ordonnacement a lancer
+ * \param argc nombre d'arguments sur la ligne de commande
+ * \param argv les arguments de la ligne de commande
+ * \param simulation_array tableau contenant tous les algorithmes d'ordonnancement a lancer
  * \return entier 0 si ok, autre si erreur
  */
 int start_simulations(int argc, char *argv[], Simulation_array *simulation_array);
@@ -43,7 +43,7 @@ void print_help(void);
  * \author Gautier Levesque
  * \date 27/02/2022
  * \brief lancer une simulation
- * \param simulation_array tableau contenant tout les algorithmes d'ordonnacement a lancer
+ * \param simulation_array tableau contenant tous les algorithmes d'ordonnancement a lancer
  * \return entier 0 si ok, -1 si erreur
  */
 int launch_an_algorithm(Simulation_array *simulation_array);

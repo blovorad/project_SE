@@ -3,7 +3,7 @@
 /**
  * \file color.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion des couleurs
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion des couleurs
  */
 
 SDL_Color BL_get_blanc(int alpha){
@@ -30,7 +30,7 @@ SDL_Color BL_get_vert(int alpha){
 	return vert;
 }
 
-SDL_Color BL_get_vert_foncer(int alpha){
+SDL_Color BL_get_vert_fonce(int alpha){
 
 	SDL_Color vert = {0,100,0,alpha};
 	return vert;

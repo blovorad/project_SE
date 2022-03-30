@@ -3,7 +3,7 @@
 /**
  * \file gui.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion de la GUI
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion de la GUI
  */
 
 BL_Button BL_create_button(BL_Window window, int x, int y, int w, int h, SDL_bool fill, int index_texture, SDL_Color color, int event,  SDL_Color text_color, char *text, char *font_path){

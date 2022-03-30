@@ -13,33 +13,33 @@
 
 /**
  * \enum Cycle_type
- * \brief Constantes si Action est CPU ou entrer/sortie
+ * \brief Constantes si Action est CPU ou entree/sortie
  */
 typedef enum{
 	
 	CPU, /*!< Action cycle CPU */
-	ES /*!< Action cycle Entrer/Sortie */
+	ES /*!< Action cycle Entree/Sortie */
 }Cycle_type;
  
 /**
  * \struct cellule processus.h
- * \brief liste chainer qui represente une action d'un processus
+ * \brief liste chainee qui represente une action d'un processus
  */
 struct cellule{
 
 	int time_execution; /*!< temps d'execution de l'action */
-	Cycle_type type; /*!< si CPU ou  ES */
+	Cycle_type type; /*!< si CPU ou ES */
 	struct cellule *suivant; /*!< adresse suivante de la prochaine action */
 };
 
 /**  
- * typedef de la struct cellule en Action pour une compréhension et une utilisation plus clair 
+ * \typedef de la struct cellule en Action pour une comprehension et une utilisation plus claire 
  */
 typedef struct cellule Action;
  
 /**
  * \struct Processus processus.h
- * \brief structure d'un processus ainsi que toute ses actions, et les resultats de la simulation pour ce processus
+ * \brief structure d'un processus ainsi que toutes ses actions, et les resultats de la simulation pour ce processus
  */
 typedef struct{
 
@@ -55,7 +55,7 @@ typedef struct{
 
 /**
  * \struct Processus_array processus.h
- * \brief gerer un tableau de processus, permet de savoir qui arrive a quelle moment en fonction de l'index dans le tableau
+ * \brief gerer un tableau de processus, permet de savoir qui arrive a quel moment en fonction de l'indice dans le tableau
  */
 typedef struct{
 
@@ -80,7 +80,7 @@ int init_processus_array(int nbProcessus, Processus_array *array_processus);
  * \date 29/01/2022
  * \brief initialise un processus
  * \param name nom du processus
- * \param arrive_at temps a laquelle arrive le processus
+ * \param arrive_at temps auquel arrive le processus
  * \param processus le processus(son adresse) qui est rempli
  */
 void init_processus(char *name, int arrive_at, Processus *processus);
@@ -89,9 +89,9 @@ void init_processus(char *name, int arrive_at, Processus *processus);
  * \fn int compare_begin_processus(const void *p1, const void *p2)
  * \author Gautier Levesque
  * \date 29/01/2022
- * \brief fonction de comparaison utiliser par Qsort qui compare les temps de chaque Action
- * \param p1 ici on envoie une Action
- * \param p2 ici on envoie une Action
+ * \brief fonction de comparaison utilisee par qsort qui compare les temps de chaque action
+ * \param p1 ici on envoie une action
+ * \param p2 ici on envoie une action
  * \return entier si p1.temps > p2.temps
  */
 int compare_begin_processus(const void *p1, const void *p2);
@@ -100,11 +100,11 @@ int compare_begin_processus(const void *p1, const void *p2);
  * \fn Action *push_to_tail(int time_execution, Cycle_type type, Action *action)
  * \author Gautier Levesque
  * \date 29/01/2022
- * \brief insertion en queue dans la liste chainer d'action
- * \param time_execution temps d'execution en int de l'action
+ * \brief insertion en queue dans la liste chainee d'actions
+ * \param time_execution temps d'execution (type int) de l'action
  * \param type type d'action, CPU ou ES
- * \param action liste chainer ou faire l'insertion
- * \return la liste chainer avec changement en queue
+ * \param action liste chainee ou faire l'insertion
+ * \return la liste chainee avec changement en queue
  */
 Action *push_to_tail(int time_execution, Cycle_type type, Action *action);
 
@@ -112,9 +112,9 @@ Action *push_to_tail(int time_execution, Cycle_type type, Action *action);
  * \fn Action *delete_head(Action *action)
  * \author Gautier Levesque
  * \date 29/01/2022
- * \brief detruis la tete de la liste chainer action
- * \param action liste chainer ou l'on doit supprimer la tete
- * \return la liste chainer avec changement de tete
+ * \brief detruit la tete de la liste chainee d'actions
+ * \param action liste chainee ou l'on doit supprimer la tete
+ * \return la liste chainee avec changement de tete
  */
 Action *delete_head(Action *action);
 

@@ -6,16 +6,16 @@
 /**
  * \file geometrie.h
  * \author Gautier Levesque
- * \brief fichier entete qui regroupe les structures utile a la gestion de la geometrie
+ * \brief fichier entete qui regroupe les structures utiles a la gestion de la geometrie
  */
 
 /**
  * \struct BL_Cercle geometrie.h
- * \brief variable pour le gestion de cercles
+ * \brief variable pour la gestion de cercles
  */
 typedef struct{
 
-	int cx; /*!< position x du centre cercle */
+	int cx; /*!< position x du centre du cercle */
 	int cy; /*!< position y du centre du cercle */
 	int rayon; /*!< rayon du cercle */
 

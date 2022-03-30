@@ -3,7 +3,7 @@
 /**
  * \file mouse.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion de la souris
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion de la souris
  */
 
 SDL_bool BL_init_mouse(BL_Mouse *mouse){

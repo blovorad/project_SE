@@ -3,7 +3,7 @@
 /**
  * \file update.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion de l'actualisation des elements
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion de l'actualisation des elements
  */
 
 SDL_bool BL_update(BL_Window window, double deltaTime, BL_Input *input, BL_Mouse *mouse, BL_Panel *panel, BL_Histogramme *histogramme, Simulation_array simulation_array){

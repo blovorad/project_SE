@@ -3,12 +3,12 @@
 /**
  * \file texture.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion des textures
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion des textures
  */
 
 SDL_bool BL_init_texture(SDL_Renderer *renderer, BL_Graphics *graphics){
 
-	//on ouvre le directory
+	//on ouvre le repertoire
 	DIR *directory = opendir("./source/graphics");
 	if(directory == NULL){
 
@@ -48,7 +48,7 @@ SDL_bool BL_init_texture(SDL_Renderer *renderer, BL_Graphics *graphics){
 	closedir(directory);
 	directory = NULL;
 
-	//allocation memoire et chargement de chaque texture trouver 1 par 1
+	//allocation memoire et chargement de chaque texture trouvee 1 par 1
 	if(noError == SDL_TRUE){
 
 		graphics->nbTexture = i;
@@ -77,11 +77,11 @@ SDL_bool BL_init_texture(SDL_Renderer *renderer, BL_Graphics *graphics){
 
 SDL_bool BL_create_texture(SDL_Renderer *renderer, char *chemin, SDL_Rect *rect, SDL_Texture **textureDst){
 
-	//Variable obligatoire pour créer une texture
+	//Variable obligatoire pour creer une texture
 	SDL_Texture *texture = NULL;
 	SDL_Surface *surface = IMG_Load(chemin);
 
-	//Controle si l'image a bien été charger dans la surface
+	//Controle si l'image a bien ete chargee dans la surface
 	if(surface == NULL)	{
 
 		SDL_Log("IMPOSSIBLE DE LOAD LA TEXTURE DANS LA SURFACE :%s", SDL_GetError());
@@ -89,7 +89,7 @@ SDL_bool BL_create_texture(SDL_Renderer *renderer, char *chemin, SDL_Rect *rect,
 	}
 	SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, 255, 255, 255));
 
-	//fonction qui retourne la texture si elle est créer
+	//fonction qui retourne la texture si elle est creee
 	texture = SDL_CreateTextureFromSurface(renderer, surface);
 	//plus besoin de la surface, FREE OBLIGATOIRE
 	SDL_FreeSurface(surface);
@@ -102,7 +102,7 @@ SDL_bool BL_create_texture(SDL_Renderer *renderer, char *chemin, SDL_Rect *rect,
 		return SDL_FALSE;
 	}
 
-	//Si on lui a passer un rect, alors on donne ses dimensions, sinon ça veut dire qu'on s'en fout
+	//Si on lui a passe un rect, alors on donne ses dimensions
 	if(rect != NULL){
 
 		if(SDL_QueryTexture(texture, NULL, NULL, &rect->w, &rect->h) != 0){
@@ -119,10 +119,10 @@ SDL_bool BL_create_texture(SDL_Renderer *renderer, char *chemin, SDL_Rect *rect,
 
 SDL_bool BL_create_texture_text(SDL_Renderer *renderer, TTF_Font *font, SDL_Color bg, char *text, SDL_Rect *rect, SDL_Texture **textureDst){
 
-	//Variable obligatoire pour créer une texture
+	//Variable obligatoire pour creer une texture
 	SDL_Texture *texture = NULL;
 	SDL_Surface *surface = TTF_RenderUTF8_Shaded(font, text, bg, BL_get_blanc(255));
-	//Controle si l'image a bien été charger dans la surface
+	//Controle si l'image a bien ete chargee dans la surface
 	if(surface == NULL)	{
 
 		SDL_Log("IMPOSSIBLE DE LOAD LA TEXTURE TEXTE DANS LA SURFACE :%s", TTF_GetError());
@@ -130,7 +130,7 @@ SDL_bool BL_create_texture_text(SDL_Renderer *renderer, TTF_Font *font, SDL_Colo
 	}
 
 	SDL_SetColorKey(surface, SDL_TRUE, SDL_MapRGB(surface->format, 255, 255, 255));
-	//fonction qui retourne la texture si elle est créer
+	//fonction qui retourne la texture si elle est creee
 	texture = SDL_CreateTextureFromSurface(renderer, surface);
 	//plus besoin de la surface, FREE OBLIGATOIRE
 	SDL_FreeSurface(surface);
@@ -143,7 +143,7 @@ SDL_bool BL_create_texture_text(SDL_Renderer *renderer, TTF_Font *font, SDL_Colo
 		return SDL_FALSE;
 	}
 
-	//Si on lui a passer un rect, alors on donne ses dimensions, sinon ça veut dire qu'on s'en fout
+	//Si on lui a passe un rect, alors on donne ses dimensions
 	if(rect != NULL){
 
 		if(SDL_QueryTexture(texture, NULL, NULL, &rect->w, &rect->h) != 0){

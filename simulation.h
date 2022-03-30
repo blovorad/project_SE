@@ -7,15 +7,15 @@
  * \file simulation.h
  * \author Gautier Levesque
  * \date 29/01/2022
- * \brief fichier entete qui gere la simulation, contient entre autre la structure du resultat et parametres de la simulation
+ * \brief fichier entete qui gere la simulation, contient entre autre la structure du resultat et les parametres de la simulation
  */
 
 /**
  * \enum Algorithm
  * \brief Constantes pour les codes des algorithmes
  *
- * Agorithm est une série de constantes definissant les algo utiliser 
- * fonctions de l'objet Agorithm.
+ * Algorithm est une serie de constantes definissant les algorithmes utilises 
+ * fonctions de l'objet Algorithm.
  */
 typedef enum{
 	
@@ -28,7 +28,7 @@ typedef enum{
  * \struct Simulation simulation.h
  * \brief Constantes pour les codes des algorithmes
  *
- * Simulation definie les parametres de la simulation ainsi que ses resultats
+ * Simulation definit les parametres de la simulation ainsi que ses resultats
  */
 typedef struct{
 
@@ -45,11 +45,11 @@ typedef struct{
 
 /**
  * \struct Simulation_array simulation.h
- * \brief gerer un tableau de simuation, chaque simulation est lier a un algorithme d'ordonnancement
+ * \brief gerer un tableau de simuations, chaque simulation est liee a un algorithme d'ordonnancement
  */
 typedef struct{
 	
-	int nbSimulations; /*!< nombre de simulation */
+	int nbSimulations; /*!< nombre de simulations */
 	Simulation *simulations;/*!< tableau des simulations */
 }Simulation_array;
 

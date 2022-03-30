@@ -3,7 +3,7 @@
  * \file config.c
  * \author Gautier Levesque
  * \date 29/01/2022
- * \brief fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnacement
+ * \brief fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnancement
  */
  
 int get_config_commandLine(char *argv[], Simulation_array *simulation_array){
@@ -90,7 +90,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
    	//boucle pour recuperer le code de l'algorithme de chaque simulation
    	for(int i = 0; i < simulation_array->nbSimulations; i++){
    	
-	   	//recuperation du type d'algorithm utilisé
+	   	//recuperation du type d'algorithm utilise
 		simulation_array->simulations[i].code_algorithm = get_algorithm_code(file);
 		simulation_array->simulations[i].quantum = 0;
 		
@@ -101,7 +101,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 		    simulation_array->simulations[i].quantum = quantum;
 		}
 		else{
-		    //si jamais pas quantum alors on lit le \n de la ligne de l'algorithme qui n'est pas lus
+		    //si jamais pas quantum alors on lit le \n de la ligne de l'algorithme qui n'est pas lu
 		    fscanf(file, "\n");
 		}
 	}
@@ -128,7 +128,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 	}
 
     close_file(file);
-    //tout s'est bien passer
+    //tout s'est bien passe
     return 0;
 }
 
@@ -164,7 +164,7 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
         init_processus(name, begin, &processus_array->processus[i]);
         car = 'a';//initialisation par defaut
         
-        //recuperation de chaque Action du processus
+        //recuperation de chaque action du processus
         while(car != '\n'){
         	
         	int time;
@@ -190,7 +190,7 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
 		processus_array->processus[i].time_execution = time_processus;
     }
     
-	//tri des processus par ordre d'arriver dans la simulation
+	//tri des processus par ordre d'arrivee dans la simulation
     qsort(processus_array->processus, processus_array->nbProcessus, sizeof(Processus), compare_begin_processus);
     
     /*
@@ -266,7 +266,7 @@ Algorithm select_algorithm(char *nom_algorithm){
     }
     else{
 
-        printf("Erreur, algorithm %s non reconnue chargement de l'algorithme FIFO\n", nom_algorithm);
+        printf("Erreur, algorithme %s non reconnu - chargement de l'algorithme FIFO\n", nom_algorithm);
         return FIFO;
     }
 }

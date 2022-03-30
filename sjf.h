@@ -18,11 +18,11 @@
  
 /**
  * \struct SJF_Thread sjf.h
- * \brief Structure pour gerer les thread pour l'algorithme SJF
+ * \brief Structure pour gerer les threads pour l'algorithme SJF
  */
 typedef struct{
  	
- 	int arrive; /*!< si le thread est bien lancer, c'est a dire que le temps d'arriver du processus est bien arriver et donc qu'il peut entrer en action */
+ 	int arrive; /*!< si le thread est bien lance, c'est-a-dire que le temps d'arrivee du processus est bien atteint et donc qu'il peut entrer en action */
  	sem_t mutex_cpu; /*!< mutex du thread pour les cycles CPU */
  	pthread_t thread; /*!< le thread en question */
  }SJF_Thread;
@@ -33,21 +33,21 @@ typedef struct{
  */
 typedef struct{
  	
- 	int nb_thread; /*!< nombre de thread */
- 	SJF_Thread *threads; /*!< le tableau de thread */
+ 	int nb_thread; /*!< nombre de threads */
+ 	SJF_Thread *threads; /*!< le tableau de threads */
  }SJF_Thread_array; 
  
  
 /**
  * \struct SJF_needs sjf.h
- * \brief toute les variables global necessaire pour l'algorithme
+ * \brief toutes les variables globales necessaires pour l'algorithme
  */
 typedef struct{
  	
-	Simulation simulation_shared; /*!< variable partager pour la simulation */
+	Simulation simulation_shared; /*!< variable partagee pour la simulation */
 	time_t start_time; /*!< temps de debut de l'algorithme */
-	double time_cpu; /*!< temps total de tout les cycles CPU reunit */
-	int first_cpu; /*!< Si on a deja un cycle CPU qui a ete executer */
+	double time_cpu; /*!< temps total de tous les cycles CPU reunis */
+	int first_cpu; /*!< Si on a deja un cycle CPU qui a ete execute */
 	SJF_Thread_array thread_array; /*!< tableau des threads */
 }SJF_needs;
 
@@ -56,7 +56,7 @@ typedef struct{
  * \author Gautier Levesque
  * \date 18/03/2022
  * \brief lancer la simulation SJF
- * \param simulation une simulation contenant toutes ses actions a effectuer, sera remplis avec les resultats de la simulation
+ * \param simulation une simulation contenant toutes ses actions a effectuer, sera remplie avec les resultats de la simulation
  */
 void sjf(Simulation *simulation);
 

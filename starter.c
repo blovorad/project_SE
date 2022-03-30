@@ -34,9 +34,9 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
             print_resultat_console_processus(*simulation_array);
         }
         else if(strcmp(argv[1], "-rc") == 0){
-            //test renseigner avec un fichier configuration
+            //test renseigne avec un fichier configuration
             if(argc == 3){
-                //sortis non specifier
+                //sortie non specifiee
                 if(get_config_file(open_file(argv[2], "r"), simulation_array) == -1){
                     
                     printf("Erreur lors du chargement de la configuration\n");
@@ -51,7 +51,7 @@ int start_simulations(int argc, char *argv[], Simulation_array *simulation_array
                 print_resultat_console_processus(*simulation_array);
             }
             else if(argc == 4){
-                //fichier de sortis specifier
+                //fichier de sortie specifiee
                 if(get_config_file(open_file(argv[2], "r"), simulation_array) == -1){
                     
                     printf("Erreur lors du chargement de la configuration\n");
