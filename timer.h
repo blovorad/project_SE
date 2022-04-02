@@ -6,7 +6,7 @@
 /**
  * \file timer.h
  * \author Gautier Levesque
- * \brief fichier entete qui regroupe les fonctions/define/structure utile a la gestion des timers
+ * \brief fichier entete qui regroupe les fonctions/define/structure utiles a la gestion des timers
  */
 
 /**
@@ -26,7 +26,7 @@ typedef struct {
  * \author Gautier Levesque
  * \brief creation d'un timer
  * \param timer le timer a creer
- * \return boolean si l'initialisation du timer a echouer ou non, SDL_FALSE si echec, SDL_TRUE sinon
+ * \return boolean si l'initialisation du timer a echoue ou non, SDL_FALSE si echec, SDL_TRUE sinon
  */
 SDL_bool BL_init_timer(BL_Timer *timer);
 

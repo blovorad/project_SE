@@ -39,7 +39,7 @@ typedef struct{
     double time_restitution; /*!< temps de restitution de l'algorithme */
     double average_time_respond; /*!< temps de reponse moyen de l'algorithme */
     double average_pourcentage_CPU; /*!< utilisation de CPU */
-    Processus_array processus_array; /*!< processus qui compose la simulation */
+    Processus_array processus_array; /*!< tableau des processus qui composent la simulation */
 }Simulation;
 
 

@@ -3,7 +3,7 @@
 /**
  * \file timer.c
  * \author Gautier Levesque
- * \brief fichier source qui regroupe les fonctions utile a la gestion des timers
+ * \brief fichier source qui regroupe les fonctions utiles a la gestion des timers
  */
 
 SDL_bool BL_init_timer(BL_Timer *timer){

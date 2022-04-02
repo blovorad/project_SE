@@ -31,7 +31,7 @@ typedef struct{
  */
 typedef struct{
 
-	int nb_blocks; /*!< nombres d'ensemble de barres */
+	int nb_blocks; /*!< nombre d'ensembles de barres */
 	int nb_legendes; /*!< nombre de barres de legende */
 	BL_Block *blocks; /*!< tableau d'ensemble de barres */
 	BL_Block legendes; /*!< barre pour la legende */
@@ -46,7 +46,7 @@ typedef struct{
 
 	int index_first_print; /*!< index de la simulation a afficher sur l'histogramme 1 */
 	int index_second_print; /*!< index de la simulation a afficher sur l'histogramme 2 */
-	int max_index; /*!< nombre maximal de simulation */
+	int max_index; /*!< nombre maximal de simulations */
 	BL_Text first_print_name; /*!< nom de la premiere simulation */
 	BL_Text second_print_name; /*!< nom de la deuxieme simulation */
 
@@ -67,7 +67,7 @@ typedef struct{
  * \brief creation de l'histogramme pour le projet
  * \param window necessaire pour creer les textures de textes
  * \param simulation_array tableau des resultats de la simulation pour generation de l'histogramme
- * \return BL_Histogramme, l'histogramme creer par la fonction
+ * \return BL_Histogramme, l'histogramme cree par la fonction
  */
 BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulation_array);
 
@@ -77,18 +77,18 @@ BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulatio
  * \brief changer le graphe 1 ou 2 de l'histogramme
  * \param window pour pouvoir recreer les textures de textes qui vont changer
  * \param simulation_array pour pouvoir recreer les textures de textes qui vont changer
- * \param histogramme l'histogramme en question, sert a savoir quelle nouveau graphique on affiche
+ * \param histogramme l'histogramme en question, sert a savoir quel nouveau graphique on affiche
  */
 void BL_change_histogramme(BL_Window window, Simulation_array simulation_array, BL_Histogramme *histogramme);
 
 /**
  * \fn double BL_search_max_value(Simulation_array simulation_array, int first_index, int second_index)
  * \author Gautier Levesque
- * \brief permet de connaitre la valeur maximal de toutes les moyennes pour pouvoir faire un coeficient de proportionalite dessus
+ * \brief permet de connaitre la valeur maximale de toutes les moyennes pour pouvoir faire un coefficient de proportionnalite dessus
  * \param simulation_array pour la comparaison des valeurs
  * \param first_index ou chercher dans le tableau de simulation_array
  * \param second_index ou chercher dans le tableau de simulation_array
- * \return double, la valeur maximal de toutes les variables de chaque simulation
+ * \return double, la valeur maximale de toutes les variables de chaque simulation
  */
 double BL_search_max_value(Simulation_array simulation_array, int first_index, int second_index);
 
@@ -98,7 +98,7 @@ double BL_search_max_value(Simulation_array simulation_array, int first_index, i
  * \brief Permet de changer le graphique a afficher dans la premiere partie de l'histogramme
  * \param window passage pour pouvoir recreer les textures de textes qui vont changer
  * \param simulation_array passage pour pouvoir recreer les textures de textes qui vont changer
- * \param histogramme l'histogramme en question, sert a savoir quelle nouveau graphique on affiche
+ * \param histogramme l'histogramme en question, sert a savoir quel nouveau graphique on affiche
  */
 void BL_change_graphe_1(BL_Window window, Simulation_array simulation_array, BL_Histogramme *histogramme);
 
@@ -108,7 +108,7 @@ void BL_change_graphe_1(BL_Window window, Simulation_array simulation_array, BL_
  * \brief Permet de changer le graphique a afficher dans la deuxieme partie de l'histogramme
  * \param window passage pour pouvoir recreer les textures de textes qui vont changer
  * \param simulation_array passage pour pouvoir recreer les textures de textes qui vont changer
- * \param histogramme l'histogramme en question, sert a savoir quelle nouveau graphique on affiche
+ * \param histogramme l'histogramme en question, sert a savoir quel nouveau graphique on affiche
  */
 void BL_change_graphe_2(BL_Window window, Simulation_array simulation_array, BL_Histogramme *histogramme);
 

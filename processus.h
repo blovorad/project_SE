@@ -33,9 +33,10 @@ struct cellule{
 };
 
 /**  
- * \typedef de la struct cellule en Action pour une comprehension et une utilisation plus claire 
+ * Action processus.h
+ * \brief struct cellule Action pour une comprehension et une utilisation plus claire 
  */
-typedef struct cellule Action;
+typedef struct cellule Action; 
  
 /**
  * \struct Processus processus.h

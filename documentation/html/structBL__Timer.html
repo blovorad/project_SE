@@ -70,19 +70,69 @@ $(function() {
 <div class="title">Référence de la structure BL_Timer</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>structure pour la gestion du temps de la SDL  
+ <a href="structBL__Timer.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="timer_8h_source.html">timer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
-<tr class="memitem:aa84c61dc6e0bf5b79a1cfc4b32f0aef0"><td class="memItemLeft" align="right" valign="top"><a id="aa84c61dc6e0bf5b79a1cfc4b32f0aef0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>previousTime</b></td></tr>
+<tr class="memitem:aa84c61dc6e0bf5b79a1cfc4b32f0aef0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBL__Timer.html#aa84c61dc6e0bf5b79a1cfc4b32f0aef0">previousTime</a></td></tr>
 <tr class="separator:aa84c61dc6e0bf5b79a1cfc4b32f0aef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33b07c4b03c93ee170e810fabd49c0ca"><td class="memItemLeft" align="right" valign="top"><a id="a33b07c4b03c93ee170e810fabd49c0ca"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>currentTime</b></td></tr>
+<tr class="memitem:a33b07c4b03c93ee170e810fabd49c0ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBL__Timer.html#a33b07c4b03c93ee170e810fabd49c0ca">currentTime</a></td></tr>
 <tr class="separator:a33b07c4b03c93ee170e810fabd49c0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5b7e9e3755d4027533b1f2bf1d38571"><td class="memItemLeft" align="right" valign="top"><a id="ac5b7e9e3755d4027533b1f2bf1d38571"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>ms</b></td></tr>
+<tr class="memitem:ac5b7e9e3755d4027533b1f2bf1d38571"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBL__Timer.html#ac5b7e9e3755d4027533b1f2bf1d38571">ms</a></td></tr>
 <tr class="separator:ac5b7e9e3755d4027533b1f2bf1d38571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>structure pour la gestion du temps de la SDL </p>
+</div><h2 class="groupheader">Documentation des données membres</h2>
+<a id="a33b07c4b03c93ee170e810fabd49c0ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b07c4b03c93ee170e810fabd49c0ca">&#9670;&nbsp;</a></span>currentTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BL_Timer::currentTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>temps courant </p>
+
+</div>
+</div>
+<a id="ac5b7e9e3755d4027533b1f2bf1d38571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b7e9e3755d4027533b1f2bf1d38571">&#9670;&nbsp;</a></span>ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double BL_Timer::ms</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>temps a ne pas depasser, en gros on fait currentTime - previousTime &gt; ms, selon comment on veut reagir </p>
+
+</div>
+</div>
+<a id="aa84c61dc6e0bf5b79a1cfc4b32f0aef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84c61dc6e0bf5b79a1cfc4b32f0aef0">&#9670;&nbsp;</a></span>previousTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BL_Timer::previousTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>temps precedent </p>
+
+</div>
+</div>
 <hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
 <li><a class="el" href="timer_8h_source.html">timer.h</a></li>
 </ul>

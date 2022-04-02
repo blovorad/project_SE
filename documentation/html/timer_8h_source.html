@@ -72,20 +72,22 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;define.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structBL__Timer.html">   12</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> previousTime;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> currentTime;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">double</span> ms;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structBL__Timer.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}<a class="code" href="structBL__Timer.html">BL_Timer</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;SDL_bool <a class="code" href="timer_8h.html#ab62e95413dd8043dd9132308d73e2a2b">BL_init_timer</a>(<a class="code" href="structBL__Timer.html">BL_Timer</a> *timer);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;SDL_bool <a class="code" href="timer_8h.html#a21b1384bb23d107581aed8f9dfd60e63">BL_update_timer</a>(<a class="code" href="structBL__Timer.html">BL_Timer</a> *timer, <span class="keyword">const</span> <span class="keywordtype">int</span> fps);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructBL__Timer_html"><div class="ttname"><a href="structBL__Timer.html">BL_Timer</a></div><div class="ttdef"><b>Definition:</b> timer.h:12</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structBL__Timer.html#aa84c61dc6e0bf5b79a1cfc4b32f0aef0">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Timer.html#aa84c61dc6e0bf5b79a1cfc4b32f0aef0">previousTime</a>; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structBL__Timer.html#a33b07c4b03c93ee170e810fabd49c0ca">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBL__Timer.html#a33b07c4b03c93ee170e810fabd49c0ca">currentTime</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structBL__Timer.html#ac5b7e9e3755d4027533b1f2bf1d38571">   20</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structBL__Timer.html#ac5b7e9e3755d4027533b1f2bf1d38571">ms</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}<a class="code" href="structBL__Timer.html">BL_Timer</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;SDL_bool <a class="code" href="timer_8h.html#ab62e95413dd8043dd9132308d73e2a2b">BL_init_timer</a>(<a class="code" href="structBL__Timer.html">BL_Timer</a> *timer);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;SDL_bool <a class="code" href="timer_8h.html#a21b1384bb23d107581aed8f9dfd60e63">BL_update_timer</a>(<a class="code" href="structBL__Timer.html">BL_Timer</a> *timer, <span class="keyword">const</span> <span class="keywordtype">int</span> fps);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructBL__Timer_html"><div class="ttname"><a href="structBL__Timer.html">BL_Timer</a></div><div class="ttdoc">structure pour la gestion du temps de la SDL</div><div class="ttdef"><b>Definition:</b> timer.h:16</div></div>
+<div class="ttc" id="astructBL__Timer_html_a33b07c4b03c93ee170e810fabd49c0ca"><div class="ttname"><a href="structBL__Timer.html#a33b07c4b03c93ee170e810fabd49c0ca">BL_Timer::currentTime</a></div><div class="ttdeci">int currentTime</div><div class="ttdef"><b>Definition:</b> timer.h:19</div></div>
+<div class="ttc" id="astructBL__Timer_html_aa84c61dc6e0bf5b79a1cfc4b32f0aef0"><div class="ttname"><a href="structBL__Timer.html#aa84c61dc6e0bf5b79a1cfc4b32f0aef0">BL_Timer::previousTime</a></div><div class="ttdeci">int previousTime</div><div class="ttdef"><b>Definition:</b> timer.h:18</div></div>
+<div class="ttc" id="astructBL__Timer_html_ac5b7e9e3755d4027533b1f2bf1d38571"><div class="ttname"><a href="structBL__Timer.html#ac5b7e9e3755d4027533b1f2bf1d38571">BL_Timer::ms</a></div><div class="ttdeci">double ms</div><div class="ttdef"><b>Definition:</b> timer.h:20</div></div>
 <div class="ttc" id="atimer_8h_html_a21b1384bb23d107581aed8f9dfd60e63"><div class="ttname"><a href="timer_8h.html#a21b1384bb23d107581aed8f9dfd60e63">BL_update_timer</a></div><div class="ttdeci">SDL_bool BL_update_timer(BL_Timer *timer, const int fps)</div><div class="ttdoc">actualisation du timer, en gros on regarde le nouveau temps</div><div class="ttdef"><b>Definition:</b> timer.c:17</div></div>
 <div class="ttc" id="atimer_8h_html_ab62e95413dd8043dd9132308d73e2a2b"><div class="ttname"><a href="timer_8h.html#ab62e95413dd8043dd9132308d73e2a2b">BL_init_timer</a></div><div class="ttdeci">SDL_bool BL_init_timer(BL_Timer *timer)</div><div class="ttdoc">creation d'un timer</div><div class="ttdef"><b>Definition:</b> timer.c:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
