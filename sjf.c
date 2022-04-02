@@ -37,10 +37,10 @@ void sjf(Simulation *simulation){
 	sjf_needs.simulation_shared.processus_array = simulation->processus_array;
 	sjf_needs.simulation_shared.quantum = simulation->quantum;
 	sjf_needs.simulation_shared.code_algorithm = simulation->code_algorithm;
-	sjf_needs.simulation_shared.average_time_attempt = simulation->average_time_attempt;
-	sjf_needs.simulation_shared.average_time_restitution = simulation->average_time_restitution;
-	sjf_needs.simulation_shared.average_time_respond = simulation->average_time_respond;
-	sjf_needs.simulation_shared.average_pourcentage_CPU = simulation->average_pourcentage_CPU;
+	sjf_needs.simulation_shared.average_time_attempt = 0;
+	sjf_needs.simulation_shared.average_time_restitution = 0;
+	sjf_needs.simulation_shared.average_time_respond = 0;
+	sjf_needs.simulation_shared.average_pourcentage_CPU = 0;
 	
 	for(int i = 0; i < sjf_needs.thread_array.nb_thread; i++){
 		

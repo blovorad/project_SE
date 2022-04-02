@@ -20,6 +20,7 @@ SDL_bool BL_draw(SDL_Renderer *renderer, BL_Graphics graphics, BL_Panel panel, B
 
 		return SDL_FALSE;
 	}
+
 	if(BL_draw_histogramme(renderer, histogramme) == SDL_FALSE){
 
 		return SDL_FALSE;

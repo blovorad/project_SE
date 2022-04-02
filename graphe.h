@@ -13,44 +13,52 @@
  * \brief fichier entete pour la creation et gestion des graphes
  */
 
+/**
+ * \struct BL_Block graphe.h
+ * \brief variable pour la gestion des barres d'un histogramme
+ */
 typedef struct{
 
-	int nb_rects;
-	SDL_Rect *rects;
-	SDL_Color *colors;
-	BL_Text *texts;
+	int nb_rects; /*!< nombre de barres */
+	SDL_Rect *rects; /*!< tableau de barres */
+	SDL_Color *colors; /*!< couleur des barres */
+	BL_Text *texts; /*!< texte sur les barres */
 }BL_Block;
 
+/**
+ * \struct BL_Histogramme graphe.h
+ * \brief variable pour la gestion d'histogramme
+ */
 typedef struct{
 
-	int nb_blocks;
-	int nb_legendes;
-	BL_Block *blocks;
-	BL_Block legendes;
-	BL_Text title_legende;
+	int nb_blocks; /*!< nombres d'ensemble de barres */
+	int nb_legendes; /*!< nombre de barres de legende */
+	BL_Block *blocks; /*!< tableau d'ensemble de barres */
+	BL_Block legendes; /*!< barre pour la legende */
+	BL_Text title_legende; /*!< titre de la legende */
 
-	BL_Text x_label;
-	BL_Text y_label;
-	BL_Text title;
+	BL_Text x_label; /*!< nom de l'abscisse de l'histogramme */
+	BL_Text y_label; /*!< nom de l'ordonnee de l'histogramme */
+	BL_Text title; /*!< titre de l'histogramme */
 
-	BL_Button button_graphe_1;
-	BL_Button button_graphe_2;
+	BL_Button button_graphe_1; /*!< bouton pour gerer le graphe 1 */
+	BL_Button button_graphe_2; /*!< bouton pour gerer le graphe 2 */
 
-	int index_first_print;
-	int index_second_print;
-	int max_index;
-	BL_Text first_print_name;
-	BL_Text second_print_name;
+	int index_first_print; /*!< index de la simulation a afficher sur l'histogramme 1 */
+	int index_second_print; /*!< index de la simulation a afficher sur l'histogramme 2 */
+	int max_index; /*!< nombre maximal de simulation */
+	BL_Text first_print_name; /*!< nom de la premiere simulation */
+	BL_Text second_print_name; /*!< nom de la deuxieme simulation */
 
-	BL_Text cpu_usage_1;
-	BL_Text cpu_usage_2;
-	BL_Text cpu_legend_1;
-	BL_Text cpu_legend_2;
+	BL_Text cpu_usage_1; /*!< utilisation cpu de la premiere simulation */
+	BL_Text cpu_usage_2; /*!< utilisation cpu de la deuxieme simulation */
+	BL_Text cpu_legend_1; /*!< texte qui va decrire l'utilisation de la premiere simulation */
+	BL_Text cpu_legend_2; /*!< texte qui va decrire l'utilisation de la deuxieme simulation */
 
-	BL_Text time_restitution_usage_1;
-	BL_Text time_restitution_usage_2;
-	BL_Text time_restitution_legend_1;
-	BL_Text time_restitution_legend_2;
+	BL_Text time_restitution_usage_1; /*!< temps de restitution de la premiere simulation */
+	BL_Text time_restitution_usage_2; /*!<  temps de restitution de la deuxieme simulation */
+	BL_Text time_restitution_legend_1; /*!< texte qui va decrire le temps de restitution de la premiere simulation */
+	BL_Text time_restitution_legend_2; /*!< texte qui va decrire le temps de restitution de la deuxieme simulation */
 }BL_Histogramme;
 
 /**

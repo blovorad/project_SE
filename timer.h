@@ -9,11 +9,15 @@
  * \brief fichier entete qui regroupe les fonctions/define/structure utile a la gestion des timers
  */
 
+/**
+ * \struct BL_Timer timer.h
+ * \brief structure pour la gestion du temps de la SDL
+ */
 typedef struct {
 
-	int previousTime;
-	int currentTime;
-	double ms;
+	int previousTime; /*!< temps precedent */
+	int currentTime; /*!< temps courant */
+	double ms; /*!< temps a ne pas depasser, en gros on fait currentTime - previousTime > ms, selon comment on veut reagir */
 
 }BL_Timer;
 

@@ -92,6 +92,12 @@ int round_robin(Simulation *simulation) {
 
         //Calcul du temps total de restitution (a diviser par le nombre de processus pour obtenir le temps moyen)
 		rr_simulation.shared_simulation.average_time_restitution += (double) rr_simulation.shared_simulation.processus_array.processus[i].time_to_restue;
+		/*for(int j = 0; j < simulation->processus_array.nbProcessus; j++){
+		
+			printf("temps restu : %d\n",simulation->processus_array.processus[j].time_to_restue);
+			printf("temps time_to_answer : %d\n",simulation->processus_array.processus[j].time_to_answer);
+			printf("temps time_attempt : %d\n",simulation->processus_array.processus[j].time_attempt); 
+		}*/
 	}
 
     //Temps moyen d'attente

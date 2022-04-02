@@ -60,11 +60,11 @@ int get_config_commandLine(char *argv[], Simulation_array *simulation_array){
 	   			
 	   			if(j % 2 == 0){
 	   			
-	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 30 + 3, CPU, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
+	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 5 + 3, CPU, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
 	   			}
 	   			else{
 	   			
-	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 30 + 3, ES, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
+	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 5 + 3, ES, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
 	   			}
 	   		}
    		}
@@ -87,6 +87,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
         return -1;
    	}
    	
+   	fscanf(file, "Algorithme = ");
    	//boucle pour recuperer le code de l'algorithme de chaque simulation
    	for(int i = 0; i < simulation_array->nbSimulations; i++){
    	
@@ -97,12 +98,8 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 		if(simulation_array->simulations[i].code_algorithm == ROUND_ROBIN){
 
 		    int quantum;
-		    fscanf(file, " quantum = %d\n", &quantum);
+		    fscanf(file, " quantum = %d", &quantum);
 		    simulation_array->simulations[i].quantum = quantum;
-		}
-		else{
-		    //si jamais pas quantum alors on lit le \n de la ligne de l'algorithme qui n'est pas lu
-		    fscanf(file, "\n");
 		}
 	}
 	
@@ -111,7 +108,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 		
 		int position = ftell(file);
 		int nbProcessus;
-		fscanf(file, "Nombre de processus = %d\n", &nbProcessus);
+		fscanf(file, "\nNombre de processus = %d\n", &nbProcessus);
 		//initialisation du tableau de processus avec juste sa taille
 		if(init_processus_array(nbProcessus, &simulation_array->simulations[i].processus_array) == -1){
 
@@ -218,7 +215,6 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
 
 int get_algorithm_code(FILE *file){
 
-    fscanf(file, "Algorithme = ");
     long position = ftell(file);
     char car = 'a';
     int size = 0;

@@ -9,7 +9,7 @@
 SDL_bool BL_init_texture(SDL_Renderer *renderer, BL_Graphics *graphics){
 
 	//on ouvre le repertoire
-	DIR *directory = opendir("./source/graphics");
+	DIR *directory = opendir("./graphics");
 	if(directory == NULL){
 
 		fprintf(stderr, "opendir; %s\n", strerror(errno));
@@ -27,7 +27,7 @@ SDL_bool BL_init_texture(SDL_Renderer *renderer, BL_Graphics *graphics){
 	//lecture et memorisation de chaque chemin d'une image qui est un png
 	while(currentFile != NULL && noError == SDL_TRUE){
 
-		char chemin[256] = {"./source/graphics/"};
+		char chemin[256] = {"./graphics/"};
 
 		strcat(chemin, currentFile->d_name);
 		SDL_RWops *img = SDL_RWFromFile(chemin, "rb");

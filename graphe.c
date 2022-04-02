@@ -13,9 +13,9 @@ BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulatio
 	histogramme.nb_blocks = simulation_array.nbSimulations;
 	histogramme.blocks = malloc(sizeof(BL_Block) * histogramme.nb_blocks);
 
-	histogramme.title = BL_create_text(window, 430, 100, BL_get_blanc(200), "Graphe des résultats des simulations", "./source/fonts/times.ttf", 18);
-	histogramme.x_label = BL_create_text(window, 525, 460, BL_get_blanc(200), "Variables", "./source/fonts/times.ttf", 15);
-	histogramme.y_label = BL_create_text(window, 280, 350, BL_get_blanc(200), "Temps seconde", "./source/fonts/times.ttf", 15);
+	histogramme.title = BL_create_text(window, 430, 100, BL_get_blanc(200), "Graphe des résultats des simulations", "./fonts/times.ttf", 18);
+	histogramme.x_label = BL_create_text(window, 525, 460, BL_get_blanc(200), "Variables", "./fonts/times.ttf", 15);
+	histogramme.y_label = BL_create_text(window, 280, 350, BL_get_blanc(200), "Temps seconde", "./fonts/times.ttf", 15);
 
 	histogramme.nb_blocks = 0;
 	histogramme.index_first_print = -1;
@@ -33,10 +33,10 @@ BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulatio
 		histogramme.nb_blocks = 2;
 	}
 
-	histogramme.cpu_legend_1 = BL_create_text(window, 390, 480, BL_get_blanc(200), "Utilisation CPU graphe 1 = ", "./source/fonts/times.ttf", 15);
-	histogramme.cpu_legend_2 = BL_create_text(window, 590, 480, BL_get_blanc(200), "Utilisation CPU graphe 2 = ", "./source/fonts/times.ttf", 15);
-	histogramme.time_restitution_legend_1 =	BL_create_text(window, 390, 500, BL_get_blanc(200), "Temps restitution graphe 1 = ", "./source/fonts/times.ttf", 15);
-	histogramme.time_restitution_legend_2 =	BL_create_text(window, 590, 500, BL_get_blanc(200), "Temps restitution graphe 2 = ", "./source/fonts/times.ttf", 15);
+	histogramme.cpu_legend_1 = BL_create_text(window, 390, 480, BL_get_blanc(200), "Utilisation CPU graphe 1 = ", "./fonts/times.ttf", 15);
+	histogramme.cpu_legend_2 = BL_create_text(window, 590, 480, BL_get_blanc(200), "Utilisation CPU graphe 2 = ", "./fonts/times.ttf", 15);
+	histogramme.time_restitution_legend_1 =	BL_create_text(window, 390, 500, BL_get_blanc(200), "Temps restitution graphe 1 = ", "./fonts/times.ttf", 15);
+	histogramme.time_restitution_legend_2 =	BL_create_text(window, 590, 500, BL_get_blanc(200), "Temps restitution graphe 2 = ", "./fonts/times.ttf", 15);
  	
 	if(histogramme.nb_blocks > 0){
 
@@ -75,7 +75,7 @@ BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulatio
 		histogramme.blocks[0].rects[0].w = 40;
 		histogramme.blocks[0].rects[1].w = 40;
 		histogramme.blocks[0].rects[2].w = 40;
-		histogramme.button_graphe_1 = BL_create_button(window, 230, 270, 120, 30, SDL_TRUE, -1, BL_get_blanc(100), -1,  BL_get_blanc(200), "Suivant graphe 1", "./source/fonts/times.ttf");
+		histogramme.button_graphe_1 = BL_create_button(window, 230, 270, 120, 30, SDL_TRUE, -1, BL_get_blanc(100), -1,  BL_get_blanc(200), "Suivant graphe 1", "./fonts/times.ttf");
 		histogramme.cpu_usage_1.texture = NULL;
 		histogramme.time_restitution_usage_1.texture = NULL;
 		if(histogramme.nb_blocks > 1){
@@ -87,7 +87,7 @@ BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulatio
 			histogramme.blocks[1].rects[0].w = 40;
 			histogramme.blocks[1].rects[1].w = 40;
 			histogramme.blocks[1].rects[2].w = 40;
-			histogramme.button_graphe_2 = BL_create_button(window, 230, 310, 120, 30, SDL_TRUE, -1, BL_get_blanc(100), -1,  BL_get_blanc(200), "Suivant graphe 2", "./source/fonts/times.ttf");
+			histogramme.button_graphe_2 = BL_create_button(window, 230, 310, 120, 30, SDL_TRUE, -1, BL_get_blanc(100), -1,  BL_get_blanc(200), "Suivant graphe 2", "./fonts/times.ttf");
 			histogramme.cpu_usage_2.texture = NULL;
 			histogramme.time_restitution_usage_2.texture = NULL;
 		}
@@ -128,11 +128,11 @@ BL_Histogramme generate_histogramme(BL_Window window, Simulation_array simulatio
 	histogramme.legendes.colors[1] = BL_get_jaune(255);
 	histogramme.legendes.colors[2] = BL_get_vert(255);
 
-	histogramme.legendes.texts[0] = BL_create_text(window, 230, 130, BL_get_blanc(200), "temps moyen restitution", "./source/fonts/times.ttf", 13);
-	histogramme.legendes.texts[1] = BL_create_text(window, 230, 170, BL_get_blanc(200), "temps moyen attente", "./source/fonts/times.ttf", 13);
-	histogramme.legendes.texts[2] = BL_create_text(window, 230, 210, BL_get_blanc(200), "temps moyen reponse", "./source/fonts/times.ttf", 13);
+	histogramme.legendes.texts[0] = BL_create_text(window, 230, 130, BL_get_blanc(200), "temps moyen restitution", "./fonts/times.ttf", 13);
+	histogramme.legendes.texts[1] = BL_create_text(window, 230, 170, BL_get_blanc(200), "temps moyen attente", "./fonts/times.ttf", 13);
+	histogramme.legendes.texts[2] = BL_create_text(window, 230, 210, BL_get_blanc(200), "temps moyen reponse", "./fonts/times.ttf", 13);
 
-	histogramme.title_legende = BL_create_text(window, 270, 100, BL_get_blanc(200), "Legende", "./source/fonts/times.ttf", 15);
+	histogramme.title_legende = BL_create_text(window, 270, 100, BL_get_blanc(200), "Legende", "./fonts/times.ttf", 15);
 
 	return histogramme;
 }
@@ -171,10 +171,10 @@ void BL_change_histogramme(BL_Window window, Simulation_array simulation_array, 
 
 			SDL_DestroyTexture(histogramme->time_restitution_usage_1.texture);
 		}
-		histogramme->first_print_name = BL_create_text(window, 400, 130, BL_get_blanc(200), get_string_from_algorithm(simulation_array.simulations[histogramme->index_first_print].code_algorithm), "./source/fonts/times.ttf", 13);
+		histogramme->first_print_name = BL_create_text(window, 400, 130, BL_get_blanc(200), get_string_from_algorithm(simulation_array.simulations[histogramme->index_first_print].code_algorithm), "./fonts/times.ttf", 13);
 		
-		double pourcentage1 = simulation_array.simulations[histogramme->index_first_print].average_time_attempt * (double)90 / max_value;
-		double pourcentage2 = simulation_array.simulations[histogramme->index_first_print].average_time_restitution * (double)90 / max_value;
+		double pourcentage1 = simulation_array.simulations[histogramme->index_first_print].average_time_restitution * (double)90 / max_value;
+		double pourcentage2 = simulation_array.simulations[histogramme->index_first_print].average_time_attempt * (double)90 / max_value;
 		double pourcentage3 = simulation_array.simulations[histogramme->index_first_print].average_time_respond * (double)90 / max_value;
 		
 		histogramme->blocks[0].rects[0].y = (int)max_hauteur + 150 - (int)(max_hauteur * pourcentage1 / (double)100);
@@ -189,25 +189,25 @@ void BL_change_histogramme(BL_Window window, Simulation_array simulation_array, 
 		char number2[255];
 		char number3[255];
 
-		sprintf(number1, "%d", (int)simulation_array.simulations[histogramme->index_first_print].average_time_attempt);
-		sprintf(number2, "%d", (int)simulation_array.simulations[histogramme->index_first_print].average_time_restitution);
+		sprintf(number1, "%d", (int)simulation_array.simulations[histogramme->index_first_print].average_time_restitution);
+		sprintf(number2, "%d", (int)simulation_array.simulations[histogramme->index_first_print].average_time_attempt);
 		sprintf(number3, "%d", (int)simulation_array.simulations[histogramme->index_first_print].average_time_respond);
 
-		histogramme->blocks[0].texts[0] = BL_create_text(window, histogramme->blocks[0].rects[0].x, histogramme->blocks[0].rects[0].y - 15, BL_get_blanc(200), number1, "./source/fonts/times.ttf", 15);
-		histogramme->blocks[0].texts[1] = BL_create_text(window, histogramme->blocks[0].rects[1].x, histogramme->blocks[0].rects[1].y - 15, BL_get_blanc(200), number2, "./source/fonts/times.ttf", 15);
-		histogramme->blocks[0].texts[2] = BL_create_text(window, histogramme->blocks[0].rects[2].x, histogramme->blocks[0].rects[2].y - 15, BL_get_blanc(200), number3, "./source/fonts/times.ttf", 15);
+		histogramme->blocks[0].texts[0] = BL_create_text(window, histogramme->blocks[0].rects[0].x, histogramme->blocks[0].rects[0].y - 15, BL_get_blanc(200), number1, "./fonts/times.ttf", 15);
+		histogramme->blocks[0].texts[1] = BL_create_text(window, histogramme->blocks[0].rects[1].x, histogramme->blocks[0].rects[1].y - 15, BL_get_blanc(200), number2, "./fonts/times.ttf", 15);
+		histogramme->blocks[0].texts[2] = BL_create_text(window, histogramme->blocks[0].rects[2].x, histogramme->blocks[0].rects[2].y - 15, BL_get_blanc(200), number3, "./fonts/times.ttf", 15);
 		
 		char cpu_1[255];
 
 		sprintf(cpu_1, "%d", (int)simulation_array.simulations[histogramme->index_first_print].average_pourcentage_CPU);
 
-		histogramme->cpu_usage_1 = BL_create_text(window, 560, 480, BL_get_blanc(200), cpu_1, "./source/fonts/times.ttf", 15);
+		histogramme->cpu_usage_1 = BL_create_text(window, 560, 480, BL_get_blanc(200), cpu_1, "./fonts/times.ttf", 15);
 
 		char time_restitution_1[255];
 
 		sprintf(time_restitution_1, "%d", (int)simulation_array.simulations[histogramme->index_first_print].time_restitution);
 
-		histogramme->time_restitution_usage_1 = BL_create_text(window, 570, 500, BL_get_blanc(200), time_restitution_1, "./source/fonts/times.ttf", 15);
+		histogramme->time_restitution_usage_1 = BL_create_text(window, 570, 500, BL_get_blanc(200), time_restitution_1, "./fonts/times.ttf", 15);
 	}
 	//si l'histogramme contient un deuxieme graphique
 	if(histogramme->nb_blocks > 1){
@@ -236,10 +236,10 @@ void BL_change_histogramme(BL_Window window, Simulation_array simulation_array, 
 
 			SDL_DestroyTexture(histogramme->time_restitution_usage_2.texture);
 		}
-		histogramme->second_print_name = BL_create_text(window, 590, 130, BL_get_blanc(200), get_string_from_algorithm(simulation_array.simulations[histogramme->index_second_print].code_algorithm), "./source/fonts/times.ttf", 13);
+		histogramme->second_print_name = BL_create_text(window, 590, 130, BL_get_blanc(200), get_string_from_algorithm(simulation_array.simulations[histogramme->index_second_print].code_algorithm), "./fonts/times.ttf", 13);
 		
-		double pourcentage1 = simulation_array.simulations[histogramme->index_second_print].average_time_attempt * (double)90 / max_value;
-		double pourcentage2 = simulation_array.simulations[histogramme->index_second_print].average_time_restitution * (double)90 / max_value;
+		double pourcentage1 = simulation_array.simulations[histogramme->index_second_print].average_time_restitution * (double)90 / max_value;
+		double pourcentage2 = simulation_array.simulations[histogramme->index_second_print].average_time_attempt * (double)90 / max_value;
 		double pourcentage3 = simulation_array.simulations[histogramme->index_second_print].average_time_respond * (double)90 / max_value;
 		
 		histogramme->blocks[1].rects[0].y = (int)max_hauteur + 150 - (int)(max_hauteur * pourcentage1 / (double)100);
@@ -254,25 +254,25 @@ void BL_change_histogramme(BL_Window window, Simulation_array simulation_array, 
 		char number5[255];
 		char number6[255];
 
-		sprintf(number4, "%d", (int)simulation_array.simulations[histogramme->index_second_print].average_time_attempt);
-		sprintf(number5, "%d", (int)simulation_array.simulations[histogramme->index_second_print].average_time_restitution);
+		sprintf(number4, "%d", (int)simulation_array.simulations[histogramme->index_second_print].average_time_restitution);
+		sprintf(number5, "%d", (int)simulation_array.simulations[histogramme->index_second_print].average_time_attempt);
 		sprintf(number6, "%d", (int)simulation_array.simulations[histogramme->index_second_print].average_time_respond);
 
-		histogramme->blocks[1].texts[0] = BL_create_text(window, histogramme->blocks[1].rects[0].x, histogramme->blocks[1].rects[0].y - 15, BL_get_blanc(200), number4, "./source/fonts/times.ttf", 15);
-		histogramme->blocks[1].texts[1] = BL_create_text(window, histogramme->blocks[1].rects[1].x, histogramme->blocks[1].rects[1].y - 15, BL_get_blanc(200), number5, "./source/fonts/times.ttf", 15);
-		histogramme->blocks[1].texts[2] = BL_create_text(window, histogramme->blocks[1].rects[2].x, histogramme->blocks[1].rects[2].y - 15, BL_get_blanc(200), number6, "./source/fonts/times.ttf", 15);
+		histogramme->blocks[1].texts[0] = BL_create_text(window, histogramme->blocks[1].rects[0].x, histogramme->blocks[1].rects[0].y - 15, BL_get_blanc(200), number4, "./fonts/times.ttf", 15);
+		histogramme->blocks[1].texts[1] = BL_create_text(window, histogramme->blocks[1].rects[1].x, histogramme->blocks[1].rects[1].y - 15, BL_get_blanc(200), number5, "./fonts/times.ttf", 15);
+		histogramme->blocks[1].texts[2] = BL_create_text(window, histogramme->blocks[1].rects[2].x, histogramme->blocks[1].rects[2].y - 15, BL_get_blanc(200), number6, "./fonts/times.ttf", 15);
 		
 		char cpu_2[255];
 		
 		sprintf(cpu_2, "%d", (int)simulation_array.simulations[histogramme->index_second_print].average_pourcentage_CPU);
 
-		histogramme->cpu_usage_2 = BL_create_text(window, 760, 480, BL_get_blanc(200), cpu_2, "./source/fonts/times.ttf", 15);
+		histogramme->cpu_usage_2 = BL_create_text(window, 760, 480, BL_get_blanc(200), cpu_2, "./fonts/times.ttf", 15);
 		
 		char time_restitution_2[255];
 
 		sprintf(time_restitution_2, "%d", (int)simulation_array.simulations[histogramme->index_second_print].time_restitution);
 
-		histogramme->time_restitution_usage_2 = BL_create_text(window, 770, 500, BL_get_blanc(200), time_restitution_2, "./source/fonts/times.ttf", 15);
+		histogramme->time_restitution_usage_2 = BL_create_text(window, 770, 500, BL_get_blanc(200), time_restitution_2, "./fonts/times.ttf", 15);
 	}	
 }
 

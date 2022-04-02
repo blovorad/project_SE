@@ -100,7 +100,12 @@ void print_resultat_console_processus(Simulation_array simulation_array){
 
 		char *string = get_string_from_algorithm(simulation_array.simulations[i].code_algorithm);
 		for(int j = 0; j < simulation_array.simulations[i].processus_array.nbProcessus; j++){
+
 		
+					/*printf("temps restu : %d\n",simulation_array.simulations[i].processus_array.processus[j].time_to_restue);
+					printf("temps time_to_answer : %d\n",simulation_array.simulations[i].processus_array.processus[j].time_to_answer);
+					printf("temps time_attempt : %d\n",simulation_array.simulations[i].processus_array.processus[j].time_attempt); */
+				
 			printf("%s;", simulation_array.simulations[i].processus_array.processus[j].name);
 			printf("%d;", simulation_array.simulations[i].processus_array.processus[j].time_to_restue);
 			printf("%d;", simulation_array.simulations[i].processus_array.processus[j].time_attempt);

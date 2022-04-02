@@ -8,7 +8,7 @@
 
 SDL_bool BL_creat_windowRenderer(char *title, BL_Window *window){
 
-	if(BL_search_file_in_Directory("./source/fichier", "config.CONFIG") == SDL_FALSE){
+	if(BL_search_file_in_Directory("./fichier", "config.CONFIG") == SDL_FALSE){
 
 		if(BL_creat_configuration() == SDL_FALSE){
 
@@ -16,7 +16,7 @@ SDL_bool BL_creat_windowRenderer(char *title, BL_Window *window){
 		}
 	}
 
-	FILE *fichier = fopen("./source/fichier/config.CONFIG", "rb");
+	FILE *fichier = fopen("./fichier/config.CONFIG", "rb");
 
 	if(fichier == NULL){
 
@@ -69,7 +69,7 @@ SDL_bool BL_creat_windowRenderer(char *title, BL_Window *window){
 
 SDL_bool BL_creat_configuration(void){
 
-	FILE *fichier = fopen("./source/fichier/config.CONFIG", "wb");
+	FILE *fichier = fopen("./fichier/config.CONFIG", "wb");
 
 	if(fichier == NULL){
 

@@ -52,7 +52,29 @@ SDL_bool BL_init(BL_Window *window, BL_Graphics *graphics, BL_Input *input, BL_M
 void BL_clean(BL_Window *window, BL_Graphics *graphics, BL_Histogramme *histogramme){
 
 	SDL_Log("ERROR : %s\n", SDL_GetError());
-
+	
+	for(int i = 0; i < histogramme->legendes.nb_rects; i++){
+		
+		SDL_DestroyTexture(histogramme->legendes.texts[i].texture);
+	}
+	
+	free(histogramme->legendes.texts);
+	free(histogramme->legendes.rects);
+	free(histogramme->legendes.colors);
+	
+	for(int j = 0; j < histogramme->nb_blocks; j++){
+	
+		for(int i = 0; i < histogramme->blocks[j].nb_rects; i++){
+			
+			SDL_DestroyTexture(histogramme->blocks[j].texts[i].texture);
+		}
+		free(histogramme->blocks[j].colors);
+		free(histogramme->blocks[j].rects);
+		free(histogramme->blocks[j].texts);
+	}
+	
+	free(histogramme->blocks);
+	
 	BL_clean_texture(graphics);
 
 	if(window->renderer != NULL){

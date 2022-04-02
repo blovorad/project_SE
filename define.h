@@ -7,9 +7,10 @@
 #include <math.h>
 #include <string.h>
 #include <time.h>
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
+#include <errno.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 
 //Mes define 
 #define BASE_SCREENWIDTH 800
