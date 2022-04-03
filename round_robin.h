@@ -27,7 +27,7 @@
  * \brief Structure pour gerer les threads durant l'algorithme Round-Robin
  */
 typedef struct {
- 	int first_cycle_CPU; /*!< booleen signalant si le processus a effectuer son premier cycle CPU ou non */
+ 	int first_cycle_CPU; /*!< booleen signalant si le processus a effectue son premier cycle CPU ou non */
  	pthread_t thread; /*!< thread representant le processus */
 } RR_Thread;
 

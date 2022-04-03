@@ -152,7 +152,7 @@ void *launch_sjf(void *nothing){
 			}
 			sem_wait(&sjf_needs.thread_array.threads[i].mutex_cpu);
 			
-			//si on n'a pas encore eu acces a la CPU alors calcule du temps de reponse
+			//si on n'a pas encore eu acces a la CPU alors calcul du temps de reponse
 			if(sjf_needs.thread_array.threads[i].first_cycle == 0){
 				
 				processus->time_to_answer = (int)difftime(time(NULL), start_time_processus);

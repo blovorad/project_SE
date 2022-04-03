@@ -23,7 +23,7 @@
 typedef struct{
  	
  	int arrive; /*!< si le thread est bien lance, c'est-a-dire que le temps d'arrivee du processus est bien atteint et donc qu'il peut entrer en action */
- 	int first_cycle; /*< si le cycle CPU a ete executer au moins une fois */
+ 	int first_cycle; /*!< si le cycle CPU a ete execute au moins une fois */
  	sem_t mutex_cpu; /*!< mutex du thread pour les cycles CPU */
  	pthread_t thread; /*!< le thread en question */
  }SJF_Thread;

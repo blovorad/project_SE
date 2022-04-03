@@ -17,12 +17,9 @@ RR_simulation rr_simulation;
 
 int round_robin(Simulation *simulation) {
 
-    //printf("-------ROUND-ROBIN-------\n");
     //Initialisation des structures
 	int nbProcessus = simulation->processus_array.nbProcessus;
 
-    //printf("nbProcessus : %d\n", nbProcessus);
-	
 	rr_simulation.threads.nb_threads = nbProcessus;
 	rr_simulation.threads.rr_threads = (RR_Thread*) malloc(sizeof(RR_Thread) * rr_simulation.threads.nb_threads);
 	if(rr_simulation.threads.rr_threads == NULL){
@@ -30,17 +27,14 @@ int round_robin(Simulation *simulation) {
 		exit(-1);
 	}
 
-    //printf("Creation du mutex...\n");
     //Creation du mutex
     sem_init(&rr_simulation.mutex_CPU, 0, 1);
 
-    //printf("Initialisation des booleens d'arrivee...\n");
     //Initialisation des booleens d'arrivee
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
 		rr_simulation.threads.rr_threads[i].first_cycle_CPU = 0;
 	}
 	
-    //printf("Parametrage de la simulation round-robin...\n");
     //Parametrage de la simulation Round-Robin a partir de celle fournie en parametre
 	rr_simulation.shared_simulation.processus_array = simulation->processus_array;
 	rr_simulation.shared_simulation.quantum = simulation->quantum;
@@ -54,30 +48,25 @@ int round_robin(Simulation *simulation) {
 
     /******* Debut de la simulation ***********/
 
-    //printf("Debut de la simulation...\n");
     //Instant de debut de la simulation
 	rr_simulation.start_time = time(NULL);
 
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
-        //printf("Lancement du thread %d...\n", i);
 		pthread_create(&rr_simulation.threads.rr_threads[i].thread, 0, launch_round_robin, 0);
 	}
 	
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
-        //printf("Destruction du thread %d...\n", i);
 		pthread_join(rr_simulation.threads.rr_threads[i].thread, 0);
 	}
 
     //Instant de fin de simulation
 	time_t end_time = time(NULL);
-    //printf("Fin de la simulation...\n");
 
     /******* Fin de la simulation ***********/
 
 
     /******* Calcul des statistiques ***********/
 
-    //printf("Calcul des statistiques...\n");
 	for (int i = 0; i < nbProcessus; i++) {
         //Sauvegarde des donnees obtenues pour chaque processus
         //Temps de restitution individuel
@@ -96,12 +85,6 @@ int round_robin(Simulation *simulation) {
 		//Calcul du temps total de reponse (a diviser par le nombre de processus pour obtenir le temps moyen)
 		rr_simulation.shared_simulation.average_time_respond += (double) rr_simulation.shared_simulation.processus_array.processus[i].time_to_answer;
 		
-		/*for(int j = 0; j < simulation->processus_array.nbProcessus; j++){
-		
-			printf("temps restu : %d\n",simulation->processus_array.processus[j].time_to_restue);
-			printf("temps time_to_answer : %d\n",simulation->processus_array.processus[j].time_to_answer);
-			printf("temps time_attempt : %d\n",simulation->processus_array.processus[j].time_attempt); 
-		}*/
 	}
 
     //Temps moyen d'attente
@@ -119,12 +102,10 @@ int round_robin(Simulation *simulation) {
     //Temps de restitution total
 	simulation->time_restitution = (double)difftime(end_time, rr_simulation.start_time);
 	
-    //printf("Destruction du mutex...\n");
     //Destruction du mutex
 	sem_destroy(&rr_simulation.mutex_CPU);
     
     //Liberation de la memoire occupee par le tableau de threads
-    //printf("Destruction du tableau de threads...\n");
 	free(rr_simulation.threads.rr_threads);
     
     return 0;
@@ -140,32 +121,27 @@ void* launch_round_robin(void* return_value) {
 	for (int j = 0; j < rr_simulation.threads.nb_threads; j++) {
 		//Identification du thread courant
 		if (pthread_self() == rr_simulation.threads.rr_threads[j].thread) {
-            // printf("Thread courant : %d\n", j);
 			i = j;
 		}
 	}
 
-    // printf("Creation du processus correspondant : %d\n", i);
     //Recuperation du processus a executer par le thread courant
 	Processus *processus = &rr_simulation.shared_simulation.processus_array.processus[i];
 
-    //Execution du processus on attend son temps d'arriver
+    //Endormissement du processus jusqu'a son moment d'arrivee
 	if(processus->arrive_at > 0){
 	
 		sleep(processus->arrive_at);
 	}
  
-    //printf("Arrivee du processus %d...\n", i);
     //Recuperation du temps de debut du processus
 	time_t start_time_processus = time(NULL);
 	
-    //printf("Debut de l'algo d'ordo Round-Robin (processus %d)...\n", i);
 	//Algorithme d'ordonnancement Round-Robin proprement dit
 	while(processus->action_cycle != NULL){
 		
         //Entree/sortie
 		if(processus->action_cycle->type == ES){
-            //printf("E/S du processus %d\n",i);
             //Simulation de l'entree/sortie en endormant le thread parent
 			sleep(processus->action_cycle->time_execution);
 			
@@ -175,13 +151,12 @@ void* launch_round_robin(void* return_value) {
         //Cycle CPU
 		else if (processus->action_cycle->type == CPU) {
 			
-            //printf("Cycle CPU du processus %d\n",i);
             time_t start_waiting = time(NULL);
 			
             //Demande l'acces a la CPU
 			sem_wait(&rr_simulation.mutex_CPU);
 			
-			//si on n'a pas encore eu acces a la CPU alors calcule du temps de reponse
+			//Calcul du temps de reponse si pas encore acces a la CPU
 			if(rr_simulation.threads.rr_threads[i].first_cycle_CPU == 0){
 				
 				processus->time_to_answer = (int)difftime(time(NULL), start_time_processus);
@@ -217,7 +192,6 @@ void* launch_round_robin(void* return_value) {
 			
 			//Liberation de la CPU
 		    sem_post(&rr_simulation.mutex_CPU);
-            //printf("Fin du cycle CPU pour le processus %d",i);
 		}
 	}
 	

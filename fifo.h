@@ -27,7 +27,7 @@
  * \brief Structure pour gerer les threads durant l'algorithme Fifo
  */
 typedef struct {
-    int first_cycle; /*!< booleen signalant si le premier cycle du processus a été effectué */
+    int first_cycle; /*!< booleen signalant si le premier cycle du processus a été effectue */
      pthread_t thread; /*!< thread representant le processus */
 } FIFO_Thread;
 

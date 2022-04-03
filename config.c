@@ -3,7 +3,7 @@
  * \file config.c
  * \author Gautier Levesque
  * \date 29/01/2022
- * \brief fichier source pour la gestion du chargemet de la configuration du programme test d'ordonnancement
+ * \brief fichier source pour la gestion du chargement de la configuration du programme test d'ordonnancement
  */
  
 int get_config_commandLine(char *argv[], Simulation_array *simulation_array){
