@@ -33,10 +33,9 @@ struct cellule{
 };
 
 /**  
- * Action processus.h
- * \brief struct cellule Action pour une comprehension et une utilisation plus claire 
+ * \typedef de la struct cellule en Action pour une comprehension et une utilisation plus claire 
  */
-typedef struct cellule Action; 
+typedef struct cellule Action;
  
 /**
  * \struct Processus processus.h
@@ -47,6 +46,7 @@ typedef struct{
     char *name; /*!< nom du processus */
     int arrive_at; /*!< quand arrive le processus */
     int time_execution; /*!< temps d'execution du processus */
+    int time_pause; /*!< temps de debut de la pause courante*/
     int time_attempt; /*!< temps d'attente du processus*/
     int time_to_restue; /*!< temps pour que le processus se termine*/ 
     int time_to_answer; /*!< temps de reponse du processus*/
@@ -84,6 +84,17 @@ int init_processus_array(int nbProcessus, Processus_array *array_processus);
  * \param processus le processus(son adresse) qui est rempli
  */
 void init_processus(char *name, int arrive_at, Processus *processus);
+
+/**
+ * \fn int compare_begin_processus(const void *p1, const void *p2)
+ * \author Gautier Levesque
+ * \date 29/01/2022
+ * \brief fonction de comparaison utilisee par qsort qui compare les temps de chaque action
+ * \param p1 ici on envoie une action
+ * \param p2 ici on envoie une action
+ * \return entier si p1.temps > p2.temps
+ */
+int compare_begin_processus(const void *p1, const void *p2);
 
 /**
  * \fn Action *push_to_tail(int time_execution, Cycle_type type, Action *action)

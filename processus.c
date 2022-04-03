@@ -27,10 +27,23 @@ void init_processus(char *name, int arrive_at, Processus *processus){
     processus->name = name;
     processus->arrive_at = arrive_at;
     processus->time_execution = 0;
+    processus->time_pause = 0;
     processus->time_attempt = 0;
     processus->time_to_restue = 0;
     processus->time_to_answer = 0;
     processus->action_cycle = NULL;
+}
+
+/*
+fonction de tri pour qsort
+comparaison entre les temps d'arrivee de chaque processus
+*/
+int compare_begin_processus(const void *p1, const void *p2){
+
+    const Processus *processus1 = p1;
+    const Processus *processus2 = p2;
+
+    return processus1->arrive_at >= processus2->arrive_at;
 }
 
 /*fonction de base pour la liste chainee d'actions*/
