@@ -161,7 +161,8 @@ void* launch_fifo(void* return_value) {
 
             //Incrementation du temps d'occuation de la CPU, avec le temps d'execution du cycle CPU
             fifo_simulation.effective_occupation_time_cpu = fifo_simulation.effective_occupation_time_cpu +  (int) difftime(time(NULL), start_occupation_cpu);
-			//Suppression de l'action effectue e
+
+			//Suppression de l'action effectuee
             processus->action_cycle = delete_head(processus->action_cycle);
 
             //Liberation de la CPU

@@ -156,7 +156,6 @@ void* launch_round_robin(void* return_value) {
         //Cycle CPU
 		else if (processus->action_cycle->type == CPU) {
 			
-            //printf("Cycle CPU du processus %d\n",i);
             time_t start_waiting = time(NULL);
 			
             //Demande l'acces a la CPU

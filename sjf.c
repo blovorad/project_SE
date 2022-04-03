@@ -133,12 +133,8 @@ void select_next_cpu(void){
 			}
 		}
 		sem_post(&sjf_needs.thread_array.threads[indice].mutex_cpu);
-		printf("le suivant est : %d\n", indice);
 	}
-	else{
 		
-		printf("aucune\n");
-	}
 }
 
 void *launch_sjf(void *nothing){

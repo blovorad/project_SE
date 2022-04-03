@@ -204,7 +204,7 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
 				}
 				if(type == ES && processus_array->processus[i].action_cycle == NULL){
 					
-					printf("ERREUR dans la redaction du fichier de configuration un processus ne peut pas commencer ses cycles par une ES, le processus %s est problematique, verifier le guide utilisateur pour plus d'information\n", name);
+					printf("ERREUR dans la redaction du fichier de configuration : un processus ne peut pas commencer ses cycles par une ES, le processus %s est problematique, verifier le guide utilisateur pour plus d'informations\n", name);
 					exit(1);
 				}
 				processus_array->processus[i].action_cycle = push_to_tail(time, type, processus_array->processus[i].action_cycle);
@@ -214,25 +214,6 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
 		processus_array->processus[i].time_execution = time_processus;
     }
     
-    /*
-    for(int i = 0; i < processus_array->nbProcessus; i++){
-		
-        printf("processus %d : %s,%d,%d\n",i, processus_array->processus[i].name, processus_array->processus[i].arrive_at, processus_array->processus[i].time_execution);
-        Action *action = processus_array->processus[i].action_cycle;
-        while(action != NULL){
-        	
-        	if(action->type == CPU){
-        		
-        		printf("time action : %d CPU\n", action->time_execution);
-        	}
-        	else{
-        		
-        		printf("time action : %d ES\n", action->time_execution);
-        	}
-        	action = action->suivant;
-        }
-    }
-    */
     
     return 0;
 }

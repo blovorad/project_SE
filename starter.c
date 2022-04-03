@@ -108,29 +108,17 @@ int launch_an_algorithm(Simulation_array *simulation_array){
             
             case FIFO: 
             	printf("Lancement de FIFO\n");
-            	//fifo(&simulation_array->simulations[i]);
+            	fifo(&simulation_array->simulations[i]);
             	printf("fin de FIFO\n");
                 break;
             case SJF: 
             	printf("lancement de SJF\n");
                 sjf(&simulation_array->simulations[i]);
                 printf("fin de SJF\n");
-                /*for(int j = 0; j < simulation_array->simulations[i].processus_array.nbProcessus; j++){
-		
-					printf("temps restu : %d\n",simulation_array->simulations[i].processus_array.processus[j].time_to_restue);
-					printf("temps time_to_answer : %d\n",simulation_array->simulations[i].processus_array.processus[j].time_to_answer);
-					printf("temps time_attempt : %d\n",simulation_array->simulations[i].processus_array.processus[j].time_attempt); 
-				}*/
                 break;
             case ROUND_ROBIN: 
             	printf("Lancement de round robin\n");
                 round_robin(&simulation_array->simulations[i]);
-                /*for(int j = 0; j < simulation_array->simulations[i].processus_array.nbProcessus; j++){
-		
-					printf("temps restu : %d\n",simulation_array->simulations[i].processus_array.processus[j].time_to_restue);
-					printf("temps time_to_answer : %d\n",simulation_array->simulations[i].processus_array.processus[j].time_to_answer);
-					printf("temps time_attempt : %d\n",simulation_array->simulations[i].processus_array.processus[j].time_attempt); 
-				}*/
                 printf("fin de round robin\n");
                 break;
             default:
