@@ -13,7 +13,7 @@ SDL_bool BL_init(BL_Window *window, BL_Graphics *graphics, BL_Input *input, BL_M
 		return SDL_FALSE;
 	}
 
-	if(BL_creat_windowRenderer("Systeme exploitation projet, Medhi Ouliana et Gautier", window) == SDL_FALSE){
+	if(BL_creat_windowRenderer("Systeme exploitation projet, Mehdi Ouliana et Gautier", window) == SDL_FALSE){
 
 		return SDL_FALSE;
 	}

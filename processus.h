@@ -33,9 +33,10 @@ struct cellule{
 };
 
 /**  
- * \typedef de la struct cellule en Action pour une comprehension et une utilisation plus claire 
+ * Action processus.h
+ * \brief struct cellule Action pour une comprehension et une utilisation plus claire 
  */
-typedef struct cellule Action;
+typedef struct cellule Action; 
  
 /**
  * \struct Processus processus.h
@@ -46,7 +47,6 @@ typedef struct{
     char *name; /*!< nom du processus */
     int arrive_at; /*!< quand arrive le processus */
     int time_execution; /*!< temps d'execution du processus */
-    int time_pause; /*!< temps de debut de la pause courante*/
     int time_attempt; /*!< temps d'attente du processus*/
     int time_to_restue; /*!< temps pour que le processus se termine*/ 
     int time_to_answer; /*!< temps de reponse du processus*/
