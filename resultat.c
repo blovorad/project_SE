@@ -21,10 +21,10 @@ int generate_result_simulation(char *path, Simulation_array simulation_array){
 		
 		char *string = get_string_from_algorithm(simulation_array.simulations[i].code_algorithm);
 		
-		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_time_restitution);
-		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_time_attempt);
-		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_time_respond);
-		fprintf(file, "%d;", (int)simulation_array.simulations[i].average_pourcentage_CPU);
+		fprintf(file, "%f;", simulation_array.simulations[i].average_time_restitution);
+		fprintf(file, "%f;", simulation_array.simulations[i].average_time_attempt);
+		fprintf(file, "%f;", simulation_array.simulations[i].average_time_respond);
+		fprintf(file, "%f;", simulation_array.simulations[i].average_pourcentage_CPU);
 		fprintf(file, "%s\n", string);
 	}
 	
@@ -48,10 +48,10 @@ void print_resultat_console_simulation(Simulation_array simulation_array){
 		
 		char *string = get_string_from_algorithm(simulation_array.simulations[i].code_algorithm);
 		
-		printf("%d;", (int)simulation_array.simulations[i].average_time_restitution);
-		printf("%d;", (int)simulation_array.simulations[i].average_time_attempt);
-		printf("%d;", (int)simulation_array.simulations[i].average_time_respond);
-		printf("%d;", (int)simulation_array.simulations[i].average_pourcentage_CPU);
+		printf("%f;", simulation_array.simulations[i].average_time_restitution);
+		printf("%f;", simulation_array.simulations[i].average_time_attempt);
+		printf("%f;", simulation_array.simulations[i].average_time_respond);
+		printf("%f;", simulation_array.simulations[i].average_pourcentage_CPU);
 		printf("%s\n", string);
 	}
 	

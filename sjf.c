@@ -80,31 +80,64 @@ void select_next_cpu(void){
 	
 	int indice = 0;
 	int time_execution = -1;
+	int profondeur = 0;
+	int nb_null = 0;
 	int i = 0;
 	
-	while(time_execution == -1 && i < sjf_needs.thread_array.nb_thread){
+	while(time_execution == -1 && i < sjf_needs.thread_array.nb_thread && nb_null < sjf_needs.thread_array.nb_thread){
+	
+		Action *action_cycle = sjf_needs.simulation_shared.processus_array.processus[i].action_cycle;
+		int j = 0;
+		while(action_cycle != NULL && j < profondeur){
+			
+			action_cycle = action_cycle->suivant;
+			j += 1;
+		}
+		
+		if(action_cycle != NULL && action_cycle->type == CPU && sjf_needs.thread_array.threads[i].arrive == 1){
 
-		if(sjf_needs.simulation_shared.processus_array.processus[i].action_cycle != NULL && sjf_needs.simulation_shared.processus_array.processus[i].action_cycle->type == CPU && sjf_needs.thread_array.threads[i].arrive == 1){
-
-			time_execution = sjf_needs.simulation_shared.processus_array.processus[i].action_cycle->time_execution;
+			time_execution = action_cycle->time_execution;
 			indice = i;
 		}
+		else if(action_cycle == NULL){
+			
+			nb_null += 1;
+		}
 		i++;
+		
+		if(sjf_needs.thread_array.nb_thread == i){
+			
+			i = 0;
+			profondeur += 1;
+		}
 	}
 	
 	if(time_execution > -1){
 	
 		for(i = 0; i < sjf_needs.thread_array.nb_thread; i++){
 			
-			if(sjf_needs.simulation_shared.processus_array.processus[i].action_cycle != NULL && sjf_needs.simulation_shared.processus_array.processus[i].action_cycle->type == CPU && sjf_needs.thread_array.threads[i].arrive == 1){
+			Action *action_cycle = sjf_needs.simulation_shared.processus_array.processus[i].action_cycle;
+			int j = 0;
+			
+			while(action_cycle != NULL && j < profondeur){
 				
-				if(sjf_needs.simulation_shared.processus_array.processus[i].action_cycle->time_execution < time_execution){
+				action_cycle = action_cycle->suivant;
+				j += 1;
+			}
+			if(action_cycle != NULL && action_cycle->type == CPU && sjf_needs.thread_array.threads[i].arrive == 1){
+				
+				if(action_cycle->time_execution < time_execution){
 				
 					indice = i;
 				}
 			}
 		}
 		sem_post(&sjf_needs.thread_array.threads[indice].mutex_cpu);
+		printf("le suivant est : %d\n", indice);
+	}
+	else{
+		
+		printf("aucune\n");
 	}
 }
 
@@ -158,8 +191,10 @@ void *launch_sjf(void *nothing){
 				processus->time_to_answer = (int)difftime(time(NULL), start_time_processus);
 				sjf_needs.thread_array.threads[i].first_cycle = 1;
 			}
-			//calcul du temps d'attente
-			processus->time_attempt += (int)difftime(time(NULL), new_time);
+			else{
+				//calcul du temps d'attente
+				processus->time_attempt += (int)difftime(time(NULL), new_time);
+			}
 			sleep(processus->action_cycle->time_execution);
 			sjf_needs.time_cpu += (int)processus->action_cycle->time_execution;
 			

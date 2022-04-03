@@ -20,6 +20,7 @@ int round_robin(Simulation *simulation) {
     //Initialisation des structures
 	int nbProcessus = simulation->processus_array.nbProcessus;
 
+	
 	rr_simulation.threads.nb_threads = nbProcessus;
 	rr_simulation.threads.rr_threads = (RR_Thread*) malloc(sizeof(RR_Thread) * rr_simulation.threads.nb_threads);
 	if(rr_simulation.threads.rr_threads == NULL){
@@ -34,7 +35,7 @@ int round_robin(Simulation *simulation) {
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
 		rr_simulation.threads.rr_threads[i].first_cycle_CPU = 0;
 	}
-	
+
     //Parametrage de la simulation Round-Robin a partir de celle fournie en parametre
 	rr_simulation.shared_simulation.processus_array = simulation->processus_array;
 	rr_simulation.shared_simulation.quantum = simulation->quantum;
@@ -52,15 +53,18 @@ int round_robin(Simulation *simulation) {
 	rr_simulation.start_time = time(NULL);
 
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
+
 		pthread_create(&rr_simulation.threads.rr_threads[i].thread, 0, launch_round_robin, 0);
 	}
 	
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
+
 		pthread_join(rr_simulation.threads.rr_threads[i].thread, 0);
 	}
 
     //Instant de fin de simulation
 	time_t end_time = time(NULL);
+    //printf("Fin de la simulation...\n");
 
     /******* Fin de la simulation ***********/
 
@@ -84,7 +88,6 @@ int round_robin(Simulation *simulation) {
 		
 		//Calcul du temps total de reponse (a diviser par le nombre de processus pour obtenir le temps moyen)
 		rr_simulation.shared_simulation.average_time_respond += (double) rr_simulation.shared_simulation.processus_array.processus[i].time_to_answer;
-		
 	}
 
     //Temps moyen d'attente
@@ -121,6 +124,7 @@ void* launch_round_robin(void* return_value) {
 	for (int j = 0; j < rr_simulation.threads.nb_threads; j++) {
 		//Identification du thread courant
 		if (pthread_self() == rr_simulation.threads.rr_threads[j].thread) {
+		
 			i = j;
 		}
 	}
@@ -142,6 +146,7 @@ void* launch_round_robin(void* return_value) {
 		
         //Entree/sortie
 		if(processus->action_cycle->type == ES){
+
             //Simulation de l'entree/sortie en endormant le thread parent
 			sleep(processus->action_cycle->time_execution);
 			
@@ -151,23 +156,25 @@ void* launch_round_robin(void* return_value) {
         //Cycle CPU
 		else if (processus->action_cycle->type == CPU) {
 			
+            //printf("Cycle CPU du processus %d\n",i);
             time_t start_waiting = time(NULL);
 			
             //Demande l'acces a la CPU
 			sem_wait(&rr_simulation.mutex_CPU);
 			
-			//Calcul du temps de reponse si pas encore acces a la CPU
+			///Calcul du temps de reponse si pas encore acces a la CPU
 			if(rr_simulation.threads.rr_threads[i].first_cycle_CPU == 0){
 				
 				processus->time_to_answer = (int)difftime(time(NULL), start_time_processus);
 				rr_simulation.threads.rr_threads[i].first_cycle_CPU = 1;
 			}
-			
-            time_t end_waiting = time(NULL);
+			else{
+				
+				 time_t end_waiting = time(NULL);
 
-            //Calcul du temps d'attente du processus
-            processus[i].time_attempt += (int) difftime(end_waiting, start_waiting);
-
+		        //Calcul du temps d'attente du processus
+		        processus[i].time_attempt += (int) difftime(end_waiting, start_waiting);
+			}
 
             //Occupation de la CPU
 
