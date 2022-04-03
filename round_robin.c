@@ -37,7 +37,7 @@ int round_robin(Simulation *simulation) {
     //printf("Initialisation des booleens d'arrivee...\n");
     //Initialisation des booleens d'arrivee
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
-		rr_simulation.threads.rr_threads[i].arrived = 0;
+		rr_simulation.threads.rr_threads[i].first_cycle_CPU = 0;
 	}
 	
     //printf("Parametrage de la simulation round-robin...\n");
@@ -92,6 +92,10 @@ int round_robin(Simulation *simulation) {
 
         //Calcul du temps total de restitution (a diviser par le nombre de processus pour obtenir le temps moyen)
 		rr_simulation.shared_simulation.average_time_restitution += (double) rr_simulation.shared_simulation.processus_array.processus[i].time_to_restue;
+		
+		//Calcul du temps total de reponse (a diviser par le nombre de processus pour obtenir le temps moyen)
+		rr_simulation.shared_simulation.average_time_respond += (double) rr_simulation.shared_simulation.processus_array.processus[i].time_to_answer;
+		
 		/*for(int j = 0; j < simulation->processus_array.nbProcessus; j++){
 		
 			printf("temps restu : %d\n",simulation->processus_array.processus[j].time_to_restue);
@@ -107,7 +111,7 @@ int round_robin(Simulation *simulation) {
 	simulation->average_time_restitution = rr_simulation.shared_simulation.average_time_restitution / (double) nbProcessus;
 
     //Temps moyen de reponse
-	simulation->average_time_respond = 0; //Considere comme negligeable a l'echelle de la simulation
+	simulation->average_time_respond = rr_simulation.shared_simulation.average_time_respond / (double) nbProcessus;
 
     //Pourcentage moyen d'occupation de la CPU
 	simulation->average_pourcentage_CPU =  (rr_simulation.effective_occupation_time_cpu / (double) difftime(end_time, rr_simulation.start_time)) * (double) 100;
@@ -145,22 +149,15 @@ void* launch_round_robin(void* return_value) {
     //Recuperation du processus a executer par le thread courant
 	Processus *processus = &rr_simulation.shared_simulation.processus_array.processus[i];
 
-    //Execution du processus 
-
-    //Mesure du temps pour demarrer le processus au moment de son arrivee
-    // printf("Determination du temps d'arrivee du processus %d...\n", i);
-	time_t current_time = time(NULL);
-	while ((int) difftime(current_time, rr_simulation.start_time) < processus->arrive_at) {
-		current_time = time(NULL);
+    //Execution du processus on attend son temps d'arriver
+	if(processus->arrive_at > 0){
+	
+		sleep(processus->arrive_at);
 	}
  
     //printf("Arrivee du processus %d...\n", i);
     //Recuperation du temps de debut du processus
 	time_t start_time_processus = time(NULL);
-	
-    //printf("Marquage du thread parent %d comme arrive...\n",i);
-    //Marquage du processus comme arrive dans le thread parent
-	rr_simulation.threads.rr_threads[i].arrived = 1;
 	
     //printf("Debut de l'algo d'ordo Round-Robin (processus %d)...\n", i);
 	//Algorithme d'ordonnancement Round-Robin proprement dit
@@ -183,6 +180,13 @@ void* launch_round_robin(void* return_value) {
 			
             //Demande l'acces a la CPU
 			sem_wait(&rr_simulation.mutex_CPU);
+			
+			//si on n'a pas encore eu acces a la CPU alors calcule du temps de reponse
+			if(rr_simulation.threads.rr_threads[i].first_cycle_CPU == 0){
+				
+				processus->time_to_answer = (int)difftime(time(NULL), start_time_processus);
+				rr_simulation.threads.rr_threads[i].first_cycle_CPU = 1;
+			}
 			
             time_t end_waiting = time(NULL);
 
@@ -218,7 +222,6 @@ void* launch_round_robin(void* return_value) {
 	}
 	
 	processus->time_to_restue = (int) difftime(time(NULL), start_time_processus);
-	processus->time_to_answer = 0; //Temps de reponse considere comme negligeable a l'echelle de la simulation
-	
+
 	return return_value;
 }

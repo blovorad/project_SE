@@ -86,17 +86,6 @@ int init_processus_array(int nbProcessus, Processus_array *array_processus);
 void init_processus(char *name, int arrive_at, Processus *processus);
 
 /**
- * \fn int compare_begin_processus(const void *p1, const void *p2)
- * \author Gautier Levesque
- * \date 29/01/2022
- * \brief fonction de comparaison utilisee par qsort qui compare les temps de chaque action
- * \param p1 ici on envoie une action
- * \param p2 ici on envoie une action
- * \return entier si p1.temps > p2.temps
- */
-int compare_begin_processus(const void *p1, const void *p2);
-
-/**
  * \fn Action *push_to_tail(int time_execution, Cycle_type type, Action *action)
  * \author Gautier Levesque
  * \date 29/01/2022

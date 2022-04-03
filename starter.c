@@ -107,6 +107,9 @@ int launch_an_algorithm(Simulation_array *simulation_array){
         switch(simulation_array->simulations[i].code_algorithm){
             
             case FIFO: 
+            	printf("Lancement de FIFO\n");
+            	fifo(&simulation_array->simulations[i]);
+            	printf("fin de FIFO\n");
                 break;
             case SJF: 
             	printf("lancement de SJF\n");
@@ -141,7 +144,11 @@ int launch_an_algorithm(Simulation_array *simulation_array){
 void print_help(void){
     
     printf("---- Aide du programme ---\n");
+    printf(" - si vous lancez sans interface graphique -\n");
     printf(" - Taper ./prog -rt <nombre de processus> <nombre de cycle CPU> pour lancer un test rapide ;\n");
     printf(" - Taper ./prog -rc <chemin vers un fichier de configuration> [chemin du fichier de sortie (optionnel) en .csv] pour lancer un test avec un fichier de configuration.\n");
+    printf(" - si vous lancez avec interface graphique -\n");
+    printf(" - Taper ./progGui -rt <nombre de processus> <nombre de cycle CPU> pour lancer un test rapide ;\n");
+    printf(" - Taper ./progGui -rc <chemin vers un fichier de configuration> [chemin du fichier de sortie (optionnel) en .csv] pour lancer un test avec un fichier de configuration.\n");
     printf("Pour plus d'informations, consulter la documentation du programme.\n");
 }

@@ -60,11 +60,12 @@ void sjf(Simulation *simulation){
 		simulation->processus_array.processus[i].time_to_answer = sjf_needs.simulation_shared.processus_array.processus[i].time_to_answer;
 		simulation->processus_array.processus[i].time_attempt = sjf_needs.simulation_shared.processus_array.processus[i].time_attempt;
 		sjf_needs.simulation_shared.average_time_attempt += (double)sjf_needs.simulation_shared.processus_array.processus[i].time_attempt;
+		sjf_needs.simulation_shared.average_time_respond += (double)sjf_needs.simulation_shared.processus_array.processus[i].time_to_answer;
 		sjf_needs.simulation_shared.average_time_restitution += (double)sjf_needs.simulation_shared.processus_array.processus[i].time_to_restue;
 	}
 	simulation->average_time_attempt = sjf_needs.simulation_shared.average_time_attempt / (double)nb_processus;
 	simulation->average_time_restitution = sjf_needs.simulation_shared.average_time_restitution / (double)nb_processus;
-	simulation->average_time_respond = 0;
+	simulation->average_time_respond = sjf_needs.simulation_shared.average_time_respond / (double)nb_processus;
 	simulation->average_pourcentage_CPU =  (sjf_needs.time_cpu / (double)difftime(end_time, sjf_needs.start_time)) * (double)100;
 	simulation->time_restitution = (double)difftime(end_time, sjf_needs.start_time);
 	
@@ -118,21 +119,20 @@ void *launch_sjf(void *nothing){
 			i = j;
 		}
 	}
-	
 	Processus *processus = &sjf_needs.simulation_shared.processus_array.processus[i];
-	time_t new_time = time(NULL);
-	while((int)difftime(new_time, sjf_needs.start_time) < processus->arrive_at){
-		
-		new_time = time(NULL);
+	if(processus->arrive_at > 0){
+	
+		sleep(processus->arrive_at);
 	}
+
 	time_t start_time_processus = time(NULL);
 	
 	//on signale que le thread est arrive
 	sjf_needs.thread_array.threads[i].arrive = 1;
-	
+
 	//debut reel de l'algorithme
 	while(processus->action_cycle != NULL){
-		
+
 		if(processus->action_cycle->type == ES){
 		
 			sleep(processus->action_cycle->time_execution);
@@ -142,7 +142,7 @@ void *launch_sjf(void *nothing){
 		}
 		else{
 			
-			new_time = time(NULL);
+			time_t new_time = time(NULL);
 			
 			//si debut de l'algorithme et donc qu'aucun cycle cpu n'a ete choisi
 			if(sjf_needs.first_cpu == 0){
@@ -150,14 +150,18 @@ void *launch_sjf(void *nothing){
 				sjf_needs.first_cpu = 1;
 				select_next_cpu();
 			}
-			
 			sem_wait(&sjf_needs.thread_array.threads[i].mutex_cpu);
+			
+			//si on n'a pas encore eu acces a la CPU alors calcule du temps de reponse
+			if(sjf_needs.thread_array.threads[i].first_cycle == 0){
 				
+				processus->time_to_answer = (int)difftime(time(NULL), start_time_processus);
+				sjf_needs.thread_array.threads[i].first_cycle = 1;
+			}
 			//calcul du temps d'attente
 			processus->time_attempt += (int)difftime(time(NULL), new_time);
-				
 			sleep(processus->action_cycle->time_execution);
-			sjf_needs.time_cpu += (double)processus->action_cycle->time_execution;
+			sjf_needs.time_cpu += (int)processus->action_cycle->time_execution;
 			
 			//recuperation action suivante
 			processus->action_cycle = delete_head(processus->action_cycle);
@@ -168,7 +172,6 @@ void *launch_sjf(void *nothing){
 	}
 	
 	processus->time_to_restue = (int)difftime(time(NULL), start_time_processus);
-	processus->time_to_answer = 0;
 	
 	return nothing;
 }

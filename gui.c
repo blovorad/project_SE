@@ -111,7 +111,7 @@ SDL_bool BL_update_panel(BL_Window window, BL_Mouse *mouse, BL_Panel *panel){
 
 			panel->position.x = 0;
 		}
-		else if(panel->position.x > (window.width - panel->position.w)){
+		else if(panel->position.x > ((int)window.width - panel->position.w)){
 
 			panel->position.x = window.width - panel->position.w;
 		}
@@ -120,7 +120,7 @@ SDL_bool BL_update_panel(BL_Window window, BL_Mouse *mouse, BL_Panel *panel){
 
 			panel->position.y = 0;
 		}
-		else if(panel->position.y > (window.height - panel->position.h)){
+		else if(panel->position.y > ((int)window.height - panel->position.h)){
 
 			panel->position.y = window.height - panel->position.h;
 		}

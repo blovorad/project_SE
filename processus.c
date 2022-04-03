@@ -33,18 +33,6 @@ void init_processus(char *name, int arrive_at, Processus *processus){
     processus->action_cycle = NULL;
 }
 
-/*
-fonction de tri pour qsort
-comparaison entre les temps d'arrivee de chaque processus
-*/
-int compare_begin_processus(const void *p1, const void *p2){
-
-    const Processus *processus1 = p1;
-    const Processus *processus2 = p2;
-
-    return processus1->arrive_at >= processus2->arrive_at;
-}
-
 /*fonction de base pour la liste chainee d'actions*/
 Action *push_to_tail(int time_execution, Cycle_type type, Action *action){
 	
