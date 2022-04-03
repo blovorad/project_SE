@@ -82,9 +82,6 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a7a1a8aec2b6e36b2bbc8668a81905dbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8c.html#a7a1a8aec2b6e36b2bbc8668a81905dbe">init_processus</a> (char *name, int arrive_at, <a class="el" href="structProcessus.html">Processus</a> *processus)</td></tr>
 <tr class="memdesc:a7a1a8aec2b6e36b2bbc8668a81905dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise un processus  <a href="processus_8c.html#a7a1a8aec2b6e36b2bbc8668a81905dbe">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7a1a8aec2b6e36b2bbc8668a81905dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9c6a0f0f8489212e8572921e1e2437"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8c.html#a6e9c6a0f0f8489212e8572921e1e2437">compare_begin_processus</a> (const void *p1, const void *p2)</td></tr>
-<tr class="memdesc:a6e9c6a0f0f8489212e8572921e1e2437"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction de comparaison utilisee par qsort qui compare les temps de chaque action  <a href="processus_8c.html#a6e9c6a0f0f8489212e8572921e1e2437">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6e9c6a0f0f8489212e8572921e1e2437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad566f6919b8dede2c1bd441f42f136b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processus_8c.html#ad566f6919b8dede2c1bd441f42f136b5">push_to_tail</a> (int time_execution, <a class="el" href="processus_8h.html#a450315c67565678c674b45ab421d53ec">Cycle_type</a> type, <a class="el" href="processus_8h.html#a206a58174ece27c950e9b005d52db250">Action</a> *action)</td></tr>
 <tr class="memdesc:ad566f6919b8dede2c1bd441f42f136b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">insertion en queue dans la liste chainee d'actions  <a href="processus_8c.html#ad566f6919b8dede2c1bd441f42f136b5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad566f6919b8dede2c1bd441f42f136b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,46 +94,6 @@ Fonctions</h2></td></tr>
 <dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a6e9c6a0f0f8489212e8572921e1e2437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e9c6a0f0f8489212e8572921e1e2437">&#9670;&nbsp;</a></span>compare_begin_processus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int compare_begin_processus </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>p1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>p2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>fonction de comparaison utilisee par qsort qui compare les temps de chaque action </p>
-<dl class="section author"><dt>Auteur</dt><dd>Gautier Levesque </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>29/01/2022 </dd></dl>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p1</td><td>ici on envoie une action </td></tr>
-    <tr><td class="paramname">p2</td><td>ici on envoie une action </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>entier si p1.temps &gt; p2.temps </dd></dl>
-
-</div>
-</div>
 <a id="a1c66c46115a1946ffe1269722a898e54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c66c46115a1946ffe1269722a898e54">&#9670;&nbsp;</a></span>delete_head()</h2>
 

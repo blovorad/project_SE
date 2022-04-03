@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.3"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Projet systeme exploitation:  Fichier source de fifo.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,32 +19,33 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Projet systeme exploitation
+   &#160;<span id="projectnumber">1.5</span>
    </div>
+   <div id="projectbrief">Simulation des principaux algorithme d&#39;ordonnancement avec récupération des statistiques de chaque algorithme pour une configuration donnée.</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.3 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <!-- window showing the filter options -->
@@ -62,23 +63,74 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">fifo.h</div></div>
+  <div class="headertitle">
+<div class="title">fifo.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __FIFO__H__</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __FIFO__H__</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">int</span> fifo(<a class="code hl_struct" href="structProcessus__array.html">Processus_array</a> array_processus, <a class="code hl_struct" href="structSimulation.html">Simulation</a> *simulation);</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructProcessus__array_html"><div class="ttname"><a href="structProcessus__array.html">Processus_array</a></div><div class="ttdef"><b>Definition:</b> processus.h:31</div></div>
-<div class="ttc" id="astructSimulation_html"><div class="ttname"><a href="structSimulation.html">Simulation</a></div><div class="ttdef"><b>Definition:</b> simulation.h:12</div></div>
+<a href="fifo_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FIFOH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FIFOH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;semaphore.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resultat_8h.html">resultat.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structFIFO__Thread.html">   29</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structFIFO__Thread.html#a3030a964970750cee17edaa065c13120">   30</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structFIFO__Thread.html#a3030a964970750cee17edaa065c13120">first_cycle</a>; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structFIFO__Thread.html#ac01661db1320fabd2424063029f81d50">   31</a></span>&#160;     pthread_t <a class="code" href="structFIFO__Thread.html#ac01661db1320fabd2424063029f81d50">thread</a>; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <a class="code" href="structFIFO__Thread.html">FIFO_Thread</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structFIFO__Threads__array.html">   38</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structFIFO__Threads__array.html#a3f1e668bc462df57979eb7c796435d00">   39</a></span>&#160;     <span class="keywordtype">int</span> <a class="code" href="structFIFO__Threads__array.html#a3f1e668bc462df57979eb7c796435d00">nb_threads</a>; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structFIFO__Threads__array.html#aa34b51424aafb276a75525cd0d1efece">   40</a></span>&#160;     <a class="code" href="structFIFO__Thread.html">FIFO_Thread</a> *<a class="code" href="structFIFO__Threads__array.html#aa34b51424aafb276a75525cd0d1efece">fifo_threads</a>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; } <a class="code" href="structFIFO__Threads__array.html">FIFO_Threads_array</a>; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structFIFO__simulation.html">   48</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structFIFO__simulation.html#a9da26e6c51ca8d6336687fd732667245">   49</a></span>&#160;    <a class="code" href="structSimulation.html">Simulation</a> <a class="code" href="structFIFO__simulation.html#a9da26e6c51ca8d6336687fd732667245">shared_simulation</a>; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structFIFO__simulation.html#a9bf616510b8fbe553d25bf7189000e96">   50</a></span>&#160;    time_t <a class="code" href="structFIFO__simulation.html#a9bf616510b8fbe553d25bf7189000e96">start_time</a>; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structFIFO__simulation.html#a1b5123921c55ec60fe12ac7af7d8e344">   51</a></span>&#160;     sem_t <a class="code" href="structFIFO__simulation.html#a1b5123921c55ec60fe12ac7af7d8e344">mutex_CPU</a>; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structFIFO__simulation.html#a7766df924e17f49200af4a010a56f784">   52</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structFIFO__simulation.html#a7766df924e17f49200af4a010a56f784">effective_occupation_time_cpu</a>; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structFIFO__simulation.html#a2338727781d3434fb5ec4f8e0f814eb7">   53</a></span>&#160;    <a class="code" href="structFIFO__Threads__array.html">FIFO_Threads_array</a> <a class="code" href="structFIFO__simulation.html#a2338727781d3434fb5ec4f8e0f814eb7">threads</a>; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <a class="code" href="structFIFO__simulation.html">FIFO_simulation</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">int</span> <a class="code" href="fifo_8h.html#aeb81143eb230fb66c5db883935c23d60">fifo</a>(<a class="code" href="structSimulation.html">Simulation</a> *simulation);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="fifo_8h.html#ac0e9ca054e7c4cbe824af5be995568a6">launch_fifo</a>(<span class="keywordtype">void</span>* return_value);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">fichier entete pour la gestion du chargement de la configuration du programme</div></div>
+<div class="ttc" id="afifo_8h_html_ac0e9ca054e7c4cbe824af5be995568a6"><div class="ttname"><a href="fifo_8h.html#ac0e9ca054e7c4cbe824af5be995568a6">launch_fifo</a></div><div class="ttdeci">void * launch_fifo(void *return_value)</div><div class="ttdoc">Fonction de simulation de l'algorithme Fifo.</div><div class="ttdef"><b>Definition:</b> fifo.c:103</div></div>
+<div class="ttc" id="afifo_8h_html_aeb81143eb230fb66c5db883935c23d60"><div class="ttname"><a href="fifo_8h.html#aeb81143eb230fb66c5db883935c23d60">fifo</a></div><div class="ttdeci">int fifo(Simulation *simulation)</div><div class="ttdoc">Simulation effectuee avec l'algorithme Fifo.</div><div class="ttdef"><b>Definition:</b> fifo.c:18</div></div>
+<div class="ttc" id="aresultat_8h_html"><div class="ttname"><a href="resultat_8h.html">resultat.h</a></div><div class="ttdoc">fichier entete qui s'occupe de la generation des resultats des simulations</div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="simulation_8h.html">simulation.h</a></div><div class="ttdoc">fichier entete qui gere la simulation, contient entre autre la structure du resultat et les parametre...</div></div>
+<div class="ttc" id="astructFIFO__Thread_html"><div class="ttname"><a href="structFIFO__Thread.html">FIFO_Thread</a></div><div class="ttdoc">Structure pour gerer les threads durant l'algorithme Fifo.</div><div class="ttdef"><b>Definition:</b> fifo.h:29</div></div>
+<div class="ttc" id="astructFIFO__Thread_html_a3030a964970750cee17edaa065c13120"><div class="ttname"><a href="structFIFO__Thread.html#a3030a964970750cee17edaa065c13120">FIFO_Thread::first_cycle</a></div><div class="ttdeci">int first_cycle</div><div class="ttdef"><b>Definition:</b> fifo.h:30</div></div>
+<div class="ttc" id="astructFIFO__Thread_html_ac01661db1320fabd2424063029f81d50"><div class="ttname"><a href="structFIFO__Thread.html#ac01661db1320fabd2424063029f81d50">FIFO_Thread::thread</a></div><div class="ttdeci">pthread_t thread</div><div class="ttdef"><b>Definition:</b> fifo.h:31</div></div>
+<div class="ttc" id="astructFIFO__Threads__array_html"><div class="ttname"><a href="structFIFO__Threads__array.html">FIFO_Threads_array</a></div><div class="ttdoc">Tableau de FIFO_Thread.</div><div class="ttdef"><b>Definition:</b> fifo.h:38</div></div>
+<div class="ttc" id="astructFIFO__Threads__array_html_a3f1e668bc462df57979eb7c796435d00"><div class="ttname"><a href="structFIFO__Threads__array.html#a3f1e668bc462df57979eb7c796435d00">FIFO_Threads_array::nb_threads</a></div><div class="ttdeci">int nb_threads</div><div class="ttdef"><b>Definition:</b> fifo.h:39</div></div>
+<div class="ttc" id="astructFIFO__Threads__array_html_aa34b51424aafb276a75525cd0d1efece"><div class="ttname"><a href="structFIFO__Threads__array.html#aa34b51424aafb276a75525cd0d1efece">FIFO_Threads_array::fifo_threads</a></div><div class="ttdeci">FIFO_Thread * fifo_threads</div><div class="ttdef"><b>Definition:</b> fifo.h:40</div></div>
+<div class="ttc" id="astructFIFO__simulation_html"><div class="ttname"><a href="structFIFO__simulation.html">FIFO_simulation</a></div><div class="ttdoc">Rassemble toutes les variables globales necessaires pour l'algorithme Fifo.</div><div class="ttdef"><b>Definition:</b> fifo.h:48</div></div>
+<div class="ttc" id="astructFIFO__simulation_html_a1b5123921c55ec60fe12ac7af7d8e344"><div class="ttname"><a href="structFIFO__simulation.html#a1b5123921c55ec60fe12ac7af7d8e344">FIFO_simulation::mutex_CPU</a></div><div class="ttdeci">sem_t mutex_CPU</div><div class="ttdef"><b>Definition:</b> fifo.h:51</div></div>
+<div class="ttc" id="astructFIFO__simulation_html_a2338727781d3434fb5ec4f8e0f814eb7"><div class="ttname"><a href="structFIFO__simulation.html#a2338727781d3434fb5ec4f8e0f814eb7">FIFO_simulation::threads</a></div><div class="ttdeci">FIFO_Threads_array threads</div><div class="ttdef"><b>Definition:</b> fifo.h:53</div></div>
+<div class="ttc" id="astructFIFO__simulation_html_a7766df924e17f49200af4a010a56f784"><div class="ttname"><a href="structFIFO__simulation.html#a7766df924e17f49200af4a010a56f784">FIFO_simulation::effective_occupation_time_cpu</a></div><div class="ttdeci">double effective_occupation_time_cpu</div><div class="ttdef"><b>Definition:</b> fifo.h:52</div></div>
+<div class="ttc" id="astructFIFO__simulation_html_a9bf616510b8fbe553d25bf7189000e96"><div class="ttname"><a href="structFIFO__simulation.html#a9bf616510b8fbe553d25bf7189000e96">FIFO_simulation::start_time</a></div><div class="ttdeci">time_t start_time</div><div class="ttdef"><b>Definition:</b> fifo.h:50</div></div>
+<div class="ttc" id="astructFIFO__simulation_html_a9da26e6c51ca8d6336687fd732667245"><div class="ttname"><a href="structFIFO__simulation.html#a9da26e6c51ca8d6336687fd732667245">FIFO_simulation::shared_simulation</a></div><div class="ttdeci">Simulation shared_simulation</div><div class="ttdef"><b>Definition:</b> fifo.h:49</div></div>
+<div class="ttc" id="astructSimulation_html"><div class="ttname"><a href="structSimulation.html">Simulation</a></div><div class="ttdoc">Constantes pour les codes des algorithmes.</div><div class="ttdef"><b>Definition:</b> simulation.h:33</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">fichier entete qui regroupe les fonctions utiles au projet</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

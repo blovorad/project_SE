@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projet systeme exploitation: Référence de la structure RR_Thread</title>
+<title>Projet systeme exploitation: Référence de la structure FIFO_Thread</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,50 +65,50 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Attributs publics</a> &#124;
-<a href="structRR__Thread-members.html">Liste de tous les membres</a>  </div>
+<a href="structFIFO__Thread-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
-<div class="title">Référence de la structure RR_Thread</div>  </div>
+<div class="title">Référence de la structure FIFO_Thread</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Structure pour gerer les threads durant l'algorithme Round-Robin.  
- <a href="structRR__Thread.html#details">Plus de détails...</a></p>
+<p>Structure pour gerer les threads durant l'algorithme Fifo.  
+ <a href="structFIFO__Thread.html#details">Plus de détails...</a></p>
 
-<p><code>#include &lt;<a class="el" href="round__robin_8h_source.html">round_robin.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="fifo_8h_source.html">fifo.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
-<tr class="memitem:a09b140ca744216988e5216c8b9630b32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRR__Thread.html#a09b140ca744216988e5216c8b9630b32">first_cycle_CPU</a></td></tr>
-<tr class="separator:a09b140ca744216988e5216c8b9630b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9896ccc95b139a456143854ce2029a79"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRR__Thread.html#a9896ccc95b139a456143854ce2029a79">thread</a></td></tr>
-<tr class="separator:a9896ccc95b139a456143854ce2029a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3030a964970750cee17edaa065c13120"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFIFO__Thread.html#a3030a964970750cee17edaa065c13120">first_cycle</a></td></tr>
+<tr class="separator:a3030a964970750cee17edaa065c13120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01661db1320fabd2424063029f81d50"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFIFO__Thread.html#ac01661db1320fabd2424063029f81d50">thread</a></td></tr>
+<tr class="separator:ac01661db1320fabd2424063029f81d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Structure pour gerer les threads durant l'algorithme Round-Robin. </p>
+<div class="textblock"><p>Structure pour gerer les threads durant l'algorithme Fifo. </p>
 </div><h2 class="groupheader">Documentation des données membres</h2>
-<a id="a09b140ca744216988e5216c8b9630b32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b140ca744216988e5216c8b9630b32">&#9670;&nbsp;</a></span>first_cycle_CPU</h2>
+<a id="a3030a964970750cee17edaa065c13120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3030a964970750cee17edaa065c13120">&#9670;&nbsp;</a></span>first_cycle</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int RR_Thread::first_cycle_CPU</td>
+          <td class="memname">int FIFO_Thread::first_cycle</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>booleen signalant si le processus a effectue son premier cycle CPU ou non </p>
+<p>booleen signalant si le premier cycle du processus a été effectue </p>
 
 </div>
 </div>
-<a id="a9896ccc95b139a456143854ce2029a79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9896ccc95b139a456143854ce2029a79">&#9670;&nbsp;</a></span>thread</h2>
+<a id="ac01661db1320fabd2424063029f81d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01661db1320fabd2424063029f81d50">&#9670;&nbsp;</a></span>thread</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pthread_t RR_Thread::thread</td>
+          <td class="memname">pthread_t FIFO_Thread::thread</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -117,7 +117,7 @@ Attributs publics</h2></td></tr>
 </div>
 </div>
 <hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
-<li><a class="el" href="round__robin_8h_source.html">round_robin.h</a></li>
+<li><a class="el" href="fifo_8h_source.html">fifo.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

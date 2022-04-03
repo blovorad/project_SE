@@ -84,9 +84,6 @@ $(function() {
 <li>arrive_at
 : <a class="el" href="structProcessus.html#a0f17c62795268f8aceab762e3f01c762">Processus</a>
 </li>
-<li>arrived
-: <a class="el" href="structRR__Thread.html#ac1e7ee10ea9a2a913918f6feaf12b904">RR_Thread</a>
-</li>
 <li>average_pourcentage_CPU
 : <a class="el" href="structSimulation.html#a30f3c44581f1ee6109b57391bfbc012b">Simulation</a>
 </li>
@@ -183,7 +180,8 @@ $(function() {
 : <a class="el" href="structBL__Input.html#a88afe603b1ec2540ae406b621d7355df">BL_Input</a>
 </li>
 <li>effective_occupation_time_cpu
-: <a class="el" href="structRR__simulation.html#aa337af89ec0792b704ea65781d655b30">RR_simulation</a>
+: <a class="el" href="structFIFO__simulation.html#a7766df924e17f49200af4a010a56f784">FIFO_simulation</a>
+, <a class="el" href="structRR__simulation.html#aa337af89ec0792b704ea65781d655b30">RR_simulation</a>
 </li>
 <li>escape
 : <a class="el" href="structBL__Input.html#a97e025bcd18a448e74c16adea814f30c">BL_Input</a>
@@ -198,12 +196,21 @@ $(function() {
 <li>f
 : <a class="el" href="structBL__Input.html#ab098a2e576c1318463b2a234ea26de30">BL_Input</a>
 </li>
+<li>fifo_threads
+: <a class="el" href="structFIFO__Threads__array.html#aa34b51424aafb276a75525cd0d1efece">FIFO_Threads_array</a>
+</li>
 <li>fill
 : <a class="el" href="structBL__Button.html#a9a7465362eb9d355016332be8a7d32db">BL_Button</a>
 , <a class="el" href="structBL__Panel.html#a54bcab0e289ef07054a70227e7154d39">BL_Panel</a>
 </li>
 <li>first_cpu
 : <a class="el" href="structSJF__needs.html#a2dc0adc7d15eaaebd69c3dfa6e59d4f3">SJF_needs</a>
+</li>
+<li>first_cycle
+: <a class="el" href="structFIFO__Thread.html#a3030a964970750cee17edaa065c13120">FIFO_Thread</a>
+</li>
+<li>first_cycle_CPU
+: <a class="el" href="structRR__Thread.html#a09b140ca744216988e5216c8b9630b32">RR_Thread</a>
 </li>
 <li>first_print_name
 : <a class="el" href="structBL__Histogramme.html#a794e5b3408ae64ad7e2ad495e0a6a41b">BL_Histogramme</a>
@@ -302,7 +309,8 @@ $(function() {
 : <a class="el" href="structBL__Timer.html#ac5b7e9e3755d4027533b1f2bf1d38571">BL_Timer</a>
 </li>
 <li>mutex_CPU
-: <a class="el" href="structRR__simulation.html#a22258dd108804c243cdfca19ec1f974e">RR_simulation</a>
+: <a class="el" href="structFIFO__simulation.html#a1b5123921c55ec60fe12ac7af7d8e344">FIFO_simulation</a>
+, <a class="el" href="structRR__simulation.html#a22258dd108804c243cdfca19ec1f974e">RR_simulation</a>
 </li>
 <li>mutex_cpu
 : <a class="el" href="structSJF__Thread.html#a18830db942c5e2f6bdb127a3a4129779">SJF_Thread</a>
@@ -336,7 +344,8 @@ $(function() {
 : <a class="el" href="structSJF__Thread__array.html#ad0619dedafcf54cb8fa242e85e583286">SJF_Thread_array</a>
 </li>
 <li>nb_threads
-: <a class="el" href="structRR__Threads__array.html#ad630f1c6d6863511f22426754de6ec3c">RR_Threads_array</a>
+: <a class="el" href="structFIFO__Threads__array.html#a3f1e668bc462df57979eb7c796435d00">FIFO_Threads_array</a>
+, <a class="el" href="structRR__Threads__array.html#ad630f1c6d6863511f22426754de6ec3c">RR_Threads_array</a>
 </li>
 <li>nbProcessus
 : <a class="el" href="structProcessus__array.html#a34412bb024904355e30ac7c1118ea373">Processus_array</a>
@@ -447,7 +456,8 @@ $(function() {
 : <a class="el" href="structBL__Histogramme.html#ace5542cc33d7ea181e701c4ede22ae8d">BL_Histogramme</a>
 </li>
 <li>shared_simulation
-: <a class="el" href="structRR__simulation.html#a018ca86080fb29b6fab6023173b57e18">RR_simulation</a>
+: <a class="el" href="structFIFO__simulation.html#a9da26e6c51ca8d6336687fd732667245">FIFO_simulation</a>
+, <a class="el" href="structRR__simulation.html#a018ca86080fb29b6fab6023173b57e18">RR_simulation</a>
 </li>
 <li>simulation_shared
 : <a class="el" href="structSJF__needs.html#a90204ca551caa9ae446a3bd306cfabd7">SJF_needs</a>
@@ -459,7 +469,8 @@ $(function() {
 : <a class="el" href="structBL__Input.html#a1e2bb53a63242736bc8eb322492c4679">BL_Input</a>
 </li>
 <li>start_time
-: <a class="el" href="structRR__simulation.html#a4f9d063d7924f23164bfd5040fd7948b">RR_simulation</a>
+: <a class="el" href="structFIFO__simulation.html#a9bf616510b8fbe553d25bf7189000e96">FIFO_simulation</a>
+, <a class="el" href="structRR__simulation.html#a4f9d063d7924f23164bfd5040fd7948b">RR_simulation</a>
 , <a class="el" href="structSJF__needs.html#a8f53c3465fa94e7d982658781e7245ab">SJF_needs</a>
 </li>
 <li>suivant
@@ -486,14 +497,16 @@ $(function() {
 : <a class="el" href="structBL__Graphics.html#a169c547634393a021825378c5f8b4de9">BL_Graphics</a>
 </li>
 <li>thread
-: <a class="el" href="structRR__Thread.html#a9896ccc95b139a456143854ce2029a79">RR_Thread</a>
+: <a class="el" href="structFIFO__Thread.html#ac01661db1320fabd2424063029f81d50">FIFO_Thread</a>
+, <a class="el" href="structRR__Thread.html#a9896ccc95b139a456143854ce2029a79">RR_Thread</a>
 , <a class="el" href="structSJF__Thread.html#a126c447f56eb573205a4287e38450ef1">SJF_Thread</a>
 </li>
 <li>thread_array
 : <a class="el" href="structSJF__needs.html#ad50f24ec13fc4803e83c72d52699241f">SJF_needs</a>
 </li>
 <li>threads
-: <a class="el" href="structRR__simulation.html#a6dbbe2ce94befc780d618847faca45b8">RR_simulation</a>
+: <a class="el" href="structFIFO__simulation.html#a2338727781d3434fb5ec4f8e0f814eb7">FIFO_simulation</a>
+, <a class="el" href="structRR__simulation.html#a6dbbe2ce94befc780d618847faca45b8">RR_simulation</a>
 , <a class="el" href="structSJF__Thread__array.html#aeb7f6ed03e63bead6f9707b31330754d">SJF_Thread_array</a>
 </li>
 <li>time_attempt
