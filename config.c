@@ -165,7 +165,7 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
         while(car != '\n'){
         	
         	int time;
-        	int type;
+        	Cycle_type type;
 		    fscanf(file, "%c", &car);
 		    if(car != ' ' && car != '\n'){
 
@@ -180,15 +180,17 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
 					fscanf(file, "ES=%d", &time);
 					type = ES;
 				}
+				if(type == ES && processus_array->processus[i].action_cycle == NULL){
+					
+					printf("ERREUR dans la redaction du fichier de configuration un processus ne peut pas commencer ses cycles par une ES, le processus %s est problematique, verifier le guide utilisateur pour plus d'information\n", name);
+					exit(1);
+				}
 				processus_array->processus[i].action_cycle = push_to_tail(time, type, processus_array->processus[i].action_cycle);
 				time_processus += time;
 			}
 		}
 		processus_array->processus[i].time_execution = time_processus;
     }
-    
-	//tri des processus par ordre d'arrivee dans la simulation
-    qsort(processus_array->processus, processus_array->nbProcessus, sizeof(Processus), compare_begin_processus);
     
     /*
     for(int i = 0; i < processus_array->nbProcessus; i++){
