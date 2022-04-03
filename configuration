@@ -4,5 +4,5 @@ Nombre de processus = 4
 Nom Arrivee <ES ou CPU>=duree
 P1 0 CPU=3 ES=2
 P2 2 CPU=10 CPU=5
-P3 4 ES=6
+P3 4 CPU=17 ES=6
 P4 7 CPU=2
