@@ -1,0 +1,22 @@
+RESULTAT DES PROCESSUS
+
+Processus;Time_to_restue;Time_attempt;Time_to_respond;Algorithm
+P1;5;0;0;SJF
+P2;20;5;3;SJF
+P3;22;16;16;SJF
+P4;11;9;9;SJF
+
+U1;5;0;0;ROUND_ROBIN
+P2;9;0;3;ROUND_ROBIN
+P3;8;3;5;ROUND_ROBIN
+P4;10;0;8;ROUND_ROBIN
+
+
+
+
+RESULTAT DE LA SIMULATION
+
+
+Average_time_restitution;Average_time_attempt;Average_time_respond;Average_pourcentage_CPU;Algorithm
+14.500000;7.500000;7.000000;100.000000;SJF
+8.000000;0.750000;4.000000;100.000000;ROUND_ROBIN
