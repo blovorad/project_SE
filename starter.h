@@ -10,6 +10,7 @@
 #include "config.h"
 #include "sjf.h"
 #include "round_robin.h"
+#include "fifo.h"
 
 /**
  * \file starter.h
