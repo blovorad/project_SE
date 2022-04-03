@@ -108,7 +108,7 @@ int launch_an_algorithm(Simulation_array *simulation_array){
             
             case FIFO: 
             	printf("Lancement de FIFO\n");
-            	fifo(&simulation_array->simulations[i]);
+            	//fifo(&simulation_array->simulations[i]);
             	printf("fin de FIFO\n");
                 break;
             case SJF: 

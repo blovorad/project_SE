@@ -49,16 +49,17 @@ int get_config_commandLine(char *argv[], Simulation_array *simulation_array){
    		}
    		
    		int nb_action = nb_CPU * 2 - 1;
+
    		//initialisation de chaque processus
    		for(int j = 0; j < nb_processus; j++){
    			
    			char *name = get_name_from_int(j);
-   			int arrive_at = (rand() % (nb_processus * 2)) + 2;
+   			int arrive_at = (rand() % (nb_processus * 2));
    			init_processus(name, arrive_at, &simulation_array->simulations[i].processus_array.processus[j]);
 	   		//initialisation de chaque action du processus
 	   		for(int k = 0; k < nb_action; k++){
-	   			
-	   			if(j % 2 == 0){
+
+	   			if(k % 2 == 0){
 	   			
 	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 5 + 3, CPU, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
 	   			}
@@ -66,9 +67,30 @@ int get_config_commandLine(char *argv[], Simulation_array *simulation_array){
 	   			
 	   				simulation_array->simulations[i].processus_array.processus[j].action_cycle = push_to_tail(rand() % 5 + 3, ES, simulation_array->simulations[i].processus_array.processus[j].action_cycle);
 	   			}
+	   			
 	   		}
    		}
    	}
+   	
+   	/*for(int i = 1; i < 2; i++){
+		for(int j= 0; j < simulation_array->simulations[i].processus_array.nbProcessus; j++){
+			
+		    printf("processus %d : %s,%d,%d\n",i, simulation_array->simulations[i].processus_array.processus[j].name,simulation_array->simulations[i].processus_array.processus[j].arrive_at, simulation_array->simulations[i].processus_array.processus[j].time_execution);
+		    Action *action = simulation_array->simulations[i].processus_array.processus[j].action_cycle;
+		    while(action != NULL){
+		    	
+		    	if(action->type == CPU){
+		    		
+		    		printf("time action : %d CPU\n", action->time_execution);
+		    	}
+		    	else{
+		    		
+		    		printf("time action : %d ES\n", action->time_execution);
+		    	}
+		    	action = action->suivant;
+		    }
+		}
+	}*/
    	
  	return 0;
 }	
@@ -98,7 +120,7 @@ int get_config_file(FILE *file, Simulation_array *simulation_array){
 		if(simulation_array->simulations[i].code_algorithm == ROUND_ROBIN){
 
 		    int quantum;
-		    fscanf(file, " quantum = %d", &quantum);
+		    fscanf(file, " quantum = %d ", &quantum);
 		    simulation_array->simulations[i].quantum = quantum;
 		}
 	}
@@ -195,7 +217,7 @@ int fill_processus_array(FILE *file, Processus_array *processus_array){
     /*
     for(int i = 0; i < processus_array->nbProcessus; i++){
 		
-        printf("processus %d : %s,%d,%d,%d\n",i, processus_array->processus[i].name, processus_array->processus[i].arrive_at, processus_array->processus[i].time_execution, processus_array->processus[i].time_pause);
+        printf("processus %d : %s,%d,%d\n",i, processus_array->processus[i].name, processus_array->processus[i].arrive_at, processus_array->processus[i].time_execution);
         Action *action = processus_array->processus[i].action_cycle;
         while(action != NULL){
         	

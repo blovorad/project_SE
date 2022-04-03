@@ -108,7 +108,7 @@ void* launch_fifo(void* return_value) {
             i = j;
         }
     }
-    //Stockage du processus correspondant au thread courant 
+    //Stockage du processus correspondant au thread courant  
     Processus *processus = &fifo_simulation.shared_simulation.processus_array.processus[i];
 	//Execution du processus 
    
@@ -119,10 +119,10 @@ void* launch_fifo(void* return_value) {
 	
 	time_t current_time = time(NULL);
 	
-    //Tant que le processus possede des cycles a effectuer
+     //Tant que le processus possede des cycles a effectuer
     while(processus->action_cycle != NULL){
 
-        //Si le cycle a effectuer est une Entree/sortie
+        /Si le cycle a effectuer est une Entree/sortie
         if(processus->action_cycle->type == ES){
             //Attente d'une duree egale aux temps d'execution du cycle ES
             sleep(processus->action_cycle->time_execution);
@@ -143,11 +143,11 @@ void* launch_fifo(void* return_value) {
             if(fifo_simulation.threads.fifo_threads[i].first_cycle ==0){
                 //Stockage de la difference de temps entre la demande et l'obtention des premiers resultats 
                 processus->time_to_answer = waitting_time;
-                //Modification de la variable first_cycle du thread courant, pour signaler qu'un cycle a deja ete effectue 
+                //Modification de la variable first_cycle du thread courant, pour signaler qu'un cycle a deja ete effectue
                 fifo_simulation.threads.fifo_threads[i].first_cycle =1;
             }
 
-            //Incrementation du temps d'attente, grace a la difference calculee precedemment (int waiting_time)
+            //Incrementation du temps d'attente, grace à la difference calculer precedement (int waitting_time)
             processus->time_attempt = processus->time_attempt + waitting_time;
 
             //Sauvegarde de l'instant au debut du temps d'occupation
@@ -161,7 +161,7 @@ void* launch_fifo(void* return_value) {
 
             //Incrementation du temps d'occuation de la CPU , avec le temps d'execution du cycle CPU
             fifo_simulation.effective_occupation_time_cpu = fifo_simulation.effective_occupation_time_cpu +  (int) difftime(time(NULL), start_occupation_cpu);
-			//Supprsession de l'action effectuee 
+			//Suppression de l'action effectue e
             processus->action_cycle = delete_head(processus->action_cycle);
 
             //Liberation de la CPU
