@@ -1,8 +1,8 @@
-Nombre d'algorithmes = 3
-Algorithme = FIFO SJF ROUND_ROBIN quantum = 3
+Nombre d'algorithmes = 2
+Algorithme = FIFO SJF
 Nombre de processus = 4
 Nom Arrivee <ES ou CPU>=duree
 P1 0 CPU=3 ES=2 CPU=2
 P2 1 CPU=2 CPU=5
-P3 2 CPU=5
-P4 3 CPU=2
+P3 2 CPU=5 ES=2
+P4 3 CPU=2 CPU=2

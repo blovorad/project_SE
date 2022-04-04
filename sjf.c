@@ -134,7 +134,6 @@ void select_next_cpu(void){
 		}
 		sem_post(&sjf_needs.thread_array.threads[indice].mutex_cpu);
 	}
-		
 }
 
 void *launch_sjf(void *nothing){

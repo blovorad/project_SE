@@ -34,6 +34,7 @@ int round_robin(Simulation *simulation) {
     //Initialisation des booleens d'arrivee
 	for (int i = 0; i < rr_simulation.threads.nb_threads; i++) {
 		rr_simulation.threads.rr_threads[i].first_cycle_CPU = 0;
+		rr_simulation.threads.rr_threads[i].thread = 0;
 	}
 
     //Parametrage de la simulation Round-Robin a partir de celle fournie en parametre
@@ -120,6 +121,9 @@ void* launch_round_robin(void* return_value) {
 	
     //Indice du thread courant
 	int i = 0;
+	while(rr_simulation.threads.rr_threads[rr_simulation.threads.nb_threads-1].thread == 0){
+		//boucle infinie pour laisser le temps a tout les thread de se lancer
+	}
 	
 	for (int j = 0; j < rr_simulation.threads.nb_threads; j++) {
 		//Identification du thread courant
